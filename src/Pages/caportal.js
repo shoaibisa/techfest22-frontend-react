@@ -48,7 +48,7 @@ const CaPortal = () => {
     <div>
       <div className="bgImage AppBody">
         <div className="navBar">
-          <nav className="navbar_continer">
+          {/* <nav className="navbar_continer">
             <div className="navbar_navlogo">
               <img src={headerLogo} alt="" className="navLogo" />
             </div>
@@ -65,7 +65,19 @@ const CaPortal = () => {
     </span>
 </ul>
 </div>
-          </nav>
+          </nav> */}
+            <nav class="navbar_continer">
+                <div class="navbar_navlogo">
+                    <img src={headerLogo} alt="" class="navLogo"/>
+                </div>
+                <div class="mainMenu">
+                    <ul>
+                        <li class="btn Active"><a href="#Home">Home</a></li>
+                        <li class="btn"><a href="#sponsors">Sponsors</a></li>
+                        <li class="btn"><a href="#Gallary">About Us</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
         <div className="caMain container d-flex pt-5" id="Home">
           <div className="homePage_item">
@@ -332,7 +344,7 @@ const CaPortal = () => {
             target="_blank "
             rel="noopener noreferrer "
           >
-            {" "}
+          
             <i className="fa fa-facebook-square fa-2x "> </i>
           </a>
           <a
@@ -340,7 +352,7 @@ const CaPortal = () => {
             target="_blank "
             rel="noopener noreferrer "
           >
-            {" "}
+          
             <i className="fa fa-twitter-square fa-2x "></i>
           </a>
           <a
@@ -348,7 +360,7 @@ const CaPortal = () => {
             target="_blank "
             rel="noopener noreferrer "
           >
-            {" "}
+
             <i className="fa fa-instagram fa-2x "></i>
           </a>
           <a
@@ -356,7 +368,7 @@ const CaPortal = () => {
             target="_blank "
             rel="noopener noreferrer "
           >
-            {" "}
+          
             <i className="fa fa-linkedin-square fa-2x "></i>
           </a>
           <a
@@ -368,6 +380,7 @@ const CaPortal = () => {
           </a>
         </div>
       </div>
+     
     </div>
   );
 };
