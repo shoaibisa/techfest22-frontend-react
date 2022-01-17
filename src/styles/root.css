@@ -95,6 +95,101 @@ nav ul li:hover {
   margin-top: 12px;
 }
 
+
+
+
+
+.hamburgerIcon {
+  cursor: pointer;
+  display: none;
+}
+
+.hamburgerIcon div {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  margin: 5px 1px;
+}
+
+.hamburgerIcon div:hover {
+  cursor: pointer;
+}
+
+@media screen and  (max-width:773px){
+
+  .hamburgerIcon{
+    display: block;
+  }
+  
+}
+
+
+
+
+
+
+
+.sidenav {
+  height: auto;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 85px;
+  right: 0;
+  background: linear-gradient(to right,rgba(0, 0, 0), rgb(36, 36, 36));
+  overflow-x: hidden;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  transition: 0.5s;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: .1px solid rgb(77, 72, 72);
+}
+
+.sidenav li a {
+  padding: 8px 8px 8px 20px;
+  text-decoration: none !important;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none !important;
+}
+
+.sidenav li {
+  list-style: none;
+}
+
+.sidenav li a:hover {
+  color: whitesmoke !important;
+  border: .1px solid rgb(77, 72, 72) !important;
+}
+
+.sidenav a:first-child:hover {
+  border: none;
+  color: rgb(148, 3, 3);
+}
+.closebtn{
+  color: white;
+}
+.closebtn a:hover {
+  border: none;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  font-size: 36px;
+  margin-right: 50px;
+}
+
+
+
+
 /* navbar styling End*/
 
 /* Main Styling Start */

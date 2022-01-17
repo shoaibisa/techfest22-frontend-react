@@ -20,6 +20,23 @@ import Rectangle from '../images/Rectangle.png';
 
 
 const CaPortal = () => {
+
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "200px";
+    document.getElementById("mainMenu").style.marginright = "200px";
+  }
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mainMenu").style.marginleft = "0";
+  }
+
+
+
+
+
+
+
+
   $(window).scroll(function (event) {
     function footer() {
       var scroll = $(window).scrollTop();
@@ -48,36 +65,30 @@ const CaPortal = () => {
     <div>
       <div className="bgImage AppBody">
         <div className="navBar">
-          {/* <nav className="navbar_continer">
+          <nav className="navbar_continer">
             <div className="navbar_navlogo">
               <img src={headerLogo} alt="" className="navLogo" />
             </div>
-            <div class="mainMenu">
+            <div className="mainMenu">
+              <ul>
+                <li className="btn Active"><a href="#Home">Home</a></li>
+                <li className="btn"><a href="#sponsors">Sponsors</a></li>
+                <li className="btn"><a href="#Gallary">About Us</a></li>
 
-<ul id="myDIV">
-    <li class="btn Active"><a href="#Home">Home</a></li>
-    <li class="btn"><a href="#sponsors">Sponsors</a></li>
-    <li class="btn"><a href="#Gallary">Gallery</a></li>
-    <span onclick="openNav()" class="hamburgerIcon">
-        <div></div>
-        <div></div>
-        <div></div>
-    </span>
-</ul>
-</div>
-          </nav> */}
-            <nav class="navbar_continer">
-                <div class="navbar_navlogo">
-                    <img src={headerLogo} alt="" class="navLogo"/>
-                </div>
-                <div class="mainMenu">
-                    <ul>
-                        <li class="btn Active"><a href="#Home">Home</a></li>
-                        <li class="btn"><a href="#sponsors">Sponsors</a></li>
-                        <li class="btn"><a href="#Gallary">About Us</a></li>
-                    </ul>
-                </div>
-            </nav>
+                <span onClick={openNav} className="hamburgerIcon">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </span>
+              </ul>
+            </div>
+            <div id="mySidenav" className="sidenav">
+              <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
+              <li><a href="#Home">Home</a></li>
+              <li><a href="#sponsors">Sponsors</a></li>
+              <li><a href="#About Us">About Us</a></li>
+            </div>
+          </nav>
         </div>
         <div className="caMain container d-flex pt-5" id="Home">
           <div className="homePage_item">
@@ -96,7 +107,6 @@ const CaPortal = () => {
               <button
                 type="submit"
                 className="homePage_Btn homePage__Btn__btn1"
-                onclick="onEmailAddBtnClick()"
               >
                 Register Now
               </button>
@@ -104,7 +114,7 @@ const CaPortal = () => {
                 type="submit"
                 className=" homePage_Btn homePage_Btn__btn2"
                 value="Learn More"
-                onclick="onEmailAddBtnClick()"
+
               >
                 Learn More
               </button>
@@ -158,7 +168,7 @@ const CaPortal = () => {
                 <div className="col">
                   <div className="about-ca-program-next-half-college">
                     <div className="about-ca-program-next-half-icon1">
-                      <img src={icon_college} alt="" srcset="" />
+                      <img src={icon_college} alt="" srcSet="" />
                     </div>
                     <div className="about-ca-program-next-half-number">
                       <b>30+</b>
@@ -344,7 +354,7 @@ const CaPortal = () => {
             target="_blank "
             rel="noopener noreferrer "
           >
-          
+
             <i className="fa fa-facebook-square fa-2x "> </i>
           </a>
           <a
@@ -352,7 +362,7 @@ const CaPortal = () => {
             target="_blank "
             rel="noopener noreferrer "
           >
-          
+
             <i className="fa fa-twitter-square fa-2x "></i>
           </a>
           <a
@@ -368,7 +378,7 @@ const CaPortal = () => {
             target="_blank "
             rel="noopener noreferrer "
           >
-          
+
             <i className="fa fa-linkedin-square fa-2x "></i>
           </a>
           <a
@@ -380,7 +390,7 @@ const CaPortal = () => {
           </a>
         </div>
       </div>
-     
+
     </div>
   );
 };
