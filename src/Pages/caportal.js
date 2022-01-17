@@ -1,7 +1,22 @@
 import React from "react";
 import $ from "jquery";
 
+
+//image import
 import headerLogo from '../images/header-logo.png';
+import heroImg from '../images/hero_image.png';
+import icon_college from '../images/icon_college.svg';
+import icon_mail from '../images/icon_mail.svg';
+import icon_money from '../images/icon_money.svg';
+import icon_people from '../images/icon_people.svg'
+import icon_phone from '../images/icon_phone.svg';
+import ima_lor from '../images/ima_lor.png';
+import image from '../images/image.png';
+import img_concession from '../images/img_concession.png';
+import img_goodies from '../images/img_goodies.png';
+import img_leader from '../images/img_leader.png';
+import Rectangle_365 from '../images/Rectangle_365.png';
+import Rectangle from '../images/Rectangle.png';
 
 
 const CaPortal = () => {
@@ -86,7 +101,7 @@ const CaPortal = () => {
           <div className="homepage__image">
             <img
               className="homePage_img"
-              src="../images/hero_image.png"
+              src={heroImg}
               alt="logo"
             />
           </div>
@@ -131,7 +146,7 @@ const CaPortal = () => {
                 <div className="col">
                   <div className="about-ca-program-next-half-college">
                     <div className="about-ca-program-next-half-icon1">
-                      <img src="images/icon_college.svg" alt="" srcset="" />
+                      <img src={icon_college} alt="" srcset="" />
                     </div>
                     <div className="about-ca-program-next-half-number">
                       <b>30+</b>
@@ -148,7 +163,7 @@ const CaPortal = () => {
                 <div className="col">
                   <div className="about-ca-program-next-half-people">
                     <div className="about-ca-program-next-half-icon2">
-                      <img src="images/icon_people.svg" alt="" srcset="" />
+                      <img src={icon_people} alt="icon" srcset="" />
                     </div>
                     <div className="about-ca-program-next-half-number">
                       <b>10K+</b>
@@ -165,7 +180,7 @@ const CaPortal = () => {
                 <div className="col">
                   <div className="about-ca-program-next-half-money">
                     <div className="about-ca-program-next-half-icon1">
-                      <img src="images/icon_money.svg" alt="" srcset="" />
+                      <img src={icon_money} alt="" srcset="" />
                     </div>
                     <div className="about-ca-program-next-half-number">
                       <b>5L+</b>
@@ -196,7 +211,7 @@ const CaPortal = () => {
               <div className="perk__section1">
                 <div className="perk_section_1">
                   <div className="perk_card">
-                    <img src="images/img_leader.png" />
+                    <img src={img_leader} />
                     <h3>Become a leader</h3>
                     <p>
                       Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -208,7 +223,7 @@ const CaPortal = () => {
                 {/* <!--------------------Ending of section 1------------------------> */}
                 <div className="perk_section_2">
                   <div className="perk_card">
-                    <img src="images/img_concession.png" />
+                    <img src={img_concession} />
                     <h3>Concession on Workshops</h3>
                     <p>
                       Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -222,7 +237,7 @@ const CaPortal = () => {
               <div className="perk__section2">
                 <div className="perk_section_3">
                   <div className="perk_card">
-                    <img src="images/img_goodies.png" />
+                    <img src={img_goodies} />
                     <h3>Goodies & Rewards</h3>
                     <p>
                       Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -234,7 +249,7 @@ const CaPortal = () => {
                 {/* <!--------------------Ending of section 3------------------------> */}
                 <div className="perk_section_4">
                   <div className="perk_card">
-                    <img src="images/ima_lor.png" />
+                    <img src={ima_lor} />
                     <h3>Letter of Recommendation</h3>
                     <p>
                       Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -284,7 +299,7 @@ const CaPortal = () => {
                     <div className="website_box_layer_outercontainer_innercontainer_contactblock-card_contactinfo">
                       <div className="website_box_layer_outercontainer_innercontainer_contactblock-card_contactinfo_Emailblock">
                         <div className="website_box_layer_outercontainer_innercontainer_contactblock-card_contactinfo_Emailblock_icon">
-                          <img src="/images/icon_mail.svg" alt="" />
+                          <img src={icon_mail} alt="" />
                         </div>
                         <div className="website_box_layer_outercontainer_innercontainer_contactblock-card_contactinfo_Emailblock_idname">
                           xxxxxx@gmail.com
@@ -292,7 +307,7 @@ const CaPortal = () => {
                       </div>
                       <div className="website_box_layer_outercontainer_innercontainer_contactblock-card_contactinfo_contactNoblock">
                         <div className="website_box_layer_outercontainer_innercontainer_contactblock-card_contactinfo_contactNoblock_icon">
-                          <img src="/images/icon_phone.svg" alt="" />
+                          <img src={icon_phone} alt="" />
                         </div>
                         <div className="website_box_layer_outercontainer_innercontainer_contactblock-card_contactinfo_contactNoblock_contactNo">
                           1234567890
