@@ -99,8 +99,7 @@ const CaPortal = () => {
                 <div className="about_Ca_portal_about_section">
                     <div className="about_Ca_portal_about_section__para">
                         <p className="para">
-                            Here, the CAs build a network of students from 250+ colleges and learn about social media, marketing, event planning and execution. They are rewarded for fulfilling thier responsibilities and motivated to strive to improve their personal skills continually.
-                        </p>
+                        The program aims at developing a network of students from over 250+ colleges. Inculcating in them, skills such as social media handling, event management, planning and execution etc. The program will help individuals in grooming their dynamic personality and will in turn help in future excellence. Every individual will be rewarded subject to fulfilling the responsibilities been given. The rewards will stimulate motivation as an asset to work upon the skills and strive for better outputs with consistency.</p>
                     </div>
                     <div className="about_Ca_portal_about_section__btn">
                         <input type="submit" className="homePage_Btn
@@ -172,14 +171,13 @@ const CaPortal = () => {
 
                         <img src={img_leader} alt="" />
                         <h3>Become a leader</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur a iusto accusantium velit itaque, ad dolorum sit. At dolore incidunt quod.
+                        <p>Leadership is the most demanding skill not only in your workplace but also in your life, and being part of this program will let you build strong & efficient leadership qualities.
                         </p>
                     </div>
                     <div className="perks_continer__first_sub_card2">
                         <img src={img_concession} alt="cocession" />
                         <h3>Concession on Workshops</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur a iusto accusantium velit itaque, ad dolorum sit. At dolore incidunt quod.
-                        </p>
+                        <p>Being a part of workshops lets you learn and improve your skills in lesser time than you feel, and guess what the program gave you concession on workshops. Isn’t that great?                        </p>
 
                     </div>
 
@@ -188,15 +186,15 @@ const CaPortal = () => {
                     <div className="perks_continer__first_sub_card3">
                         <img src={img_goodies} alt="goodies" />
                         <h3>Goodies &amp; Rewards</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur a iusto accusantium velit itaque, ad dolorum sit. At dolore incidunt quod.
-                        </p>
+                        <p>The program does not just make you learn skills there is something extra i.e., you would be getting awesome goodies & Rewards. Guess what, that’s a surprise.                        </p>
                     </div>
                     <div className="perks_continer__first_sub_card4">
 
                         <img src={ima_lor} alt="ima_lor"/>
                         <h3>Letter of Recommendation</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur a iusto accusantium velit itaque, ad dolorum sit. At dolore incidunt quod.
-                        </p>
+                        <p>Learning skills, applying them in real life builds your knowledge power but what next to get your dream job, a prestigious L.O.R i.e., Letter of Recommendation.
+In this program, you would be getting L.O.R too.
+</p>
                     </div>
                 </div>
             </div>
