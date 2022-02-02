@@ -74,10 +74,10 @@ const CaPortal = () => {
                         </div>
 
                         <div className="homePage_Btn">
-                            <input type="submit" className="homePage_Btn
-                                    homePage__Btn__btn1" value="Register Now"  />
-                            <input type="submit" className="homePage_Btn
-                                    homePage_Btn__btn2" value="Learn More" />
+                            <a href="https://meet.google.com/kmx-winy-xjp" className="homePage_Btn
+                                    homePage__Btn__btn1"  >Register Now</a>
+                            <a href="" className="homePage_Btn
+                                    homePage_Btn__btn2" value="Learn More" >Learn More</a>
                         </div>
                     </div>
                     <div>
@@ -207,7 +207,7 @@ In this program, you would be getting L.O.R too.
             <div className="website_box_layer_registerationblock-card_mobile-view">
                 <div className="website_box_layer_registerationblock-card_mobile-view_innercontent">
                     <div className="website_box_layer_registerationblock-card_innercontent_btn_mobile-view">
-                        <a href="#Reg" className="registerationblock-card_btn_a_mobile-view">Register
+                        <a href="https://forms.gle/Q9a3m6GJ99wsmEYz9" className="registerationblock-card_btn_a_mobile-view" target="_blank">Register
                                 Here</a>
                     </div>
                 </div>
@@ -222,7 +222,7 @@ In this program, you would be getting L.O.R too.
                                 Ready to Upskill Yourself ?
                             </div>
                             <div className="website_box_layer_outercontainer_innercontainer_registerationblock-card_btn">
-                                <a href="#Register" className="registerationblock-card_btn_a">Register
+                                <a href="https://forms.gle/Q9a3m6GJ99wsmEYz9" className="registerationblock-card_btn_a" target="_blank">Register
                                         Here</a>
                             </div>
                         </div>
@@ -236,7 +236,7 @@ In this program, you would be getting L.O.R too.
                                         <img src={icon_mail} alt=""/>
                                     </div>
                                     <div className="website_box_layer_outercontainer_innercontainer_contactblock-card_contactinfo_Emailblock_idname">
-                                        xxxxxx@gmail.com
+                                    techfest@sliet.ac.in
                                     </div>
                                 </div>
                                 <div className="website_box_layer_outercontainer_innercontainer_contactblock-card_contactinfo_contactNoblock">
@@ -244,7 +244,7 @@ In this program, you would be getting L.O.R too.
                                         <img src={icon_phone} alt="" />
                                     </div>
                                     <div className="website_box_layer_outercontainer_innercontainer_contactblock-card_contactinfo_contactNoblock_contactNo">
-                                        1234567890
+                                    +91 97407 34156
                                     </div>
                                 </div>
                             </div>
