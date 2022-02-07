@@ -1,14 +1,15 @@
 import React from 'react';
 
-import './styles/root.css'
-
-
-import CaPortal from './Pages/caportal';
+// import CaPortal from './Pages/Caportal';
+import Home from './components/Home/Home';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
     <div className="App">
-      <CaPortal />
+      <Home/>
+      {/* <CaPortal/> */}
+      <Footer/>
     </div>
   );
 }

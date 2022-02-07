@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
-    "mini-css-extract-plugin": "2.5.2"
+    "mini-css-extract-plugin": "2.5.2",
+    "react-router-dom": "^6.2.1"
   }
 }

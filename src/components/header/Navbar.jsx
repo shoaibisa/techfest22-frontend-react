@@ -1,29 +1,30 @@
 import React from "react";
 
 
+
 //images import
-import headerLogo from '../images/header-logo.png';
+import headerLogo from '../../images/header-logo.png';
 
 
-const navbar = () => {
+const Navbar = () => {
     
 
 
     return (
-        <div>
-            <nav className="navbar navbar-dark navbar-expand-lg  fixed-top" style="background-color: black;">
+        <>
+     
+            <div className="navbar navbar-dark navbar-expand-lg  fixed-top" >
             <div className="container-fluid font-weight-light my-1">
-                <a className="navbar-brand mx-2" href="#">
-                    <img src="./images/header-logo.png" className="logo" alt="" width="200" height="35" />
+                <a className="navbar-brand mx-2" href="/#">
+                    <img src={headerLogo} className="logo" alt="" width="200" height="35" />
                 </a>
-                <button className="navbar-toggler btn-outline" type="button" data-bs-toggle="offcanvas"
+                <button className="navbar-toggler btn-outline-none" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbarLg" aria-controls="offcanvasNavbarLg">
                     <span className="navbar-toggler-icon">
-                        <i className="fa fa-bars" style="color:white; font-size:28px;"></i>
+                        <i className=""></i>
                     </span>
                 </button>
                 <div className="offcanvas offcanvas-end"
-                    style="background-color: black; border-radius: 50px 0 0 50px; height:80%; width:50%;" tabindex="-1"
                     id="offcanvasNavbarLg" aria-labelledby="offcanvasNavbarLgLabel">
                     <div className="offcanvas-header">
                         <h5 className="offcanvas-title p-1 text-light" id="offcanvasNavbarLabel">TechFest'22</h5>
@@ -35,24 +36,24 @@ const navbar = () => {
                             <li className="nav-item home "></li>
                             <li className="nav-item" >
                                 <a className="nav-link mx-3 text-light line active " data-toggle="pill" aria-current="page"
-                                    href="#">Home</a> </li>
+                                    href="/#">Home</a> </li>
                             <li className="nav-item">
                                 <a className="nav-link mx-3 line text-light" data-toggle="pill" aria-current="page"
-                                    href="#">About
+                                    href="/#">About
                                     Us</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link mx-3 text-light line" data-toggle="pill" href="#">Workshops</a>
+                                <a className="nav-link mx-3 text-light line" data-toggle="pill" href="/#">Workshops</a>
                             </li>
                             <li className="nav-item dropdown text-light">
-                                <a className="nav-link dropdown-toggle mx-3 text-light line" href="#"
+                                <a className="nav-link dropdown-toggle mx-3 text-light line" href="/#"
                                     id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     Domains
                                 </a>
 
-                                <ul className="dropdown-menu " aria-labelledby="offcanvasNavbarDropdown"
-                                    style="background-color :rgb(17, 34, 13)">
+                                <ul className="dropdown-menu " aria-labelledby="offcanvasNavbarDropdown">
+                                   
                                     <li><a className="dropdown-item  text-light line" href="Chemfor">Chemfor</a></li>
                                     <li><a className="dropdown-item text-light line" href="Electrica">Electrica</a></li>
                                     <li><a className="dropdown-item text-light line" href="Electrica">Electrica</a></li>
@@ -64,16 +65,16 @@ const navbar = () => {
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link  mx-3 text-light line" aria-current="page" href="#">CA Portal</a>
+                                <a className="nav-link  mx-3 text-light line" aria-current="page" href="/#">CA Portal</a>
                             </li>
                             <button className="btn btn-outline-light mx-3" type="submit">Sign in</button>
                         </ul>
                     </div>
                 </div>
-            </div>
-        </nav>
-        </div>
-    )
+                </div>
+                </div>
+            </>
+    );
 };
 
-export default navbar;
+export default Navbar;
