@@ -10,6 +10,7 @@ import workshop_home_png from '../../images/Png-Workshops-home-Webp.webp'
 import building from '../../images/BUilding.svg'
 import footfall from '../../images/Footfall.svg'
 import dollar_svg from '../../images/Dollar-Svg.svg'
+import domain_png from '../../images/Domains Webp Home.webp'
 import sponser_img3 from '../../images/sponser_images/Group 3.png'
 import sponser_img4 from '../../images/sponser_images/Group 4.png'
 import sponser_img11 from '../../images/sponser_images/Group 11.png'
@@ -96,7 +97,7 @@ const Home = () => {
             <div className="cards-container">
                 <div className="cards-container_card1">
                     <div className="cards-container_card1_image ">
-                        <img className="workShop_Animation " src="./images/Png Workshops home Webp.webp" alt=""/>
+                        <img className="workShop_Animation " src={workshop_home_png} alt=""/>
                     </div>
                     <div className="cards-container_card1_description-container">
                         <div className="cards-container_card1_description-container_title">
@@ -112,7 +113,7 @@ const Home = () => {
                 </div>
                 <div className="cards-container_card2 mt-4">
                     <div className="cards-container_card2_image">
-                        <img className="workShop_Animation" src={workshop_home_png} alt=""/>
+                        <img className="workShop_Animation" src={domain_png} alt=""/>
                     </div>
                     <div className="cards-container_card2_description-container">
                         <div className="cards-container_card1_description-container_title">
