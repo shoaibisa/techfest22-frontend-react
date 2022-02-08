@@ -35,6 +35,7 @@ const Home = () => {
 
     return (
         <>
+        
         <div>
          <div className="home__video py-5">
             <video className="homepage_gif" onclick="myFunction()" style={ {width:"100%",

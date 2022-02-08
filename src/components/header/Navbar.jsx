@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
         <>
      
-            <div className="navbar navbar-dark navbar-expand-lg  fixed-top" >
+            <div className="navbar navbar-dark navbar-expand-lg  fixed-top" style={{backgroundColor: "black"}} >
             <div className="container-fluid font-weight-light my-1">
                 <a className="navbar-brand mx-2" href="/#">
                     <img src={headerLogo} className="logo" alt="" width="200" height="35" />
@@ -24,7 +24,7 @@ const Navbar = () => {
                         <i className=""></i>
                     </span>
                 </button>
-                <div className="offcanvas offcanvas-end"
+                <div className="offcanvas offcanvas-end"  style={{backgroundColor: "black"}}
                     id="offcanvasNavbarLg" aria-labelledby="offcanvasNavbarLgLabel">
                     <div className="offcanvas-header">
                         <h5 className="offcanvas-title p-1 text-light" id="offcanvasNavbarLabel">TechFest'22</h5>
