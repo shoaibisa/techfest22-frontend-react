@@ -33,26 +33,26 @@ li:hover::after {
   background-color: rgb(17, 34, 13) !important;
 }
 
-.img1 {
-  display: block;
-}
-
-.img2 {
-  display: none;
-}
-.workShop_Animation {
-  animation: animate 3s linear infinite;
-}
-
-@keyframes animate {
-  50% {
-    transition: 1s ease;
-    transform: translateY(-20px);
+.dropdown-menu {
+    position: absolute !important;
+    z-index: 1 !important;
   }
 
-  100% {
-    transition: 1s ease;
-    transform: translateY(0px);
+@media screen {
+    .dropdown:hover .dropdown-menu,
+    .btn-group:hover .dropdown-menu {
+      display: block;
+    }
+    .dropdown-menu {
+      margin: auto;
+    }
+    .dropdown-toggle {
+      margin: auto;
+    }
+    .navbar .dropdown-toggle,
+    .nav-tabs .dropdown-toggle {
+      margin: auto;
+    }
   }
-}
+
 

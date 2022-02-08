@@ -21,17 +21,18 @@ const Navbar = () => {
                 <button className="navbar-toggler btn-outline-none" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbarLg" aria-controls="offcanvasNavbarLg">
                     <span className="navbar-toggler-icon">
-                        <i className=""></i>
+                        <i className="fa fa-bars"  style={{color:"white", fontSize:"28px"}}></i>
                     </span>
                 </button>
-                <div className="offcanvas offcanvas-end"  style={{backgroundColor: "black"}}
+                <div className="offcanvas offcanvas-end"  style={{backgroundColor: "black", borderRadius: "50px 0 0 50px", height:"80%", width:"50%"}} tabindex="-1"
                     id="offcanvasNavbarLg" aria-labelledby="offcanvasNavbarLgLabel">
                     <div className="offcanvas-header">
                         <h5 className="offcanvas-title p-1 text-light" id="offcanvasNavbarLabel">TechFest'22</h5>
                         <button type="button" className="btn-close text-reset btn btn-light" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
                     </div>
-                    <div className="offcanvas-body">
+                    <div className="offcanvas-body" 
+                    >
                         <ul className="navbar-nav text-light justify-content-end flex-grow-1 pe-3 sm ">
                             <li className="nav-item home "></li>
                             <li className="nav-item" >
@@ -52,7 +53,8 @@ const Navbar = () => {
                                     Domains
                                 </a>
 
-                                <ul className="dropdown-menu " aria-labelledby="offcanvasNavbarDropdown">
+                                <ul className="dropdown-menu " aria-labelledby="offcanvasNavbarDropdown"
+                                style={{backgroundColor :"rgb(17, 34, 13)", width: "100%", position: "absolute", bottom:"-673%"}}>
                                    
                                     <li><a className="dropdown-item  text-light line" href="Chemfor">Chemfor</a></li>
                                     <li><a className="dropdown-item text-light line" href="Electrica">Electrica</a></li>
