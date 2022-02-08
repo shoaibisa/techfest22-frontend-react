@@ -1,6 +1,6 @@
 import React from "react";
 
-
+import './Navbar.css'
 
 //images import
 import headerLogo from '../../images/header-logo.png';
@@ -13,8 +13,8 @@ const Navbar = () => {
     return (
         <>
      
-            <div className="navbar navbar-dark navbar-expand-lg  fixed-top" style={{backgroundColor: "black"}} >
-            <div className="container-fluid font-weight-light my-1">
+            <div className="navbar navbar-dark navbar-expand-lg  fixed-top"  >
+            <div className="container-fluid font-weight-light my-1" style={{backgroundColor: "black"}}>
                 <a className="navbar-brand mx-2" href="/#">
                     <img src={headerLogo} className="logo" alt="" width="200" height="35" />
                 </a>
