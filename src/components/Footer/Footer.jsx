@@ -18,6 +18,8 @@ const Footer = () => {
     <a href="https://www.youtube.com/channel/UCTSrKfF90hZq7reWgd2oyZg" target="_blank" rel="noopener
             noreferrer"><i className="fa fa-youtube-play fa-2x"></i></a>
 </div>
+        <div className="rotate-translate"> </div>
+        <div className="translate-rotate"></div>
 </div>
 </>
     );
