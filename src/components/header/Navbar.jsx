@@ -13,8 +13,8 @@ const Navbar = () => {
     return (
         <>
      
-            <div className="navbar navbar-dark navbar-expand-lg  fixed-top"  >
-            <div className="container-fluid font-weight-light my-1" style={{backgroundColor: "black"}}>
+            <div className="navbar navbar-dark navbar-expand-lg  fixed-top"  style={{backgroundColor: "black"}}>
+            <div className="container-fluid font-weight-light my-1" >
                 <a className="navbar-brand mx-2" href="/#">
                     <img src={headerLogo} className="logo" alt="" width="200" height="35" />
                 </a>
