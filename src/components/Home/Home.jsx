@@ -1,7 +1,34 @@
 import React from "react";
 import './Home.css'
+
+
+//images import
 import homepage_gif from '../../images/hompage-gif-logo.webp';
-import homepage_gif_mobile from '../../images/hompage-gif-mobile.webm';
+import homepage_gif_mobile_vid from '../../images/hompage-gif-mobile.webm';
+import homapage_gif_vid from '../../images/homepage--gif.webm'
+import workshop_home_png from '../../images/Png-Workshops-home-Webp.webp'
+import building from '../../images/BUilding.svg'
+import footfall from '../../images/Footfall.svg'
+import dollar_svg from '../../images/Dollar-Svg.svg'
+import sponser_img3 from '../../images/sponser_images/Group 3.png'
+import sponser_img4 from '../../images/sponser_images/Group 4.png'
+import sponser_img11 from '../../images/sponser_images/Group 11.png'
+import sponser_img12 from '../../images/sponser_images/Group 12.png'
+import sponser_img13 from '../../images/sponser_images/Group 13.png'
+import sponser_img17 from '../../images/sponser_images/Group 17.png'
+import sponser_img18 from '../../images/sponser_images/Group 18.png'
+import sponser_img19 from '../../images/sponser_images/Group 19.png'
+import sponser_img23 from '../../images/sponser_images/Group 23.png'
+import sponser_img24 from '../../images/sponser_images/Group 24.png'
+import sponser_img25 from '../../images/sponser_images/Group 25.png'
+import sponser_img26 from '../../images/sponser_images/Group 26.png'
+import sponser_img27 from '../../images/sponser_images/Group 27.png'
+import sponser_img28 from '../../images/sponser_images/Group 28.png'
+import sponser_img29 from '../../images/sponser_images/Group 29.png'
+
+
+
+
 const Home = () => {
   
 
@@ -11,11 +38,11 @@ const Home = () => {
          <div className="home__video py-5">
             <video className="homepage_gif" onclick="myFunction()" style={ {width:"100%",
     overflow:"hidden"}} loop="loop" autoplay muted="true" preload="auto">
-                <source src={homepage_gif} type="video/webm"/>
+                <source src={homapage_gif_vid} type="video/webm"/>
                 Your browser does not support the video tag.
             </video>
             <video className="homepage_gif_mobile" onclick="myFunction()" width="100%" height="100%" loop="loop" autoplay muted="true" preload="auto">
-                <source src={homepage_gif_mobile} type="video/webm"/>
+                <source src={homepage_gif_mobile_vid} type="video/webm"/>
                 Your browser does not support the video tag.
             </video>
             <div className="scroll d-flex" onclick="myFunction()">
@@ -31,7 +58,7 @@ const Home = () => {
             <div className="container-fluid top-0 logo_section text-light py-5">
                 <div className="logo_section_content">
                     <div className="text-center rounded py-5 logo_section__image">
-                        <img src="./images/hompage-gif-logo.webp" className="rounded Logo_image" alt=""/>
+                        <img src={homepage_gif} className="rounded Logo_image" alt=""/>
                     </div>
 
                     <div className="text-center py-2  logo_section__about">
@@ -85,7 +112,7 @@ const Home = () => {
                 </div>
                 <div className="cards-container_card2 mt-4">
                     <div className="cards-container_card2_image">
-                        <img className="workShop_Animation" src="./images/Domains Webp Home.webp" alt=""/>
+                        <img className="workShop_Animation" src={workshop_home_png} alt=""/>
                     </div>
                     <div className="cards-container_card2_description-container">
                         <div className="cards-container_card1_description-container_title">
@@ -108,7 +135,7 @@ const Home = () => {
                         <div className="col p-5">
                             <div className="college p-3 ">
                                 <div className="icon1">
-                                    <img src="images/BUilding.svg" alt="" srcset=""/>
+                                    <img src={building} alt="" />
                                 </div>
                                 <div className="number">
                                     <b>30+</b>
@@ -123,7 +150,7 @@ const Home = () => {
                         <div className="col p-5">
                             <div className="people p-3">
                                 <div className="icon2">
-                                    <img src="images/Footfall.svg" alt="" srcset=""/>
+                                    <img src={footfall} alt="" />
                                 </div>
                                 <div className="number">
                                     <b>10K+</b>
@@ -138,7 +165,7 @@ const Home = () => {
                         <div className="col p-5">
                             <div className="money p-3">
                                 <div className="icon3">
-                                    <img src="images/Dollar Svg.svg" alt="" srcset=""/>
+                                    <img src={dollar_svg} alt="" />
                                 </div>
                                 <div className="number">
                                     <b>5L+</b>
@@ -162,77 +189,77 @@ const Home = () => {
                     <div className="owl-carousel owl-theme " id="owl-carousel ">
                         <div className="Gallery_item ">
                             <a href="# ">
-                                <img src="./images/sponser_images/Group 3.png " alt=" " srcset=" "/>
+                                <img src={sponser_img3} alt=" " />
                             </a>
                         </div>
                         <div className="Gallery_item ">
                             <a href="# ">
-                                <img src="./images/sponser_images/Group 4.png " alt=" " srcset=" "/>
+                                <img src={sponser_img4} alt=" " srcset=" "/>
                             </a>
                         </div>
                         <div className="Gallery_item ">
                             <a href="# ">
-                                <img src="./images/sponser_images/Group 11.png " alt=" " srcset=" "/>
+                                <img src={sponser_img11} alt=" " srcset=" "/>
                             </a>
                         </div>
                         <div className="Gallery_item ">
                             <a href="# ">
-                                <img src="./images/sponser_images/Group 12.png " alt=" " srcset=" "/>
+                                <img src={sponser_img12} alt=" " srcset=" "/>
                             </a>
                         </div>
                         <div className="Gallery_item ">
                             <a href="# ">
-                                <img src="./images/sponser_images/Group 13.png " alt=" " srcset=" "/>
+                                <img src={sponser_img13} alt=" " srcset=" "/>
                             </a>
                         </div>
                         <div className="Gallery_item ">
                             <a href="# ">
-                                <img src="./images/sponser_images/Group 17.png " alt=" " srcset=" "/>
+                                <img src={sponser_img17} alt=" " srcset=" "/>
                             </a>
                         </div>
                         <div className="Gallery_item ">
                             <a href="# ">
-                                <img src="./images/sponser_images/Group 18.png " alt=" " srcset=" "/>
+                                <img src={sponser_img18} alt=" " srcset=" "/>
                             </a>
                         </div>
                         <div className="Gallery_item ">
                             <a href="# ">
-                                <img src="./images/sponser_images/Group 19.png " alt=" " srcset=" "/>
+                                <img src={sponser_img19} alt=" " srcset=" "/>
                             </a>
                         </div>
                         <div className="Gallery_item ">
                             <a href="# ">
-                                <img src="./images/sponser_images/Group 23.png " alt=" " srcset=" "/>
+                                <img src={sponser_img23} alt=" " srcset=" "/>
                             </a>
                         </div>
                         <div className="Gallery_item ">
                             <a href="# ">
-                                <img src="./images/sponser_images/Group 24.png " alt=" " srcset=" "/>
+                                <img src={sponser_img24} alt=" " srcset=" "/>
                             </a>
                         </div>
                         <div className="Gallery_item ">
                             <a href="# ">
-                                <img src="./images/sponser_images/Group 25.png " alt=" " srcset=" "/>
+                                <img src={sponser_img25} alt=" " srcset=" "/>
                             </a>
                         </div>
                         <div className="Gallery_item ">
                             <a href="# ">
-                                <img src="./images/sponser_images/Group 26.png " alt=" " srcset=" "/>
+                                <img src={sponser_img26} alt=" " srcset=" "/>
                             </a>
                         </div>
                         <div className="Gallery_item ">
                             <a href="# ">
-                                <img src="./images/sponser_images/Group 27.png " alt=" " srcset=" "/>
+                                <img src={sponser_img27} alt=" " srcset=" "/>
                             </a>
                         </div>
                         <div className="Gallery_item ">
                             <a href="# ">
-                                <img src="./images/sponser_images/Group 28.png " alt=" " srcset=" "/>
+                                <img src={sponser_img28} alt=" " srcset=" "/>
                             </a>
                         </div>
                         <div className="Gallery_item ">
                             <a href="# ">
-                                <img src="./images/sponser_images/Group 29.png " alt=" " srcset=" "/>
+                                <img src={sponser_img29} alt=" " srcset=" "/>
                             </a>
                         </div>
 
