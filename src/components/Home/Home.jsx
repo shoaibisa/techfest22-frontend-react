@@ -1,6 +1,6 @@
 import React from "react";
 import './Home.css'
-
+import Sponsor from "../sponsors/Sponsor";
 
 
 //images import
@@ -12,21 +12,7 @@ import building from '../../images/BUilding.svg'
 import footfall from '../../images/Footfall.svg'
 import dollar_svg from '../../images/Dollar-Svg.svg'
 import domain_png from '../../images/Domains Webp Home.webp'
-import sponser_img3 from '../../images/sponser_images/Group 3.png'
-import sponser_img4 from '../../images/sponser_images/Group 4.png'
-import sponser_img11 from '../../images/sponser_images/Group 11.png'
-import sponser_img12 from '../../images/sponser_images/Group 12.png'
-import sponser_img13 from '../../images/sponser_images/Group 13.png'
-import sponser_img17 from '../../images/sponser_images/Group 17.png'
-import sponser_img18 from '../../images/sponser_images/Group 18.png'
-import sponser_img19 from '../../images/sponser_images/Group 19.png'
-import sponser_img23 from '../../images/sponser_images/Group 23.png'
-import sponser_img24 from '../../images/sponser_images/Group 24.png'
-import sponser_img25 from '../../images/sponser_images/Group 25.png'
-import sponser_img26 from '../../images/sponser_images/Group 26.png'
-import sponser_img27 from '../../images/sponser_images/Group 27.png'
-import sponser_img28 from '../../images/sponser_images/Group 28.png'
-import sponser_img29 from '../../images/sponser_images/Group 29.png'
+
 
 
 
@@ -95,6 +81,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
+        <Sponsor/>
         {/* <!-- Scroll Down Button Start--> */}
         <div className="bottomSection">
 
@@ -132,7 +119,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
+       
 
             <div className="container__college__people__money1 mt-5 mb-5 cards-container ">
                 <div className="college__people__money">
@@ -150,7 +137,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-
+                       
 
                         <div className="col p-5">
                             <div className="people p-3">
@@ -180,7 +167,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-
+                    
 
                     </div>
                 </div>
