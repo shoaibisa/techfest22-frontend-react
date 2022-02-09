@@ -53,3 +53,4 @@ const Sigin = () => {
         </div>
     )
 }
+export default Sigin;

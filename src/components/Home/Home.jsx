@@ -12,6 +12,7 @@ import building from '../../images/BUilding.svg'
 import footfall from '../../images/Footfall.svg'
 import dollar_svg from '../../images/Dollar-Svg.svg'
 import domain_png from '../../images/Domains Webp Home.webp'
+import Crowsel from "../Crousel";
 
 
 
@@ -26,7 +27,7 @@ const Home = () => {
         
         <div>
          <div className="home__video py-5">
-            <img className="homepage_gif" onclick="myFunction()" style={ {width:"100%",
+            <img className="homepage_gif" onclick="myFunction()" style={{width:"100%",
     overflow:"hidden"}} src={homapage_gif_vid}/>
            
 {/* 
@@ -81,7 +82,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
-        <Sponsor/>
+     
         {/* <!-- Scroll Down Button Start--> */}
         <div className="bottomSection">
 
@@ -119,8 +120,8 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-       
-
+            <Crowsel/>
+            {/* <Sponsor/> */}
             <div className="container__college__people__money1 mt-5 mb-5 cards-container ">
                 <div className="college__people__money">
                     <div className="row text-light text-center">
