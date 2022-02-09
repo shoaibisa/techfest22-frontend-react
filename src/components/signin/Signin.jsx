@@ -36,7 +36,7 @@ const Sigin = () => {
 
                     <div class="login__button d-flex justify-content-around">
                         <input type="submit" class="btn__color mb-3"></input>
-                        <a class=" text-light text-decoration-none " href="#">Forgot Password?</a>
+                        <a class=" text-light text-decoration-none " href="/#">Forgot Password?</a>
 
                     </div>
                 </form>
