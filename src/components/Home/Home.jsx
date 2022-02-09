@@ -12,8 +12,8 @@ import building from '../../images/BUilding.svg'
 import footfall from '../../images/Footfall.svg'
 import dollar_svg from '../../images/Dollar-Svg.svg'
 import domain_png from '../../images/Domains Webp Home.webp'
-import Crowsel from "../Crousel";
 
+import Crowsel from "../Crousel";
 
 
 

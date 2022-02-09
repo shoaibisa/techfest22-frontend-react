@@ -1,7 +1,6 @@
-
+import React from 'react';
 import footfall from '../images/Footfall.svg'
-import dollar_svg from '../images/Dollar-Svg.svg'
-import React,{Component} from 'react';  
+import dollar_svg from '../images/Dollar-Svg.svg' 
 import OwlCarousel from 'react-owl-carousel';  
 import 'owl.carousel/dist/assets/owl.carousel.css';  
 import 'owl.carousel/dist/assets/owl.theme.default.css';  
