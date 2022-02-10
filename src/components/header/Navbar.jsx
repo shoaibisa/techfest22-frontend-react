@@ -36,18 +36,19 @@ const Navbar = () => {
                         <ul className="navbar-nav text-light justify-content-end flex-grow-1 pe-3 sm ">
                             <li className="nav-item home "></li>
                             <li className="nav-item" >
-                                <NavLink className="nav-link mx-3 text-light line active " data-toggle="pill" aria-current="page"
-                                    to="/">Home</NavLink> </li>
+                                <NavLink className="nav-link mx-3 text-light line " activeClassName="active " data-toggle="pill" aria-current="page"
+                                   exact to="/">Home</NavLink> </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link mx-3 line text-light" data-toggle="pill" aria-current="page"
-                                    to="/about">About
+                                  exact  to="/about">About
                                     Us</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link mx-3 text-light line" data-toggle="pill" to="/workshop">Workshops</NavLink>
+                                <NavLink className="nav-link mx-3 text-light line" data-toggle="pill" exact to="/workshop">Workshops</NavLink>
                             </li>
                             <li className="nav-item dropdown text-light">
-                                <NavLink className="nav-link dropdown-toggle mx-3 text-light line" to="/#"
+                                <NavLink className="nav-link dropdown-toggle mx-3 text-light line" exact to="/#"
+                                
                                     id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     Domains
@@ -56,18 +57,17 @@ const Navbar = () => {
                                 <ul className="dropdown-menu " aria-labelledby="offcanvasNavbarDropdown"
                                 style={{backgroundColor :"rgb(17, 34, 13)", width: "100%", position: "absolute", bottom:"-673%"}}>
                                    
-                                    <li><NavLink className="dropdown-item  text-light line" to="Chemfor">Chemfor</NavLink></li>
-                                    <li><NavLink className="dropdown-item text-light line" to="Electrica">Electrica</NavLink></li>
-                                    <li><NavLink className="dropdown-item text-light line" to="Electrica">Electrica</NavLink></li>
-                                    <li><NavLink className="dropdown-item text-light line" to="Kermis">Kermis</NavLink></li>
-                                    <li><NavLink className="dropdown-item text-light line" to="Karyarachna">Karyarachna</NavLink></li>
-                                    <li><NavLink className="dropdown-item text-light line" to="Mechanica">Mechanica</NavLink></li>
-                                    <li><NavLink className="dropdown-item text-light line" to="Plexus">Plexus</NavLink></li>
-                                    <li><NavLink className="dropdown-item text-light line" to="Robozar">Robozar</NavLink></li>
+                                    <li><NavLink className="dropdown-item  text-light line" activeClassName="active " exact to="Chemfor">Chemfor</NavLink></li>
+                                    <li><NavLink className="dropdown-item text-light line" activeClassName="active " exact to="Electrica">Electrica</NavLink></li>
+                                    <li><NavLink className="dropdown-item text-light line" activeClassName="active " exact to="Kermis">Kermis</NavLink></li>
+                                    <li><NavLink className="dropdown-item text-light line" activeClassName="active " exact to="Karyarachna">Karyarachna</NavLink></li>
+                                    <li><NavLink className="dropdown-item text-light line" activeClassName="active " exact to="Mechanica">Mechanica</NavLink></li>
+                                    <li><NavLink className="dropdown-item text-light line" activeClassName="active " exact to="Plexus">Plexus</NavLink></li>
+                                    <li><NavLink className="dropdown-item text-light line" activeClassName="active " exact to="Robozar">Robozar</NavLink></li>
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link  mx-3 text-light line" aria-current="page" to="/ca">CA Portal</NavLink>
+                                <NavLink className="nav-link  mx-3 text-light line" aria-current="page" activeClassName="active " exact to="/ca">CA Portal</NavLink>
                             </li>
                             <button className="btn btn-outline-light mx-3" type="submit">Sign in</button>
                         </ul>
