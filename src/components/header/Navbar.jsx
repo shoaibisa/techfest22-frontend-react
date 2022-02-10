@@ -37,14 +37,14 @@ const Navbar = () => {
                             <li className="nav-item home "></li>
                             <li className="nav-item" >
                                 <NavLink className="nav-link mx-3 text-light line active " data-toggle="pill" aria-current="page"
-                                    to="/#">Home</NavLink> </li>
+                                    to="/">Home</NavLink> </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link mx-3 line text-light" data-toggle="pill" aria-current="page"
-                                    to="/#">About
+                                    to="/about">About
                                     Us</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link mx-3 text-light line" data-toggle="pill" to="/#">Workshops</NavLink>
+                                <NavLink className="nav-link mx-3 text-light line" data-toggle="pill" to="/workshop">Workshops</NavLink>
                             </li>
                             <li className="nav-item dropdown text-light">
                                 <NavLink className="nav-link dropdown-toggle mx-3 text-light line" to="/#"
@@ -67,7 +67,7 @@ const Navbar = () => {
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link  mx-3 text-light line" aria-current="page" to="/#">CA Portal</NavLink>
+                                <NavLink className="nav-link  mx-3 text-light line" aria-current="page" to="/ca">CA Portal</NavLink>
                             </li>
                             <button className="btn btn-outline-light mx-3" type="submit">Sign in</button>
                         </ul>

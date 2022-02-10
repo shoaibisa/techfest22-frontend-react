@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: heading font;
-  src: url("../font/BEST\ IN\ CLASS.ttf");
+  src: url("../../font/BEST\ IN\ CLASS.ttf");
 }
 
 body {
@@ -17,16 +17,15 @@ body {
 
 .backImg__1 {
   width: 100%;
-  background-image: url(../images/hero_bg.png),
+  background-image: url(../../images/hero_bg.png),
     linear-gradient(rgba(0, 0, 0, -7.473), rgba(0, 0, 0, 0.6)),
-    url(../images/BG.png);
+    url(../../images/BG.png);
   background-position: top, bottom;
   background-repeat: no-repeat, no-repeat;
   background-size: 100%, 100%;
 }
 
 /*NavBar Styling Start*/
-
 
 /* navbar styling End*/
 
@@ -400,8 +399,6 @@ input:active {
 /* <!---------------------------------------------- perks of ca ends here-------------------------------------> */
 
 /* <!---------------------- Footer start  here -----------------------> */
-
-
 
 /* <!---------------------- Footer End  here -----------------------> */
 

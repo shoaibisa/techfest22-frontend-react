@@ -3,21 +3,21 @@ import React from "react";
 import './Caportal.css'
 
 //image import
-// import headerLogo from '../images/header-logo.png';
-import heroImg from '../images/hero_image.png';
-import icon_college from '../images/icon_college.svg';
-import icon_mail from '../images/icon_mail.svg';
-import icon_money from '../images/icon_money.svg';
-import icon_people from '../images/icon_people.svg'
-import icon_phone from '../images/icon_phone.svg';
-import ima_lor from '../images/ima_lor.png';
-//import image from '../images/image.png';
-import img_concession from '../images/img_concession.png';
-import img_goodies from '../images/img_goodies.png';
-import img_leader from '../images/img_leader.png';
-import Navbar from "../components/header/Navbar";
-// import Rectangle_365 from '../images/Rectangle_365.png';
-// import Rectangle from '../images/Rectangle.png';
+// import headerLogo from '../../images/header-logo.png';
+import heroImg from '../../images/hero_image.png';
+import icon_college from '../../images/icon_college.svg';
+import icon_mail from '../../images/icon_mail.svg';
+import icon_money from '../../images/icon_money.svg';
+import icon_people from '../../images/icon_people.svg'
+import icon_phone from '../../images/icon_phone.svg';
+import ima_lor from '../../images/ima_lor.png';
+//import image from '../../images/image.png';
+import img_concession from '../../images/img_concession.png';
+import img_goodies from '../../images/img_goodies.png';
+import img_leader from '../../images/img_leader.png';
+import Navbar from "../../components/header/Navbar";
+// import Rectangle_365 from '../../images/Rectangle_365.png';
+// import Rectangle from '../../images/Rectangle.png';
 
 
 const CaPortal = () => {
