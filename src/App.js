@@ -4,7 +4,8 @@ import CaPortal from './Pages/caportal/Caportal';
 import Navbar from './components/header/Navbar';
 import Home from './components/home/Home';
 import Footer from './components/Footer/Footer';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 
 
 
