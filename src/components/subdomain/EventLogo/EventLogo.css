@@ -1,0 +1,156 @@
+}
+.Robozar p{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1.5rem;
+}
+.Robozar__content{
+    color: white; z-index: 0; position: absolute;bottom: -10rem; text-align: center;
+}
+.circle {
+    margin: auto;
+    margin-top: 5rem;
+    position: relative;
+    width: 60vh;
+    height: 60vh;
+    z-index: 1;
+    background: linear-gradient(#33ccff, #201b1d);
+    border-radius: 50%;
+    
+
+
+}
+.circle img {
+    animation: animate 2s linear infinite;
+    z-index: 1; position: absolute;top: -1rem;width: 100%;height: 100%;left: 0rem;
+}
+
+@keyframes animate {
+
+    
+    50% {
+        
+        transition: 1s ease; 
+        transform: translateY(-20px);
+    }
+
+    100% {
+       
+        transition: 1s ease; 
+        transform: translateY(0px);
+    }
+}
+
+.circle:after {
+
+    content: '';
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    bottom: 35px;
+    left: 35px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.circle span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#04fd25, #000000, rgb(0, 0, 0));
+    border-radius: 50%;
+}
+
+.circle span:nth-child(1) {
+    filter: blur(25px);
+    
+}
+
+.circle span:nth-child(2) {
+    filter: blur(15px);
+}
+
+.circle span:nth-child(3) {
+    filter: blur(20px);
+}
+
+.circle span:nth-child(4) {
+    filter: blur(55px);
+}
+
+@media screen and(max-width:376px) {
+    .circle {
+        width: 50vh !important;
+        height: 50vh !important;
+    }
+
+    .circle span {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+
+.Robozar{
+   background-image: url("../../images/Domain/Group.png"),url("../../images/Domain/Group\ \(1\).png");
+   background-repeat: no-repeat;
+   background-position: right,left;
+   background-blend-mode:color;
+   background-color: rgba(0, 0, 0, 0.9);
+   animation: backAnimate 20s  forwards ;
+   margin-top: 7.5rem !important;
+   
+   
+   
+}
+@media (max-width:426px) {
+   .Robozar{
+       background: none ;
+     animation: none;
+   }
+   body{
+    background-color:rgb(2, 10, 2)
+   }
+}
+@keyframes backAnimate{
+        0%{
+            background-color: rgba(0, 0, 0, 1);
+            
+        }
+        10%{
+            background-color: rgba(0, 0, 0, 0.9);
+            
+        }
+        20%{
+            background-color: rgba(0, 0, 0, 0.7);
+            
+        }
+        30%{
+            background-color: rgba(0, 0, 0, 0.6);
+           
+        }
+        40%{
+            background-color: rgba(0, 0, 0, 0.5);
+            
+        }
+        
+        50%{
+            background-color: rgba(0, 0, 0, 0.4);
+          
+        }
+        
+        70%{
+            background-color: rgba(0, 0, 0, 0.3);
+            
+        }
+        
+        90%{
+            background-color: rgba(0, 0, 0, 0.4);
+            
+            
+        }
+        100%{
+            background-color: rgba(0, 0, 0, 0.5);
+            
+           
+        }
+       }
