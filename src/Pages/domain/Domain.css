@@ -102,7 +102,7 @@ body {
 
 
 .Robozar{
-   background-image: url("image/Group.png"),url("image/Group\ \(1\).png");
+   background-image: url("../../images/Domain/Group.png"),url("../../images/Domain/Group\ \(1\).png");
    background-repeat: no-repeat;
    background-position: right,left;
    background-blend-mode:color;
