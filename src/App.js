@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/ca" element={<CaPortal />} />
-        <Route exact path="/domain" element={<Domain />} />
+        {/* <Route exact path="/domain" element={<Domain />} /> */}
         {/* <Route exact path="/signup" element={<SignIn/>} /> */}
       </Routes>
 
