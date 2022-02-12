@@ -5,6 +5,7 @@ import Navbar from "./components/header/Navbar";
 import Home from "./components/home/Home";
 import Footer from "./components/Footer/Footer";
 import Domain from "./Pages/domain/Domain";
+import SignIn from "./components/signin/Signin";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.min.js";
 import "owl.carousel/dist/assets/owl.carousel.css";
@@ -18,8 +19,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/ca" element={<CaPortal />} />
-        <Route exact path="/Chemfor" element={<Domain />} />
-        {/* <Route exact path="/signup" element={<SignIn/>} /> */}
+        {/* <Route exact path="/Chemfor" element={<Domain />} /> */}
+        <Route exact path="/signin" element={<SignIn/>} />
       </Routes>
 
       {/* <Home/>

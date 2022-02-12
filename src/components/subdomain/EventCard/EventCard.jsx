@@ -1,5 +1,8 @@
 import React from "react";
 import './EventCard.css';
+import background_overlay_right from '../../images/Domain/background-overlay-right.png';
+import bgoverlay_left from '../../images/Domain/bgoverlay-left.png';
+import thisisengineering_raeng from '../../images/Domain/thisisengineering-raeng-4w0XkDe2Ee8-unsplash 2.png';
 
 
 const EventCard = () =>{
