@@ -10,7 +10,7 @@ import thisisengineering_raeng from '../../images/Domain/thisisengineering-raeng
 
 const Domain = () => {
     return(
-        <>
+        <div className="bod">
          <div className="Robozar">
 
 <div className="circle">
@@ -105,7 +105,7 @@ const Domain = () => {
     </div>
 </div>
 </div>
-        </>
+        </div>
     );
 }
 export default Domain;
