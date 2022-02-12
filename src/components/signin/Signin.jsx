@@ -1,5 +1,5 @@
 import React from 'react';
-
+import 
 import signup_gif from '../../images/Signup gif.webm'
 
 const Sigin = () => {

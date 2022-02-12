@@ -5,8 +5,8 @@ import background_overlay_right from '../../images/Domain/background-overlay-rig
 import bgoverlay_left from '../../images/Domain/bgoverlay-left.png';
 import group_1 from '../../images/Domain/Group (1).png';
 import group from '../../images/Domain/Group.png';
-import pngwing from '../../images/Domain/pngwing.png';
-import thisisengineering_raeng from '../../images/Domain/thisisengineering.png';
+import pngwing from '../../images/Domain/pngwing 3.png';
+import thisisengineering_raeng from '../../images/Domain/thisisengineering-raeng-4w0XkDe2Ee8-unsplash 2.png';
 
 const Domain = () => {
     return(
