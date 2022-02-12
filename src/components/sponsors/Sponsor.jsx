@@ -1,6 +1,9 @@
 import React from "react"
 import './Sponsor.css'
 import $ from "jquery"
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
+
 
 import sponser_img3 from '../../images/sponser_images/Group 3.png'
 import sponser_img4 from '../../images/sponser_images/Group 4.png'
@@ -30,7 +33,7 @@ const Sponsor = () => {
     <h1>Sponsors</h1>
 </div>
 <div className="Sponsors__container ">
-    <div className="owl-carousel owl-theme " id="owl-carousel ">
+    <div className="owl-carousel owl-theme " >
         <div className="Gallery_item ">
             <a href="# ">
                 <img src={sponser_img3} alt=" " />
