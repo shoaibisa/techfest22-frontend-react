@@ -1,7 +1,12 @@
 import React from "react";
 import './Domain.css';
 import { NavLink } from "react-router-dom";
-
+import background_overlay_right from '../../images/Domain/background-overlay-right.png';
+import bgoverlay_left from '../../images/Domain/bgoverlay-left.png';
+import group_1 from '../../images/Domain/Group (1).png';
+import group from '../../images/Domain/Group.png';
+import pngwing from '../../images/Domain/pngwing.png';
+import thisisengineering_raeng from '../../images/Domain/thisisengineering.png';
 
 const Domain = () => {
     return(
@@ -11,7 +16,7 @@ const Domain = () => {
 <div className="circle">
     <span>
     </span>
-    <img src="./image/pngwing 3.png" alt=""
+    <img src={pngwing} alt=""
         />
     <div className="Robozar__content"
         >

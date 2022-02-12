@@ -168,7 +168,7 @@ body {
         
 
 .Robozar__bottom{
-    background-image: url("./image/bgoverlay-left.png"),url("./image/background-overlay-right.png");
+    background-image: url("../../images/Domain/bgoverlay-left.png"),url("../../images/Domain/background-overlay-right.png");
     background-position: left,right;
     background-repeat: no-repeat;
     background-size: 60% ,60%;
@@ -195,7 +195,7 @@ body {
 .robozar_left_container{
     width: 60%;
     height: 400px;
-    background-image: url("./image/thisisengineering-raeng-4w0XkDe2Ee8-unsplash\ 2.png");
+    background-image: url("../../images/Domain/thisisengineering-raeng-4w0XkDe2Ee8-unsplash\ 2.png");
     background-size: cover;
     border-radius: 15px;
 }
