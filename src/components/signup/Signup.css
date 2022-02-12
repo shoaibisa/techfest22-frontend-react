@@ -1,0 +1,119 @@
+body {
+  overflow-y: hidden;
+}
+
+@font-face {
+  font-family: "heading font";
+  src: url("../font/BEST\ IN\ CLASS.ttf") format("truetype");
+}
+.signUpBody {
+  background-image: url("./images/Stagnant\ BG\ Webp.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 120vh;
+  justify-content: center;
+}
+.SignUp__Gif video {
+  width: 30rem;
+  height: 30rem;
+  mix-blend-mode: lighten;
+}
+
+.SignUp__Gif {
+  flex: 0.5;
+}
+.SignUp__linking {
+  justify-content: space-between;
+}
+
+.SignUp__inputs {
+  flex: 0.5;
+  width: 100%;
+}
+.container__signUp {
+  margin-right: 30rem;
+  margin-left: 30rem;
+}
+.SignUp {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 426px) {
+  .SignUp__Gif {
+    display: none;
+  }
+  .SignUp__inputs {
+    flex: 1 !important;
+  }
+  .SignUp__inputs form p {
+    margin-left: -10rem;
+  }
+}
+
+.SignUp__inputs form {
+  border-radius: 3px;
+}
+.SignUp__inputs form h1 {
+  font-family: "heading font";
+  letter-spacing: 2px;
+  font-weight: 200;
+}
+
+.SignUp__inputs form label {
+  margin: 10px 0;
+  position: relative;
+  width: 50%;
+}
+@media screen and (max-width: 769px) {
+  .SignUp__inputs form label {
+    width: unset;
+  }
+}
+
+.SignUp__inputs span {
+  padding: 10px;
+  pointer-events: none;
+  position: absolute;
+  left: 10px;
+  top: 0;
+  transition: 0.2s;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  opacity: 0.3;
+  color: white;
+}
+.SignUp__inputs form label input {
+  padding: 7px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  color: #fff;
+  border: 0.5px solid rgb(155, 144, 144);
+  border-radius: 5px;
+}
+
+.SignUp__inputs form label input:focus + span,
+input:not(:placeholder-shown) + span {
+  opacity: 1;
+  transform: scale(0.75) translateY(-100%) translateX(-30px);
+}
+
+input:focus + span,
+input:not(:-ms-input-placeholder) + span {
+  opacity: 1;
+  transform: scale(0.75) translateY(-100%) translateX(-30px);
+}
+
+.btn__color {
+  background: linear-gradient(to right, green, rgb(17, 39, 7));
+  padding: 5px;
+  width: 100px;
+  border-radius: 3px;
+  color: white;
+}
+.SignUp__inputs form p {
+  font-size: 13px;
+  margin-left: -8rem;
+}

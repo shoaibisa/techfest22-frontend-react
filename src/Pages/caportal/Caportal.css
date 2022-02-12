@@ -1,0 +1,739 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: heading font;
+  src: url("../../font/BEST\ IN\ CLASS.ttf");
+}
+
+body {
+  background-color: black;
+  color: antiquewhite;
+  overflow-x: hidden;
+}
+
+.backImg__1 {
+  width: 100%;
+  background-image: url(../../images/hero_bg.png),
+    linear-gradient(rgba(0, 0, 0, -7.473), rgba(0, 0, 0, 0.6)),
+    url(../../images/BG.png);
+  background-position: top, bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100%, 100%;
+}
+
+/*NavBar Styling Start*/
+
+/* navbar styling End*/
+
+/* Main Styling Start */
+
+.homePage {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  padding-top: 60px;
+}
+
+.homePage_item {
+  /* padding: 90px 0 10px 50px; */
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.homePage_img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.homePage_item_content {
+  position: relative;
+}
+
+.mainContent {
+  width: 100%;
+}
+
+.homePage_item_heading {
+  font-size: 4rem;
+  color: white;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+  font-family: "heading font";
+}
+
+.homePage_item_heading_shadow {
+  height: 38px;
+  width: 130px;
+  background: linear-gradient(
+    to right,
+    rgba(247, 247, 247, 1) 0%,
+    rgba(125, 185, 232, 0) 100%
+  );
+  opacity: 0.5;
+  position: absolute;
+  left: 63%;
+  top: 66%;
+  transform: skewX(-20deg);
+}
+
+.homePage_Btn {
+  display: flex;
+  color: #ffff;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.homePage__Btn__btn1 {
+  background: linear-gradient(
+    to right,
+    rgb(0, 36, 0) 0%,
+    rgb(0, 87, 0) 0%,
+    rgb(0, 138, 0) 72%,
+    rgb(82, 177, 82) 100%
+  );
+  margin: 10px 10px 2px 0px;
+  padding: 10px 31px;
+}
+
+.homePage_Btn__btn2 {
+  margin: 10px 0px 0px 10px;
+  padding: 10px 31px;
+  color: #ffff;
+  background-color: transparent;
+  border: 2px solid rgb(0, 138, 0);
+}
+
+input:active {
+  transform: scale(1.1);
+}
+
+/* Main Styling End*/
+
+/* Nav Responsive Styling Start */
+
+@media screen and (max-width: 767px) {
+  nav ul li {
+    display: none !important;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 2px solid green;
+    padding: 15px 15px;
+  }
+  .homePage {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 633px) {
+  .nav {
+    width: 110%;
+    transition: 0.5s ease;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .nav {
+    width: 120%;
+    transition: 0.5s ease;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .nav {
+    width: 140%;
+    transition: 0.5s ease;
+  }
+}
+
+/*Nav Responsive Styling End */
+
+/* Main Responsive Styling Start */
+
+@media screen and (max-width: 1024px) {
+  .homePage_item_heading_shadow {
+    left: 63%;
+  }
+  .perks_CaPortal__heading__Boader {
+    width: 56% !important;
+  }
+}
+
+@media screen and (max-width: 912px) {
+  .homePage_item_heading_shadow {
+    left: 71%;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .homePage_item_heading {
+    font-size: 3rem;
+  }
+  .homePage_item_heading_shadow {
+    height: 26px;
+    left: 56%;
+  }
+  .homePage_img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .homePage_item_heading {
+    font-size: 2.4rem;
+  }
+  .homePage_item_heading_shadow {
+    left: 54%;
+    top: 63%;
+  }
+  .homePage_img {
+    width: 100%;
+  }
+  .about_CaPortal__heading_content h2 {
+    font-size: 1.7rem;
+  }
+  .about_Ca_portal_about_section__para p {
+    font-size: 1.5rem;
+  }
+  .about_CaPortal__heading__Boader {
+    width: 51% !important;
+  }
+  .perks_CaPortal__heading__Boader {
+    width: 39% !important;
+  }
+  .navbar_continer {
+    border-radius: 0px;
+  }
+}
+
+/* Main ResponsiveStyling End */
+
+/* <!--------------------------About CA Program goes here-----------------------------------------> */
+
+.about_Ca_portal {
+  display: flex;
+  flex-direction: column;
+  padding-top: 90px;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+.about_Ca_portal__heading {
+  display: flex;
+}
+
+.about_CaPortal__heading_content {
+  margin-right: 10px;
+}
+
+.about_CaPortal__heading_content h2 {
+  font-family: "heading font";
+}
+
+.about_CaPortal__heading__Boader {
+  border-top: 2px solid white;
+  width: 58%;
+  margin-top: 1.6rem;
+}
+
+.about_Ca_portal_about_section {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-left: 60px;
+}
+
+.about_Ca_portal_about_section__para p {
+  font-size: 1.5rem;
+}
+
+.about-ca-program-next-half {
+  margin-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.about-ca-program-next-half-number {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 3rem;
+  color: white;
+}
+
+.about-ca-program-next-half-college {
+  border-right: 8px solid rgba(68, 173, 82, 0.89);
+  border-radius: 5px;
+}
+
+.about-ca-program-next-half-text {
+  text-align: center;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.about-ca-program-next-half-people {
+  border-right: 8px solid rgba(98, 172, 108, 1);
+  border-radius: 5px;
+}
+
+.about-ca-program-next-half-icon1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  margin-top: 2rem;
+  padding-top: 0.5rem;
+}
+
+.about-ca-program-next-half-icon2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.row1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* <!--------------------------About CA Program ends here----------------------------------------->*/
+
+/* <!---------------------------------------------- perks of ca goes here-------------------------------------> */
+
+.perks_Ca_portal {
+  display: flex;
+  flex-direction: column;
+  padding-top: 90px;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+.perks_Ca_portal__heading {
+  display: flex;
+}
+
+.perks_CaPortal__heading_content {
+  margin-right: 10px;
+}
+
+.perks_CaPortal__heading_content h2 {
+  font-family: "heading font";
+}
+
+.perks_CaPortal__heading__Boader {
+  border-top: 2px solid white;
+  width: 58%;
+  margin-top: 1.6rem;
+}
+
+.perks_Ca_portal_about_section {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-left: 60px;
+}
+
+.perks_Ca_portal_about_section__para p {
+  font-size: 1.5rem;
+}
+
+.perks_continer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.perks_continer__first_sub {
+  display: flex;
+  padding-top: 90px;
+}
+
+.perks_continer__second_sub {
+  display: flex;
+  padding-top: 90px;
+}
+
+.perks_continer__first_sub_card1 {
+  width: 586px;
+  text-align: center;
+  margin: 0% 4% 0% 4%;
+}
+
+.perks_continer__first_sub_card2 {
+  width: 586px;
+  text-align: center;
+  margin: 0% 4% 0% 4%;
+}
+
+.perks_continer__first_sub_card3 {
+  width: 586px;
+  text-align: center;
+  margin: 0% 4% 0% 4%;
+}
+
+.perks_continer__first_sub_card4 {
+  width: 586px;
+  text-align: center;
+  margin: 0% 4% 0% 4%;
+}
+
+/* <!---------------------------------------------- perks of ca ends here-------------------------------------> */
+
+/* <!---------------------- Footer start  here -----------------------> */
+
+/* <!---------------------- Footer End  here -----------------------> */
+
+/* <!---------------------- Query Box  Start  here ----------------------->*/
+
+.website_box_layer {
+  margin-top: 47px;
+}
+
+.website_box_layer_registerationblock-card_mobile-view {
+  justify-content: center;
+  display: none;
+}
+
+.website_box_layer_registerationblock-card_innercontent_heading_mobile-view {
+  margin: 23px;
+  color: white;
+  text-align: center;
+}
+
+.website_box_layer_registerationblock-card_innercontent_btn_mobile-view {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 23px;
+}
+
+.registerationblock-card_btn_a_mobile-view {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  color: #ffff;
+  background: linear-gradient(
+    90deg,
+    rgba(18, 54, 22, 1) 58%,
+    rgba(21, 197, 45, 0.842) 98%
+  );
+  border-radius: 8px;
+  width: 16rem;
+  padding: 10px;
+}
+
+.website_box_layer_desktop-view {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  margin-top: 50px;
+}
+
+.website_box_layer_outercontainer {
+  background: linear-gradient(120deg, rgb(82, 80, 80), rgb(48, 48, 48));
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: rgb(242, 245, 243);
+  background-position: center;
+  border-radius: 15px;
+  background-size: cover;
+  width: 60%;
+}
+
+.website_box_layer_innercontainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+}
+
+.website_box_layer_outercontainer_innercontainer_registerationblock-card {
+  padding: 32px;
+}
+
+.website_box_layer_outercontainer_innercontainer_registerationblock-card_heading {
+  margin: 6px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.website_box_layer_outercontainer_innercontainer_registerationblock-card_btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 23px;
+}
+
+.registerationblock-card_btn_a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  color: #ffff;
+  background: linear-gradient(
+    90deg,
+    rgba(18, 54, 22, 1) 58%,
+    rgba(21, 197, 45, 0.842) 98%
+  );
+  border-radius: 8px;
+  width: 10rem;
+  padding: 5px;
+}
+
+.website_box_layer_outercontainer_innercontainer_contactblock-card {
+  color: white;
+}
+
+.website_box_layer_outercontainer_innercontainer_contactblock-card_heading {
+  display: flex;
+  padding: 6px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.website_box_layer_outercontainer_innercontainer_contactblock-card_contactinfo_Emailblock {
+  display: flex;
+  margin: 6px;
+  justify-content: space-between;
+}
+
+.website_box_layer_outercontainer_innercontainer_contactblock-card_contactinfo_Emailblock_icon {
+  width: 32px;
+}
+
+.website_box_layer_outercontainer_innercontainer_contactblock-card_contactinfo_Emailblock_icon
+  img {
+  width: 100%;
+}
+
+.website_box_layer_outercontainer_innercontainer_contactblock-card_contactinfo_contactNoblock {
+  display: flex;
+  margin: 6px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.website_box_layer_outercontainer_innercontainer_contactblock-card_contactinfo_contactNoblock_icon {
+  width: 32px;
+}
+
+.website_box_layer_outercontainer_innercontainer_contactblock-card_contactinfo_contactNoblock_icon
+  img {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .website_box_layer_outercontainer {
+    width: 93%;
+  }
+}
+
+@media (max-width: 658px) {
+  .website_box_layer_outercontainer {
+    width: 100%;
+  }
+  .website_box_layer_registerationblock-card_mobile-view {
+    display: flex;
+  }
+  .website_box_layer_outercontainer_innercontainer_registerationblock-card {
+    display: none;
+  }
+}
+
+/* <!---------------------- Query Box  End here ----------------------->*/
+
+/*  --------------------------------------Responsive---------------------------*/
+
+@media (max-width: 860px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 766px) {
+  .about_CaPortal__heading_content h2 {
+    font-size: 1.7rem;
+  }
+  .about_Ca_portal_about_section__para p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 426px) {
+  .website_box_layer_outercontainer {
+    margin-bottom: 25px;
+  }
+  .homePage_item_heading_shadow {
+    left: 57%;
+  }
+  .about_CaPortal__heading_content h2 {
+    font-size: 1.7rem;
+  }
+  .about_Ca_portal_about_section {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .about_Ca_portal_about_section__para p {
+    font-size: 1.2rem;
+  }
+  .about_CaPortal__heading__Boader {
+    width: 10%;
+  }
+  .row {
+    display: block;
+  }
+  .about-ca-program-next-half-college {
+    border-right: 0;
+    border-bottom: 8px solid rgba(98, 172, 108, 1);
+    border-radius: 5px;
+  }
+  .about-ca-program-next-half-people {
+    border-right: 0;
+    border-bottom: 8px solid rgba(98, 172, 108, 1);
+    border-radius: 5px;
+  }
+  .about-ca-program-next-half-money {
+    border-right: 0;
+    border-bottom: 8px solid rgba(98, 172, 108, 1);
+    border-radius: 5px;
+  }
+  .about-ca-program-next-half-text {
+    margin-bottom: 20px;
+  }
+  .hamburgerIcon div {
+    display: block;
+  }
+  .backImg__1 {
+    background-image: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .row {
+    --bs-gutter-x: 0rem;
+  }
+  .about_CaPortal__heading__Boader {
+    width: 28%;
+  }
+  .homePage_item_heading_shadow {
+    left: 58%;
+  }
+  .perks_continer__first_sub {
+    display: flex;
+    padding-top: 90px;
+    flex-wrap: wrap;
+  }
+  .perks_continer__second_sub {
+    display: flex;
+    padding-top: 90px;
+    flex-wrap: wrap;
+  }
+  .perks_CaPortal__heading__Boader {
+    display: none;
+  }
+  .perks_CaPortal__heading_content {
+    margin-right: 0px;
+    border-bottom: 2px solid white;
+  }
+  .about_CaPortal__heading__Boader {
+    display: none;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  .about_CaPortal__heading_content {
+    margin-right: 0px;
+    border-bottom: 2px solid white;
+  }
+  .about_Ca_portal_about_section__para p {
+    margin-top: 8px;
+  }
+  .about_Ca_portal__heading {
+    display: block;
+  }
+  .about_CaPortal__heading_content h2 {
+    font-size: 1.97rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .homePage_item_heading_shadow {
+    left: 69% !important;
+  }
+  .about_CaPortal__heading_content h2 {
+    font-size: 1.68rem !important;
+  }
+  .perks_CaPortal__heading_content h2 {
+    font-size: 1.59rem !important;
+  }
+  .homePage__Btn__btn1 {
+    padding: 10px 24px !important;
+  }
+  .homePage_Btn__btn2 {
+    padding: 10px 24px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .about_CaPortal__heading_content h2 {
+    font-size: 1.75rem;
+  }
+  .homePage_item_heading_shadow {
+    left: 65%;
+    top: 62%;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  .homePage__Btn__btn1 {
+    padding: 10px 25px !important;
+  }
+  .homePage_Btn__btn1 {
+    padding: 10px 25px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .about_CaPortal__heading_content h2 {
+    font-size: 1.49rem !important;
+  }
+  .perks_CaPortal__heading_content h2 {
+    font-size: 1.41rem !important;
+  }
+  .about-ca-program-next-half {
+    margin-left: 2rem;
+  }
+  .homePage_item_heading_shadow {
+    left: 78% !important;
+    top: 62%;
+  }
+  .homePage__Btn__btn1 {
+    padding: 10px 26px !important;
+  }
+  .homePage_Btn__btn2 {
+    padding: 10px 25px !important;
+  }
+  .website_box_layer {
+    padding-left: 3rem;
+  }
+}
