@@ -1,3 +1,6 @@
+.home{
+  background-color: black;
+}
 .homepage_gif {
   display: block;
 }
@@ -250,12 +253,14 @@ html {
 
 .cards-container_card2 {
   width: 300px;
+  padding-top: 40px;
 }
 
-.cards-container_card2_image {
+ .cards-container_card2_image {
   display: flex;
   justify-content: center;
-}
+
+} 
 
 .cards-container_card2_image img {
   width: 100%;
@@ -265,10 +270,10 @@ html {
 .cards-container_card2_description-container {
   text-align: center;
   color: white;
-  padding: 5px;
+  margin-top: -15px;
 }
 
-.cards-container_card1_description-container_title {
+.cards-container_card2_description-container_title {
   font-family: "heading-font";
   font-size: large;
 }

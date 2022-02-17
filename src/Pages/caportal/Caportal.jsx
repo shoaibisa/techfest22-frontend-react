@@ -15,7 +15,7 @@ import ima_lor from '../../images/ima_lor.png';
 import img_concession from '../../images/img_concession.png';
 import img_goodies from '../../images/img_goodies.png';
 import img_leader from '../../images/img_leader.png';
-import Navbar from "../../components/header/Navbar";
+// import Navbar from "../../components/header/Navbar";
 // import Rectangle_365 from '../../images/Rectangle_365.png';
 // import Rectangle from '../../images/Rectangle.png';
 
@@ -23,8 +23,8 @@ import Navbar from "../../components/header/Navbar";
 const CaPortal = () => {
 
   return (
-    <div>
-    <Navbar/>
+    <div className="caportal">
+    
      <div className="backImg__1">
            <div className="container2">
             <div className="mainContentdesktopview">
@@ -172,7 +172,7 @@ In this program, you would be getting L.O.R too.
             <div className="website_box_layer_registerationblock-card_mobile-view">
                 <div className="website_box_layer_registerationblock-card_mobile-view_innercontent">
                     <div className="website_box_layer_registerationblock-card_innercontent_btn_mobile-view">
-                        <a href="https://forms.gle/Q9a3m6GJ99wsmEYz9" className="registerationblock-card_btn_a_mobile-view" target="_blank">Register
+                        <a href="/https://forms.gle/Q9a3m6GJ99wsmEYz9" className="registerationblock-card_btn_a_mobile-view" target="_blank">Register
                                 Here</a>
                     </div>
                 </div>
@@ -187,7 +187,7 @@ In this program, you would be getting L.O.R too.
                                 Ready to Upskill Yourself ?
                             </div>
                             <div className="website_box_layer_outercontainer_innercontainer_registerationblock-card_btn">
-                                <a href="https://forms.gle/Q9a3m6GJ99wsmEYz9" className="registerationblock-card_btn_a" target="_blank">Register
+                                <a href="/https://forms.gle/Q9a3m6GJ99wsmEYz9" className="registerationblock-card_btn_a" target="_blank">Register
                                         Here</a>
                             </div>
                         </div>

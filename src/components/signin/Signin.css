@@ -1,18 +1,20 @@
-body {
-  overflow-y: hidden;
+.signin {
+  overflow-y: hidden !important;
 }
 
 @font-face {
   font-family: "heading font";
-  src: url("../font/BEST\ IN\ CLASS.ttf") format("truetype");
+  /* src: url("../font/BEST\ IN\ CLASS.ttf") format("truetype"); */
 }
 .SigninBody {
-  background-image: url("./images/Stagnant\ BG\ Webp.jpg");
+  background-image: url("../../images/Stagnant\ BG\ Webp.jpg ");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   height: 120vh;
-  justify-content: center;
+  /* display: flex; */
+  
+  /* justify-content:center; */
 }
 .Signin__Gif video {
   width: 30rem;
@@ -25,8 +27,8 @@ body {
 }
 
 .container__Signin {
-  margin-right: 30rem;
-  margin-left: 30rem;
+  /* margin-right: 30rem;
+  margin-left: 30rem; */
 }
 @media screen and (max-width: 426px) {
   .Signin__Gif {

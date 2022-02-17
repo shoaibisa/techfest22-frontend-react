@@ -2,7 +2,15 @@ import React from "react";
 import'./EventLogo.css';
 
 
-const EventLogo = () =>{
+// import group_1 from '../../../images/Domain/Group (1).png';
+// import group from '../../../images/Domain/Group.png';
+import pngwing from '../../../images/Domain/pngwing 3.png';
+
+
+
+const EventLogo = (props) =>{
+    return(
+        <div className="Robo">
     <div className="Robozar">
 
     <div className="circle">
@@ -21,6 +29,8 @@ const EventLogo = () =>{
     </div>
     
     </div>
+    </div>
 
+    );
 }
 export default EventLogo;

@@ -1,9 +1,13 @@
+
+.Robo{
+    background-color: black;
+}
 .Robozar__bottom{
-    background-image: url("../../images/Domain/bgoverlay-left.png"),url("../../images/Domain/background-overlay-right.png");
+    background-image: url("../../../images/Domain/bgoverlay-left.png"),url("../../../images/Domain/background-overlay-right.png");
     background-position: left,right;
     background-repeat: no-repeat;
     background-size: 60% ,60%;
-    margin-top: 10rem;
+    padding-top: 10rem;
 }
 .robozar_main_container{
     min-height: 80vh;
@@ -13,7 +17,7 @@
     align-items: center;
     justify-content: center;
     color: white;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 .robozar_container{
     width: 90%;
@@ -26,7 +30,7 @@
 .robozar_left_container{
     width: 60%;
     height: 400px;
-    background-image: url("../../images/Domain/thisisengineering-raeng-4w0XkDe2Ee8-unsplash\ 2.png");
+    background-image: url("../../../images/Domain/thisisengineering-raeng-4w0XkDe2Ee8-unsplash\ 2.png");
     background-size: cover;
     border-radius: 15px;
 }

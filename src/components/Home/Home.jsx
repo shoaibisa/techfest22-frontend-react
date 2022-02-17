@@ -3,9 +3,10 @@ import './Home.css'
 import Sponsor from "../sponsors/Sponsor";
 
 
+
 //images import
 import homepage_gif from '../../images/hompage-gif-logo.webp';
-import homepage_gif_mobile_vid from '../../images/hompage-gif-mobile.webm';
+// import homepage_gif_mobile_vid from '../../images/hompage-gif-mobile.webm';
 import homapage_gif_vid from '../../images/gif/desk-view.gif'
 import workshop_home_png from '../../images/Png-Workshops-home-Webp.webp'
 import building from '../../images/BUilding.svg'
@@ -19,15 +20,21 @@ import domain_png from '../../images/Domains Webp Home.webp'
 
 
 
-const Home =() => {
-  
 
+const Home =() => {
+    const gotoServices = () =>
+    window.scrollTo({
+      top: 500,
+      behavior: "smooth",
+      // You can also assign value "auto"
+      // to the behavior parameter.
+    });
+  
+    
     return (
-        <>
-        
-        <div>
+        <div className="home">
          <div className="home__video py-5">
-            <img className="homepage_gif" alt="" onclick="myFunction()" style={{width:"100%",
+            <img className="homepage_gif" alt="" style={{width:"100%",
     overflow:"hidden"}} src={homapage_gif_vid}/>
            
 {/* 
@@ -35,13 +42,13 @@ const Home =() => {
                 <source src={homepage_gif_mobile_vid} type="video/webm"/>
                 Your browser does not support the video tag.
             </video> */}
-            <img className="homepage_gif_mobile" alt=""  onclick="myFunction()" style={ {width:"100%",
+            <img className="homepage_gif_mobile" alt=""  style={ {width:"100%",
     overflow:"hidden"}} src={homapage_gif_vid}/>
-            <div className="scroll d-flex" onclick="myFunction()">
-                <div className="scroll__text">
+            <div className="scroll d-flex" >
+                <div className="scroll__text" onClick={gotoServices}>
                     <h6>Scroll Down</h6>
                 </div>
-                <div className="scroll__goto">
+                <div className="scroll__goto" onClick={gotoServices}>
                     <i className="fa fa-chevron-down"></i>
                 </div>
             </div>
@@ -103,7 +110,7 @@ const Home =() => {
                         </div>
                     </div>
                 </div>
-                <div className="cards-container_card2 mt-4">
+                <div className="cards-container_card2">
                     <div className="cards-container_card2_image">
                         <img className="workShop_Animation" src={domain_png} alt=""/>
                     </div>
@@ -122,7 +129,7 @@ const Home =() => {
             </div>
           
             <Sponsor/>
-            <div className="container__college__people__money1 mt-5 mb-5 cards-container ">
+            <div className="container__college__people__money1 py-5  cards-container ">
                 <div className="college__people__money">
                     <div className="row text-light text-center">
                         <div className="col p-5">
@@ -177,12 +184,6 @@ const Home =() => {
 
         </div>
     </div>
-
-
-        
-   
-           
-        </>
     );
 }
 

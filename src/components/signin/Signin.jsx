@@ -1,27 +1,28 @@
 import React from 'react';
-
-import signup_gif from '../../images/Signup gif.webm';
+import './Signin.css';
+// import signup_gif from '../../images/Signup gif.webm';
+import image from '../../images/hero image.png'
 
 const Sigin = () => {
   return (
     <div>
-      <body>
-        <div class="SigninBody ">
-          <div class="Signin justify-content-around  d-flex ">
-            <div class="Signin__Gif mt-5">
-              <video loop="loop" autoplay muted="true" preload="auto">
-                <source src={signup_gif} />
-              </video>
+        <div className="SigninBody ">
+          <div className="Signin justify-content-around  d-flex ">
+            <div className="Signin__Gif mt-5">
+              {/* <video loop="loop" autoplay muted="true" preload="auto">
+                <source src={} />
+              </video> */}
+           <img src={image} alt="Girl in a jacket" width="500" height="600"></img>
             </div>
 
-            <div class="Signin__inputs  pt-5 mt-5 ">
-              <div class="Signin__inputs__head">
-                <h2 class="text-light " href="#">
+            <div className="Signin__inputs  pt-5 mt-5 ">
+              <div className="Signin__inputs__head">
+                <h2 className="text-light " href="#">
                   Welcome Back!
                 </h2>
-                <p class="text-light">Sign in to continue</p>
+                <p className="text-light">Sign in to continue</p>
               </div>
-              <form name="SigninForm" action="" class=" text-center">
+              <form name="SigninForm" action="" className=" text-center">
                 <label>
                   <input
                     name="emailId"
@@ -47,21 +48,21 @@ const Sigin = () => {
                   <i
                     onclick="ShowPassword()"
                     id="fa_eye"
-                    class="fa fa-eye-slash"
+                    className="fa fa-eye-slash"
                   ></i>
-                  <p class="text-danger" id="pass"></p>
+                  <p className="text-danger" id="pass"></p>
                 </label>
-                <div class="login__button d-flex justify-content-around">
-                  <input type="submit" class="btn__color mb-3"></input>
-                  <a class=" text-light text-decoration-none " href="/#">
+                <div className="login__button d-flex justify-content-around">
+                  <input type="submit" className="btn__color mb-3"></input>
+                  <a className=" text-light text-decoration-none " href="/#">
                     Forgot Password?
                   </a>
                 </div>
               </form>
-              <p class="text-light mt-3 Signin__inputs__haveAcount">
+              <p className="text-light mt-3 Signin__inputs__haveAcount">
                 Don't have an account?{' '}
                 <a
-                  class=" text-decoration-none text-light font-weight-bold "
+                  className=" text-decoration-none text-light font-weight-bold "
                   href="./Signup.html"
                 >
                   {' '}
@@ -71,9 +72,6 @@ const Sigin = () => {
             </div>
           </div>
         </div>
-
-        <script src="./login.js"></script>
-      </body>
     </div>
   );
 };
