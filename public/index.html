@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="techFEST is a platform where engineers, innovators, changemakers,
+    entrepreneurs and tech enthusiasts collaborate to create solutions to
+    some of the world's most challenging problems."
+    />
     <link
       rel="shortcut icon"
       href="%PUBLIC_URL%/favicon.svg"
@@ -27,7 +33,6 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-  
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -37,20 +42,20 @@
         function footer() {
           var scroll = $(window).scrollTop();
           if (scroll > 20) {
-            $(".footer ").fadeIn("slow ").removeClass("show ");
+            $('.footer ').fadeIn('slow ').removeClass('show ');
           } else {
-            $(".footer ").fadeOut("slow ").removeClass("show ");
+            $('.footer ').fadeOut('slow ').removeClass('show ');
           }
 
-          clearTimeout($.data(this, "scrollTimer"));
+          clearTimeout($.data(this, 'scrollTimer'));
           $.data(
             this,
-            "scrollTimer",
+            'scrollTimer',
             setTimeout(function () {
-              if ($(".footer").is(":hover")) {
+              if ($('.footer').is(':hover')) {
                 footer();
               } else {
-                $(".footer ").fadeOut("slow ");
+                $('.footer ').fadeOut('slow ');
               }
             }, 3000)
           );
@@ -58,8 +63,8 @@
         footer();
       });
 
-      $(document).on("ready", function (e) {
-        $(".owl-carousel").owlCarousel({
+      $(document).on('ready', function (e) {
+        $('.owl-carousel').owlCarousel({
           loop: true,
           margin: 10,
           merge: true,
@@ -95,7 +100,7 @@
       });
     </script>
   </head>
-  
+
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>

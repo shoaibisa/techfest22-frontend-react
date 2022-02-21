@@ -1,0 +1,192 @@
+{
+  "sponser": [
+    {
+      "title": "Group 4.png",
+      "imageSrc": "img/sponser_images/Group 4.png"
+    },
+    {
+      "title": "Group 3.png",
+      "imageSrc": "img/sponser_images/Group 3.png"
+    },
+    {
+      "title": "Group 11.png",
+      "imageSrc": "img/sponser_images/Group 11.png"
+    },
+    {
+      "title": "Group 12.png",
+      "imageSrc": "img/sponser_images/Group 12.png"
+    },
+    {
+      "title": "Group 13.png",
+      "imageSrc": "img/sponser_images/Group 13.png"
+    },
+    {
+      "title": "Group 17.png",
+      "imageSrc": "img/sponser_images/Group 17.png"
+    },
+    {
+      "title": "Group 18.png",
+      "imageSrc": "img/sponser_images/Group 18.png"
+    },
+    {
+      "title": "Group 19.png",
+      "imageSrc": "img/sponser_images/Group 19.png"
+    },
+    {
+      "title": "Group 23.png",
+      "imageSrc": "img/sponser_images/Group 23.png"
+    },
+    {
+      "title": "Group 24.png",
+      "imageSrc": "img/sponser_images/Group 24.png"
+    },
+    {
+      "title": "Group 25.png",
+      "imageSrc": "img/sponser_images/Group 25.png"
+    },
+    {
+      "title": "Group 26.png",
+      "imageSrc": "img/sponser_images/Group 26.png"
+    },
+    {
+      "title": "Group 27.png",
+      "imageSrc": "img/sponser_images/Group 27.png"
+    },
+    {
+      "title": "Group 28.png",
+      "imageSrc": "img/sponser_images/Group 28.png"
+    },
+    {
+      "title": "Group 29.png",
+      "imageSrc": "img/sponser_images/Group 29.png"
+    }
+  ],
+  "gallery": [
+    {
+      "title": "img1",
+      "imageSrc": "img/gallerry/img1.png"
+    },
+    {
+      "title": "img2",
+      "imageSrc": "img/gallerry/img2.png"
+    },
+    {
+      "title": "img3",
+      "imageSrc": "img/gallerry/img3.png"
+    },
+    {
+      "title": "img4",
+      "imageSrc": "img/gallerry/img4.png"
+    },
+    {
+      "title": "img5",
+      "imageSrc": "img/gallerry/img5.png"
+    },
+    {
+      "title": "img6",
+      "imageSrc": "img/gallerry/img6.png"
+    },
+    {
+      "title": "img7",
+      "imageSrc": "img/gallerry/img7.png"
+    },
+    {
+      "title": "img8",
+      "imageSrc": "img/gallerry/img8.png"
+    },
+    {
+      "title": "img9",
+      "imageSrc": "img/gallerry/img9.png"
+    },
+    {
+      "title": "img10.png",
+      "imageSrc": "img/gallerry/img10.png"
+    },
+    {
+      "title": "img11",
+      "imageSrc": "img/gallerry/img11.png"
+    },
+    {
+      "title": "img12",
+      "imageSrc": "img/gallerry/img12.png"
+    },
+    {
+      "title": "img13",
+      "imageSrc": "img/gallerry/img13.png"
+    },
+    {
+      "title": "img14",
+      "imageSrc": "img/gallerry/img14.png"
+    },
+    {
+      "title": "img16",
+      "imageSrc": "img/gallerry/img15.png"
+    },
+    {
+      "title": "img16",
+      "imageSrc": "img/gallerry/img16.png"
+    },
+    {
+      "title": "img17",
+      "imageSrc": "img/gallerry/img17.png"
+    },
+    {
+      "title": "img18",
+      "imageSrc": "img/gallerry/img18.png"
+    },
+    {
+      "title": "img19",
+      "imageSrc": "img/gallerry/img19.png"
+    },
+    {
+      "title": "img20",
+      "imageSrc": "img/gallerry/img20.png"
+    }
+  ],
+  "groupTechfestAbt": [
+    {
+      "title": "Group 767",
+      "imageSrc": "img/aboutus/group_tf/Group 767.png"
+    },
+    {
+      "title": "Group 768",
+      "imageSrc": "img/aboutus/group_tf/Group 768.png"
+    },
+    {
+      "title": "Group 769",
+      "imageSrc": "img/aboutus/group_tf/Group 769.png"
+    },
+    {
+      "title": "Group 770",
+      "imageSrc": "img/aboutus/group_tf/Group 770.png"
+    }
+  ],
+  "group_buliding": [
+    {
+      "title": "BUilding",
+      "imageSrc": "img/group-building/BUilding.svg"
+    },
+    {
+      "title": "Dollar",
+      "imageSrc": "img/group-building/Dollar Svg.svg"
+    },
+    {
+      "title": "Footfall",
+      "imageSrc": "img/group-building/Footfall.svg"
+    }
+  ],
+  "head_tf": [
+    {
+      "title": "header-logo",
+      "imageSrc": "img/main_img/header-logo.png"
+    },
+    {
+      "title": "tf22",
+      "imageSrc": "img/main_img/tf22.png"
+    },
+    {
+      "title": "White SLIET 1",
+      "imageSrc": "img/main_img/White SLIET 1.png"
+    }
+  ]
+}

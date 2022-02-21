@@ -1,0 +1,561 @@
+body {
+  overflow-x: hidden !important;
+  background-color: rgb(0, 0, 0);
+  background-image: url('../../images/Stagnant-BG-Webp.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+p {
+  font-family: helvetica !important;
+  opacity: 0.8;
+}
+
+/* Navbar code ends here */
+/* .container__About__Us__Upperpart{
+    background-image: url(images/Stagnant\ BG\ Webp.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+} */
+.aboutus-wrap {
+  margin-bottom: 100px;
+}
+.About__Us__part1 {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.About__Us__part1__techfest__logo {
+  display: flex;
+  justify-content: center;
+  flex-grow: 0.1;
+  border-right: 2px solid #fff;
+}
+.About__Us__part1__techfest__logo img {
+  height: 230px;
+  width: 275px;
+}
+.About__Us__part1__SLIET__logo img {
+  height: 230px;
+  width: 275px;
+}
+.About__Us__part1__SLIET__logo {
+  display: flex;
+  justify-content: center;
+  flex-grow: 0.1;
+}
+.About__Us__part2 {
+  justify-content: center;
+  margin-top: 5rem;
+  flex-direction: column;
+  text-align: center;
+}
+.About__Us__part2__text {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-top: 1rem;
+  word-spacing: 2px;
+  letter-spacing: 0.2px;
+}
+
+.container__college__people__money1 {
+  margin-top: 10rem;
+  padding-bottom: 2rem;
+}
+.college__people__money1 {
+  margin-top: 3rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+.container__college__people__money1 .colhmn {
+  flex-grow: 0.8;
+}
+.number {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 3rem;
+  color: white;
+}
+.college {
+  border-right: 8px solid rgba(98, 172, 108, 1);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.text {
+  text-align: center;
+  font-size: 1.3rem;
+  color: white;
+}
+.people {
+  border-right: 8px solid rgba(98, 172, 108, 1);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.money {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.container__college__people__money2 {
+  display: none;
+}
+
+.About__Us__About__SLIET {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  align-items: center;
+  background-color: #091e02;
+  flex-direction: column;
+  flex-grow: 0.25;
+  border: 2px solid rgba(98, 172, 108, 1);
+  border-radius: 20px;
+}
+.container__About__Sliet {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.About__Us__About__Sliet__Description {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.About__Us__About__Sliet__Description1 {
+  display: none;
+}
+.About__Us__About__Sliet__Heading {
+  margin-top: 1rem;
+  font-size: 4rem;
+  border-bottom: 1px solid #fff;
+}
+@media screen and (max-width: 490px) {
+  body {
+    background-image: none;
+  }
+
+  .college__people__money1 {
+    margin-top: -3rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .college {
+    border: none;
+    border-bottom: 8px solid rgba(98, 172, 108, 1);
+  }
+  .people {
+    border: none;
+    border-bottom: 8px solid rgba(98, 172, 108, 1);
+  }
+  .money {
+    border: none;
+    border-bottom: 8px solid rgba(98, 172, 108, 1);
+  }
+  .number {
+    margin-top: -0.2rem;
+  }
+  .container__About__Us__Upperpart {
+    background-image: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+  }
+  .About__Us__part1__techfest__logo {
+    display: flex;
+    flex-grow: 1;
+  }
+  .About__Us__part1__SLIET__logo {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .About__Us__part1__techfest__logo img {
+    height: 130px;
+    width: 150px;
+  }
+  .About__Us__part1__SLIET__logo img {
+    height: 130px;
+    width: 150px;
+  }
+
+  .About__Us__part2 img {
+    width: 150px;
+  }
+  .About__Us__part2__text p {
+    font-size: 0.59rem;
+  }
+  .About__Us__part2 {
+    margin-top: 1.5rem;
+  }
+  .About__Us__About__Sliet__Heading {
+    font-size: 1.2rem;
+    margin-top: 0rem;
+  }
+  .About__Us__About__Sliet__Description p {
+    font-size: 0.6rem;
+    text-align: center;
+  }
+
+  .About__Us__About__SLIET {
+    margin-left: 2rem;
+    background-size: cover;
+    padding-bottom: 0;
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 403px) {
+  .container__About__Us__Upperpart {
+    margin-left: 4.5rem;
+  }
+  .About__Us__part2__text p {
+    font-size: 0.66rem;
+  }
+  .container__college__people__money1 {
+    margin-left: 4.5rem;
+  }
+  .About__Us__About__SLIET {
+    margin-left: 4.5rem;
+    padding-bottom: 0;
+  }
+  .About__Us__About__Sliet__Description p {
+    font-size: 0.66rem;
+  }
+}
+
+/* about sliet part ends here */
+@font-face {
+  font-family: 'heading font';
+  src: url('../../font/BEST\ IN\ CLASS.ttf') format('truetype');
+}
+
+body {
+  background-color: black !important;
+  color: white !important;
+}
+/* yearly-logo starts here */
+
+.website_year-declaration_outer-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.heading h1 {
+  font-size: 3rem;
+  font-family: 'heading font';
+}
+
+.para {
+  width: 23rem;
+}
+
+.para p {
+  font-size: 1.2rem;
+  text-align: left;
+  word-spacing: 1px;
+}
+
+.image-box {
+  width: 320px;
+}
+
+.image-box img {
+  width: 100%;
+}
+.website_year-declaration_left-block_img {
+  /* background-color: aqua; */
+  margin-left: -7rem;
+}
+
+@media screen and (max-width: 768px) {
+  .image-box {
+    width: 177px;
+  }
+  .heading h1 {
+    font-size: large;
+  }
+  .para {
+    width: 20rem;
+  }
+  .para p {
+    font-size: xx-small;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image-box {
+    max-width: 160px;
+  }
+  .para {
+    width: 12.2rem;
+  }
+  .website_year-declaration {
+    margin-left: 8rem;
+  }
+}
+/* yearly-logo styling ends here */
+
+.container-fluid {
+  width: 80%;
+  /* margin-top: 5rem; */
+}
+
+.trailer_container {
+  display: grid;
+  justify-content: center;
+  gap: 4px;
+  align-content: center;
+  grid-auto-flow: row;
+}
+
+.trailer_iframe {
+  width: 550px;
+  height: 300px;
+  border-radius: 10px;
+  border: 0.1px solid rgb(112, 111, 111);
+}
+
+@media screen and (max-width: 662px) {
+  .trailer_iframe {
+    width: 500px;
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 562px) {
+  .trailer_iframe {
+    width: 400px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 368px) {
+  .trailer_iframe {
+    width: 450px;
+    height: 230px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .trailer_iframe {
+    width: 300px;
+    height: 230px;
+  }
+}
+
+@media screen and (max-width: 308px) {
+  .trailer_iframe {
+    width: 240px;
+    height: 230px;
+  }
+}
+
+@media screen and (max-width: 240px) {
+  .trailer_iframe {
+    width: 200px;
+    height: 230px;
+  }
+}
+
+@media screen and (max-width: 213px) {
+  .trailer_iframe {
+    width: 180px;
+    height: 200px;
+  }
+}
+
+.Gallery_heading {
+  font-family: 'heading font';
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#owl-carousel {
+  position: relative;
+  z-index: 0 !important;
+}
+
+.Gallery_item {
+  margin: 10px;
+  height: 210px;
+  padding: 15px;
+}
+
+.wrapper .owl-item {
+  opacity: 0.5;
+  transform: scale(0.5);
+}
+
+.wrapper .owl-item.center {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.owl-nav {
+  font-size: 3rem;
+}
+
+.owl-prev {
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  background-color: black;
+}
+
+.owl-next {
+  position: absolute;
+  top: 30%;
+  right: 0%;
+}
+
+@media screen and (max-width: 768px) {
+  .Gallery_item {
+    margin: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Gallery_item {
+    margin: 30px;
+  }
+}
+/* sponsor code starts here */
+
+.Website_sponsor_heading {
+  font-family: 'heading font';
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#sponsor_carousel {
+  position: relative;
+  z-index: 0 !important;
+}
+
+.Sponsor_item {
+  margin: 10px;
+  height: 210px;
+  padding: 15px;
+}
+
+.Website_sponsor_wrapper .owl-item {
+  opacity: 0.5;
+  transform: scale(0.5);
+}
+
+.Website_sponsor_wrapper .owl-item.center {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.owl-nav {
+  font-size: 3rem;
+}
+
+.owl-prev {
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  background-color: black;
+}
+
+.owl-next {
+  position: absolute;
+  top: 30%;
+  right: 0%;
+}
+
+@media (max-width: 768px) {
+  .Sponsor_item {
+    margin: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Sponsor_item {
+    margin: 30px;
+  }
+}
+/* footer section */
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  display: none;
+}
+
+.show,
+.footer:hover {
+  display: block;
+}
+
+.social-icons {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  padding-bottom: 15px;
+  border-top: 0.5px solid white;
+  border-left: 0.5px solid white;
+  border-right: 0.5px solid white;
+  backdrop-filter: blur(6px);
+}
+
+.social-icons a i {
+  color: white;
+  padding: 0 10px;
+}
+
+.social-icons .fa-facebook-square:hover {
+  color: #6195ff !important;
+  transition: 0.3s ease;
+}
+
+.fa-twitter-square:hover {
+  color: #1da1f2 !important;
+  transition: 0.3s ease;
+}
+
+.fa-instagram:hover {
+  color: #cd486b !important;
+  transition: 0.3s ease;
+}
+
+.fa-linkedin-square:hover {
+  color: #0e76a8 !important;
+  transition: 0.3s ease;
+}
+
+.fa-youtube-play:hover {
+  color: #ff0000 !important;
+  transition: 0.3s ease;
+}
+
+.fa-telegram:hover {
+  color: #0088cc !important;
+  transition: 0.3s ease;
+}
