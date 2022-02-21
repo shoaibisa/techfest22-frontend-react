@@ -12,6 +12,7 @@ const Navbar = () => {
 
 
     return (
+      
      <>
             <div className="navbar navbar-dark navbar-expand-lg  fixed-top" style={{backgroundColor: "black"}} >
             <div className="container-fluid font-weight-light my-1" >
@@ -55,7 +56,7 @@ const Navbar = () => {
                                 </NavLink>
 
                                 <ul className="dropdown-menu " aria-labelledby="offcanvasNavbarDropdown"
-                                style={{backgroundColor :"rgb(17, 34, 13)", width: "100%", position: "absolute", bottom:"-673%"}}>
+                                style={{backgroundColor :"rgb(17, 34, 13)", width: "100%"}}>
                                    
                                     <li><NavLink className="dropdown-item  text-light line" activeClassName="active " exact to="Chemfor">Chemfor</NavLink></li>
                                     <li><NavLink className="dropdown-item text-light line" activeClassName="active " exact to="Electrica">Electrica</NavLink></li>
@@ -69,7 +70,7 @@ const Navbar = () => {
                             <li className="nav-item">
                                 <NavLink className="nav-link  mx-3 text-light line" aria-current="page" activeClassName="active " exact to="/ca">CA Portal</NavLink>
                             </li>
-                            <button className="btn btn-outline-light mx-3" type="submit">Sign in</button>
+                            <NavLink className="btn btn-md btn-outline-light active mx-3" data-toggle="button" aria-pressed="true" autocomplete="off" activeClassName="active " exact to="/signin" role="button">Sign in</NavLink>
                         </ul>
                     </div>
                 </div>
@@ -80,5 +81,6 @@ const Navbar = () => {
             
     );
 }
+
 
 export default Navbar;

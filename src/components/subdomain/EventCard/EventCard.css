@@ -1,0 +1,162 @@
+
+.Robo{
+    background-color: black;
+    
+}
+.Robozar__bottom{
+    background-image: url("../../../images/Domain/bgoverlay-left.png"),url("../../../images/Domain/background-overlay-right.png");
+    background-position: left,right;
+    background-repeat: no-repeat;
+    background-size: 60% ,60%;
+    padding-top: 10rem;
+}
+.robozar_main_container{
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-bottom: -1rem;
+}
+.robozar_container{
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.robozar_left_container{
+    width: 60%;
+    height: 400px;
+    background-image: url("../../../images/Domain/thisisengineering-raeng-4w0XkDe2Ee8-unsplash\ 2.png");
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.robozar_right_container{
+    width: 25%;
+    /* min-height: 100px !important; */
+    background-color: rgb(92, 89, 89,.6);
+    padding: 10px;
+    border: 3px solid rgb(6, 248, 59);
+    margin: -100px;
+    border-radius: 15px;
+    /* height: auto; */
+    object-fit: contain;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+.robozar_right_container:hover{
+    transform: scale(1.05);
+}
+.robozar_register_button{
+    text-decoration: none;
+    background-color:rgb(18, 189, 18);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.robozar_problem_statement_button{
+    text-decoration: none;
+    background-color:none;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 20px;
+    margin-left: 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.robozar_right_content h1,h2{
+    font-size: medium;
+}
+.robozar_right_content p{
+    margin-top: -5px;
+}
+.robozar_left_content{
+    margin:30px 120px 30px 30px ;
+}
+@media(max-width:860px) {
+  .robozar_register_button{
+      padding: 5px 8px;
+  }
+  .robozar_problem_statement_button{
+      padding: 5px 8px;
+  }
+  .robozar_main_container{
+    min-height: 100vh;
+}
+}
+
+@media(max-width:768px) {
+    .robozar_main_container{
+        flex-direction:column;
+        -ms-flex-direction: column;
+    }
+    .robozar_container{
+        flex-direction:column;
+        -ms-flex-direction: column;
+        width: 100%;
+        padding: 15px;
+    }
+    .robozar_left_container{
+        width: 100%;
+        height: 400px;
+    }
+    .robozar_left_content{
+         margin:30px;
+        align-items: center;
+        justify-content: center;
+    }
+    .robozar_right_container{
+        width: 70%;
+        margin-top: -90px;
+    }
+    .Robozar__bottom{
+        margin-bottom: 7rem;
+    }
+}
+@media screen and (max-width:426px) {
+    .Robozar__bottom{
+        margin-bottom:10rem;
+        margin-top: 12rem;
+    }
+}
+@media screen and (max-width:381px) {
+    .robozar_main_container{
+        margin-left:1.6rem;
+        margin-right: unset;
+        
+    }
+    .Robozar__bottom{
+        background-position: left,bottom;
+        background-size: 80% ,100%;
+    }
+    .robozar_right_container{
+        margin-top: -2rem !important;
+    }
+}
+@media(max-width:360px) {
+    .robozar_left_container{
+        height: 500px;
+        width: 90%;
+        margin-left: -3.5rem;
+    }
+    .robozar_right_container{
+        width: 70%;
+        margin-top: -90px;
+        margin-right: -3.8rem;
+    }
+    .robozar_main_container{
+        margin-bottom: 100px;
+    }
+    .robozar_problem_statement_button{
+        padding: 5px 20px;
+        margin: 10px auto auto 0px;
+        border-radius: 5px;
+        display: inline-block;
+    }
+}

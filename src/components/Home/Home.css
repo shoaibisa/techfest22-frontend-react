@@ -1,3 +1,11 @@
+.home{
+  background-color: black ;
+}
+.bottomSection{
+  /* margin-bottom: 5rem; */
+  padding-bottom: 5rem;
+
+}
 .homepage_gif {
   display: block;
 }
@@ -44,6 +52,7 @@
 .Logo_image {
   width: 200px;
   height: 200px;
+  border-radius: 50% !important;
 }
 
 .logo_section {
@@ -52,6 +61,7 @@
 
 .logo_section__image {
   position: relative;
+  margin-top: 5rem;
 }
 
 .logo_section_content {
@@ -85,9 +95,8 @@
 }
 
 .logo_section_button_section__About_Us {
-  border: 1px solid gray;
+  border: 1px solid gray !important;
   background-color: transparent;
-  outline: none !important;
   box-shadow: none;
 }
 
@@ -124,17 +133,12 @@ button:active {
   background-size: cover;
   background-attachment: fixed;
 }
-
-html {
-  scroll-behavior: smooth;
-}
-
 .scroll {
   display: flex;
   align-items: center;
   justify-content: flex-end;
- 
   margin: -120px 40px 0 0;
+  top: 30rem;
 
 }
 
@@ -250,12 +254,14 @@ html {
 
 .cards-container_card2 {
   width: 300px;
+  padding-top: 40px;
 }
 
-.cards-container_card2_image {
+ .cards-container_card2_image {
   display: flex;
   justify-content: center;
-}
+
+} 
 
 .cards-container_card2_image img {
   width: 100%;
@@ -265,10 +271,10 @@ html {
 .cards-container_card2_description-container {
   text-align: center;
   color: white;
-  padding: 5px;
+  margin-top: -15px;
 }
 
-.cards-container_card1_description-container_title {
+.cards-container_card2_description-container_title {
   font-family: "heading-font";
   font-size: large;
 }
