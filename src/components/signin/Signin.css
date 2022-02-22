@@ -1,0 +1,168 @@
+
+.SigninBody {
+  background-image: url("../../images/Stagnant\ BG\ Webp.jpg ");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  overflow-y: hidden;
+  padding-top: 2rem;
+}
+.Signin__Gif video {
+  width: 30rem;
+  height: 30rem;
+  mix-blend-mode: lighten;
+}
+.Signin__inputs{
+  margin-top: 10rem ;
+}
+
+.Signin__Gif {
+  flex: 0.5;
+}
+@media screen and (max-width: 426px) {
+  .Signin__Gif {
+    display: none;
+  }
+  .Signin__inputs {
+    flex: 1 !important;
+  }
+  .Signin__inputs form p {
+    margin-left: -10rem;
+  }
+  .Signin__inputs form label {
+    width: 18rem !important;
+  }
+  .login__button {
+    display: flex;
+    flex-direction: row !important;
+    margin-left: 1.8rem;
+  }
+  .login__button input {
+    margin-left: 2rem;
+  }
+  .login__button a {
+    margin-left: unset !important;
+    margin-right: 5rem;
+  }
+  .Signin__inputs__haveAcount {
+    margin-left: 4.2rem;
+  }
+  .Signin__inputs__head {
+    margin-left: 4.8rem;
+  }
+}
+@media screen and (max-width: 321px) {
+  .login__button a {
+    font-size: 15px !important;
+    margin-left: 2rem;
+  }
+  .login__button input {
+    margin-left: -0.3rem;
+  }
+  .Signin__inputs__haveAcount {
+    margin-left: 2.2rem;
+  }
+}
+@media screen and (max-width: 376px) {
+  .Signin__inputs form label {
+    width: 15rem !important;
+  }
+}
+
+.Signin__inputs form .fa-eye {
+  cursor: pointer !important;
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  right: 5px;
+  top: 2px;
+}
+.Signin__inputs form .fa-eye-slash {
+  cursor: pointer !important;
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  right: 5px;
+  top: 2px;
+}
+
+.Signin__inputs form {
+  width: 100% !important;
+}
+.Signin__inputs form h2 {
+  font-weight: 400;
+  text-align: unset;
+}
+.Signin__inputs form p {
+  text-align: unset;
+}
+
+.Signin__inputs form label {
+  margin: 10px 0;
+  position: relative;
+  width: 20rem;
+  margin-top: 30px;
+}
+@media screen and (max-width: 769px) {
+  .Signin__inputs form label {
+    width: 16rem;
+  }
+  .login__button {
+    display: block;
+    flex-direction: column;
+  }
+  .login__button a {
+    margin-left: -8rem;
+  }
+}
+.login__button {
+  width: 100%;
+}
+
+.Signin__inputs span {
+  padding: 10px;
+  pointer-events: none;
+  position: absolute;
+  left: 10px;
+  top: 0;
+  transition: 0.2s;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  opacity: 0.3;
+  color: white;
+}
+.Signin__inputs form label input {
+  padding: 7px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  color: #fff;
+  border: 0.5px solid rgb(155, 144, 144);
+  border-radius: 5px;
+  
+}
+.Signin__inputs form label input:focus{
+  outline-color: rgb(8, 245, 8);
+  border: none;
+}
+
+.Signin__inputs form label input:focus + span,
+input:not(:placeholder-shown) + span {
+  opacity: 1;
+  transform: scale(0.75) translateY(-100%) translateX(-30px);
+}
+
+input:focus + span,
+input:not(:-ms-input-placeholder) + span {
+  opacity: 1;
+  transform: scale(0.75) translateY(-100%) translateX(-30px);
+}
+
+.btn__color {
+  background: linear-gradient(to right, rgb(12, 226, 12), rgb(33, 87, 9));
+  padding: 2px;
+  width: 90px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+}

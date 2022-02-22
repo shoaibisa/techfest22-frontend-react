@@ -3,17 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="techFEST is a platform where engineers, innovators, changemakers,
+    entrepreneurs and tech enthusiasts collaborate to create solutions to
+    some of the world's most challenging problems."
+    />
     <link
       rel="shortcut icon"
       href="%PUBLIC_URL%/favicon.svg"
       type="image/x-icon"
     />
     <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
-    
+    <link
       rel="stylesheet"
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <!-- JavaScript Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -27,7 +33,6 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-  
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -37,20 +42,20 @@
         function footer() {
           var scroll = $(window).scrollTop();
           if (scroll > 20) {
-            $(".footer ").fadeIn("slow ").removeClass("show ");
+            $('.footer ').fadeIn('slow ').removeClass('show ');
           } else {
-            $(".footer ").fadeOut("slow ").removeClass("show ");
+            $('.footer ').fadeOut('slow ').removeClass('show ');
           }
 
-          clearTimeout($.data(this, "scrollTimer"));
+          clearTimeout($.data(this, 'scrollTimer'));
           $.data(
             this,
-            "scrollTimer",
+            'scrollTimer',
             setTimeout(function () {
-              if ($(".footer").is(":hover")) {
+              if ($('.footer').is(':hover')) {
                 footer();
               } else {
-                $(".footer ").fadeOut("slow ");
+                $('.footer ').fadeOut('slow ');
               }
             }, 3000)
           );
@@ -58,10 +63,44 @@
         footer();
       });
 
-     
+      $(document).on('ready', function (e) {
+        $('.owl-carousel').owlCarousel({
+          loop: true,
+          margin: 10,
+          merge: true,
+          scroll: true,
+          nav: true,
+          autoplay: true,
+          smartSpeed: 600,
+          autoplaySpeed: 1000,
+          center: true,
+          dots: false,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1,
+              nav: true,
+              loop: true,
+              center: true,
+            },
+            700: {
+              items: 2,
+              nav: true,
+              loop: true,
+              center: true,
+            },
+            1000: {
+              items: 3,
+              nav: true,
+              loop: true,
+              center: true,
+            },
+          },
+        });
+      });
     </script>
   </head>
-  
+
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>

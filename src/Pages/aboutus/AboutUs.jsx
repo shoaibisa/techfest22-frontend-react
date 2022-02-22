@@ -4,9 +4,9 @@ import './AboutUs.css';
 
 const AboutUs = () => {
     return(
-        <div>
-       <h1></h1>
-        </div>
+        <>
+        <h1>This is AboutUs page</h1>
+        </>
     );
 }
 export default AboutUs;

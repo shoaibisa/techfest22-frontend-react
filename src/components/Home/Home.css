@@ -1,20 +1,42 @@
 .home{
-  background-color: black ;
-}
-.bottomSection{
-  /* margin-bottom: 5rem; */
-  padding-bottom: 5rem;
-
+  background-color: black;
 }
 .homepage_gif {
   display: block;
 }
-
+.home__slider{
+  padding-bottom: 5rem;
+}
 .homepage_gif_mobile {
   display: none;
 }
 .workShop_Animation {
   animation: animate 3s linear infinite;
+}
+.college__people__money{
+  margin-top: -4rem;
+}
+
+
+.home__slider__line{
+  height: 2px;
+  width: 60%;
+  background-color: white;
+  border-radius: 20px;
+  margin-left: -15rem;
+  margin-top: 2rem;
+  /* margin-right: -2rem; */
+}
+.home__slider__text{
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.home__slider__text h1{
+  font-size: 50px;
+  font-family: "heading font";
 }
 
 @keyframes animate {
@@ -52,7 +74,6 @@
 .Logo_image {
   width: 200px;
   height: 200px;
-  border-radius: 50% !important;
 }
 
 .logo_section {
@@ -61,7 +82,6 @@
 
 .logo_section__image {
   position: relative;
-  margin-top: 5rem;
 }
 
 .logo_section_content {
@@ -95,10 +115,10 @@
 }
 
 .logo_section_button_section__About_Us {
-  border: 1px solid gray !important;
+  border: 1px solid rgb(107, 103, 103) !important;
   background-color: transparent;
-  box-shadow: none;
 }
+
 
 .btn-green,
 .btn-green:hover,
@@ -133,12 +153,17 @@ button:active {
   background-size: cover;
   background-attachment: fixed;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 .scroll {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+ 
   margin: -120px 40px 0 0;
-  top: 30rem;
 
 }
 
@@ -342,3 +367,11 @@ button:active {
   }
 }
 /* This is the footer section ................... */
+
+
+@media screen and (max-width:1025px) {
+  .home__slider__line{
+    display: none;
+  }
+  
+}

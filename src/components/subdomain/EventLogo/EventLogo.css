@@ -8,12 +8,9 @@
     color: white;
      z-index: 0; 
      position: absolute;
-     bottom: -13rem;
+     bottom: -15rem;
      text-align: center;
      
-}
-.Robozar__content h4{
-    font-size: medium;
 }
 .circle {
     margin: auto;

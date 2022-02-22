@@ -6,6 +6,12 @@ li::after {
   display: block;
   transition: 0.5s;
 }
+.navbar__justyfy{
+  display: flex;
+  justify-content: space-between;
+  
+  
+}
 
 li:hover::after {
   width: 100%;
