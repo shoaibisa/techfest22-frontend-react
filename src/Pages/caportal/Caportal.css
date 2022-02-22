@@ -1,15 +1,11 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 @font-face {
   font-family: heading font;
   src: url("../../font/BEST\ IN\ CLASS.ttf");
 }
 
-body {
+.caportal {
   background-color: black;
   color: antiquewhite;
   overflow-x: hidden;
@@ -122,16 +118,7 @@ input:active {
 /* Nav Responsive Styling Start */
 
 @media screen and (max-width: 767px) {
-  nav ul li {
-    display: none !important;
-  }
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border: 2px solid green;
-    padding: 15px 15px;
-  }
+ 
   .homePage {
     display: flex;
     flex-wrap: wrap;
@@ -148,19 +135,9 @@ input:active {
   }
 }
 
-@media screen and (max-width: 540px) {
-  .nav {
-    width: 120%;
-    transition: 0.5s ease;
-  }
-}
 
-@media screen and (max-width: 370px) {
-  .nav {
-    width: 140%;
-    transition: 0.5s ease;
-  }
-}
+
+
 
 /*Nav Responsive Styling End */
 
@@ -217,9 +194,7 @@ input:active {
   .perks_CaPortal__heading__Boader {
     width: 39% !important;
   }
-  .navbar_continer {
-    border-radius: 0px;
-  }
+ 
 }
 
 /* Main ResponsiveStyling End */

@@ -1,12 +1,42 @@
+.home{
+  background-color: black;
+}
 .homepage_gif {
   display: block;
 }
-
+.home__slider{
+  padding-bottom: 5rem;
+}
 .homepage_gif_mobile {
   display: none;
 }
 .workShop_Animation {
   animation: animate 3s linear infinite;
+}
+.college__people__money{
+  margin-top: -4rem;
+}
+
+
+.home__slider__line{
+  height: 2px;
+  width: 60%;
+  background-color: white;
+  border-radius: 20px;
+  margin-left: -15rem;
+  margin-top: 2rem;
+  /* margin-right: -2rem; */
+}
+.home__slider__text{
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.home__slider__text h1{
+  font-size: 50px;
+  font-family: "heading font";
 }
 
 @keyframes animate {
@@ -85,11 +115,10 @@
 }
 
 .logo_section_button_section__About_Us {
-  border: 1px solid gray;
+  border: 1px solid rgb(107, 103, 103) !important;
   background-color: transparent;
-  outline: none !important;
-  box-shadow: none;
 }
+
 
 .btn-green,
 .btn-green:hover,
@@ -250,12 +279,14 @@ html {
 
 .cards-container_card2 {
   width: 300px;
+  padding-top: 40px;
 }
 
-.cards-container_card2_image {
+ .cards-container_card2_image {
   display: flex;
   justify-content: center;
-}
+
+} 
 
 .cards-container_card2_image img {
   width: 100%;
@@ -265,10 +296,10 @@ html {
 .cards-container_card2_description-container {
   text-align: center;
   color: white;
-  padding: 5px;
+  margin-top: -15px;
 }
 
-.cards-container_card1_description-container_title {
+.cards-container_card2_description-container_title {
   font-family: "heading-font";
   font-size: large;
 }
@@ -336,3 +367,11 @@ html {
   }
 }
 /* This is the footer section ................... */
+
+
+@media screen and (max-width:1025px) {
+  .home__slider__line{
+    display: none;
+  }
+  
+}
