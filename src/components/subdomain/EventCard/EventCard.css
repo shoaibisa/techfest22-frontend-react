@@ -74,7 +74,10 @@
     font-size: medium;
 }
 .robozar_right_content p{
-    margin-top: -5px;
+    margin-top: -15px;
+}
+.robozar_right_content p .fa{
+    margin-right: 0.5rem;
 }
 .robozar_left_content{
     margin:30px 120px 30px 30px ;
@@ -127,7 +130,7 @@
 }
 @media screen and (max-width:381px) {
     .robozar_main_container{
-        margin-left:1.6rem;
+        margin-left:-0.2rem;
         margin-right: unset;
         
     }
@@ -140,15 +143,21 @@
     }
 }
 @media(max-width:360px) {
+
     .robozar_left_container{
         height: 500px;
         width: 90%;
-        margin-left: -3.5rem;
+        /* margin-left: -.5rem; */
+    }
+}
+@media(max-width:360px) {
+    .robozar_left_container{
+        height: 500px;
+        width: 90%;
     }
     .robozar_right_container{
         width: 70%;
         margin-top: -90px;
-        margin-right: -3.8rem;
     }
     .robozar_main_container{
         margin-bottom: 100px;

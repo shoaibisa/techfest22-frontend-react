@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 // import thisisengineering_raeng from '../../../images/Domain/thisisengineering-raeng-4w0XkDe2Ee8-unsplash 2.png';
 
 
-const EventCard = () => {
+function EventCard() {
     return (
         <div className="Robo">
             <div className="Robozar__bottom">
@@ -26,13 +26,15 @@ const EventCard = () => {
                                 <NavLink to="/" className="robozar_register_button">Register Here</NavLink>
                                 <NavLink to="/" className="robozar_problem_statement_button">Problem Statement</NavLink>
                             </div>
-                        </div >
+                        </div>
                         <div className="robozar_right_container">
                             <div className="robozar_right_content">
                                 <h2> Prize Worth</h2>
-                                <h1>Rs. 50,000</h1>
-                                <p>Register before 11/03</p>
-                                <p>11:59 P.M.</p>
+                                <h1>Rs. 50,000</h1> <br />
+
+                                <p> <i className=" fa fa-light fa-calendar"></i>Register before 11/03</p>
+                                <p><i class="fa fa-clock-o"></i>11:59 P.M.</p>
+                                <br />
                                 <p className="robozar_right_content_eventcoordinator">Event Coordinator</p>
                                 <p>+91XXXXXXXXXX</p>
                                 <p className="robozar_right_content_eventcoordinator">Event Coordinator</p>
