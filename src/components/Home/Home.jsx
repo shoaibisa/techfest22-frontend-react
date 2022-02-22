@@ -2,8 +2,7 @@ import React from 'react';
 import './Home.css';
 
 import Sliderslick from '../Slider/Sliderslick';
-// import data from '../../data/data.json';
-//images import
+
 import homepage_gif from '../../images/hompage-gif-logo.webp';
 // import homepage_gif_mobile_vid from '../../images/hompage-gif-mobile.webm';
 import homapage_gif_vid from '../../images/gif/desk-view.gif';
