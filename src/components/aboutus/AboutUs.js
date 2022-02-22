@@ -8,14 +8,14 @@ const AboutUs = props => {
       <div className="container__About__Us__Upperpart">
         <div className="About__Us__part1">
           <div className="About__Us__part1__techfest__logo">
-            <img src={props.head_tf[1].imageSrc} alt="" />
+            <img src={props.data.head_tf[1].imageSrc} alt="" />
           </div>
           <div className="About__Us__part1__SLIET__logo">
-            <img src={props.head_tf[2].imageSrc} alt="" />
+            <img src={props.data.head_tf[2].imageSrc} alt="" />
           </div>
         </div>
         <div className="About__Us__part2">
-          <img src={props.head_tf[0].imageSrc} alt="" />
+          <img src={props.data.head_tf[0].imageSrc} alt="" />
           <div className="About__Us__part2__text">
             <p>
               techFEST is a platform where engineers, innovators, changemakers,
@@ -208,7 +208,7 @@ const AboutUs = props => {
             className="trailer_iframe"
             title="Trailer"
             src="https://www.youtube.com/embed/Nt58vSQqBU8?controls=0"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write;
                 encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen

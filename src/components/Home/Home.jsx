@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 
 import Sliderslick from '../Slider/Sliderslick';
-import data from '../../data/data.json';
+// import data from '../../data/data.json';
 //images import
 import homepage_gif from '../../images/hompage-gif-logo.webp';
 // import homepage_gif_mobile_vid from '../../images/hompage-gif-mobile.webm';
@@ -13,7 +13,7 @@ import footfall from '../../images/Footfall.svg';
 import dollar_svg from '../../images/Dollar-Svg.svg';
 import domain_png from '../../images/Domains Webp Home.webp';
 
-const Home = () => {
+const Home = props => {
   const gotoServices = () =>
     window.scrollTo({
       top: 500,
@@ -139,7 +139,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <Sliderslick data={data.sponser} />
+        <Sliderslick data={props.data} />
         {/* <Sponsor/> */}
         <div className="container__college__people__money1 py-5  cards-container ">
           <div className="college__people__money">
