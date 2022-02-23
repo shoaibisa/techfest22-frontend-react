@@ -188,5 +188,19 @@
       "title": "White SLIET 1",
       "imageSrc": "img/main_img/White SLIET 1.png"
     }
+  ],
+  "domain": [
+    {
+      "title": "Robozar",
+      "imageSrc": "img/domain/1.jpg"
+    },
+    {
+      "title": "Robozar",
+      "imageSrc": "img/domain/2.jpg"
+    },
+    {
+      "title": "Robozar",
+      "imageSrc": "img/domain/3.jpg"
+    }
   ]
 }

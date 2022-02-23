@@ -15,6 +15,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 import dataJson from './data/data.json';
 import AboutUs from './components/aboutus/AboutUs';
+import Domain from './Pages/domain/Domain';
 
 function App() {
   return (
@@ -28,6 +29,11 @@ function App() {
         <Route exact path="/signin" element={<SignIn />} />
         <Route exact path="/signup" element={<SignUp />} />
         <Route exact path="/about" element={<AboutUs data={dataJson} />} />
+        <Route
+          exact
+          path="/domain"
+          element={<Domain data={dataJson.domain} />}
+        />
       </Routes>
 
       {/* <Home/>
