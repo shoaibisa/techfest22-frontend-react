@@ -4,7 +4,7 @@ import './AboutUs.css';
 
 const AboutUs = props => {
   return (
-    <div className="aboutus-wrap">
+    <div className="aboutus-wrap aboutUsBody">
       <div className="container__About__Us__Upperpart">
         <div className="About__Us__part1">
           <div className="About__Us__part1__techfest__logo">
@@ -16,19 +16,19 @@ const AboutUs = props => {
         </div>
         <div className="About__Us__part2">
           <img src={props.data.head_tf[0].imageSrc} alt="" />
-          <div className="About__Us__part2__text">
+          <div className="About__Us__part2__text  ">
             <p>
-              techFEST is a platform where engineers, innovators, changemakers,
+              techFEST is a platform where engineers, innovators, changemakers,{' '}
               <br />
-              entrepreneurs and tech enthusiasts collaborate to create solutions
-              to <br />
-              some of the world's most challenging problems.
+              entrepreneurs and tech enthusiasts collaborate to create solutions{' '}
+              <br />
+              to some of the world's most challenging problems.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="container__college__people__money1">
+      <div className="container__college__people__money1 container">
         <div className="college__people__money1">
           <div className="colhmn">
             <div className="college">
@@ -116,7 +116,7 @@ const AboutUs = props => {
       {/* <!-- About sliet part ends here -->
     <!-- year-logo code starts here --> */}
       <div className="website_year-declaration">
-        <div className="website_year-declaration_outer-container">
+        <div className="website_year-declaration_outer-container container">
           <div className="website_year-declaration_left-block">
             <div className="website_year-declaration_left-block_title heading">
               <h1>techFEST'22</h1>
@@ -219,18 +219,23 @@ const AboutUs = props => {
 
       {/* <!-- gallery code starts here --> */}
 
-      <div class="Website_sponsor_heading">
-        <h1>Gallery</h1>
+      <div className="aboutUs__slider">
+        <div class="Website_sponsor_heading">
+          <h1>Gallery</h1>
+        </div>
+        <Sliderslick data={props.data.gallery} />
       </div>
-      <Sliderslick data={props.data.gallery} />
 
       {/* <!-- gallery code ends here --> */}
 
       {/* Sponser */}
-      <div class="Website_sponsor_heading">
-        <h1>Our Previous Sponsor</h1>
+      <div className="aboutUs__slider aboutUs__slider__last">
+        <div class="Website_sponsor_heading">
+          <h1>Our Previous Sponsor</h1>
+        </div>
+
+        <Sliderslick data={props.data.sponser} />
       </div>
-      <Sliderslick data={props.data.sponser} />
     </div>
   );
 };

@@ -1,6 +1,5 @@
-body {
+.aboutUsBody {
   overflow-x: hidden !important;
-  background-color: rgb(0, 0, 0);
   background-image: url('../../images/Stagnant-BG-Webp.webp');
   background-size: cover;
   background-repeat: no-repeat;
@@ -243,18 +242,6 @@ p {
   }
 }
 
-/* about sliet part ends here */
-@font-face {
-  font-family: 'heading font';
-  src: url('../../font/BEST\ IN\ CLASS.ttf') format('truetype');
-}
-
-body {
-  background-color: black !important;
-  color: white !important;
-}
-/* yearly-logo starts here */
-
 .website_year-declaration_outer-container {
   display: flex;
   justify-content: space-evenly;
@@ -316,11 +303,6 @@ body {
 }
 /* yearly-logo styling ends here */
 
-.container-fluid {
-  width: 80%;
-  /* margin-top: 5rem; */
-}
-
 .trailer_container {
   display: grid;
   justify-content: center;
@@ -354,6 +336,25 @@ body {
   .trailer_iframe {
     width: 450px;
     height: 230px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .container__About__Us__Upperpart {
+    margin-left: -1rem;
+  }
+  .container__college__people__money1 {
+    margin-left: -1rem;
+  }
+  .container__About__Sliet {
+    margin-left: -3.8rem;
+  }
+  .website_year-declaration {
+    margin-right: 3.9rem;
+  }
+}
+@media screen and (max-width: 376px) {
+  .website_year-declaration_left-block {
+    margin-right: -2rem;
   }
 }
 
@@ -430,12 +431,6 @@ body {
   right: 0%;
 }
 
-@media screen and (max-width: 768px) {
-  .Gallery_item {
-    margin: 40px;
-  }
-}
-
 @media screen and (max-width: 480px) {
   .Gallery_item {
     margin: 30px;
@@ -487,12 +482,6 @@ body {
   position: absolute;
   top: 30%;
   right: 0%;
-}
-
-@media (max-width: 768px) {
-  .Sponsor_item {
-    margin: 40px;
-  }
 }
 
 @media screen and (max-width: 480px) {
