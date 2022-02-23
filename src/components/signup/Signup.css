@@ -1,13 +1,13 @@
-body {
+/* body {
   overflow-y: hidden;
-}
+} */
 
 @font-face {
   font-family: "heading font";
-  src: url("../font/BEST\ IN\ CLASS.ttf") format("truetype");
+  src: url("../../font/BEST\ IN\ CLASS.ttf") format("truetype");
 }
 .signUpBody {
-  background-image: url("./images/Stagnant\ BG\ Webp.jpg");
+  background-image: url("../../images/Stagnant\ BG\ Webp.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;

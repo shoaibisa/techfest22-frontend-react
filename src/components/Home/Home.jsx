@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-
+import {NavLink} from "react-router-dom";
 import Sliderslick from '../Slider/Sliderslick';
 
 import homepage_gif from '../../images/hompage-gif-logo.webp';
@@ -81,12 +81,12 @@ const Home = props => {
               </div>
             </div>
             <div className="text-center logo_section__button_section">
-              <button
-                type="button"
+              <NavLink
+                data-toggle="button" aria-pressed="true" autoComplete="off" activeClassName="active " exact to="/signup" role="button"
                 className="btn btn-green mx-2 pr-5 pl-5 btn-lg logo_section_button_section__Sign_Up"
               >
                 Sign Up Now
-              </button>
+              </NavLink>
               <button
                 type="button"
                 className="btn text-light pr-5 pl-5 mx-2 btn-lg  logo_section_button_section__About_Us"

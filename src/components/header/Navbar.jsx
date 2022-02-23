@@ -37,11 +37,11 @@ const Navbar = () => {
                         <ul className="navbar-nav text-light justify-content-end flex-grow-1 pe-3 sm ">
                             <li className="nav-item home "></li>
                             <li className="nav-item" >
-                                <NavLink className="nav-link mx-3 text-light line " activeclassname="active " data-toggle="pill" aria-current="page"
-                                   exact to="/">Home</NavLink> </li>
+                                <NavLink className="nav-link mx-3 text-light line " activeClassName="active " data-toggle="pill" aria-current="page"
+                                   exact="true" to="/">Home</NavLink> </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link mx-3 line text-light" data-toggle="pill" aria-current="page"
-                                  exact  to="/about">About
+                                  exact="true"  to="/about">About
                                     Us</NavLink>
                             </li>
                             <li className="nav-item">
@@ -70,7 +70,7 @@ const Navbar = () => {
                             <li className="nav-item">
                                 <NavLink className="nav-link  mx-3 text-light line" aria-current="page" activeClassName="active " exact to="/ca">CA Portal</NavLink>
                             </li>
-                            <NavLink className="btn btn-md btn-outline-light active mx-3" data-toggle="button" aria-pressed="true" autoComplete="off" activeClassName="active " exact to="/signin" role="button">Sign in</NavLink>
+                            <NavLink className="btn btn-md btn-outline-light active mx-3"  activeClassName="active " exact to="/signin" data-toggle="button" aria-pressed="true" autoComplete="off" role="button">Sign in</NavLink>
                         </ul>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Signin.css';
+import {NavLink} from "react-router-dom";
 // import signup_gif from '../../images/Signup gif.webm';
 import image from '../../images/hero image.png'
 
@@ -57,7 +58,7 @@ function Signin() {
                 <input
                   name="emailId"
                   required
-                  autocomplete="off"
+                  autoComplete="off"
                   type="email"
                   placeholder=" "
                 />
@@ -69,7 +70,7 @@ function Signin() {
                   id="Showpass"
                   name="password"
                   required
-                  autocomplete="off"
+                  autoComplete="off"
                   type="password"
                   placeholder=" "
                 />
@@ -91,13 +92,13 @@ function Signin() {
             </form>
             <p className="text-light mt-3 Signin__inputs__haveAcount">
               Don't have an account?{' '}
-              <a
+              <NavLink
                 className=" text-decoration-none text-light font-weight-bold "
-                href="./Signup.html"
+                activeClassName="active" exact to="/signup" 
               >
                 {' '}
                 <b>Sign Up</b>
-              </a>{' '}
+              </NavLink>{' '}
             </p>
           </div>
         </div>
