@@ -1,4 +1,5 @@
 import React from 'react';
+ import './Signup.css';
 
 //images
 import signup_gif from '../../images/Signup gif.webm'

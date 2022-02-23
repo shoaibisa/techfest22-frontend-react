@@ -1,7 +1,9 @@
 import React from 'react';
 import './Signin.css';
+ 
 // import signup_gif from '../../images/Signup gif.webm';
-import image from '../../images/hero image.png'
+import image from '../../images/hero image.png';
+import { NavLink } from 'react-router-dom';
 
 function Signin() {
 
@@ -91,13 +93,19 @@ function Signin() {
             </form>
             <p className="text-light mt-3 Signin__inputs__haveAcount">
               Don't have an account?{' '}
-              <a
+              {/* <a
                 className=" text-decoration-none text-light font-weight-bold "
                 href="./Signup.html"
               >
                 {' '}
                 <b>Sign Up</b>
-              </a>{' '}
+              </a>{' '} */}
+              <NavLink
+                className=" text-decoration-none text-light font-weight-bold "
+                to="/signup"
+              >
+                Sign Up
+              </NavLink>
             </p>
           </div>
         </div>
