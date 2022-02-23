@@ -1,13 +1,8 @@
 import React from 'react';
 import './Signin.css';
 import {NavLink} from "react-router-dom";
-// import signup_gif from '../../images/Signup gif.webm';
-import image from '../../images/hero image.png'
-
+import signup_gif from '../../images/Signup gif.webm';
 function Signin() {
-
-
-
 
   function ShowPassword()
 {
@@ -40,10 +35,10 @@ function Signin() {
       <div className="SigninBody ">
         <div className="Signin justify-content-around  d-flex ">
           <div className="Signin__Gif mt-5">
-            {/* <video loop="loop" autoplay muted="true" preload="auto">
-            <source src={} />
-          </video> */}
-            <img src={image} alt="Girl in a jacket" width="500" height="600"></img>
+          <video  loop = {true} autoPlay = {true} muted = {true}>
+            <source style={{width:"600px",height:"400px"}} src={signup_gif} type = "video/webm" />
+
+            </video>
           </div>
 
           <div className="Signin__inputs  ">

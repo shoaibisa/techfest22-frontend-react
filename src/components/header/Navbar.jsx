@@ -50,7 +50,7 @@ const Navbar = () => {
                             <li className="nav-item dropdown text-light">
                                 <NavLink className="nav-link dropdown-toggle mx-3 text-light line" exact to="/domain"
                                 
-                                    id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown"
+                                    id="offcanvasNavbarDropdown" role="button" 
                                     aria-expanded="false">
                                     Domains
                                 </NavLink>

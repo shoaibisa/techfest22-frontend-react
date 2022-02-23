@@ -1,8 +1,10 @@
 .home{
   background-color: black;
+  margin-top: -7rem;
 }
 .homepage_gif {
   display: block;
+  width: 100%;
 }
 .home__slider{
   padding-bottom: 5rem;
@@ -70,10 +72,48 @@
     bottom: 0rem;
   }
 }
+@media screen and (max-width:769px) {
+.scroll{
+  margin-bottom:6rem;
+}
+  .home{
+    margin-top: -2rem !important;
+  }
+
+}
+@media screen and (max-width:1025px) {
+  .scroll{
+    bottom: 6rem !important;
+  }
+  .home{
+    margin-top: -4rem;
+  }
+
+}
+@media screen and (max-width:426px) {
+  .scroll{
+    bottom: 15rem !important;
+  }
+  .home{
+    margin-top:unset !important;
+  }
+  .Logo_image {
+    width: 250px !important;
+    height: 250px !important;
+  }
+
+}
+@media screen and (max-width:320px) {
+  .scroll{
+    bottom: 20rem !important;
+    right: 1rem !important;
+  }
+ 
+}
 
 .Logo_image {
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 350px;
 }
 
 .logo_section {
@@ -161,9 +201,10 @@ html {
 .scroll {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  position: absolute;
+  right: 2rem;
+  bottom: 5rem;
  
-  margin: -120px 40px 0 0;
 
 }
 

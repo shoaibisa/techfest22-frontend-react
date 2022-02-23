@@ -1,9 +1,8 @@
-body {
+.Mainomainbody {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden !important;
-  background-color: rgb(0, 0, 0);
-  height: 1300px;
+  background-color: #000 !important;
 }
 
 html {
@@ -155,6 +154,7 @@ img {
   width: 230px;
   height: 230px;
   perspective: 1000px;
+  cursor: pointer;
 }
 
 .flip-card-inner {

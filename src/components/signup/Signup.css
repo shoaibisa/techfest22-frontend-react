@@ -1,7 +1,3 @@
-/* body {
-  overflow-y: hidden;
-} */
-
 @font-face {
   font-family: "heading font";
   src: url("../../font/BEST\ IN\ CLASS.ttf") format("truetype");
@@ -11,10 +7,14 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  height: 120vh;
+  height: 100vh;
   justify-content: center;
+  overflow-y: hidden;
+  padding-top: 4rem !important;
+  
 }
 .SignUp__Gif video {
+  margin-top: 2rem;
   width: 30rem;
   height: 30rem;
   mix-blend-mode: lighten;

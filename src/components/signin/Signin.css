@@ -9,6 +9,7 @@
   padding-top: 2rem;
 }
 .Signin__Gif video {
+  margin-top: 2rem;
   width: 30rem;
   height: 30rem;
   mix-blend-mode: lighten;

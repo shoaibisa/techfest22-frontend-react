@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 import {NavLink} from "react-router-dom";
 import Sliderslick from '../Slider/Sliderslick';
-
+import homepage__gifvideo from '../../images/homepage--gif.webm'
 import homepage_gif from '../../images/hompage-gif-logo.webp';
 // import homepage_gif_mobile_vid from '../../images/hompage-gif-mobile.webm';
 import homapage_gif_vid from '../../images/gif/desk-view.gif';
@@ -15,7 +15,7 @@ import domain_png from '../../images/Domains Webp Home.webp';
 const Home = props => {
   const gotoServices = () =>
     window.scrollTo({
-      top: 500,
+      top: 850,
       behavior: 'smooth',
       // You can also assign value "auto"
       // to the behavior parameter.
@@ -24,12 +24,16 @@ const Home = props => {
   return (
     <div className="home">
       <div className="home__video py-5">
-        <img
+        {/* <img
           className="homepage_gif"
           alt=""
           style={{ width: '100%', overflow: 'hidden' }}
           src={homapage_gif_vid}
-        />
+        /> */}
+          <video className='homepage_gif'  loop = {true} autoPlay = {true} muted = {true}>
+            <source style={{width:"100%"}} src={homepage__gifvideo} type = "video/webm" />
+
+            </video>
 
         {/* 
             <video className="homepage_gif_mobile" onclick="myFunction()" width="100%" height="100%" loop="loop" autoplay muted="true" preload="auto">

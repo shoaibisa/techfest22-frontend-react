@@ -1,5 +1,6 @@
 import React from 'react';
 import './Domain.css';
+// import SimpleSlider from '../../components/DomainSlider/Domainslider';
 const Domain = props => {
   //   var items = document.getElementsByClassName('line');
   //   var activeClassName = 'active';
@@ -56,14 +57,14 @@ const Domain = props => {
   //     dots[slideIndex - 1].className += ' active1';
   //   }
   return (
-    <div>
+    <div className='Mainomainbody'>
       <div className="background">
         <div className="silder container mt-5 pt-5">
           <div className="domains__slideshow__container ">
             <div className="domains__slideshow__myslides domains__slideshow__fade">
               <img src={props.data[0].imageSrc} alt="" />
             </div>
-
+            
             <div className="domains__slideshow__myslides domains__slideshow__fade">
               <img src={props.data[0].imageSrc} alt="" />
             </div>
@@ -154,39 +155,16 @@ const Domain = props => {
                 </div>
               </div>
             </div>
-            {/* <div className="flip-card mt-3 mx-2 ">
+            <div className="flip-card mt-3 mx-2 ">
               <div
                 className="flip-card-inner "
-                style=" margin-left: 1rem; margin-right: 1rem; "
+                style={{ marginLeft: "1rem", marginRight: "1rem" }}
               >
                 <div className="flip-card-front ">
                   <img
                     src={props.data[0].imageSrc}
                     alt="Avatar "
-                    style="width:230px;height:230px; "
-                  />
-                  <div className="bottom-right ">
-                    <h4> Electrica</h4>
-                    <p>Explore</p>
-                  </div>
-                </div>
-                <div className="flip-card-back ">
-                  <h1>John Doe</h1>
-                  <p>Architect & Engineer</p>
-                  <p>We love that guy</p>
-                </div>
-              </div>
-            </div> */}
-            {/* <div className="flip-card mt-3 mx-2 ">
-              <div
-                className="flip-card-inner "
-                style=" margin-left: 1rem;   margin-right: 1rem;"
-              >
-                <div className="flip-card-front ">
-                  <img
-                    src={props.data[0].imageSrc}
-                    alt="Avatar "
-                    style="width:230px;height:230px; "
+                    style={{width:"230px",height:"230px" }}
                   />
                   <div className="bottom-right ">
                     <h4> Electrica</h4>
@@ -200,18 +178,16 @@ const Domain = props => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="row1 mt-5 ">
             <div className="flip-card mt-3 mx-2 ">
               <div
                 className="flip-card-inner "
-                style=" margin-left: 1rem;   margin-right: 1rem;"
+                style={{ marginLeft: "1rem", marginRight: "1rem" }}
               >
                 <div className="flip-card-front ">
                   <img
                     src={props.data[0].imageSrc}
                     alt="Avatar "
-                    style="width:230px;height:230px; "
+                    style={{width:"230px",height:"230px" }}
                   />
                   <div className="bottom-right ">
                     <h4> Electrica</h4>
@@ -224,17 +200,17 @@ const Domain = props => {
                   <p>We love that guy</p>
                 </div>
               </div>
-            </div> */}
-            {/* <div className="flip-card mt-3 mx-2 ">
+            </div>
+            <div className="flip-card mt-3 mx-2 ">
               <div
                 className="flip-card-inner "
-                style=" margin-left: 1rem;   margin-right: 1rem;"
+                style={{ marginLeft: "1rem", marginRight: "1rem" }}
               >
                 <div className="flip-card-front ">
                   <img
-                    src="images/slider/1.jpg "
+                    src={props.data[0].imageSrc}
                     alt="Avatar "
-                    style="width:230px;height:230px; "
+                    style={{width:"230px",height:"230px" }}
                   />
                   <div className="bottom-right ">
                     <h4> Electrica</h4>
@@ -247,17 +223,17 @@ const Domain = props => {
                   <p>We love that guy</p>
                 </div>
               </div>
-            </div> */}
-            {/* <div className="flip-card mt-3 mx-2 ">
+            </div>
+            <div className="flip-card mt-3 mx-2 ">
               <div
                 className="flip-card-inner "
-                style={{" margin-left: 1rem;   margin-right: 1rem;"}}
+                style={{ marginLeft: "1rem", marginRight: "1rem" }}
               >
                 <div className="flip-card-front ">
                   <img
-                    src="images/slider/1.jpg "
+                    src={props.data[0].imageSrc}
                     alt="Avatar "
-                    style="width:230px;height:230px; "
+                    style={{width:"230px",height:"230px" }}
                   />
                   <div className="bottom-right ">
                     <h4> Electrica</h4>
@@ -270,17 +246,17 @@ const Domain = props => {
                   <p>We love that guy</p>
                 </div>
               </div>
-            </div> */}
-            {/* <div className="flip-card mt-3 mx-2 ">
+            </div>
+            <div className="flip-card mt-3 mx-2 ">
               <div
                 className="flip-card-inner "
-                style={{" margin-left: 1rem;   margin-right: 1rem;"}}
+                style={{ marginLeft: "1rem", marginRight: "1rem" }}
               >
                 <div className="flip-card-front ">
                   <img
-                    src="images/slider/1.jpg "
+                    src={props.data[0].imageSrc}
                     alt="Avatar "
-                    style="width:230px;height:230px; "
+                    style={{width:"230px",height:"230px" }}
                   />
                   <div className="bottom-right ">
                     <h4> Electrica</h4>
@@ -293,7 +269,77 @@ const Domain = props => {
                   <p>We love that guy</p>
                 </div>
               </div>
-            </div> */}
+            </div>
+            <div className="flip-card mt-3 mx-2 ">
+              <div
+                className="flip-card-inner "
+                style={{ marginLeft: "1rem", marginRight: "1rem" }}
+              >
+                <div className="flip-card-front ">
+                  <img
+                    src={props.data[0].imageSrc}
+                    alt="Avatar "
+                    style={{width:"230px",height:"230px" }}
+                  />
+                  <div className="bottom-right ">
+                    <h4> Electrica</h4>
+                    <p>Explore</p>
+                  </div>
+                </div>
+                <div className="flip-card-back ">
+                  <h1>John Doe</h1>
+                  <p>Architect & Engineer</p>
+                  <p>We love that guy</p>
+                </div>
+              </div>
+            </div>
+            <div className="flip-card mt-3 mx-2 ">
+              <div
+                className="flip-card-inner "
+                style={{ marginLeft: "1rem", marginRight: "1rem" }}
+              >
+                <div className="flip-card-front ">
+                  <img
+                    src={props.data[0].imageSrc}
+                    alt="Avatar "
+                    style={{width:"230px",height:"230px" }}
+                  />
+                  <div className="bottom-right ">
+                    <h4> Electrica</h4>
+                    <p>Explore</p>
+                  </div>
+                </div>
+                <div className="flip-card-back ">
+                  <h1>John Doe</h1>
+                  <p>Architect & Engineer</p>
+                  <p>We love that guy</p>
+                </div>
+              </div>
+            </div>
+            <div className="flip-card mt-3 mx-2 ">
+              <div
+                className="flip-card-inner "
+                style={{ marginLeft: "1rem", marginRight: "1rem" }}
+              >
+                <div className="flip-card-front ">
+                  <img
+                    src={props.data[0].imageSrc}
+                    alt="Avatar "
+                    style={{width:"230px",height:"230px" }}
+                  />
+                  <div className="bottom-right ">
+                    <h4> Electrica</h4>
+                    <p>Explore</p>
+                  </div>
+                </div>
+                <div className="flip-card-back ">
+                  <h1>John Doe</h1>
+                  <p>Architect & Engineer</p>
+                  <p>We love that guy</p>
+                </div>
+              </div>
+            </div>
+           
           </div>
         </div>
       </div>
