@@ -138,7 +138,7 @@ const Home = props => {
             </div>
           </div>
         </div>
-       
+
         {/* <Sponsor/> */}
         <div className="container__college__people__money1 cards-container ">
           <div className="college__people__money">
@@ -189,15 +189,14 @@ const Home = props => {
             </div>
           </div>
         </div>
-       <div className="home__slider">
-         <div className="home__slider__text  container">
-           <h1>Sposors</h1>
-         <div className="home__slider__line"></div>
-         </div>
-       <Sliderslick data={props.data} />
-       </div>
+        <div className="home__slider">
+          <div className="home__slider__text  container">
+            <h1>Sponsors</h1>
+            <div className="home__slider__line"></div>
+          </div>
+          <Sliderslick data={props.data} />
+        </div>
       </div>
-      
     </div>
   );
 };
