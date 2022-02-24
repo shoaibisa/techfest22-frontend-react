@@ -1,8 +1,8 @@
 import React from 'react';
 import './Home.css';
-import {NavLink} from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 import Sliderslick from '../Slider/Sliderslick';
-import homepage__gifvideo from '../../images/homepage--gif.webm'
+import homepage__gifvideo from '../../images/homepage--gif.webm';
 import homepage_gif from '../../images/hompage-gif-logo.webp';
 // import homepage_gif_mobile_vid from '../../images/hompage-gif-mobile.webm';
 import homapage_gif_vid from '../../images/gif/desk-view.gif';
@@ -30,10 +30,18 @@ const Home = props => {
           style={{ width: '100%', overflow: 'hidden' }}
           src={homapage_gif_vid}
         /> */}
-          <video className='homepage_gif'  loop = {true} autoPlay = {true} muted = {true}>
-            <source style={{width:"100%"}} src={homepage__gifvideo} type = "video/webm" />
-
-            </video>
+        <video
+          className="homepage_gif"
+          loop={true}
+          autoPlay={true}
+          muted={true}
+        >
+          <source
+            style={{ width: '100%' }}
+            src={homepage__gifvideo}
+            type="video/webm"
+          />
+        </video>
 
         {/* 
             <video className="homepage_gif_mobile" onclick="myFunction()" width="100%" height="100%" loop="loop" autoplay muted="true" preload="auto">
@@ -86,17 +94,29 @@ const Home = props => {
             </div>
             <div className="text-center logo_section__button_section">
               <NavLink
-                data-toggle="button" aria-pressed="true" autoComplete="off" activeClassName="active " exact to="/signup" role="button"
+                data-toggle="button"
+                aria-pressed="true"
+                autoComplete="off"
+                activeClassName="active "
+                exact
+                to="/signup"
+                role="button"
                 className="btn btn-green mx-2 pr-5 pl-5 btn-lg logo_section_button_section__Sign_Up"
               >
                 Sign Up Now
               </NavLink>
-              <button
-                type="button"
+              <NavLink
+                data-toggle="button"
+                aria-pressed="true"
+                autoComplete="off"
+                activeClassName="active "
+                exact
+                to="/about"
+                role="button"
                 className="btn text-light pr-5 pl-5 mx-2 btn-lg  logo_section_button_section__About_Us"
               >
                 About Us
-              </button>
+              </NavLink>
             </div>
           </div>
         </div>
@@ -137,7 +157,8 @@ const Home = props => {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               </div>
               <div className="cards-container_card2_description-container_btn">
-                <a href="/#">Learn More</a>
+                <NavLink to={'/domain'}>Learn More</NavLink>
+                {/* <a href="/#">Learn More</a> */}
               </div>
             </div>
           </div>
