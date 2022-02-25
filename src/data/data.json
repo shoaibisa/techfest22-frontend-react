@@ -202,5 +202,17 @@
       "title": "Robozar",
       "imageSrc": "img/domain/3.jpg"
     }
-  ]
+ 
+  ],
+"eventLogo": [
+  {
+    "imageSrc": "images/Domain/pngwing 3.png",
+    "title": "Robozar",
+    "subTitle":"They are doing what we do, eventually might do it all. You build what can work for you, We bring this which can make you better at building. Do participate to build better."
+
+    
+  }
+
+
+]
 }

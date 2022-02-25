@@ -4,7 +4,7 @@ import'./EventLogo.css';
 
 // import group_1 from '../../../images/Domain/Group (1).png';
 // import group from '../../../images/Domain/Group.png';
-import pngwing from '../../../images/Domain/pngwing 3.png';
+// import pngwing from '../../../images/Domain/pngwing 3.png';
 
 
 
@@ -16,15 +16,13 @@ const EventLogo = (props) =>{
     <div className="circle">
         <span>
         </span>
-        <img src={pngwing} alt=""
+        <img src={props.imgsrc} alt=""
             />
         <div className="Robozar__content"
             >
-            <h1>ROBOZAR</h1>
+            <h1>{props.title}</h1>
             <h4>Explore Events</h4>
-            <p>They are doing what we do, eventually might do it all.
-                You build what can work for you, We bring this which can make you better at building. Do participate to build better.
-                </p>
+            <p>{props.subTitle}</p>
         </div>
     </div>
     

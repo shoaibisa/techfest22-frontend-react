@@ -16,6 +16,12 @@ import 'owl.carousel';
 import dataJson from './data/data.json';
 import AboutUs from './components/aboutus/AboutUs';
 import Domain from './Pages/domain/Domain';
+import Electrica from './Pages/domain/Electrica/Electrica';
+import Kermis from './Pages/domain/Kermis/Kermis';
+import Karyarachna from './Pages/domain/Karyarachna/Karyarachna';
+import Mechanica from './Pages/domain/Mechanica/Mechanica';
+import Plexus from './Pages/domain/Plexus/Plexus';
+import Robozar from './Pages/domain/Robozar/Robozar';
 
 function App() {
   return (
@@ -26,6 +32,12 @@ function App() {
         <Route exact path="/" element={<Home data={dataJson.sponser} />} />
         <Route exact path="/ca" element={<CaPortal />} />
         <Route exact path="/chemfor" element={<Chemfor />} />
+        <Route exact path="/electrica" element={<Electrica />} />
+        <Route exact path="/kermis" element={<Kermis />} />
+        <Route exact path="/karyarachna" element={<Karyarachna />} />
+        <Route exact path="/mechanica" element={<Mechanica />} />
+        <Route exact path="/plexus" element={<Plexus />} />
+        <Route exact path="/robozar" element={<Robozar />} />
         <Route exact path="/signin" element={<SignIn />} />
         <Route exact path="/signup" element={<SignUp />} />
         <Route exact path="/about" element={<AboutUs data={dataJson} />} />

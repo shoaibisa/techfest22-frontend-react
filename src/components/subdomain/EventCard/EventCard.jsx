@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 // import thisisengineering_raeng from '../../../images/Domain/thisisengineering-raeng-4w0XkDe2Ee8-unsplash 2.png';
 
 
-function EventCard() {
+const EventCard = (props) => {
     return (
         <div className="Robo">
             <div className="Robozar__bottom">
@@ -14,13 +14,10 @@ function EventCard() {
                     <div className="robozar_container">
                         <div className="robozar_left_container">
                             <div className="robozar_left_content">
-                                <h1>Robozar</h1>
+                                <h1>{props.title}</h1>
                                 <br />
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Necessitatibus qui cumque quae accusantium ducimus iusto
-                                    fugit officiis ad, libero animi aliquid! Qui minus nemo iure,
-                                    dicta totam provident aliquam ducimus.
+                                    {props.subTitle}
                                 </p>
                                 <br />
                                 <NavLink to="/" className="robozar_register_button">Register Here</NavLink>
@@ -30,15 +27,15 @@ function EventCard() {
                         <div className="robozar_right_container">
                             <div className="robozar_right_content">
                                 <h2> Prize Worth</h2>
-                                <h1>Rs. 50,000</h1> <br />
+                                <h1>{props.amount}</h1> <br />
 
-                                <p> <i className=" fa fa-light fa-calendar"></i>Register before 11/03</p>
-                                <p><i class="fa fa-clock-o"></i>11:59 P.M.</p>
+                                <p> <i className=" fa fa-light fa-calendar"></i>Register before {props.date}</p>
+                                <p><i class="fa fa-clock-o"></i>{props.time}</p>
                                 <br />
                                 <p className="robozar_right_content_eventcoordinator">Event Coordinator</p>
-                                <p>+91XXXXXXXXXX</p>
+                                <p>{props.mobile1}</p>
                                 <p className="robozar_right_content_eventcoordinator">Event Coordinator</p>
-                                <p>+91XXXXXXXXXX</p>
+                                <p>{props.mobile2}</p>
                             </div>
                         </div>
                     </div>
