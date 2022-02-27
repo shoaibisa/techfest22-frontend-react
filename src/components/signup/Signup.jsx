@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './Signup.css';
 import signup_gif from '../../images/Signup gif.webm';
 import { NavLink } from 'react-router-dom';
+import axios from 'axios';
+import { baseUrl } from '../../API/api';
+require('dotenv').config("../../../.env");
 
 
 const Signup = () => {
@@ -31,8 +34,20 @@ const Signup = () => {
     setReferralCode(e.target.value);
   }
 
-  const onSubmitBtnClick = () => {
-    console.log(name, email, password, confirmPassword, referralCode);
+  const onSubmitBtnClick = async() => {
+    const data = {
+      "name": name,
+      "email": email,
+      "password": password,
+      "referralCode": referralCode
+    }
+    console.log(data)
+    await axios.post(`${baseUrl}/signUp`, data).then(res => {
+      console.log(res);
+      
+    }).catch(err => {
+      console.log(err);
+    })
   }
 
   return (
