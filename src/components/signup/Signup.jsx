@@ -3,8 +3,8 @@ import './Signup.css';
 import signup_gif from '../../images/Signup gif.webm';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
-// import { baseUrl } from '../../API/api';
-// require('dotenv').config("../../../.env");
+import { baseUrl } from '../../API/api';
+require('dotenv').config("../../../.env");
 
 
 const Signup = () => {
@@ -42,12 +42,12 @@ const Signup = () => {
       "referralCode": referralCode
     }
     console.log(data)
-    // await axios.post(`${baseUrl}/signUp`, data).then(res => {
-    //   console.log(res);
+    await axios.post(`${baseUrl}/signUp`, data).then(res => {
+      console.log(res);
       
-    // }).catch(err => {
-    //   console.log(err);
-    // })
+    }).catch(err => {
+      console.log(err);
+    })
   }
 
   return (
