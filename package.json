@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "mini-css-extract-plugin": "2.5.2",
+    "path-browserify": "^1.0.1",
     "react-router-dom": "^6.2.1"
   }
 }

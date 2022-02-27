@@ -4,7 +4,7 @@ import signup_gif from '../../images/Signup gif.webm';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import { baseUrl } from '../../API/api';
-require('dotenv').config("../../../.env");
+// require('dotenv').config("../../../.env");
 
 
 const Signup = () => {
