@@ -22,6 +22,7 @@ import Karyarachna from './Pages/domain/Karyarachna/Karyarachna';
 import Mechanica from './Pages/domain/Mechanica/Mechanica';
 import Plexus from './Pages/domain/Plexus/Plexus';
 import Robozar from './Pages/domain/Robozar/Robozar';
+import WorkshopForm from './components/WorkshopForm/WorkshopForm';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route exact path="/robozar" element={<Robozar />} />
         <Route exact path="/signin" element={<SignIn />} />
         <Route exact path="/signup" element={<SignUp />} />
+        <Route exact path="/workshop" element={<WorkshopForm/>} />
         <Route exact path="/about" element={<AboutUs data={dataJson} />} />
         <Route
           exact

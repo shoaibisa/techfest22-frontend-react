@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import './Domain.css';
 // import SimpleSlider from '../../components/DomainSlider/Domainslider';
-const Domain = props => {
+const Domain = (props) => {
  
   var settings = {
     infinite: true,
