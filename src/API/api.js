@@ -1,1 +1,1 @@
-module.exports.baseUrl = 'https://api.techfestsliet.com';
+export const baseUrl = 'https://api.techfestsliet.com';
