@@ -2,7 +2,7 @@ import React from 'react';
 import Sliderslick from '../Slider/Sliderslick';
 import './AboutUs.css';
 
-const AboutUs = props => {
+const AboutUs = (props) => {
   return (
     <div className="aboutus-wrap aboutUsBody">
       <div className="container__About__Us__Upperpart">

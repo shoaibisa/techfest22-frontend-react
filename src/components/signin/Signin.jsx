@@ -2,9 +2,11 @@ import React from 'react';
 import './Signin.css';
 import {NavLink} from "react-router-dom";
 import signup_gif from '../../images/Signup gif.webm';
+// import { useState } from 'react';
 function Signin() {
 
   function ShowPassword()
+
 {
     var shopass = document.getElementById("Showpass");
     var fa_eye = document.getElementById("fa_eye");

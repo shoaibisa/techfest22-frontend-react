@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom';
 import Sliderslick from '../Slider/Sliderslick';
 import homepage__gifvideo from '../../images/homepage--gif.webm';
 import homepage_gif from '../../images/hompage-gif-logo.webp';
-// import homepage_gif_mobile_vid from '../../images/hompage-gif-mobile.webm';
-import homapage_gif_vid from '../../images/gif/desk-view.gif';
+import homepage_gif_mobile_vid from '../../images/hompage-gif-mobile.webm';
+// import homapage_gif_vid from '../../images/gif/desk-view.gif';
 import workshop_home_png from '../../images/Png-Workshops-home-Webp.webp';
 import building from '../../images/BUilding.svg';
 import footfall from '../../images/Footfall.svg';
@@ -43,17 +43,29 @@ const Home = props => {
           />
         </video>
 
-        {/* 
+        {/* <video
+          className="homepage_gif_mobile"
+          loop={true}
+          autoPlay={true}
+          muted={true}
+        >
+          <source
+            style={{ width: '100%' }}
+            src={homepage_gif_mobile_vid}
+            type="video/webm"
+          />
+        </video> */}
+        
             <video className="homepage_gif_mobile" onclick="myFunction()" width="100%" height="100%" loop="loop" autoplay muted="true" preload="auto">
                 <source src={homepage_gif_mobile_vid} type="video/webm"/>
                 Your browser does not support the video tag.
-            </video> */}
-        <img
+            </video>
+        {/* <img
           className="homepage_gif_mobile"
           alt=""
           style={{ width: '100%', overflow: 'hidden' }}
           src={homapage_gif_vid}
-        />
+        /> */}
         <div className="scroll d-flex">
           <div className="scroll__text" onClick={gotoServices}>
             <h6>Scroll Down</h6>
