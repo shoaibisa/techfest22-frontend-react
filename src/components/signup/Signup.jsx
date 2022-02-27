@@ -1,9 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Signup.css';
-//images
 import signup_gif from '../../images/Signup gif.webm';
 import { NavLink } from 'react-router-dom';
+
+
 const Signup = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [referralCode, setReferralCode] = useState('');
+
+  const getName = (e) => {
+    setName(e.target.value);
+  }
+
+  const getEmail = (e) => {
+    setEmail(e.target.value);
+  }
+
+  const getPassword = (e) => {
+    setPassword(e.target.value);
+  }
+
+  const getConfirmPassword = (e) => {
+    setConfirmPassword(e.target.value)
+  }
+
+  const getReferralCode = (e) => {
+    setReferralCode(e.target.value);
+  }
+
+  const onSubmitBtnClick = () => {
+    console.log(name, email, password, confirmPassword, referralCode);
+  }
+
   return (
     <div>
       <div className="signUpBody ">
@@ -30,6 +61,8 @@ const Signup = () => {
               <label className="mt-3">
                 <input
                   name="Fullname"
+                  value={name}
+                  onChange={getName}
                   required
                   autocomplete="off"
                   type="text"
@@ -41,6 +74,8 @@ const Signup = () => {
               <label>
                 <input
                   name="emailId"
+                  value={email}
+                  onChange={getEmail}
                   required
                   autocomplete="off"
                   type="email"
@@ -52,6 +87,8 @@ const Signup = () => {
               <label>
                 <input
                   name="password"
+                  value={password}
+                  onChange={getPassword}
                   required
                   autocomplete="off"
                   type="password"
@@ -64,6 +101,8 @@ const Signup = () => {
               <label>
                 <input
                   name="cnfPassword"
+                  value={confirmPassword}
+                  onChange={getConfirmPassword}
                   required
                   autocomplete="off"
                   type="text"
@@ -77,6 +116,8 @@ const Signup = () => {
                 <input
                   name="referal"
                   type="text"
+                  value={referralCode}
+                  onChange={getReferralCode}
                   required
                   autocomplete="off"
                   placeholder=" "
@@ -84,7 +125,7 @@ const Signup = () => {
                 <span>Refral Code</span>
               </label>{' '}
               <br />
-              <input type="submit" className="btn__color mb-3"></input>
+              <button type='button' onClick={onSubmitBtnClick} className="btn__color mb-3">Submit</button>
             </form>
             <p className="text-light mt-3 Signin__inputs__haveAcount">
               Already have an account?{' '}
