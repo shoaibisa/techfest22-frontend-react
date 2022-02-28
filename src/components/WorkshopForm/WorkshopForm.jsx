@@ -2,9 +2,46 @@ import React, { useState, useEffect } from 'react';
 import { Multiselect } from 'multiselect-react-dropdown';
 
 const WorkshopForm = () => {
+     const [wsName, setwsName ] = useState('');
+  const [wsDesc,setwsDesc ] = useState('');
+  const [hostDesc, sethostDesc] = useState('');
+  const [hostName, sethostName] = useState('');
+  const [startDate, setstartDate] = useState('');
+  const [endDate,setendDate] = useState('');
+  const [studentCoordinator, setstudentCoordinator] = useState('');
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
+
+  const getwsName = (e) => {
+    setwsName(e.target.value);
+  }
+
+  const getwsDesc = (e) => {
+    setwsDesc(e.target.value);
+  }
+
+  const gethostDesc = (e) => {
+    sethostDesc(e.target.value);
+  }
+
+  const gethostName = (e) => {
+    sethostName(e.target.value)
+  }
+
+  const getstartDate = (e) => {
+    setstartDate(e.target.value);
+  }
+  const getendDate = (e) => {
+    setendDate(e.target.value);
+  }
+  const getstudentCoordinator = (e) => {
+    setstudentCoordinator(e.target.value);
+  }
+
+
+    console.log(data)
+  
 
   useEffect(() => {
     fetch('http://localhost:4000/coordinator/get-all-details')
@@ -30,6 +67,17 @@ const WorkshopForm = () => {
     const dataC = items.map(w => {
       return { coordinator: w.coordinatorName, value: w._id };
     });
+    const onSubmitBtnClick = async() => {
+        const data = {
+         
+        "wsName":wsName,
+        "wsDesc":wsDesc,
+        "hostDesc":hostDesc,
+        "hostName":hostName,
+        "startDate":startDate,
+        "endDate":endDate,
+        "studentCoordinator":studentCoordinator
+        }
 
     return (
       <div
@@ -53,8 +101,8 @@ const WorkshopForm = () => {
             <span>Image </span>
             <input
               name="image"
-              //   value={}
-              //   onChange={}
+                // value={}
+                // onChange={}
               required
               autocomplete="off"
               type="file"
@@ -67,8 +115,8 @@ const WorkshopForm = () => {
             <span>Workshop name </span>
             <input
               name="workshopName"
-              //   value={}
-              //   onChange={}
+                value={wsName}
+                onChange={getwsName}
               required
               autocomplete="off"
               type="text"
@@ -81,8 +129,8 @@ const WorkshopForm = () => {
             <span>Ws Desc </span>
             <input
               name="wsDesc"
-              //   value={}
-              //   onChange={}
+                value={wsDesc}
+                onChange={getwsDesc}
               required
               autocomplete="off"
               type="text"
@@ -95,8 +143,8 @@ const WorkshopForm = () => {
             <span>Host Name </span>
             <input
               name="hostName"
-              //   value={}
-              //   onChange={}
+                value={hostName}
+                onChange={gethostName}
               required
               autocomplete="off"
               type="text"
@@ -111,8 +159,8 @@ const WorkshopForm = () => {
             <input
               name=""
               type="text"
-              //   value={}
-              //   onChange={}
+                value={hostDesc}
+                onChange={gethostDesc}
               required
               autocomplete="off"
               placeholder=" "
@@ -124,8 +172,8 @@ const WorkshopForm = () => {
             <span>Start Date </span>
             <input
               name="startDate"
-              //   value={}
-              //   onChange={}
+                value={startDate}
+                onChange={getstartDate}
               required
               autocomplete="off"
               type="date"
@@ -140,8 +188,8 @@ const WorkshopForm = () => {
             {/* <p className="text-danger" id=""></p> */}
             <input
               name="endDate"
-              //   value={}
-              //   onChange={}
+                value={endDate}
+                onChange={getendDate}
               required
               autocomplete="off"
               type="date"
@@ -152,7 +200,10 @@ const WorkshopForm = () => {
           <br />
           <label>
             <span>Student Coordinator </span>
-            <Multiselect options={dataC} displayValue="coordinator" />
+            <Multiselect
+            value={studentCoordinator}
+            onChange={getstudentCoordinator} 
+            options={dataC} displayValue="coordinator" />
           </label>
           <br />
           <br />
@@ -163,6 +214,7 @@ const WorkshopForm = () => {
       </div>
     );
   }
+}
 };
 
 export default WorkshopForm;
