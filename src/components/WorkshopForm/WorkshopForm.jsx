@@ -1,6 +1,23 @@
-import React from 'react'
+import React,{useState} from 'react';
+import {Multiselect} from 'multiselect-react-dropdown';
 
 const WorkshopForm = () => {
+    // async renderData()
+    const data= [
+        { value: '1', car: 'Bugatti' },
+        { value: '2', car: 'Ferrari' },
+        { value: '3', car: 'Aston Martin' },
+        { value: '4', car: 'Koenigsegg' },
+        { value: '5', car: 'BMW' },
+        { value: '6', car: 'Cadillac' }
+      ]
+    // const API = await axios.get('https://jsonplaceholder.typicode.com/comments')
+    // const serverResponse = API.data
+    // const dropDownValue = serverResponse.map((response) => ({
+    //     "value" : response.id,
+    //     "label" : response.email
+    //   }))
+      const [options]= useState(data);
   return (
     <div className='workshopForm' style={{display:"flex", justifyContent:"flex-start", margin:"100px 50px"}}>
           <form
@@ -110,7 +127,12 @@ const WorkshopForm = () => {
                   type="date"
                   placeholder=" "
                 />
-                
+                <p className="text-danger" id=""></p>
+                </label>
+                <br />
+                <label>
+              <span>Student Coordinator </span>
+              <Multiselect options={options} displayValue="car"/>
               </label>
               <br />
               <br />
