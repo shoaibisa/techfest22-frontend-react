@@ -12,7 +12,7 @@ import footfall from '../../images/Footfall.svg';
 import dollar_svg from '../../images/Dollar-Svg.svg';
 import domain_png from '../../images/Domains Webp Home.webp';
 
-const Home = props => {
+const Home = (props) => {
   const gotoServices = () =>
     window.scrollTo({
       top: 850,

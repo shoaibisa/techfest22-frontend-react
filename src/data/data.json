@@ -204,15 +204,13 @@
     }
  
   ],
-"eventLogo": [
-  {
-    "imageSrc": "images/Domain/pngwing 3.png",
-    "title": "Robozar",
-    "subTitle":"They are doing what we do, eventually might do it all. You build what can work for you, We bring this which can make you better at building. Do participate to build better."
-
-    
-  }
-
-
-]
+  "WorkshopForm": [
+    { "value": "1", "label": "Bugatti" },
+    { "value": "2", "label": "Ferrari" },
+    { "value": "3", "label": "Aston Martin" },
+    { "value": "4", "label": "Koenigsegg"},
+    { "value": "5", "label": "BMW" },
+    { "value": "6", "label": "Cadillac" }
+  ]
+ 
 }
