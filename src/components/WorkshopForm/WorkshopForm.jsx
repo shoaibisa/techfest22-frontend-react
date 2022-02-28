@@ -13,6 +13,7 @@ const WorkshopForm = () => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
+  const [selectedImage, setselectedImage] = useState(null);
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -38,21 +39,50 @@ const WorkshopForm = () => {
   const getendDate = e => {
     setendDate(e.target.value);
   };
-  const getstudentCoordinator = e => {
-    setstudentCoordinator(e.target.value);
+  const getstudentCoordinator = (selectedList, selectedItem) => {
+    setstudentCoordinator(selectedList);
   };
 
-  const onSubmitBtnClick = async () => {
-    const data = {
-      wsName: wsName,
-      wsDesc: wsDesc,
-      hostDesc: hostDesc,
-      hostName: hostName,
-      startDate: startDate,
-      endDate: endDate,
-      studentCoordinator: studentCoordinator,
-    };
-    console.log(data);
+  const onSubmitBtnClick = async event => {
+    // const cStudent = studentCoordinator.join(',');
+    // console.log(cStudent, studentCoordinator);
+
+    console.log(studentCoordinator);
+
+    event.preventDefault();
+    let zData = new FormData();
+    zData.append('workshop', selectedImage);
+    // const data = {
+    //   wsName: wsName,
+    //   wsDesc: wsDesc,
+    //   hostDesc: hostDesc,
+    //   hostName: hostName,
+    //   startDate: startDate,
+    //   endDate: endDate,
+    //   studentCoordinator: studentCoordinator,
+    // };
+    zData.append('wsName', wsName);
+    zData.append('wsDesc', wsDesc);
+    zData.append('hostName', hostName);
+    zData.append('startDate', startDate);
+    zData.append('endDate', endDate);
+    zData.append('studentCoordinator', studentCoordinator);
+    try {
+      const response = await axios({
+        method: 'post',
+        url: 'http://localhost:4000/workshop/create',
+        data: zData,
+        headers: { 'Content-Type': 'multipart/form-data' },
+      });
+      console.log(response.status);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const getImageHandle = e => {
+    setselectedImage(e.target.files[0]);
+    //console.log(e.target.files[0]);
   };
 
   useEffect(() => {
@@ -77,7 +107,8 @@ const WorkshopForm = () => {
     return <div>Loading...</div>;
   } else {
     const dataC = items.map(w => {
-      return { coordinator: w.coordinatorName, value: w._id };
+      const cd = w.coordinatorName + ' ' + w.coordinatorEmail;
+      return { coordinator: cd, value: w._id };
     });
 
     return (
@@ -101,11 +132,11 @@ const WorkshopForm = () => {
           <label className="">
             <span>Image </span>
             <input
-              name="image"
+              name="workshop"
               // value={}
-              // onChange={}
+              onChange={getImageHandle}
               required
-              autocomplete="off"
+              autoComplete="off"
               type="file"
               placeholder=" "
             />
@@ -119,7 +150,7 @@ const WorkshopForm = () => {
               value={wsName}
               onChange={getwsName}
               required
-              autocomplete="off"
+              autoComplete="off"
               type="text"
               placeholder=" "
             />
@@ -133,7 +164,7 @@ const WorkshopForm = () => {
               value={wsDesc}
               onChange={getwsDesc}
               required
-              autocomplete="off"
+              autoComplete="off"
               type="text"
               placeholder=" "
             />
@@ -147,7 +178,7 @@ const WorkshopForm = () => {
               value={hostName}
               onChange={gethostName}
               required
-              autocomplete="off"
+              autoComplete="off"
               type="text"
               placeholder=" "
             />
@@ -163,7 +194,7 @@ const WorkshopForm = () => {
               value={hostDesc}
               onChange={gethostDesc}
               required
-              autocomplete="off"
+              autoComplete="off"
               placeholder=" "
             />
             <p className="text-danger" id=""></p>
@@ -176,7 +207,7 @@ const WorkshopForm = () => {
               value={startDate}
               onChange={getstartDate}
               required
-              autocomplete="off"
+              autoComplete="off"
               type="date"
               placeholder=" "
             />
@@ -192,7 +223,7 @@ const WorkshopForm = () => {
               value={endDate}
               onChange={getendDate}
               required
-              autocomplete="off"
+              autoComplete="off"
               type="date"
               placeholder=" "
             />
@@ -202,10 +233,11 @@ const WorkshopForm = () => {
           <label>
             <span>Student Coordinator </span>
             <Multiselect
-              value={studentCoordinator}
-              onChange={getstudentCoordinator}
+              onSelect={getstudentCoordinator}
+              // onChange={getstudentCoordinator}
               options={dataC}
               displayValue="coordinator"
+              showCheckbox="true"
             />
           </label>
           <br />

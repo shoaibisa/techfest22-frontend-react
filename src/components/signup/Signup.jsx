@@ -42,7 +42,8 @@ const Signup = () => {
     };
     console.log(data);
     await axios
-      .post(`${baseUrl}/signUp`, data)
+      //.post(`${baseUrl}/signUp`, data)
+      .post('http://localhost:4000/signUp', data)
       .then(res => {
         console.log(res);
       })
