@@ -155,7 +155,7 @@ const Signup = () => {
                 <span>Refral Code</span>
               </label>{' '}
               <br />
-              <button type='button' onClick={onSubmitBtnClick} className="btn__color mb-3">Submit</button>
+              <button type='button' onClick={onSubmitBtnClick} disabled={isLoading} className="btn__color mb-3">Submit</button>
             </form>
             <p className="text-light mt-3 Signin__inputs__haveAcount">
               Already have an account?{' '}
