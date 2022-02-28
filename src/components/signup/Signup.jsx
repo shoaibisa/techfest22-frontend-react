@@ -6,64 +6,50 @@ import axios from 'axios';
 import { baseUrl } from '../../API/api';
 // require('dotenv').config("../../../.env");
 
-
 const Signup = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [referralCode, setReferralCode] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
 
-  const getName = (e) => {
+  const getName = e => {
     setName(e.target.value);
-  }
+  };
 
-  const getEmail = (e) => {
+  const getEmail = e => {
     setEmail(e.target.value);
-  }
+  };
 
-  const getPassword = (e) => {
+  const getPassword = e => {
     setPassword(e.target.value);
-  }
+  };
 
-  const getConfirmPassword = (e) => {
-    setConfirmPassword(e.target.value)
-  }
+  const getConfirmPassword = e => {
+    setConfirmPassword(e.target.value);
+  };
 
-  const getReferralCode = (e) => {
+  const getReferralCode = e => {
     setReferralCode(e.target.value);
-  }
+  };
 
-  const onSubmitBtnClick = async() => {
-    setIsLoading(true)
-    if(!(name && email && password && confirmPassword)) {
-      alert('Please fill all the fields');
-      setIsLoading(false);
-      return;
-    }
-
-    if(password !== confirmPassword) {
-      alert('Passwords do not match');
-      setIsLoading(false);
-      return;
-    }
-
+  const onSubmitBtnClick = async () => {
     const data = {
-      "name": name,
-      "email": email,
-      "password": password,
-      "referralCode": referralCode
-    }
-    console.log(data)
-    await axios.post(`${baseUrl}/signUp`, data).then(res => {
-      console.log(res);
-      setIsLoading(false);
-    }).catch(err => {
-      console.log(err);
-      setIsLoading(false);
-    })
-  }
+      name: name,
+      email: email,
+      password: password,
+      referralCode: referralCode,
+    };
+    console.log(data);
+    await axios
+      .post(`${baseUrl}/signUp`, data)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
 
   return (
     <div>
@@ -155,7 +141,13 @@ const Signup = () => {
                 <span>Refral Code</span>
               </label>{' '}
               <br />
-              <button type='button' onClick={onSubmitBtnClick} disabled={isLoading} className="btn__color mb-3">Submit</button>
+              <button
+                type="button"
+                onClick={onSubmitBtnClick}
+                className="btn__color mb-3"
+              >
+                Submit
+              </button>
             </form>
             <p className="text-light mt-3 Signin__inputs__haveAcount">
               Already have an account?{' '}

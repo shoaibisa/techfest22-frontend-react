@@ -1,47 +1,59 @@
 import React, { useState, useEffect } from 'react';
 import { Multiselect } from 'multiselect-react-dropdown';
+import axios from 'axios';
 
 const WorkshopForm = () => {
-     const [wsName, setwsName ] = useState('');
-  const [wsDesc,setwsDesc ] = useState('');
+  const [wsName, setwsName] = useState('');
+  const [wsDesc, setwsDesc] = useState('');
   const [hostDesc, sethostDesc] = useState('');
   const [hostName, sethostName] = useState('');
   const [startDate, setstartDate] = useState('');
-  const [endDate,setendDate] = useState('');
+  const [endDate, setendDate] = useState('');
   const [studentCoordinator, setstudentCoordinator] = useState('');
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
 
-  const getwsName = (e) => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const getwsName = e => {
     setwsName(e.target.value);
-  }
+  };
 
-  const getwsDesc = (e) => {
+  const getwsDesc = e => {
     setwsDesc(e.target.value);
-  }
+  };
 
-  const gethostDesc = (e) => {
+  const gethostDesc = e => {
     sethostDesc(e.target.value);
-  }
+  };
 
-  const gethostName = (e) => {
-    sethostName(e.target.value)
-  }
+  const gethostName = e => {
+    sethostName(e.target.value);
+  };
 
-  const getstartDate = (e) => {
+  const getstartDate = e => {
     setstartDate(e.target.value);
-  }
-  const getendDate = (e) => {
+  };
+  const getendDate = e => {
     setendDate(e.target.value);
-  }
-  const getstudentCoordinator = (e) => {
+  };
+  const getstudentCoordinator = e => {
     setstudentCoordinator(e.target.value);
-  }
+  };
 
-
-    console.log(data)
-  
+  const onSubmitBtnClick = async () => {
+    const data = {
+      wsName: wsName,
+      wsDesc: wsDesc,
+      hostDesc: hostDesc,
+      hostName: hostName,
+      startDate: startDate,
+      endDate: endDate,
+      studentCoordinator: studentCoordinator,
+    };
+    console.log(data);
+  };
 
   useEffect(() => {
     fetch('http://localhost:4000/coordinator/get-all-details')
@@ -67,17 +79,6 @@ const WorkshopForm = () => {
     const dataC = items.map(w => {
       return { coordinator: w.coordinatorName, value: w._id };
     });
-    const onSubmitBtnClick = async() => {
-        const data = {
-         
-        "wsName":wsName,
-        "wsDesc":wsDesc,
-        "hostDesc":hostDesc,
-        "hostName":hostName,
-        "startDate":startDate,
-        "endDate":endDate,
-        "studentCoordinator":studentCoordinator
-        }
 
     return (
       <div
@@ -101,8 +102,8 @@ const WorkshopForm = () => {
             <span>Image </span>
             <input
               name="image"
-                // value={}
-                // onChange={}
+              // value={}
+              // onChange={}
               required
               autocomplete="off"
               type="file"
@@ -115,8 +116,8 @@ const WorkshopForm = () => {
             <span>Workshop name </span>
             <input
               name="workshopName"
-                value={wsName}
-                onChange={getwsName}
+              value={wsName}
+              onChange={getwsName}
               required
               autocomplete="off"
               type="text"
@@ -129,8 +130,8 @@ const WorkshopForm = () => {
             <span>Ws Desc </span>
             <input
               name="wsDesc"
-                value={wsDesc}
-                onChange={getwsDesc}
+              value={wsDesc}
+              onChange={getwsDesc}
               required
               autocomplete="off"
               type="text"
@@ -143,8 +144,8 @@ const WorkshopForm = () => {
             <span>Host Name </span>
             <input
               name="hostName"
-                value={hostName}
-                onChange={gethostName}
+              value={hostName}
+              onChange={gethostName}
               required
               autocomplete="off"
               type="text"
@@ -159,8 +160,8 @@ const WorkshopForm = () => {
             <input
               name=""
               type="text"
-                value={hostDesc}
-                onChange={gethostDesc}
+              value={hostDesc}
+              onChange={gethostDesc}
               required
               autocomplete="off"
               placeholder=" "
@@ -172,8 +173,8 @@ const WorkshopForm = () => {
             <span>Start Date </span>
             <input
               name="startDate"
-                value={startDate}
-                onChange={getstartDate}
+              value={startDate}
+              onChange={getstartDate}
               required
               autocomplete="off"
               type="date"
@@ -188,8 +189,8 @@ const WorkshopForm = () => {
             {/* <p className="text-danger" id=""></p> */}
             <input
               name="endDate"
-                value={endDate}
-                onChange={getendDate}
+              value={endDate}
+              onChange={getendDate}
               required
               autocomplete="off"
               type="date"
@@ -201,20 +202,26 @@ const WorkshopForm = () => {
           <label>
             <span>Student Coordinator </span>
             <Multiselect
-            value={studentCoordinator}
-            onChange={getstudentCoordinator} 
-            options={dataC} displayValue="coordinator" />
+              value={studentCoordinator}
+              onChange={getstudentCoordinator}
+              options={dataC}
+              displayValue="coordinator"
+            />
           </label>
           <br />
           <br />
-          <button type="button" className="btn__color mb-3">
+          <button
+            type="button"
+            onClick={onSubmitBtnClick}
+            disabled={isLoading}
+            className="btn__color mb-3"
+          >
             Submit
           </button>
         </form>
       </div>
     );
   }
-}
 };
 
 export default WorkshopForm;
