@@ -13,6 +13,7 @@ const Signup = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [referralCode, setReferralCode] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const getName = (e) => {
     setName(e.target.value);
@@ -35,6 +36,19 @@ const Signup = () => {
   }
 
   const onSubmitBtnClick = async() => {
+    setIsLoading(true)
+    if(!(name && email && password && confirmPassword)) {
+      alert('Please fill all the fields');
+      setIsLoading(false);
+      return;
+    }
+
+    if(password !== confirmPassword) {
+      alert('Passwords do not match');
+      setIsLoading(false);
+      return;
+    }
+
     const data = {
       "name": name,
       "email": email,
@@ -44,9 +58,10 @@ const Signup = () => {
     console.log(data)
     await axios.post(`${baseUrl}/signUp`, data).then(res => {
       console.log(res);
-      
+      setIsLoading(false);
     }).catch(err => {
       console.log(err);
+      setIsLoading(false);
     })
   }
 
