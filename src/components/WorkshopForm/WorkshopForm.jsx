@@ -1,7 +1,10 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import {Multiselect} from 'multiselect-react-dropdown';
 
-const WorkshopForm = () => {
+ const WorkshopForm = () => {
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [items, setItems] = useState([]);
     // async renderData()
     const data= [
         { value: '1', car: 'Bugatti' },
@@ -17,7 +20,31 @@ const WorkshopForm = () => {
     //     "value" : response.id,
     //     "label" : response.email
     //   }))
-      const [options]= useState(data);
+    useEffect(() => {
+        fetch("http://localhost:4000/coordinator/get-all-details")
+          .then(res => res.json())
+          .then(
+            (result) => {
+              setIsLoaded(true);
+              setItems(result);
+              console.log(items);
+            },
+            
+           
+            (error) => {
+                setIsLoaded(true);
+                setError(error);
+              }
+            )
+        }, [])
+        
+        if (error) {
+          return <div>Error: {error.message}</div>;
+        } else if (!isLoaded) {
+          return <div>Loading...</div>;
+        } else {
+            console.log(items);       
+    //   const [options]= useState(data);
   return (
     <div className='workshopForm' style={{display:"flex", justifyContent:"flex-start", margin:"100px 50px"}}>
           <form
@@ -132,7 +159,7 @@ const WorkshopForm = () => {
                 <br />
                 <label>
               <span>Student Coordinator </span>
-              <Multiselect options={options} displayValue="car"/>
+              <Multiselect options={data.value} displayValue="car"/>
               </label>
               <br />
               <br />
@@ -141,5 +168,6 @@ const WorkshopForm = () => {
     </div>
   )
 }
+ }
 
 export default WorkshopForm;
