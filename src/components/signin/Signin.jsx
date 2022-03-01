@@ -1,45 +1,71 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Signin.css';
-import {NavLink} from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 import signup_gif from '../../images/Signup gif.webm';
-// import { useState } from 'react';
+import { baseUrl } from '../../API/api';
+import { localUrl } from '../../API/api';
+import axios from 'axios';
+
 function Signin() {
+  // const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  function ShowPassword()
+  const getEmail = e => {
+    setEmail(e.target.value);
+  };
+  const getpassword = e => {
+    setPassword(e.target.value);
+  };
 
-{
-    var shopass = document.getElementById("Showpass");
-    var fa_eye = document.getElementById("fa_eye");
+  const onSubmitBtnClick = async () => {
+    const zData = {
+      email: email,
+      password: password,
+    };
+    console.log(zData);
 
-    
-    var type = shopass.getAttribute("type");
-    if(type === "password")
-    {
-        type = "text";
-       shopass.setAttribute("type", type);
-       fa_eye.classList.add("fa-eye");
-       fa_eye.classList.remove("fa-eye-slash");
-       
+    try {
+      return await axios({
+        method: 'post',
+        data: zData,
+        url: `${localUrl}/signIn`,
+      }).then(response => {
+        console.log(response.data);
+      });
+    } catch (error) {
+      console.log(error);
     }
-    else
-    {
-        
-        type = "password";
-        shopass.setAttribute("type",type);
-        fa_eye.classList.add("fa-eye-slash");
-       fa_eye.classList.remove("fa-eye");
-        
+  };
+
+  function ShowPassword() {
+    var shopass = document.getElementById('Showpass');
+    var fa_eye = document.getElementById('fa_eye');
+
+    var type = shopass.getAttribute('type');
+    if (type === 'password') {
+      type = 'text';
+      shopass.setAttribute('type', type);
+      fa_eye.classList.add('fa-eye');
+      fa_eye.classList.remove('fa-eye-slash');
+    } else {
+      type = 'password';
+      shopass.setAttribute('type', type);
+      fa_eye.classList.add('fa-eye-slash');
+      fa_eye.classList.remove('fa-eye');
     }
-    
-}
+  }
   return (
     <div>
       <div className="SigninBody ">
         <div className="Signin justify-content-around  d-flex ">
           <div className="Signin__Gif mt-5">
-          <video  loop = {true} autoPlay = {true} muted = {true}>
-            <source style={{width:"600px",height:"400px"}} src={signup_gif} type = "video/webm" />
-
+            <video loop={true} autoPlay={true} muted={true}>
+              <source
+                style={{ width: '600px', height: '400px' }}
+                src={signup_gif}
+                type="video/webm"
+              />
             </video>
           </div>
 
@@ -50,7 +76,7 @@ function Signin() {
               </h2>
               <p className="text-light">Sign in to continue</p>
             </div>
-            <form name="SigninForm" action="" className=" text-center">
+            <form name="SigninForm" className=" text-center">
               <label>
                 <input
                   name="emailId"
@@ -58,6 +84,7 @@ function Signin() {
                   autoComplete="off"
                   type="email"
                   placeholder=" "
+                  onChange={getEmail}
                 />
                 <span>Email</span>
               </label>{' '}
@@ -70,6 +97,7 @@ function Signin() {
                   autoComplete="off"
                   type="password"
                   placeholder=" "
+                  onChange={getpassword}
                 />
 
                 <span>Password</span>
@@ -81,7 +109,13 @@ function Signin() {
                 <p className="text-danger" id="pass"></p>
               </label>
               <div className="login__button d-flex justify-content-around">
-                <input type="submit" className="btn__color mb-3"></input>
+                <button
+                  type="button"
+                  onClick={onSubmitBtnClick}
+                  className="btn__color mb-3"
+                >
+                  Submit
+                </button>
                 <a className=" text-light text-decoration-none " href="/#">
                   Forgot Password?
                 </a>
@@ -91,7 +125,9 @@ function Signin() {
               Don't have an account?{' '}
               <NavLink
                 className=" text-decoration-none text-light font-weight-bold "
-                activeClassName="active" exact to="/signup" 
+                activeClassName="active"
+                exact
+                to="/signup"
               >
                 {' '}
                 <b>Sign Up</b>
@@ -101,7 +137,7 @@ function Signin() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Signin
+export default Signin;

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Multiselect } from 'multiselect-react-dropdown';
 import axios from 'axios';
+import { baseUrl } from '../../API/api';
+import { localUrl } from '../../API/api';
 
 const WorkshopForm = () => {
   const [wsName, setwsName] = useState('');
@@ -46,8 +48,11 @@ const WorkshopForm = () => {
   const onSubmitBtnClick = async event => {
     // const cStudent = studentCoordinator.join(',');
     // console.log(cStudent, studentCoordinator);
+    const sc = studentCoordinator.map(e => {
+      return e.value;
+    });
 
-    console.log(studentCoordinator);
+    //console.log(sc[0]);
 
     event.preventDefault();
     let zData = new FormData();
@@ -64,20 +69,52 @@ const WorkshopForm = () => {
     zData.append('wsName', wsName);
     zData.append('wsDesc', wsDesc);
     zData.append('hostName', hostName);
+    zData.append('hostDesc', hostDesc);
     zData.append('startDate', startDate);
     zData.append('endDate', endDate);
-    zData.append('studentCoordinator', studentCoordinator);
+    zData.append('studentCoordinator', sc);
     try {
-      const response = await axios({
-        method: 'post',
-        url: 'http://localhost:4000/workshop/create',
-        data: zData,
-        headers: { 'Content-Type': 'multipart/form-data' },
-      });
-      console.log(response.status);
+      return await axios(
+        {
+          method: 'post',
+          url: `${baseUrl}/workshop/create`,
+          data: zData,
+          headers: {
+            'Content-Type': 'multipart/form-data',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+          },
+        },
+        {
+          onUploadProgress: ProgressEvent => {
+            console.log(
+              'Upload image progress ' +
+                Math.round(ProgressEvent.loaded / ProgressEvent.total) * 100 +
+                ' '
+            );
+          },
+        }
+      )
+        .then(res => {
+          console.log(res);
+        })
+        .catch(err => {
+          console.log(err);
+        });
+      // console.log(response);
     } catch (error) {
       console.log(error);
     }
+    // const config = { headers: { 'Content-Type': 'multipart/form-data' } };
+    // await axios
+    //   //.post(`${baseUrl}/signUp`, data)
+    //   .post('http://localhost:4000/workshop/create', zData, config)
+    //   .then(res => {
+    //     console.log(res);
+    //   })
+    //   .catch(err => {
+    //     console.log(err);
+    //   });
   };
 
   const getImageHandle = e => {
@@ -86,7 +123,7 @@ const WorkshopForm = () => {
   };
 
   useEffect(() => {
-    fetch('http://localhost:4000/coordinator/get-all-details')
+    fetch(`${baseUrl}/coordinator/get-all-details`)
       .then(res => res.json())
       .then(
         result => {
@@ -121,7 +158,7 @@ const WorkshopForm = () => {
         }}
       >
         <form
-          onsubmit=" return myFormValidation()"
+          onSubmit=" return myFormValidation()"
           name="signupForm"
           action=""
           className=""
