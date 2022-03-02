@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Multiselect } from 'multiselect-react-dropdown';
 import axios from 'axios';
-import { baseUrl } from '../../API/api';
-import { localUrl } from '../../API/api';
+import { baseUrl } from '../../../API/api';
+import { localUrl } from '../../../API/api';
 
-const WorkshopForm = () => {
+const DomainForm = () => {
   const [wsName, setwsName] = useState('');
   const [wsDesc, setwsDesc] = useState('');
   const [hostDesc, sethostDesc] = useState('');
@@ -77,7 +77,7 @@ const WorkshopForm = () => {
       return await axios(
         {
           method: 'post',
-          url: `${baseUrl}/workshop/create`,
+          url: `${localUrl}/workshop/create`,
           data: zData,
           headers: {
             'Content-Type': 'multipart/form-data',
@@ -118,12 +118,23 @@ const WorkshopForm = () => {
   };
 
   const getImageHandle = e => {
-    setselectedImage(e.target.files[0]);
+    var fileName = e.target.files[0].name;
+    var idxDot = fileName.lastIndexOf('.') + 1;
+    var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+    if (extFile === 'jpg' || extFile === 'jpeg' || extFile === 'png') {
+      //TO DO
+      setselectedImage(e.target.files[0]);
+    } else {
+      alert('Only jpg/jpeg and png files are allowed!');
+      setselectedImage(null);
+    }
+    // console.log(e.target.files[0].name);
+
     //console.log(e.target.files[0]);
   };
 
   useEffect(() => {
-    fetch(`${baseUrl}/coordinator/get-all-details`)
+    fetch(`${localUrl}/coordinator/get-all-details`)
       .then(res => res.json())
       .then(
         result => {
@@ -166,7 +177,7 @@ const WorkshopForm = () => {
           <h1 className="" href="/#">
             Workshop Form
           </h1>
-          <label className="">
+          {/* <label className="">
             <span>Image </span>
             <input
               name="workshop"
@@ -178,6 +189,20 @@ const WorkshopForm = () => {
               placeholder=" "
             />
             <p className="text-danger" id="pass"></p>
+          </label> */}
+          <label class="btn btn-default btn-file ">
+            Image browse{' '}
+            <input
+              type="file"
+              style={{}}
+              name="workshop"
+              // value={}
+              onChange={getImageHandle}
+              required
+              autoComplete="off"
+              placeholder=" "
+              accept="image/png, image/gif, image/jpeg"
+            />
           </label>
           <br />
           <label>
@@ -293,4 +318,4 @@ const WorkshopForm = () => {
   }
 };
 
-export default WorkshopForm;
+export default DomainForm;

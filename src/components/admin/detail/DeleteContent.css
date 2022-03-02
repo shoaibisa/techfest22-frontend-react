@@ -1,0 +1,11 @@
+.delete-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.5rem;
+  margin-top: 100px;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgb(0, 0, 0, 0.25);
+  background-color: #dcb8fa;
+}
