@@ -17,6 +17,7 @@ const WorkshopForm = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
   const [selectedImage, setselectedImage] = useState(null);
+  const [response, setResponse] = useState(null);
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -78,7 +79,7 @@ const WorkshopForm = () => {
       return await axios(
         {
           method: 'post',
-          url: `${localUrl}/workshop/create`,
+          url: `${baseUrl}/workshop/create`,
           data: zData,
           headers: {
             'Content-Type': 'multipart/form-data',
@@ -97,6 +98,14 @@ const WorkshopForm = () => {
         }
       )
         .then(res => {
+          //setResponse(res)
+          if (res.status !== 200 || res.status !== 200) {
+            console.log(res);
+            throw res.data;
+          }
+        })
+        .then(res => {
+          setResponse(res);
           console.log(res);
         })
         .catch(err => {
@@ -124,7 +133,7 @@ const WorkshopForm = () => {
   };
 
   useEffect(() => {
-    fetch(`${localUrl}/coordinator/get-all-details`)
+    fetch(`${baseUrl}/coordinator/get-all-details`)
       .then(res => res.json())
       .then(
         result => {
@@ -170,6 +179,7 @@ const WorkshopForm = () => {
             action=""
             className=""
           >
+            <h1>res {response}</h1>
             <h1 className="" href="/#">
               Workshop Form
             </h1>

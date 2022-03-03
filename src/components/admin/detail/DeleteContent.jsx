@@ -4,7 +4,7 @@ import './DeleteContent.css';
 const DeleteContent = props => {
   const [content, setContent] = useState(props);
   const onBtnClick = () => {
-    setContent('show');
+    //setContent('show');
     console.log(content);
   };
 
@@ -13,7 +13,7 @@ const DeleteContent = props => {
       <p>{props.data.name}</p>
       <p>{props.data.desc}</p>
       <button type="button" onClick={onBtnClick} className="btn__color mb-3">
-        Submit
+        Delete
       </button>
     </div>
   );

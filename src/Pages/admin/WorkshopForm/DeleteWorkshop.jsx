@@ -4,12 +4,6 @@ import DeleteContent from '../../../components/admin/detail/DeleteContent';
 import { baseUrl } from '../../../API/api';
 import { localUrl } from '../../../API/api';
 
-const data = {
-  name: 'mahi',
-  desc: 'kjsdjk',
-  id: '2',
-};
-
 const DeleteWorkshop = () => {
   const [contents, setContents] = useState('');
   const [isLoaded, setIsLoaded] = useState(false);
@@ -36,15 +30,17 @@ const DeleteWorkshop = () => {
   }
 
   return (
-    <ul className="expense-list">
-      {contents.map(w => (
-        <DeleteContent
-          key={w._id}
-          data={{ name: w.workshopName, desc: w.wsDesc, id: w._id }}
-        />
-      ))}
-      {/* <p>{contents}</p> */}
-    </ul>
+    <div className="delete-card">
+      <ul className="delete-list ">
+        {contents.map(w => (
+          <DeleteContent
+            key={w._id}
+            data={{ name: w.workshopName, desc: w.wsDesc, id: w._id }}
+          />
+        ))}
+        {/* <p>{contents}</p> */}
+      </ul>
+    </div>
   );
 };
 
