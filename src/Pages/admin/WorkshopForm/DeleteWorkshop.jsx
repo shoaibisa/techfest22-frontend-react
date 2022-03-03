@@ -9,8 +9,8 @@ const DeleteWorkshop = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    fetch(`${localUrl}/workshop/all`)
+  const loadData = async () => {
+    fetch(`${baseUrl}/workshop/all`)
       .then(res => res.json())
       .then(
         result => {
@@ -23,7 +23,9 @@ const DeleteWorkshop = () => {
           setError(error);
         }
       );
-  }, []);
+  };
+
+  loadData()
 
   if (contents.length === 0) {
     return <h1 className="delete-list__fallback">Not Found!</h1>;
@@ -33,6 +35,7 @@ const DeleteWorkshop = () => {
     <div className="delete-card">
       <ul className="delete-list ">
         {contents.map(w => (
+          {loadData},
           <DeleteContent
             key={w._id}
             data={{ name: w.workshopName, desc: w.wsDesc, id: w._id }}
