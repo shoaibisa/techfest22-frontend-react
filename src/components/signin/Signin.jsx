@@ -2,6 +2,7 @@ import React from 'react';
 import './Signin.css';
 import {NavLink} from "react-router-dom";
 import signup_gif from '../../images/Signup gif.webm';
+import forgotlogo from '../../images/background-main.png'
 function Signin() {
 
   function ShowPassword()
@@ -98,6 +99,15 @@ function Signin() {
           </div>
         </div>
       </div>
+
+      {/* <div className="forgotpassword">
+        <div className="forgotpassword__content">
+                  <div className="forgotpassword__content__heading">
+                    <h4>Forgot your password</h4>
+                    <p>We will send you a email to reset your password</p>
+                  </div>
+        </div>
+      </div> */}
     </div>
   )
 }

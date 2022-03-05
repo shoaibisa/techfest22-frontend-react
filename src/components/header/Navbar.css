@@ -12,7 +12,9 @@ li::after {
   
   
 }
-
+.btn-close {
+  background-color: white !important;
+}
 li:hover::after {
   width: 100%;
 }

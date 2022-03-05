@@ -17,12 +17,10 @@
   margin-top: 8rem;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
 }
 .About__Us__part1__techfest__logo {
   display: flex;
-  justify-content: center;
   flex-grow: 0.1;
   border-right: 2px solid #fff;
 }
@@ -49,9 +47,11 @@
 .About__Us__part2__text {
   font-size: 1.3rem;
   color: #fff;
-  margin-top: 1rem;
+  padding-top: 1rem;
   word-spacing: 2px;
   letter-spacing: 0.2px;
+  width: 50rem;
+  margin: auto;
  
   
 }
@@ -68,6 +68,7 @@
 }
 .container__college__people__money1 .colhmn {
   flex-grow: 0.8;
+  margin-top: 2rem;
 }
 .number {
   text-align: center;
@@ -113,11 +114,13 @@
   border-radius: 20px;
 }
 .container__About__Sliet {
-  margin-top: 5rem;
+  padding-top: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 3rem;
+  margin: auto;
+  padding-bottom: 5rem;
 }
 .About__Us__About__Sliet__Description {
   text-align: center;
@@ -126,6 +129,7 @@
   justify-content: center;
   font-size: 1.2rem;
   font-family: Arial, Helvetica, sans-serif;
+  width: 35rem;
 }
 .About__Us__About__Sliet__Description1 {
   display: none;
@@ -136,9 +140,6 @@
   border-bottom: 1px solid #fff;
 }
 @media screen and (max-width: 490px) {
-  body {
-    background-image: none;
-  }
 
   .college__people__money1 {
     margin-top: -3rem;
@@ -192,8 +193,9 @@
   .About__Us__part2 img {
     width: 150px;
   }
-  .About__Us__part2__text p {
-    font-size: 0.59rem;
+  .About__Us__part2__text  {
+    width: 25rem;
+    text-align: center;
   }
   .About__Us__part2 {
     margin-top: 1.5rem;
@@ -214,13 +216,33 @@
     border-radius: 10px;
   }
 }
+@media screen and (max-width: 426px) {
+  .About__Us__part1{
+    margin-left: 1.7rem;
+  }
+  
+}
+@media screen and (max-width: 376px) {
+  .About__Us__part2__text{
+    width: 20rem !important ;
+  }
+  
+}
+@media screen and (max-width: 326px) {
+  .About__Us__part2__text{
+    width: 18rem !important ;
+  }
+  
+}
 @media screen and (max-width: 403px) {
   .container__About__Us__Upperpart {
     margin-left: 4.5rem;
   }
-  .About__Us__part2__text p {
-    font-size: 0.66rem;
+  .About__Us__part2__text  {
+   width: 24rem;
+  
   }
+ 
   .container__college__people__money1 {
     margin-left: 4.5rem;
   }
@@ -291,7 +313,7 @@
     width: 12.2rem;
   }
   .website_year-declaration {
-    margin-left: 8rem;
+    margin-left: 4rem;
   }
 }
 /* yearly-logo styling ends here */
@@ -331,6 +353,10 @@
   .trailer_iframe {
     width: 450px;
     height: 230px;
+  }
+  .About__Us__About__Sliet__Description {
+   
+    width: 16rem !important;
   }
 }
 @media screen and (max-width: 376px) {
@@ -487,6 +513,10 @@
 @media screen and (max-width: 480px) {
   .Sponsor_item {
     margin: 30px;
+  }
+  .About__Us__About__Sliet__Description {
+    
+    width: 20rem;
   }
 }
 /* footer section */

@@ -18,8 +18,8 @@ const AboutUs = props => {
           <img src={props.data.head_tf[0].imageSrc} alt="" />
           <div className="About__Us__part2__text  ">
             <p>
-              techFEST is a platform where engineers, innovators, changemakers, <br />
-              entrepreneurs and tech enthusiasts collaborate to create solutions <br />
+              techFEST is a platform where engineers, innovators, changemakers, 
+              entrepreneurs and tech enthusiasts collaborate to create solutions
               to some of the world's most challenging problems.
             </p>
           </div>
@@ -90,21 +90,21 @@ const AboutUs = props => {
           <div className="About__Us__About__Sliet__Description">
             <p>
               Sant Longowal Institute of Engineering and Technology was
-              established as a <br />
+              established as a 
               tribute to revered saint Sant Harchand Singh Longowal. The
-              institute strives <br />
+              institute strives
               to impart quality knowledge and technical skills by creating a
-              healthy competitive <br />
+              healthy competitive 
               enviroment that encourages innovation and critical thinking among
-              students. At <br />
+              students. At 
               the academic level the institute offers various academic courses
               of
-              <br />
+             
               Undergraduate and PostGraduate programmes. Apart from academics,
-              SLIET is <br />
+              SLIET is 
               home to various co-cirrcular activities and communities such as
-              National Cadet <br />
-              Corps-SLIET, Endeavour, SSDC, Juggernauts, Green rangers, <br />
+              National Cadet
+              Corps-SLIET, Endeavour, SSDC, Juggernauts, Green rangers,
               Institute Innovation cell, SARS, National Service Scheme, etc.
             </p>
           </div>

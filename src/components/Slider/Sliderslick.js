@@ -18,7 +18,7 @@ const Sliderslick = props => {
       {
         breakpoint: 426, // tablet breakpoint
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
