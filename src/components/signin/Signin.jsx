@@ -1,15 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Signin.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import signup_gif from '../../images/Signup gif.webm';
 import { baseUrl } from '../../API/api';
 import { localUrl } from '../../API/api';
 import axios from 'axios';
+import UserDash from '../../Pages/user/UserDash';
+import ErrorModel from '../UI/ErrorModel/ErrorModel';
 
 function Signin() {
   // const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [responses, setResponses] = useState(null);
+  // const [isErrs, setIsErrs] = useState();
+  const [errosMade, setErrosMade] = useState(); //undefined
+
+  // const navigate = useNavigate();
 
   const getEmail = e => {
     setEmail(e.target.value);
@@ -19,23 +26,37 @@ function Signin() {
   };
 
   const onSubmitBtnClick = async () => {
+    // if (email.trim().length === 0 || password.trim().length === 0) {
+    //   setErrosMade({
+    //     title: 'Error',
+    //     message: 'Field should not be empty',
+    //   });
+    //   return;
+    // }
+
     const zData = {
       email: email,
       password: password,
     };
     console.log(zData);
 
-    try {
-      return await axios({
-        method: 'post',
-        data: zData,
-        url: `${baseUrl}/signIn`,
-      }).then(response => {
-        console.log(response.data);
-      });
-    } catch (error) {
-      console.log(error);
+    // try {
+    const fetchData = await axios({
+      method: 'post',
+      data: zData,
+      url: `${localUrl}/signIn`,
+    });
+
+    setResponses(fetchData.data);
+    console.log(responses.error.error);
+    if (responses.error.isErrors) {
+      alert(responses.error.error);
     }
+    // alert(fetchData.data.isErrors);
+  };
+
+  const onErrosMadeHandle = () => {
+    setErrosMade(null);
   };
 
   function ShowPassword() {
@@ -57,6 +78,13 @@ function Signin() {
   }
   return (
     <div>
+      {errosMade && (
+        <ErrorModel
+          title={errosMade.title}
+          message={errosMade.message}
+          onErrosClick={onErrosMadeHandle}
+        />
+      )}
       <div className="SigninBody ">
         <div className="Signin justify-content-around  d-flex ">
           <div className="Signin__Gif mt-5">

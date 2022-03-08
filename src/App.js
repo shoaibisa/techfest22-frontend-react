@@ -25,6 +25,9 @@ import Robozar from './Pages/domain/Robozar/Robozar';
 import WorkshopForm from './Pages/admin/WorkshopForm/WorkshopForm';
 import DomainForm from './Pages/admin/domain/DomainForm';
 import DeleteWorkshop from './Pages/admin/WorkshopForm/DeleteWorkshop';
+import AdminContent from './Pages/admin/AdminContent';
+import CoordinatorForm from './Pages/admin/coordinator/CoordinatorForm';
+import CoordinatorContent from './Pages/admin/coordinator/CoordinatorContent';
 
 function App() {
   return (
@@ -45,7 +48,7 @@ function App() {
         <Route exact path="/signup" element={<SignUp />} />
         <Route exact path="/workshop" element={<WorkshopForm />} />
         <Route exact path="/about" element={<AboutUs data={dataJson} />} />
-        <Route exact path="/admin/domain" element={<DomainForm />} />
+        <Route exact path="/admin/domains" element={<DomainForm />} />
         <Route
           exact
           path="/domain"
@@ -53,9 +56,20 @@ function App() {
         />
         <Route
           exact
+          path="/admin/coordinators/add"
+          element={<CoordinatorForm />}
+        />
+        <Route
+          exact
+          path="/admin/coordinators"
+          element={<CoordinatorContent />}
+        />
+        <Route
+          exact
           path="/admin/workshop/delete"
           element={<DeleteWorkshop />}
         />
+        <Route exact path="/admin" element={<AdminContent />} />
       </Routes>
       <Footer />
     </div>

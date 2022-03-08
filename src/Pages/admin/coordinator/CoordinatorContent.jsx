@@ -4,18 +4,18 @@ import DeleteContent from '../../../components/admin/detail/DeleteContent';
 import { baseUrl } from '../../../API/api';
 import { localUrl } from '../../../API/api';
 
-const DeleteWorkshop = () => {
+const CoordinatorContent = () => {
   const [contents, setContents] = useState('');
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
 
-  const loadData = async () => {
-    fetch(`${baseUrl}/workshop/all`)
+  useEffect(() => {
+    fetch(`${localUrl}/coordinator/get-all-details`)
       .then(res => res.json())
       .then(
         result => {
           setIsLoaded(true);
-          setContents(result['w']);
+          setContents(result['c']);
         },
 
         error => {
@@ -23,9 +23,9 @@ const DeleteWorkshop = () => {
           setError(error);
         }
       );
-  };
+  }, []);
 
-  loadData();
+  // loadData();
 
   if (contents.length === 0) {
     return <h1 className="delete-list__fallback">Not Found!</h1>;
@@ -34,21 +34,20 @@ const DeleteWorkshop = () => {
   return (
     <div className="delete-card">
       <ul className="delete-list ">
-        {contents.map(
-          w => (
-            { loadData },
-            (
-              <DeleteContent
-                key={w._id}
-                data={{ name: w.workshopName, desc: w.wsDesc, id: w._id }}
-              />
-            )
-          )
-        )}
+        {contents.map(w => (
+          <DeleteContent
+            key={w._id}
+            data={{
+              name: w.coordinatorName,
+              desc: w.coordinatorEmail,
+              id: w._id,
+            }}
+          />
+        ))}
         {/* <p>{contents}</p> */}
       </ul>
     </div>
   );
 };
 
-export default DeleteWorkshop;
+export default CoordinatorContent;

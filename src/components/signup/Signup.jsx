@@ -42,7 +42,7 @@ const Signup = () => {
     };
     console.log(data);
     await axios
-      .post(`${baseUrl}/signUp`, data)
+      .post(`${localUrl}/signUp`, data)
       .then(res => {
         console.log(res);
       })

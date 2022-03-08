@@ -4,18 +4,18 @@ import DeleteContent from '../../../components/admin/detail/DeleteContent';
 import { baseUrl } from '../../../API/api';
 import { localUrl } from '../../../API/api';
 
-const DeleteWorkshop = () => {
+const DomainContent = () => {
   const [contents, setContents] = useState('');
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
 
   const loadData = async () => {
-    fetch(`${baseUrl}/workshop/all`)
+    fetch(`${localUrl}/coordinator/get-all-details`)
       .then(res => res.json())
       .then(
         result => {
           setIsLoaded(true);
-          setContents(result['w']);
+          setContents(result['c']);
         },
 
         error => {
@@ -40,7 +40,11 @@ const DeleteWorkshop = () => {
             (
               <DeleteContent
                 key={w._id}
-                data={{ name: w.workshopName, desc: w.wsDesc, id: w._id }}
+                data={{
+                  name: w.coordinatorName,
+                  desc: w.coordinatorType,
+                  id: w._id,
+                }}
               />
             )
           )
@@ -51,4 +55,4 @@ const DeleteWorkshop = () => {
   );
 };
 
-export default DeleteWorkshop;
+export default DomainContent;
