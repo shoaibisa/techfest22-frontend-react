@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import CaPortal from './Pages/caportal/Caportal';
 import Navbar from './components/header/Navbar';
@@ -29,11 +29,69 @@ import AdminContent from './Pages/admin/AdminContent';
 import CoordinatorForm from './Pages/admin/coordinator/CoordinatorForm';
 import CoordinatorContent from './Pages/admin/coordinator/CoordinatorContent';
 
+import UserDash from './Pages/user/UserDash';
+import axios from 'axios';
+import { localUrl } from './API/api';
+import ErrorModel from './components/UI/ErrorModel/ErrorModel';
+
+// import { render } from '@testing-library/react';
+
 function App() {
+  const [isUserLoggedIn, setUserLoggedIn] = useState();
+  const [errosMade, setErrosMade] = useState();
+
+  useEffect(() => {});
+
+  const userLoginHandle = async authData => {
+    const fetchdata = await axios({
+      method: 'post',
+      data: authData,
+      url: `${localUrl}/signIn`,
+    });
+    if (fetchdata.status !== 200 || fetchdata.status !== 201) {
+      setErrosMade({
+        title: 'Error',
+        message: fetchdata.data.message,
+      });
+    }
+    // setUserLoggedIn(true);
+    console.log(fetchdata);
+  };
+
+  //error message
+  const onErrosMadeHandle = () => {
+    setErrosMade(null);
+  };
+
+  let routes = (
+    <Route>
+      <Route
+        exact
+        path="/signin"
+        element={<SignIn onLogin={userLoginHandle} />}
+      />
+      <Route exact path="/signup" element={<SignUp />} />
+    </Route>
+  );
+
+  if (isUserLoggedIn) {
+    routes = (
+      <Route>
+        <Route exact path="/dashboard" element={<UserDash />} />
+      </Route>
+    );
+  }
+
   return (
     <div className="App">
       <Navbar />
-
+      {errosMade && (
+        <ErrorModel
+          title={errosMade.title}
+          message={errosMade.message}
+          onErrosClick={onErrosMadeHandle}
+        />
+      )}
       <Routes>
         <Route exact path="/" element={<Home data={dataJson.sponser} />} />
         <Route exact path="/ca" element={<CaPortal />} />
@@ -44,8 +102,6 @@ function App() {
         <Route exact path="/mechanica" element={<Mechanica />} />
         <Route exact path="/plexus" element={<Plexus />} />
         <Route exact path="/robozar" element={<Robozar />} />
-        <Route exact path="/signin" element={<SignIn />} />
-        <Route exact path="/signup" element={<SignUp />} />
         <Route exact path="/workshop" element={<WorkshopForm />} />
         <Route exact path="/about" element={<AboutUs data={dataJson} />} />
         <Route exact path="/admin/domains" element={<DomainForm />} />
@@ -69,8 +125,10 @@ function App() {
           path="/admin/workshop/delete"
           element={<DeleteWorkshop />}
         />
+        {routes}
         <Route exact path="/admin" element={<AdminContent />} />
       </Routes>
+
       <Footer />
     </div>
   );

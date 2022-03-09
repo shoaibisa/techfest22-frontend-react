@@ -33,13 +33,14 @@ const Signup = () => {
     setReferralCode(e.target.value);
   };
 
-  const onSubmitBtnClick = async () => {
+  const onSubmitBtnClick = async e => {
     const data = {
       name: name,
       email: email,
       password: password,
       referralCode: referralCode,
     };
+
     console.log(data);
     await axios
       .post(`${localUrl}/signUp`, data)
@@ -49,6 +50,7 @@ const Signup = () => {
       .catch(err => {
         console.log(err);
       });
+    // let routes ()= <Navigate to="/login" />;
   };
 
   return (

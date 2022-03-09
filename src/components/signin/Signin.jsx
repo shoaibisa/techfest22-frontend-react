@@ -8,12 +8,12 @@ import axios from 'axios';
 import UserDash from '../../Pages/user/UserDash';
 import ErrorModel from '../UI/ErrorModel/ErrorModel';
 
-function Signin() {
+function Signin(props) {
   // const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [responses, setResponses] = useState(null);
-  // const [isErrs, setIsErrs] = useState();
+
   const [errosMade, setErrosMade] = useState(); //undefined
 
   // const navigate = useNavigate();
@@ -25,33 +25,38 @@ function Signin() {
     setPassword(e.target.value);
   };
 
-  const onSubmitBtnClick = async () => {
-    // if (email.trim().length === 0 || password.trim().length === 0) {
-    //   setErrosMade({
-    //     title: 'Error',
-    //     message: 'Field should not be empty',
-    //   });
-    //   return;
-    // }
+  const onSubmitBtnClick = async e => {
+    e.preventDefault();
+    if (email.trim().length === 0 || password.trim().length === 0) {
+      setErrosMade({
+        title: 'Error',
+        message: 'Field should not be empty',
+      });
+      return;
+    }
 
     const zData = {
       email: email,
       password: password,
     };
-    console.log(zData);
 
-    // try {
-    const fetchData = await axios({
-      method: 'post',
-      data: zData,
-      url: `${localUrl}/signIn`,
-    });
+    props.onLogin(zData);
+    // console.log(zData);
 
-    setResponses(fetchData.data);
-    console.log(responses.error.error);
-    if (responses.error.isErrors) {
-      alert(responses.error.error);
-    }
+    // // try {
+    // const fetchData = await axios({
+    //   method: 'post',
+    //   data: zData,
+    //   url: `${localUrl}/signIn`,
+    // });
+
+    // setResponses(fetchData.data);
+    // console.log(responses);
+
+    // if(fetchData.data.)
+    // if (responses.error.isErrors) {
+    //   alert(responses.error.error);
+    // }
     // alert(fetchData.data.isErrors);
   };
 
