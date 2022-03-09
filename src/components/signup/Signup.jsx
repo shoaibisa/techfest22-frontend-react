@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import { baseUrl, localUrl } from '../../API/api';
 // require('dotenv').config("../../../.env");
+import ErrorModel from '../UI/ErrorModel/ErrorModel';
 
 const Signup = () => {
   const [name, setName] = useState('');
@@ -12,6 +13,7 @@ const Signup = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [referralCode, setReferralCode] = useState('');
+  const [errosMade, setErrosMade] = useState(); //undefined
 
   const getName = e => {
     setName(e.target.value);
@@ -34,6 +36,19 @@ const Signup = () => {
   };
 
   const onSubmitBtnClick = async e => {
+    e.preventDefault();
+    if (
+      email.trim().length === 0 ||
+      password.trim().length === 0 ||
+      name.trim().length === 0
+    ) {
+      setErrosMade({
+        title: 'Error',
+        message: 'Field should not be empty',
+      });
+      return;
+    }
+
     const data = {
       name: name,
       email: email,
@@ -53,8 +68,18 @@ const Signup = () => {
     // let routes ()= <Navigate to="/login" />;
   };
 
+  const onErrosMadeHandle = () => {
+    setErrosMade(null);
+  };
   return (
     <div>
+      {errosMade && (
+        <ErrorModel
+          title={errosMade.title}
+          message={errosMade.message}
+          onErrosClick={onErrosMadeHandle}
+        />
+      )}
       <div className="signUpBody ">
         <div className="SignUp  d-flex ">
           <div className="SignUp__Gif mt-5">
