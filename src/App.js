@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import CaPortal from './Pages/caportal/Caportal';
 import Navbar from './components/header/Navbar';
 import Home from './components/Home/Home';
@@ -39,7 +39,7 @@ import ErrorModel from './components/UI/ErrorModel/ErrorModel';
 function App() {
   const [isUserLoggedIn, setUserLoggedIn] = useState();
   const [errosMade, setErrosMade] = useState();
-
+  const navigate = useNavigate();
   useEffect(() => {});
 
   const userLoginHandle = async authData => {
@@ -53,9 +53,16 @@ function App() {
         title: 'Error',
         message: fetchdata.data.message,
       });
+      // return;
     }
-    // setUserLoggedIn(true);
-    console.log(fetchdata);
+    // setErrosMade(null);
+    if (fetchdata.status === 200 || fetchdata === 201) {
+      setErrosMade(false);
+      setUserLoggedIn(true);
+      navigate('/dashboard');
+
+      console.log(fetchdata);
+    }
   };
 
   //error message
