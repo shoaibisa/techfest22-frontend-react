@@ -1,106 +1,87 @@
-body {
-  margin: 0px;
-  padding: 0px;
+.body {
+  margin: 0px !important;
+  padding: 0px !important;
   overflow-x: hidden !important;
-  background-color: rgb(0, 0, 0);
-  color: #fff;
+  background-color: rgb(0, 0, 0) !important;
+  color: #fff !important;
   
 }
 .Dashboard__body{
   /* background-image: url("/images/background-overlay-right.png"); */
-  background-position: bottom;
-  background-repeat: no-repeat;
+  background-position: bottom !important;
+  background-repeat: no-repeat !important;
 }
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 p {
   font-family: helvetica !important;
-  opacity: .8;
+  opacity: .8 !important;
 }
 
-li::after {
-  width: 0;
-  height: 2px;
-  content: '';
-  background: rgb(65, 241, 21);
-  display: block;
-  transition: 0.5s;
-}
 
-li:hover::after {
-  width: 100%;
-}
-
-.nav-item a.active {
-  border-bottom: 2px solid rgb(65, 241, 21);
-}
-
-.dropdown-menu li a:hover {
-  background-color: rgb(17, 34, 13) !important;
-}
 /*------------ Nav End Hear ................*/
 
 .home_background {
   background-image: url("../../images/dashboard/Stagnant\ BG\ Webp.webp");
-  background-size: 100%;
-  background-repeat: no-repeat;
+  background-size: 100%  !important;
+  background-repeat: no-repeat !important;
 }
 
 .blockquote-footer {
-  color: #ffff;
+  color: #ffff  !important;
 }
 
-.py-5,
+/* .py-5,
 .pt-5 {
   padding-top: 6rem!important;
-}
+} */
 
 
 
 .container {
  
-  height: 100%;
+  height: 100% !important;
 }
 
 .text-light td {
-  border-top: 0px;
+  border-top: 0px !important;
 }
 
 .removeBg {
-  background: transparent;
-  border: 1px solid #fff;
-  border-radius: 25px;
+  background: transparent !important;
+  border: 1px solid #fff  !important;
+  border-radius: 25px  !important;
 }
 
 
 
 .collapse1 {
-overflow-y: scroll;
-height: 200px;
+overflow-y: scroll  !important;
+height: 200px  !important;
 }
 
 .collapse1::-webkit-scrollbar {
-width: 8px;
+width: 8px  !important;
 }
 
 .collapse1::-webkit-scrollbar-track {
-background: #eee;
-border-radius: 10px;
+background: #eee  !important;
+border-radius: 10px  !important;
 }
 
 .collapse1::-webkit-scrollbar-thumb {
-border-radius: 1rem;
-background-color: #41f115;
-background-image: linear-gradient(to top, #41f115 0%, #41f115 100%);
+border-radius: 1rem  !important;
+background-color: #41f115  !important;
+background-image: linear-gradient(to top, #41f115 0%, #41f115 100%)  !important;
 }
 
 .vl {
-  flex: 0 0 0.666667%;
-  max-width: 0.666667%;
-  border-left: 2px solid white;
-  height: 250px;
+  flex: 0 0 0.666667%  !important;
+  max-width: 0.666667%  !important;
+  border-left: 2px solid white  !important;
+  height: 250px  !important;
 }
 
 .fa-lightbulb:before {
@@ -114,9 +95,9 @@ background-image: linear-gradient(to top, #41f115 0%, #41f115 100%);
 }
 
 .maintenance {
-  -webkit-filter: invert(1);
-  filter: invert(1);
-  margin-right: 5px;
+  -webkit-filter: invert(1) !important;
+  filter: invert(1) !important;
+  margin-right: 5px !important;
 }
 
 .idea {
@@ -127,105 +108,27 @@ background-image: linear-gradient(to top, #41f115 0%, #41f115 100%);
 
 @media only screen and (max-width: 990px) {
   .vl {
-      border-bottom: 2px solid white;
-      border-left: none;
-      min-width: 94%;
-      padding: 10px 0px;
-      margin-bottom: 15px;
+      border-bottom: 2px solid white !important;
+      border-left: none !important;
+      min-width: 94% !important;
+      padding: 10px 0px !important;
+      margin-bottom: 15px !important;
   }
   .row {
-      flex-direction: column;
+      flex-direction: column !important;
   }
 }
 /*--------------  next section----------------------- */
 
 .gradient {
-  background: #031C04;
-  background: -webkit-radial-gradient(center, #031C04, #010101);
-  background: -moz-radial-gradient(center, #031C04, #010101);
-  background: radial-gradient(ellipse at center, #031C04, #010101);
+  background: #031C04 !important;
+  background: -webkit-radial-gradient(center, #031C04, #010101) !important;
+  background: -moz-radial-gradient(center, #031C04, #010101) !important;
+  background: radial-gradient(ellipse at center, #031C04, #010101) !important;
 }
 
 /* This is the footer section ................... */
 
-.footer {
-  position: fixed;
-  bottom: 0px;
-  text-align: center;
-  width: 100%;
-  display: block;
-}
-
-.show,
-.footer:hover {
-  display: block;
-}
-
-.social-icons {
-  width: 100%;
-  height: auto;
-  padding: 10px;
-  padding-bottom: 15px;
-  border-top: .5px solid white;
-  backdrop-filter: blur(6px);
-}
-
-.social-icons a i {
-  color: white;
-  padding: 0 10px;
-}
-
-.social-icons .fa-facebook-square:hover {
-  color: #6195ff !important;
-  transition: .3s ease;
-}
-
-.fa-twitter-square:hover {
-  color: #1DA1F2 !important;
-  transition: .3s ease;
-}
-
-.fa-instagram:hover {
-  color: #cd486b !important;
-  transition: .3s ease;
-}
-
-.fa-linkedin-square:hover {
-  color: #0e76a8 !important;
-  transition: .3s ease;
-}
-
-.fa-youtube-play:hover {
-  color: #FF0000 !important;
-  transition: .3s ease;
-}
-
-.fa-telegram:hover {
-  color: #0088CC !important;
-  transition: .3s ease;
-}
-
-.rotate-translate {
-  transform: translateX(-62px) translateY(35px) rotate(24deg);
-  height: 128px;
-  width: 40px;
-  border-right: 2px solid white;
-  background-color: rgb(0, 0, 0);
-  left: 40px;
-  top: -3rem;
-  position: absolute;
-}
-
-.translate-rotate {
-  transform: translateX(520px) translateY(36px) rotate(338deg);
-  height: 128px;
-  width: 40px;
-  border-left: 2px solid white;
-  background-color: rgb(0, 0, 0);
-  right: 31rem;
-  top: -3rem;
-  position: absolute;
-}
 
 .dashboard_both_table{
   background-image: url("../../images/dashboard/hero_bg\ \(4\).png");

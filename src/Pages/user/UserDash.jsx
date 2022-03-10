@@ -3,13 +3,13 @@ import React from 'react';
 import './UserDash.css';
 const UserDash = () => {
   return (
-    <div>
+    <div className='body'>
 
        <div className="Dashboard__body">
         <div className="Main">
             <div className="home_background">
-                <div className="container mt-5 pt-5">
-                    <div className="text-center py-2">
+                <div className="container mt-4 pt-5">
+                    <div className="text-center py-5 mt-4">
                         <div className="text-center text-light">
 
                             <figure className="text-center text-light">
@@ -31,11 +31,11 @@ const UserDash = () => {
                                 <div className="card-body">
                                     <h3 className="card-title text-light
                                                 text-center">
-                                                  {/* <img className="idea"
-                                            src="https://img.icons8.com/fluency-systems-regular/48/000000/idea.png" />Event */}
-                                        Register
+                                                  <img className="idea"
+                                            src="https://img.icons8.com/fluency-systems-regular/48/000000/idea.png" />
+                                         Event Register
                                     </h3>
-                                    <div className="collapse1 p-3 m-3">
+                                    <div className="collapse1 p-4 mt-4 mb-2">
                                         <table className="table text-light">
                                             <tbody>
                                                 <tr>
@@ -93,11 +93,11 @@ const UserDash = () => {
                                 <div className="card-body">
                                     <h3 className="card-title text-light
                                                 text-center">
-                                                  {/* <img className="maintenance"
-                                            src="https://img.icons8.com/ios/50/000000/maintenance.png" />Workshops */}
-                                        Register
+                                                  <img className="maintenance"
+                                            src="https://img.icons8.com/ios/50/000000/maintenance.png" />
+                                        Workshops Register
                                     </h3>
-                                    <div className="collapse1 p-3 m-3">
+                                    <div className="collapse1 p-4 mt-4">
                                         <table className="table text-light">
                                             <tbody>
                                                 <tr>
