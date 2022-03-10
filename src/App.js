@@ -35,7 +35,7 @@ import { localUrl } from './API/api';
 import ErrorModel from './components/UI/ErrorModel/ErrorModel';
 
 function App() {
-  const [isUserLoggedIn, setUserLoggedIn] = useState();
+  const [isUserLoggedIn, setUserLoggedIn] = useState(true);
   const [errosMade, setErrosMade] = useState();
   const [userId, serUserId] = useState(null);
   const navigate = useNavigate();
