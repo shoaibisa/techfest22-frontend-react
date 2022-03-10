@@ -34,6 +34,13 @@ function Signin(props) {
       });
       return;
     }
+    if (!email.trim().includes('@')) {
+      setErrosMade({
+        title: 'Error',
+        message: 'Invalid mail!',
+      });
+      return;
+    }
 
     const zData = {
       email: email,

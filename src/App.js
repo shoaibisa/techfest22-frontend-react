@@ -34,13 +34,28 @@ import axios from 'axios';
 import { localUrl } from './API/api';
 import ErrorModel from './components/UI/ErrorModel/ErrorModel';
 
-// import { render } from '@testing-library/react';
-
 function App() {
   const [isUserLoggedIn, setUserLoggedIn] = useState();
   const [errosMade, setErrosMade] = useState();
+  const [userId, serUserId] = useState(null);
   const navigate = useNavigate();
-  useEffect(() => {});
+
+  //in first load
+  useEffect(() => {
+    const token = localStorage.getItem('jswToken');
+    const expiryDate = localStorage.getItem('expiryDate');
+    if (!token || !expiryDate) {
+      return;
+    }
+    if (new Date(expiryDate) <= new Date()) {
+      logOutHandler();
+      return;
+    }
+    const userId = localStorage.getItem('userId');
+    const remainingMilliseconds =
+      new Date(expiryDate).getTime() - new Date().getTime();
+    setUserLoggedIn(true);
+  }, []);
 
   const userLoginHandle = async authData => {
     const fetchdata = await axios({
@@ -48,7 +63,10 @@ function App() {
       data: authData,
       url: `${localUrl}/signIn`,
     });
-    if (fetchdata.status !== 200 || fetchdata.status !== 201) {
+    if (
+      fetchdata.status !== 200 ||
+      (fetchdata.status !== 201 && fetchdata.data.isError)
+    ) {
       setErrosMade({
         title: 'Error',
         message: fetchdata.data.message,
@@ -56,13 +74,64 @@ function App() {
       // return;
     }
     // setErrosMade(null);
-    if (fetchdata.status === 200 || fetchdata === 201) {
+    if (
+      fetchdata.status === 200 ||
+      (fetchdata.status === 201 && fetchdata.data.isSucces)
+    ) {
       setErrosMade(false);
+      localStorage.setItem('jswToken', fetchdata.data.token);
+      localStorage.setItem('userId', fetchdata.data.userId);
+      const remainingMilliseconds = 60 * 60 * 1000; //1h
+      const expiryDate = new Date(new Date().getTime() + remainingMilliseconds);
+      localStorage.setItem('expiryDate', expiryDate.toISOString());
+
       setUserLoggedIn(true);
       navigate('/dashboard');
 
       console.log(fetchdata);
     }
+
+    // fetchdata.then(result => {
+    //   console.log(result);
+    // });
+
+    // const userLoginHandle = async authData => {
+    // axios
+    //   .post(`${localUrl}/signIn`, authData)
+    //   .then(result => {
+    //     if (
+    //       result.status !== 200 ||
+    //       result.status !== 201 ||
+    //       result.status === 400
+    //     ) {
+    //       // setErrosMade({
+    //       //   title: 'Error',
+    //       //   message: result.data.message,
+    //       // });
+    //       // //  return;
+    //       throw new Error('fhj');
+    //     }
+
+    //     return result;
+    //   })
+    //   .then(resData => {
+    //     console.log(resData);
+    //   })
+    //   .catch(err => {
+    //     setErrosMade({
+    //       title: 'Error',
+    //       message: err,
+    //     });
+    //     // return;
+    //   });
+  };
+
+  const logOutHandler = () => {
+    setUserLoggedIn(false);
+
+    localStorage.removeItem('jswToken');
+    localStorage.removeItem('userId');
+    localStorage.removeItem('expiryDate');
   };
 
   //error message
@@ -91,7 +160,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler} />
       {errosMade && (
         <ErrorModel
           title={errosMade.title}

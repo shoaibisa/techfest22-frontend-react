@@ -5,6 +5,7 @@ import EventLogo from "../../../components/subdomain/EventLogo/EventLogo";
 import pngwing from '../../../../src/images/Domain/pngwing 3.png';
 
 const Chemfor = () => {
+    
     return(
         <div className="subdomain">
         <EventLogo imgsrc={pngwing}

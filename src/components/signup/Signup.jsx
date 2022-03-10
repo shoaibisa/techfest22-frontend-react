@@ -37,34 +37,60 @@ const Signup = () => {
 
   const onSubmitBtnClick = async e => {
     e.preventDefault();
-    if (
-      email.trim().length === 0 ||
-      password.trim().length === 0 ||
-      name.trim().length === 0
-    ) {
-      setErrosMade({
-        title: 'Error',
-        message: 'Field should not be empty',
-      });
-      return;
-    }
+    // if (
+    //   email.trim().length === 0 ||
+    //   password.trim().length === 0 ||
+    //   name.trim().length === 0
+    // ) {
+    //   setErrosMade({
+    //     title: 'Error',
+    //     message: 'Field should not be empty',
+    //   });
+    //   return;
+    // }
+    // if (!email.trim().includes('@')) {
+    //   setErrosMade({
+    //     title: 'Error',
+    //     message: 'Invalid mail!',
+    //   });
+    //   return;
+    // }
+
+    // if (name.trim().length < 5) {
+    //   setErrosMade({
+    //     title: 'Error',
+    //     message: 'Name should be 5 character long!',
+    //   });
+    // }
 
     const data = {
       name: name,
       email: email,
       password: password,
       referralCode: referralCode,
+      confirmPassword: confirmPassword,
     };
 
-    console.log(data);
+    // console.log(data);
     await axios
       .post(`${localUrl}/signUp`, data)
-      .then(res => {
-        console.log(res);
+      .then(result => {
+        console.log(result);
+        if (
+          result.status !== 200 ||
+          (result.status !== 201 && result.data.isError)
+        ) {
+          setErrosMade({
+            title: 'Error',
+            message: result.data.message,
+          });
+          return;
+        }
       })
       .catch(err => {
         console.log(err);
       });
+
     // let routes ()= <Navigate to="/login" />;
   };
 

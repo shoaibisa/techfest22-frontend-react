@@ -214,7 +214,7 @@ const CaPortal = () => {
             <div className="website_box_layer_registerationblock-card_mobile-view_innercontent">
               <div className="website_box_layer_registerationblock-card_innercontent_btn_mobile-view">
                 <a
-                  href="/https://forms.gle/Q9a3m6GJ99wsmEYz9"
+                  href="https://forms.gle/Q9a3m6GJ99wsmEYz9"
                   className="registerationblock-card_btn_a_mobile-view"
                   target="_blank"
                 >
@@ -234,7 +234,7 @@ const CaPortal = () => {
                   </div>
                   <div className="website_box_layer_outercontainer_innercontainer_registerationblock-card_btn">
                     <a
-                      href="/https://forms.gle/Q9a3m6GJ99wsmEYz9"
+                      href="https://forms.gle/Q9a3m6GJ99wsmEYz9"
                       className="registerationblock-card_btn_a"
                       target="_blank"
                     >
