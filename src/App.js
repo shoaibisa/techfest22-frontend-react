@@ -35,9 +35,10 @@ import { localUrl } from './API/api';
 import ErrorModel from './components/UI/ErrorModel/ErrorModel';
 
 function App() {
-  const [isUserLoggedIn, setUserLoggedIn] = useState(true);
+  const [isUserLoggedIn, setUserLoggedIn] = useState();
   const [errosMade, setErrosMade] = useState();
   const [userId, serUserId] = useState(null);
+  const [token, setToken] = useState();
   const navigate = useNavigate();
 
   //in first load
@@ -52,6 +53,7 @@ function App() {
       return;
     }
     const userId = localStorage.getItem('userId');
+    setToken(token);
     const remainingMilliseconds =
       new Date(expiryDate).getTime() - new Date().getTime();
     setUserLoggedIn(true);
@@ -84,7 +86,7 @@ function App() {
       const remainingMilliseconds = 60 * 60 * 1000; //1h
       const expiryDate = new Date(new Date().getTime() + remainingMilliseconds);
       localStorage.setItem('expiryDate', expiryDate.toISOString());
-
+      setToken(fetchdata.data.token);
       setUserLoggedIn(true);
       navigate('/dashboard');
 
@@ -153,7 +155,11 @@ function App() {
   if (isUserLoggedIn) {
     routes = (
       <Route>
-        <Route exact path="/dashboard" element={<UserDash />} />
+        <Route
+          exact
+          path="/dashboard"
+          element={<UserDash isAuth={isUserLoggedIn} token={token} />}
+        />
       </Route>
     );
   }
