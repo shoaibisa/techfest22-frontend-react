@@ -4,6 +4,7 @@ import CaPortal from './Pages/caportal/Caportal';
 import Navbar from './components/header/Navbar';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
+import Forgot from './Pages/ForgotPassword/Forgot';
 import './App.css';
 // import Domain from "./Pages/domain/Domain";
 import Chemfor from './Pages/domain/Chemfor/Chemfor';
@@ -147,6 +148,7 @@ function App() {
         element={<SignIn onLogin={userLoginHandle} />}
       />
       <Route exact path="/signup" element={<SignUp />} />
+      <Route exact path="/forgot" element={<Forgot />} />
     </Route>
   );
 

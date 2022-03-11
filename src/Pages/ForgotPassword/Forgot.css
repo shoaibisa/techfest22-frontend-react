@@ -1,0 +1,69 @@
+.Forgot__body{
+    overflow-x: hidden !important;
+    background: black;
+    background-image: url(../../images/ForgotImage/Vector\ Logo.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    
+}
+.forgot__password{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.forgot__password p{
+    font-size: 1.3rem;
+}
+
+.form{
+    text-align: center;
+    border-bottom: 2px solid #fff;
+    margin-top: 3rem;
+
+}
+
+.form-input{
+    border: none;
+    background-color: black;
+    padding-bottom: 2px;
+    text-align: center;
+    color: #fff;
+    width: 20rem;
+    outline: none;
+}
+
+.send__request{
+    text-align: center;
+    background: linear-gradient( 90deg, rgba(18, 54, 22, 1) 58%, rgba(21, 197, 45, 0.842) 98%);
+    border-radius: 8px;
+    width: 10rem;
+    height: 2.5rem;
+    padding-top: 3px;
+    font-size: 1rem;
+    transition-duration: .5s;
+    margin-top: 1rem;
+    border: none;
+    color: #fff;
+}
+.send__request:hover{
+    text-decoration: none;
+    color: rgb(35, 206, 63);
+    
+}
+
+@media screen and (max-width:490px) {
+    .Forgot__body{
+        background-image: none;
+        
+    }
+    .forgot__password p{
+        font-size: .6rem;
+    }
+}

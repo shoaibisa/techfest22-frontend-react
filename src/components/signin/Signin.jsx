@@ -156,9 +156,9 @@ function Signin(props) {
                 >
                   Submit
                 </button>
-                <a className=" text-light text-decoration-none " href="/#">
+                <NavLink className=" text-light text-decoration-none " to={"/forgot"}>
                   Forgot Password?
-                </a>
+                </NavLink>
               </div>
             </form>
             <p className="text-light mt-3 Signin__inputs__haveAcount">
