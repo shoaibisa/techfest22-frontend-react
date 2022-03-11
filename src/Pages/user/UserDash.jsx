@@ -6,6 +6,7 @@ import ErrorModel from '../../components/UI/ErrorModel/ErrorModel';
 import './UserDash.css';
 const UserDash = props => {
   const [errosMade, setErrosMade] = useState();
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     axios
@@ -15,7 +16,7 @@ const UserDash = props => {
         },
       })
       .then(result => {
-        console.log(result);
+        setUser(result.data.user)
       });
   }, []);
 
@@ -26,13 +27,14 @@ const UserDash = props => {
 
   return (
     <div className="body">
-      {errosMade && (
+       {errosMade && 
         <ErrorModel
           title={errosMade.title}
           message={errosMade.message}
           onErrosClick={onErrosMadeHandle}
         />
-      )}
+      }
+      {user && 
       <div className="Dashboard__body">
         <div className="Main">
           <div className="home_background">
@@ -41,7 +43,7 @@ const UserDash = props => {
                 <div className="text-center text-light">
                   <figure className="text-center text-light">
                     <blockquote className="blockquote">
-                      <h2>Namaste! Anubhav Raj</h2>
+                      <h2>Namaste! {user && user.name}</h2>
                     </blockquote>
                     <figcaption className="blockquote-footer">
                       Your Unique tF ID is 1960
@@ -407,7 +409,7 @@ const UserDash = props => {
             </div>
           </div>
         </div>
-      </div>
+      </div>}
     </div>
   );
 };
