@@ -1,0 +1,314 @@
+.body {
+  margin: 0px !important;
+  padding: 0px !important;
+  overflow-x: hidden !important;
+  background-color: rgb(0, 0, 0) !important;
+  color: #fff !important;
+  
+}
+.Dashboard__body{
+  /* background-image: url("/images/background-overlay-right.png"); */
+  background-position: bottom !important;
+  background-repeat: no-repeat !important;
+}
+html {
+  scroll-behavior: smooth !important;
+}
+
+p {
+  font-family: helvetica !important;
+  opacity: .8 !important;
+}
+
+
+/*------------ Nav End Hear ................*/
+
+.home_background {
+  background-image: url("../../images/dashboard/Stagnant\ BG\ Webp.webp");
+  background-size: 100%  !important;
+  background-repeat: no-repeat !important;
+}
+
+.blockquote-footer {
+  color: #ffff  !important;
+}
+
+/* .py-5,
+.pt-5 {
+  padding-top: 6rem!important;
+} */
+
+
+
+.container {
+ 
+  height: 100% !important;
+}
+
+.text-light td {
+  border-top: 0px !important;
+}
+
+.removeBg {
+  background: transparent !important;
+  border: 1px solid #fff  !important;
+  border-radius: 25px  !important;
+}
+
+
+
+.collapse1 {
+overflow-y: scroll  !important;
+height: 200px  !important;
+}
+
+.collapse1::-webkit-scrollbar {
+width: 8px  !important;
+}
+
+.collapse1::-webkit-scrollbar-track {
+background: #eee  !important;
+border-radius: 10px  !important;
+}
+
+.collapse1::-webkit-scrollbar-thumb {
+border-radius: 1rem  !important;
+background-color: #41f115  !important;
+background-image: linear-gradient(to top, #41f115 0%, #41f115 100%)  !important;
+}
+
+.vl {
+  flex: 0 0 0.666667%  !important;
+  max-width: 0.666667%  !important;
+  border-left: 2px solid white  !important;
+  height: 250px  !important;
+}
+
+.fa-lightbulb:before {
+  content: "\f0eb";
+  font-size: 25px;
+}
+
+.fa-tools:before {
+  content: "\f7d9";
+  font-size: 25px;
+}
+
+.maintenance {
+  -webkit-filter: invert(1) !important;
+  filter: invert(1) !important;
+  margin-right: 5px !important;
+}
+
+.idea {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 990px) {
+  .vl {
+      border-bottom: 2px solid white !important;
+      border-left: none !important;
+      min-width: 94% !important;
+      padding: 10px 0px !important;
+      margin-bottom: 15px !important;
+  }
+  .row {
+      flex-direction: column !important;
+  }
+}
+/*--------------  next section----------------------- */
+
+.gradient {
+  background: #031C04 !important;
+  background: -webkit-radial-gradient(center, #031C04, #010101) !important;
+  background: -moz-radial-gradient(center, #031C04, #010101) !important;
+  background: radial-gradient(ellipse at center, #031C04, #010101) !important;
+}
+
+/* This is the footer section ................... */
+
+
+.dashboard_both_table{
+  background-image: url("../../images/dashboard/hero_bg\ \(4\).png");
+  background-position: center;
+  background-size: 60rem;
+  background-repeat: no-repeat;
+  margin: auto 12% auto 12%;
+  font-size: 1.2rem;
+  margin-bottom: 4.5rem;
+}
+.dashboard_profile_container{
+  width: 80%;
+  margin: 5%;
+}
+.dashboard_profile_container .fa-edit{
+  font-size: 20px;
+  cursor: pointer;
+}
+.dashboard_profile{
+  border:2px solid white;
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 15%;
+  display: flex;
+}
+
+.dashboard_certificate{
+  border:2px solid white;
+  border-radius: 20px;
+  margin-top: 15%;
+
+}
+.dashboard_certificate_container{
+  width: 80%;
+  margin: 5%;
+}
+.dashboard_profile_table_td{
+  float: right;
+}
+.dashboard_hr{
+  width: 100%;
+  margin-bottom: 10px;
+}
+.dashboard_profile_left_cell{
+  width: 75%;
+}
+.dashboard_profile_left_cell2{
+  width: 75%;
+}
+.dashboard_profile_left_cell3{
+  width: 25%;
+}
+.dashboard_profile_left_cell4{
+  width: 15%;
+  border: none;
+}
+.dashboard_profile_button{
+  color: white;
+  padding: 0px;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 0px 25px;
+}
+.dashboard_profile_button:hover{
+background-color: green;
+color: white;
+}
+.dashboard_table_heading{
+  font-size: 2rem;
+}
+.dashboard_table_sub_heading{
+  font-size: 1.5rem;
+}
+#dashboard_download_icon{
+  font-size: 1rem;
+}
+@media(max-width:1500px){
+  .dashboard_profile_left_cell{
+      width: 70%;
+  }
+  .dashboard_profile_left_cell2{
+      width: 70%;
+  }
+  .dashboard_hr{
+      width: 765px;
+  }
+}
+@media(max-width:1275px){
+  .dashboard_profile_left_cell{
+      width: 50%;
+  }
+  .dashboard_profile_left_cell2{
+      width: 75%;
+  }
+  .dashboard_hr{
+      width: 100%;
+  }
+}
+
+@media (max-width:900px){
+  .dashboard_profile_container{
+      width: 90%;
+  }
+  .dashboard_certificate_container{
+      width: 98%;
+  }
+}
+@media(max-width:740px){
+  .dashboard_both_table{
+      font-size: 0.8rem;
+  }
+  .dashboard_table_heading{
+      font-size: 1.5rem;
+  }
+  .dashboard_table_sub_heading{
+      font-size: 1.1rem;
+  }
+  .dashboard_profile_button{
+      font-size: 0.8rem;
+  }
+  #dashboard_download_icon{
+      font-size: 0.8rem;
+  }
+}
+@media(max-width:580px){
+  .dashboard_both_table{
+      font-size: 0.5rem;
+  }
+  .dashboard_table_heading{
+      font-size: 1.2rem;
+  }
+  .dashboard_table_sub_heading{
+      font-size: 0.9rem;
+  }
+  .dashboard_profile_button{
+      font-size: 0.5rem;
+  }
+  #dashboard_download_icon{
+      font-size: 0.5rem;
+  }
+  .dashboard_hr{
+      width: 94%;
+      margin-bottom: 5px;
+  }
+}
+@media(max-width:400px){
+  .dashboard_both_table{
+      font-size: 0.4rem;
+  }
+  .dashboard_table_heading{
+      font-size: 1rem;
+  }
+  .dashboard_table_sub_heading{
+      font-size: 0.7rem;
+  }
+  .dashboard_profile_button{
+      font-size: 0.4rem;
+  }
+  #dashboard_download_icon{
+      font-size: 0.4rem;
+  }
+  .dashboard_hr{
+      width: 92%;
+      margin-bottom: 3px;
+  }
+}
+@media screen and (max-width:426px) {
+  .dashboard_both_table{
+      background-size: 40rem;
+  }
+}
+@media screen and (max-width:377px) {
+  .dashboard_both_table{
+      background-size: 30rem;
+  }
+}
+@media screen and (max-width:322px) {
+  .dashboard_both_table{
+      background-size: 23rem;
+  }
+}
