@@ -1,6 +1,6 @@
-.Forgot__body{
+.Forgot_body{
     overflow-x: hidden !important;
-    background: black;
+    /* background: black; */
     background-image: url(../../images/ForgotImage/Vector\ Logo.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
