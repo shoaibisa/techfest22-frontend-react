@@ -8,7 +8,7 @@ function Forgot() {
         <div >
 
             <div className="forgot__password">
-                <img src={passwordreset} alt=""  />
+                <img src={passwordreset} alt="" />
                 <h3>
                     Forgot Password!
                 </h3>
