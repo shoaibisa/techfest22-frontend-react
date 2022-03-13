@@ -7,7 +7,7 @@ function Forgot() {
     return (
         <div >
 
-            <div className="forgot__password" style={{background:"black",backgroundImage:`url(${vector})`}}>
+            <div className="forgot__password">
                 <img src={passwordreset} alt=""  />
                 <h3>
                     Forgot Password!

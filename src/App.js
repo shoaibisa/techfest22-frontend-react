@@ -34,7 +34,7 @@ import UserDash from './Pages/user/UserDash';
 import axios from 'axios';
 import { localUrl } from './API/api';
 import ErrorModel from './components/UI/ErrorModel/ErrorModel';
- import AllUsers from "./Pages/admin/userList/allUsers";
+import AllUsers from "./Pages/admin/userList/allUsers";
 
 
 function App() {
