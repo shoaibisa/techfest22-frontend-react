@@ -75,7 +75,7 @@ const CaPortal = () => {
             </div>
             <div className="about_Ca_portal_about_section">
               <div className="about_Ca_portal_about_section__para">
-                <p className="para">
+                <p className="para1">
                   The program aims at developing a network of students from over
                   250+ colleges. Inculcating in them, skills such as social
                   media handling, event management, planning and execution etc.

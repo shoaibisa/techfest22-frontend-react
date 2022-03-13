@@ -34,6 +34,8 @@ import UserDash from './Pages/user/UserDash';
 import axios from 'axios';
 import { localUrl } from './API/api';
 import ErrorModel from './components/UI/ErrorModel/ErrorModel';
+import AllUsers from "./Pages/admin/userList/allUsers";
+ import Sponsor from "./Pages/sponsor/sponsor"
 
 function App() {
   const [isUserLoggedIn, setUserLoggedIn] = useState();
@@ -189,6 +191,7 @@ function App() {
         <Route exact path="/workshop" element={<WorkshopForm />} />
         <Route exact path="/about" element={<AboutUs data={dataJson} />} />
         <Route exact path="/admin/domains" element={<DomainForm />} />
+       
         <Route
           exact
           path="/domain"
@@ -211,6 +214,8 @@ function App() {
         />
         {routes}
         <Route exact path="/admin" element={<AdminContent />} />
+        <Route exact path="/admin/users" element={<AllUsers />} />
+        <Route exact path="/sponsor" element={<Sponsor />} />
       </Routes>
 
       <Footer />

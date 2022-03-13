@@ -55,11 +55,20 @@ const Home = props => {
             type="video/webm"
           />
         </video> */}
-        
-            <video className="homepage_gif_mobile" onclick="myFunction()" width="100%" height="100%" loop="loop" autoplay muted="true" preload="auto">
-                <source src={homepage_gif_mobile_vid} type="video/webm"/>
-                Your browser does not support the video tag.
-            </video>
+
+        <video
+          className="homepage_gif_mobile"
+          onclick="myFunction()"
+          width="100%"
+          height="100%"
+          loop="loop"
+          autoplay
+          muted="true"
+          preload="auto"
+        >
+          <source src={homepage_gif_mobile_vid} type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
         {/* <img
           className="homepage_gif_mobile"
           alt=""
@@ -105,18 +114,20 @@ const Home = props => {
               </div>
             </div>
             <div className="text-center logo_section__button_section">
-              <NavLink
-                data-toggle="button"
-                aria-pressed="true"
-                autoComplete="off"
-                activeClassName="active "
-                exact
-                to="/signup"
-                role="button"
-                className="btn btn-green mx-2 pr-5 pl-5 btn-lg logo_section_button_section__Sign_Up"
-              >
-                Sign Up Now
-              </NavLink>
+              {!props.isAuth && (
+                <NavLink
+                  data-toggle="button"
+                  aria-pressed="true"
+                  autoComplete="off"
+                  activeClassName="active "
+                  exact
+                  to="/signup"
+                  role="button"
+                  className="btn btn-green mx-2 pr-5 pl-5 btn-lg logo_section_button_section__Sign_Up"
+                >
+                  Sign Up Now
+                </NavLink>
+              )}
               <NavLink
                 data-toggle="button"
                 aria-pressed="true"

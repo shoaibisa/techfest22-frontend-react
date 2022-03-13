@@ -1,17 +1,18 @@
 import React from 'react'
 import passwordreset from "../../images/ForgotImage/password-reset 1.png";
+import vector from "../../images/ForgotImage/Vector Logo.png";
 import "./Forgot.css"
 
 function Forgot() {
     return (
-        <div className='Forgot__body'>
+        <div >
 
             <div className="forgot__password">
-                <img src={passwordreset} alt=""  />
+                <img src={passwordreset} alt="" />
                 <h3>
                     Forgot Password!
                 </h3>
-                <p>
+                <p >
                     No worries! it happens, enter your E-mail
                     and we'll send you a reset link.
                 </p>
@@ -24,4 +25,4 @@ function Forgot() {
     )
 }
 
-export default Forgot
+export default Forgot;

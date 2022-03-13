@@ -79,6 +79,30 @@ const Navbar = props => {
                 </li>
                 <li className="nav-item">
                   <NavLink
+                    className="nav-link mx-3 text-light line "
+                    activeClassName="active "
+                    data-toggle="pill"
+                    aria-current="page"
+                    exact="true"
+                    to="/dashboard"
+                  >
+                    Dahboard
+                  </NavLink>{' '}
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    className="nav-link mx-3 text-light line "
+                    activeClassName="active "
+                    data-toggle="pill"
+                    aria-current="page"
+                    exact="true"
+                    to="/admin"
+                  >
+                    Admin
+                  </NavLink>{' '}
+                </li>
+                <li className="nav-item">
+                  <NavLink
                     className="nav-link mx-3 line text-light"
                     data-toggle="pill"
                     aria-current="page"

@@ -126,7 +126,7 @@ function Signin(props) {
                   placeholder=" "
                   onChange={getEmail}
                 />
-                <span>Email</span>
+                <span style={{background: 'transparent'}}>Email</span>
               </label>{' '}
               <br />
               <label>
@@ -140,7 +140,7 @@ function Signin(props) {
                   onChange={getpassword}
                 />
 
-                <span>Password</span>
+                <span style={{background: 'transparent'}}>Password</span>
                 <i
                   onClick={ShowPassword}
                   id="fa_eye"
