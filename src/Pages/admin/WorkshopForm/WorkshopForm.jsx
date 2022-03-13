@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import './WorkshopForm.css';
+import AdminContent from '../AdminContent';
 import { Multiselect } from 'multiselect-react-dropdown';
 import axios from 'axios';
 import { baseUrl } from '../../../API/api';
@@ -158,171 +160,219 @@ const WorkshopForm = () => {
       return { coordinator: cd, value: w._id };
     });
 
-    return (
-      <>
-        <div style={{ marginTop: '100px' }}>
-          <NavLink to={'/admin/workshop/delete'} target="_blank">
-            Delete Workshop
-          </NavLink>
-        </div>
-        <div
-          className="workshopForm"
-          style={{
-            display: 'flex',
-            justifyContent: 'flex-start',
-            marginLeft: '100px',
-          }}
-        >
-          <form
-            onSubmit=" return myFormValidation()"
-            name="signupForm"
-            action=""
-            className=""
-          >
-            <h1>res {response}</h1>
-            <h1 className="" href="/#">
-              Workshop Form
-            </h1>
-            {/* <label className="">
-            <span>Image </span>
-            <input
-              name="workshop"
-              // value={}
-              onChange={getImageHandle}
-              required
-              autoComplete="off"
-              type="file"
-              placeholder=" "
-            />
-            <p className="text-danger" id="pass"></p>
-          </label> */}
-            <label class="btn btn-default btn-file ">
-              Image browse{' '}
-              <input
-                type="file"
-                style={{}}
-                name="workshop"
-                // value={}
-                onChange={getImageHandle}
-                required
-                autoComplete="off"
-                placeholder=" "
-                accept="image/png, image/gif, image/jpeg"
-              />
-            </label>
-            <br />
-            <label>
-              <span>Workshop name </span>
-              <input
-                name="workshopName"
-                value={wsName}
-                onChange={getwsName}
-                required
-                autoComplete="off"
-                type="text"
-                placeholder=" "
-              />
-              <p className="text-danger" id="pass"></p>
-            </label>{' '}
-            <br />
-            <label>
-              <span>Ws Desc </span>
-              <input
-                name="wsDesc"
-                value={wsDesc}
-                onChange={getwsDesc}
-                required
-                autoComplete="off"
-                type="text"
-                placeholder=" "
-              />
-              <p className="text-danger" id="pass"></p>
-            </label>{' '}
-            <br />
-            <label>
-              <span>Host Name </span>
-              <input
-                name="hostName"
-                value={hostName}
-                onChange={gethostName}
-                required
-                autoComplete="off"
-                type="text"
-                placeholder=" "
-              />
+  //   return (
+  //     <div>
+  //       <div style={{ marginTop: '100px' }}>
+  //         <NavLink to={'/admin/workshop/delete'} target="_blank">
+  //           Delete Workshop
+  //         </NavLink>
+  //       </div>
+  //       <div
+  //         className="workshopForm"
+  //         style={{
+  //           display: 'flex',
+  //           justifyContent: 'flex-start',
+  //           marginLeft: '100px',
+  //         }}
+  //       >
+  //         <form
+  //           onSubmit=" return myFormValidation()"
+  //           name="signupForm"
+  //           action=""
+  //           className=""
+  //         >
+  //           <h1>res {response}</h1>
+  //           <h1 className="" href="/#">
+  //             Workshop Form
+  //           </h1>
+  //           {/* <label className="">
+  //           <span>Image </span>
+  //           <input
+  //             name="workshop"
+  //             // value={}
+  //             onChange={getImageHandle}
+  //             required
+  //             autoComplete="off"
+  //             type="file"
+  //             placeholder=" "
+  //           />
+  //           <p className="text-danger" id="pass"></p>
+  //         </label> */}
+  //           <label class="btn btn-default btn-file ">
+  //             Image browse{' '}
+  //             <input
+  //               type="file"
+  //               style={{}}
+  //               name="workshop"
+  //               // value={}
+  //               onChange={getImageHandle}
+  //               required
+  //               autoComplete="off"
+  //               placeholder=" "
+  //               accept="image/png, image/gif, image/jpeg"
+  //             />
+  //           </label>
+  //           <br />
+  //           <label>
+  //             <span>Workshop name </span>
+  //             <input
+  //               name="workshopName"
+  //               value={wsName}
+  //               onChange={getwsName}
+  //               required
+  //               autoComplete="off"
+  //               type="text"
+  //               placeholder=" "
+  //             />
+  //             <p className="text-danger" id="pass"></p>
+  //           </label>{' '}
+  //           <br />
+  //           <label>
+  //             <span>Ws Desc </span>
+  //             <input
+  //               name="wsDesc"
+  //               value={wsDesc}
+  //               onChange={getwsDesc}
+  //               required
+  //               autoComplete="off"
+  //               type="text"
+  //               placeholder=" "
+  //             />
+  //             <p className="text-danger" id="pass"></p>
+  //           </label>{' '}
+  //           <br />
+  //           <label>
+  //             <span>Host Name </span>
+  //             <input
+  //               name="hostName"
+  //               value={hostName}
+  //               onChange={gethostName}
+  //               required
+  //               autoComplete="off"
+  //               type="text"
+  //               placeholder=" "
+  //             />
 
-              <p className="text-danger" id=""></p>
-            </label>
-            <br />
-            <label>
-              <span>Host Desc </span>
-              <input
-                name=""
-                type="text"
-                value={hostDesc}
-                onChange={gethostDesc}
-                required
-                autoComplete="off"
-                placeholder=" "
-              />
-              <p className="text-danger" id=""></p>
-            </label>
-            <br />
-            <label>
-              <span>Start Date </span>
-              <input
-                name="startDate"
-                value={startDate}
-                onChange={getstartDate}
-                required
-                autoComplete="off"
-                type="date"
-                placeholder=" "
-              />
+  //             <p className="text-danger" id=""></p>
+  //           </label>
+  //           <br />
+  //           <label>
+  //             <span>Host Desc </span>
+  //             <input
+  //               name=""
+  //               type="text"
+  //               value={hostDesc}
+  //               onChange={gethostDesc}
+  //               required
+  //               autoComplete="off"
+  //               placeholder=" "
+  //             />
+  //             <p className="text-danger" id=""></p>
+  //           </label>
+  //           <br />
+  //           <label>
+  //             <span>Start Date </span>
+  //             <input
+  //               name="startDate"
+  //               value={startDate}
+  //               onChange={getstartDate}
+  //               required
+  //               autoComplete="off"
+  //               type="date"
+  //               placeholder=" "
+  //             />
 
-              <p className="text-danger" id=""></p>
-            </label>
-            <br />
-            <label>
-              <span>End Date </span>
-              {/* <p className="text-danger" id=""></p> */}
-              <input
-                name="endDate"
-                value={endDate}
-                onChange={getendDate}
-                required
-                autoComplete="off"
-                type="date"
-                placeholder=" "
-              />
-              <p className="text-danger" id=""></p>
-            </label>
-            <br />
-            <label>
-              <span>Student Coordinator </span>
-              <Multiselect
-                onSelect={getstudentCoordinator}
-                // onChange={getstudentCoordinator}
-                options={dataC}
-                displayValue="coordinator"
-                showCheckbox="true"
-              />
-            </label>
-            <br />
-            <br />
-            <button
-              type="button"
-              onClick={onSubmitBtnClick}
-              disabled={isLoading}
-              className="btn__color mb-3"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
-      </>
+  //             <p className="text-danger" id=""></p>
+  //           </label>
+  //           <br />
+  //           <label>
+  //             <span>End Date </span>
+  //             {/* <p className="text-danger" id=""></p> */}
+  //             <input
+  //               name="endDate"
+  //               value={endDate}
+  //               onChange={getendDate}
+  //               required
+  //               autoComplete="off"
+  //               type="date"
+  //               placeholder=" "
+  //             />
+  //             <p className="text-danger" id=""></p>
+  //           </label>
+  //           <br />
+  //           <label>
+  //             <span>Student Coordinator </span>
+  //             <Multiselect
+  //               onSelect={getstudentCoordinator}
+  //               // onChange={getstudentCoordinator}
+  //               options={dataC}
+  //               displayValue="coordinator"
+  //               showCheckbox="true"
+  //             />
+  //           </label>
+  //           <br />
+  //           <br />
+  //           <button
+  //             type="button"
+  //             onClick={onSubmitBtnClick}
+  //             disabled={isLoading}
+  //             className="btn__color mb-3"
+  //           >
+  //             Submit
+  //           </button>
+          // </form>
+          return(
+            <div>
+              <AdminContent/>
+          <div className="superadmin_workshopselection_mainheading">
+      <span>Workshop</span>
+</div>
+<form className="super_admin_workshop_form">
+<table>
+<tr className="super_admin_workshop_name">
+    <td>
+        <p>Workshop Name</p>
+    <input type="text" name="workshop_name"/>
+</td>
+    <td>
+        <p>Workshop Picture</p>
+    <input type="file" name="file"/>
+</td>
+</tr>
+    <tr>
+        <td>
+            <p>Workshop Description(max 50 words)</p>
+            <textarea name="Description" cols="40" rows="4"placeholder="Write the Description Here"></textarea>
+        </td>
+        <td className=" super_admin_workshop_table_description_padding">
+            <p>Workshop Statement Drive Link</p>
+            <textarea name="Description" cols="40" rows="4"placeholder="Write the Description Here"></textarea>
+        </td>
+    </tr>
+<tr>
+    <td>
+        <p>Registration Closes On</p>
+        <input type="date" placeholder=""/>
+    </td>
+    <td className="workshop_registration_closes_event_select">
+        <p>Registration Closes On(time)</p>
+        <input type="time" name="file"/>
+    </td>
+</tr>
+    <tr>
+    <td>
+    <button type="submit"
+     className="submit_button">Save</button>
+    </td>
+    </tr>
+    </table>
+    </form>
+    </div>
+    // </div>
+   
     );
-  }
+          }
+        
 };
 
 export default WorkshopForm;
