@@ -1,4 +1,4 @@
-.admin-list {
+/* .admin-list {
   margin-top: 100px;
 }
 
@@ -7,4 +7,403 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
+} */
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden !important;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  
+}
+.Dashboard__body{
+  background-image: url("../../images/SuperAdmin/hero_bg\ \(4\).png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  font-family: helvetica !important;
+  opacity: .8;
+
+}
+/*------------ Nav End Hear ................*/
+
+.super_admin_background {
+  background-image: url("../../images/SuperAdmin/Stagnant\ BG\ Webp.webp");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.blockquote-footer {
+  color: #ffff;
+}
+
+.py-5,
+.pt-5 {
+  padding-top: 6rem!important;
+}
+
+
+
+.container {
+ 
+  height: 100%;
+}
+
+.text-light td {
+  border-top: 0px;
+}
+
+.removeBg {
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 25px;
+}
+
+
+
+.collapse1 {
+overflow-y: scroll;
+height: 200px;
+}
+
+.collapse1::-webkit-scrollbar {
+width: 8px;
+}
+
+.collapse1::-webkit-scrollbar-track {
+background: #eee;
+border-radius: 10px;
+}
+
+.collapse1::-webkit-scrollbar-thumb {
+border-radius: 1rem;
+background-color: #41f115;
+background-image: linear-gradient(to top, #41f115 0%, #41f115 100%);
+}
+
+.vl {
+  flex: 0 0 0.666667%;
+  max-width: 0.666667%;
+  border-left: 2px solid white;
+  height: 250px;
+}
+
+.fa-lightbulb:before {
+  content: "\f0eb";
+  font-size: 25px;
+}
+
+.fa-tools:before {
+  content: "\f7d9";
+  font-size: 25px;
+}
+
+.maintenance {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+  margin-right: 5px;
+}
+
+.idea {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 990px) {
+  .vl {
+      border-bottom: 2px solid white;
+      border-left: none;
+      min-width: 94%;
+      padding: 10px 0px;
+      margin-bottom: 15px;
+  }
+  .row {
+      flex-direction: column;
+  }
+}
+/*--------------  next section----------------------- */
+
+.gradient {
+  background: #031C04;
+  background: -webkit-radial-gradient(center, #031C04, #010101);
+  background: -moz-radial-gradient(center, #031C04, #010101);
+  background: radial-gradient(ellipse at center, #031C04, #010101);
+}
+
+/* This is the footer section ................... */
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.show,
+.footer:hover {
+  display: block;
+}
+
+.social-icons {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  padding-bottom: 15px;
+  border-top: .5px solid white;
+  backdrop-filter: blur(6px);
+}
+
+.social-icons a i {
+  color: white;
+  padding: 0 10px;
+}
+
+.social-icons .fa-facebook-square:hover {
+  color: #6195ff !important;
+  transition: .3s ease;
+}
+
+.fa-twitter-square:hover {
+  color: #1DA1F2 !important;
+  transition: .3s ease;
+}
+
+.fa-instagram:hover {
+  color: #cd486b !important;
+  transition: .3s ease;
+}
+
+.fa-linkedin-square:hover {
+  color: #0e76a8 !important;
+  transition: .3s ease;
+}
+
+.fa-youtube-play:hover {
+  color: #FF0000 !important;
+  transition: .3s ease;
+}
+
+.fa-telegram:hover {
+  color: #0088CC !important;
+  transition: .3s ease;
+}
+.super_admin_whole_page_container{
+  margin: 10rem 0 0 5rem;
+  position: relative;
+  right: 0;
+}
+/*-----------------------The Main content starts here-----------------*/
+.full_page_domain{
+  width: 100%;
+  display: flex;
+}
+
+/*---------- the css of the content starts here --------------*/
+.side-bar {
+  width: 200px;
+  padding: 20px;
+  background-color: rgb(14, 14, 14);
+  border-radius: 5px;
+}
+
+.side-bar-logo-outercontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-bar-logo {
+  width: 100px;
+}
+
+.side-bar-logo img {
+  width: 100%;
+}
+
+.side-bar-ul {
+  padding: 5px;
+}
+
+.side-bar-navlist {
+  list-style: none;
+  text-align: center;
+  margin: 20px 0px 20px 0px;
+}
+
+.side-bar-navlist a {
+  text-decoration: none;
+  margin: 5px;
+  color: white;
+}
+
+@media (max-width:768px) {
+  .side-bar {
+      width: 127px;
+  }
+  .domain_right_side_page{
+      margin-left: 2rem;
+  }
+}
+/*------------the domain coordinator---------*/
+
+.domain_right_side_page{
+  width: 85%;
+  margin-left: 5rem;
+}
+
+.superadmin_welcomeoutercontainer {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 8rem;
+}
+
+.superadmin_welcome {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  min-width: 100%;
+  min-height: 150px;
+  background-color: rgb(168, 166, 166, 0.1);
+  border-radius: 14px;
+}
+
+.superadmin_welcome_logo {
+  width: 100px;
+  /* margin: 20px; */
+}
+
+.superadmin_welcome_logo img {
+  width: 100%;
+}
+
+.superadmin_welcome_speech_intro {
+  font-size:x-large;
+  letter-spacing: 2px;
+}
+
+.superadmin_welcome_speech_tag {
+  font-size: small;
+}
+
+.superadmin_enrollcountoutercontainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 230px;
+}
+
+.enrollcountbox {
+  border: 1px solid green;
+  padding: 41px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.enrollcountbox_numberdisplay {
+  font-size: xx-large;
+}
+
+.enrollecountbox_titledisplay {
+  font-size: small;
+}
+
+.superadmin_domainselection {
+  /* border: 1px solid black; */
+  display: flex;
+  width: 75%;
+  justify-content: space-around;
+  /* min-height: 120px; */
+  align-items: center;
+  margin-top: 15px;
+}
+
+.superadmin_domainselection_mainheading {
+  font-size: xx-large;
+  /* border: 1px solid purple; */
+  position: relative;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+.superadmin_domainselection_mainheading::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  right: 0px;
+  top: 60%;
+  z-index: -2;
+}
+
+span {
+  background: #000;
+  padding: 10px;
+}
+/*-----------------The domain css container----------------*/
+.super_admin_domain_form{
+  margin-left: 5rem;
+}
+.super_admin_domain_form td{
+  width: 18rem;
+}
+.super_admin_domain_name select{ 
+  width: 15rem;
+  background-color: rgb(66, 66, 66,.5);
+}
+.super_admin_domain_name input{ 
+  width: 15rem;
+  background-color: rgb(66, 66, 66,.5);
+}
+.super_admin_domain_form textarea{ 
+  width: 20rem;
+  color: white;
+  background-color: rgb(66, 66, 66,.1);
+}
+.submit_button{
+  width: 10rem;
+  height: 2rem;
+  border-radius: 8px;
+  background: linear-gradient( 90deg, rgba(18, 54, 22, 1) 58%, rgba(21, 197, 45, 0.842) 98%);
+  color:#fff;
+}
+@media (max-width:860px) {
+  .super_admin_domain_form td{
+      width: 15rem;
+  }
+  .super_admin_domain_name select{ 
+      width: 10rem;
+  }
+  .super_admin_domain_name input{ 
+      width: 10rem;
+  }
+  .super_admin_domain_form textarea{ 
+      width: 15rem;
+  }
+}
+@media (max-width:660px) {
+  .super_admin_domain_form{
+      margin-left: 2rem;
+  }
+  .super_admin_domain_form td{
+      width: 8rem;
+  }
+  .super_admin_domain_name select{ 
+      width: 5rem;
+  }
+  .super_admin_domain_name input{ 
+      width: 8rem;
+  }
+  .super_admin_domain_form textarea{ 
+      width: 10rem;
+  }
 }
