@@ -1,0 +1,77 @@
+.four__zero__page{
+    background-image: url("./images/background-main.png");
+    background-position: center,right;
+    background-size: cover;
+    background-repeat: no-repeat,no-repeat;
+    background-color: black;
+    color: white;
+    text-align: center;
+    z-index: 1;;
+    height: 100vh;
+    width: 100%;
+}
+.EmailTemplate__topShadow img{
+    position: fixed;
+    top: -19rem;
+    left: -2rem;
+    z-index: 0;
+    height: 80rem;
+   
+}
+.EmailTemplate__topShadow__bottom img{
+    position: fixed;
+    top: -19rem;
+    /* left: -2rem; */
+    z-index: 0;
+    right: 0;
+    height: 80rem;
+    transform: rotate(180deg);
+}
+.four__zero__page__content{
+    top: 35%;
+    left: 38%;
+    position: absolute;
+
+    
+}
+.ForZeropage__button{
+
+    background: linear-gradient(to right, rgb(6, 231, 6), rgba(3, 48, 8, 0.842) 98%);
+    color: white;
+    font-weight: 800;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer ;
+    padding: 5px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    z-index: 2;
+}
+.four__zero__page__content p{
+    font-size: 2rem;
+    margin-top: -1.5rem;
+    
+}
+.four__zero__page__content h5{
+    font-size: 1rem;
+    margin-top: -1rem;
+}
+@media screen and (max-width:1025px) {
+    .four__zero__page__content{
+        margin-left: -2.5rem;
+    }
+}
+@media screen and (max-width:775px) {
+    .four__zero__page__content{
+        margin-left: -5.5rem;
+    }
+}
+@media screen and (max-width:426px) {
+    .four__zero__page__content{
+        margin-left: -7.7rem;
+    }
+    /* .EmailTemplate__topShadow,.EmailTemplate__topShadow__bottom{
+        display: none;
+    } */
+}

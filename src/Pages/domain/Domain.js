@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import './Domain.css';
 // import SimpleSlider from '../../components/DomainSlider/Domainslider';
 const Domain = (props) => {
- 
+
   var settings = {
     infinite: true,
     speed: 600,
@@ -18,47 +18,47 @@ const Domain = (props) => {
   return (
     <div className='Mainomainbody'>
 
-        <div className="Mainomainbody__slider container">
+      <div className="Mainomainbody__slider container">
         <Slider  {...settings} >
           <div
 
             style={{
               width: "100%"
             }}>
-            <img  src={props.data[0].imageSrc} alt="" />
+            <img src={props.data[0].imageSrc} alt="" />
           </div>
           <div
             style={{
               width: "100%"
             }}>
-            <img  src={props.data[0].imageSrc} alt="" />
+            <img src={props.data[0].imageSrc} alt="" />
           </div>
           <div style={{
-              width: "100%"
-            }}>
-            <img  src={props.data[0].imageSrc} alt="" />
+            width: "100%"
+          }}>
+            <img src={props.data[0].imageSrc} alt="" />
           </div>
           <div style={{
-              width: "100%"
-            }}>
+            width: "100%"
+          }}>
             <img src={props.data[0].imageSrc} alt="" />
           </div>
           <div>
-            <img  src={props.data[0].imageSrc} alt="" />
+            <img src={props.data[0].imageSrc} alt="" />
           </div>
           <div style={{
-              width: "100%"
-            }}>
-            <img  src={props.data[0].imageSrc} alt="" />
+            width: "100%"
+          }}>
+            <img src={props.data[0].imageSrc} alt="" />
           </div>
         </Slider>
-        </div>
+      </div>
 
 
       <div className="  container ">
 
-        
-       
+
+
         <div className="text-center domains__section text-light container mt-3 pt-3">
           <div className=" text-center domains__section__heading">
             <h2 className="">Domains</h2>
