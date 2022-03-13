@@ -35,7 +35,7 @@ import axios from 'axios';
 import { localUrl } from './API/api';
 import ErrorModel from './components/UI/ErrorModel/ErrorModel';
 import AllUsers from './Pages/admin/userList/allUsers';
-import Sponsor from './Pages/sponsor/sponsor';
+import Sponsor from './Pages/admin/sponsor/sponsor';
 import Fourzerofour from './Pages/FourZero/Fourzerofour';
 
 function App() {

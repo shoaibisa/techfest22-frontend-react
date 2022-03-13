@@ -12,7 +12,6 @@ function Signin(props) {
   // const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [responses, setResponses] = useState(null);
 
   const [errosMade, setErrosMade] = useState(); //undefined
 
@@ -126,7 +125,7 @@ function Signin(props) {
                   placeholder=" "
                   onChange={getEmail}
                 />
-                <span style={{background: 'transparent'}}>Email</span>
+                <span style={{ background: 'transparent' }}>Email</span>
               </label>{' '}
               <br />
               <label>
@@ -140,7 +139,7 @@ function Signin(props) {
                   onChange={getpassword}
                 />
 
-                <span style={{background: 'transparent'}}>Password</span>
+                <span style={{ background: 'transparent' }}>Password</span>
                 <i
                   onClick={ShowPassword}
                   id="fa_eye"
@@ -156,7 +155,10 @@ function Signin(props) {
                 >
                   Submit
                 </button>
-                <NavLink className=" text-light text-decoration-none " to={"/forgot"}>
+                <NavLink
+                  className=" text-light text-decoration-none "
+                  to={'/forgot'}
+                >
                   Forgot Password?
                 </NavLink>
               </div>

@@ -1,29 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './AdminContent.css';
 import heroImage from '../../images/SuperAdmin/2.png';
+import axios from 'axios';
+import { baseUrl, localUrl } from '../../API/api';
 
 const AdminContent = () => {
+  const [tfData, setTfData] = useState();
+  useEffect(() => {
+    axios.get(`${localUrl}/admin/tfdetails`).then(fethData => {
+      console.log(fethData.data);
+      setTfData(fethData.data);
+    });
+  }, []);
   return (
-    // <div classNameName="admin-list">
-    //   <h2>You are in admin mode</h2>
-    //   <p>Be furious</p>
-    //   <NavLink classNameName="nav-link-css" to={'/admin/workshop'}>
-    //     workshops
-    //   </NavLink>
-    //   <NavLink classNameName="nav-link-css" to={'/admin/events'}>
-    //     events
-    //   </NavLink>
-    //   <NavLink classNameName="nav-link-css" to={'/admin/users'}>
-    //     users
-    //   </NavLink>
-    //   <NavLink classNameName="nav-link-css" to={'/admin/domains'}>
-    //     domain
-    //   </NavLink>
-    //   <NavLink classNameName="nav-link-css" to={'/admin/coordinators'}>
-    //     coordinators
-    //   </NavLink>
-    // </div>
     <div>
       <div className="full_page_domain">
         <div className="domain_right_side_page">
@@ -44,20 +34,26 @@ const AdminContent = () => {
           </div>
           <div className="superadmin_enrollcountoutercontainer">
             <div className="enrollcountbox">
-              <div className="enrollcountbox_numberdisplay">2000</div>
+              <div className="enrollcountbox_numberdisplay">
+                {tfData && tfData.registration}
+              </div>
               <div className="enrollecountbox_titledisplay">Registration</div>
             </div>
             <div className="enrollcountbox">
-              <div className="enrollcountbox_numberdisplay">40</div>
+              <div className="enrollcountbox_numberdisplay">
+                {tfData && tfData.institutions}
+              </div>
               <div className="enrollecountbox_titledisplay">Institutions</div>
             </div>
             <div className="enrollcountbox">
-              <div className="enrollcountbox_numberdisplay">1000</div>
+              <div className="enrollcountbox_numberdisplay">
+                {tfData && tfData.slietians}
+              </div>
               <div className="enrollecountbox_titledisplay">SLIETians</div>
             </div>
           </div>
-             </div>
-             </div>
+        </div>
+      </div>
     </div>
   );
 };
