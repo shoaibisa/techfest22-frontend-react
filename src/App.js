@@ -34,6 +34,8 @@ import UserDash from './Pages/user/UserDash';
 import axios from 'axios';
 import { localUrl } from './API/api';
 import ErrorModel from './components/UI/ErrorModel/ErrorModel';
+ import AllUsers from "./Pages/admin/userList/allUsers";
+
 
 function App() {
   const [isUserLoggedIn, setUserLoggedIn] = useState();
@@ -211,6 +213,7 @@ function App() {
         />
         {routes}
         <Route exact path="/admin" element={<AdminContent />} />
+        <Route exact path="/admin/users" element={<AllUsers />} />
       </Routes>
 
       <Footer />
