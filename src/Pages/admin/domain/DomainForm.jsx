@@ -4,7 +4,6 @@ import axios from 'axios';
 import { baseUrl } from '../../../API/api';
 import { localUrl } from '../../../API/api';
 import './DomainForm.css'
-import AdminContent from '../AdminContent';
 
 const DomainForm = () => {
   const [wsName, setwsName] = useState('');
@@ -163,7 +162,6 @@ const DomainForm = () => {
 
     return (
       <div>
-        <AdminContent/>
       <div className="superadmin_domainselection_mainheading">
     <span>Domain</span>
 </div>

@@ -89,17 +89,67 @@ const Navbar = props => {
                     Dahboard
                   </NavLink>{' '}
                 </li>
-                <li className="nav-item">
+                <li className="nav-item dropdown text-light">
                   <NavLink
-                    className="nav-link mx-3 text-light line "
-                    activeClassName="active "
-                    data-toggle="pill"
-                    aria-current="page"
-                    exact="true"
+                    className="nav-link dropdown-toggle mx-3 text-light line"
+                    exact
                     to="/admin"
+                    id="offcanvasNavbarDropdown"
+                    role="button"
+                    aria-expanded="false"
                   >
                     Admin
-                  </NavLink>{' '}
+                  </NavLink>
+
+                  <ul
+                    className="dropdown-menu "
+                    aria-labelledby="offcanvasNavbarDropdown"
+                    style={{
+                      backgroundColor: 'rgb(17, 34, 13)',
+                      width: '100%',
+                    }}
+                  >
+                    <li>
+                      <NavLink
+                        className="dropdown-item  text-light line"
+                        activeClassName="active "
+                        exact
+                        to="/admin/domain"
+                      >
+                        Domain
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        className="dropdown-item text-light line"
+                        activeClassName="active "
+                        exact
+                        to="/admin/enents"
+                      >
+                        Events
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        className="dropdown-item text-light line"
+                        activeClassName="active "
+                        exact
+                        to="/admin/workshop"
+                      >
+                        Workshop
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        className="dropdown-item text-light line"
+                        activeClassName="active "
+                        exact
+                        to="/admin/sponsor"
+                      >
+                        Sponser
+                      </NavLink>
+                    </li>
+                  </ul>
                 </li>
                 <li className="nav-item">
                   <NavLink

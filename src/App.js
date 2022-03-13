@@ -218,6 +218,8 @@ function App() {
         <Route exact path="/admin" element={<AdminContent />} />
         <Route exact path="/admin/users" element={<AllUsers />} />
         <Route exact path="/admin/sponsor" element={<Sponsor />} />
+        <Route exact path="/admin/domain" element={<DomainForm />} />
+        <Route exact path="/admin/events" element={<Sponsor />} />
         <Route path="*" element={<Fourzerofour />} />
       </Routes>
 
