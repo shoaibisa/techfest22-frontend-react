@@ -217,7 +217,7 @@ function App() {
         {routes}
         <Route exact path="/admin" element={<AdminContent />} />
         <Route exact path="/admin/users" element={<AllUsers />} />
-        <Route exact path="/sponsor" element={<Sponsor />} />
+        <Route exact path="/admin/sponsor" element={<Sponsor />} />
         <Route path="*" element={<Fourzerofour />} />
       </Routes>
 
