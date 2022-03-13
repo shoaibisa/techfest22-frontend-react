@@ -35,7 +35,7 @@ const UserList = () => {
               data-toggle="modal"
             >
               <i className="material-icons">&#xE147;</i>{" "}
-              <span>Add New User</span>
+              <span style={{background: 'transparent' ,padding:'2px'}} >Add New User</span>
             </Button>
           </div>
         </div>

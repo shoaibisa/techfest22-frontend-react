@@ -14,7 +14,7 @@ const ModalOverlay = props => {
       <header className={classes.header}>
         <h2>{props.title}</h2>
       </header>
-      <div className={classes.content}>{props.message}</div>
+      <div  style={{ color:'black'}} className={classes.content}>{props.message}</div>
       <footer className={classes.actions}>
         <ButtonUi onBtnClick={props.onErrosClick}>OK</ButtonUi>
       </footer>

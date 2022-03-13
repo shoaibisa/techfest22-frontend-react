@@ -137,7 +137,7 @@ const Signup = () => {
                   type="text"
                   placeholder=" "
                 />
-                <span>Full Name</span>
+                <span style={{background: 'transparent'}}>Full Name</span>
               </label>{' '}
               <br />
               <label>
@@ -150,7 +150,7 @@ const Signup = () => {
                   type="email"
                   placeholder=" "
                 />
-                <span>Email</span>
+                <span style={{background: 'transparent'}}>Email</span>
               </label>{' '}
               <br />
               <label>
@@ -163,7 +163,7 @@ const Signup = () => {
                   type="password"
                   placeholder=" "
                 />
-                <span>Password</span>
+                <span style={{background: 'transparent'}}>Password</span>
                 <p className="text-danger" id="pass"></p>
               </label>{' '}
               <br />
@@ -177,7 +177,7 @@ const Signup = () => {
                   type="text"
                   placeholder=" "
                 />
-                <span>Confirm Password</span>
+                <span style={{background: 'transparent'}}>Confirm Password</span>
                 <p className="text-danger" id="cnfPass"></p>
               </label>
               <br />
@@ -191,7 +191,7 @@ const Signup = () => {
                   autocomplete="off"
                   placeholder=" "
                 />
-                <span>Refral Code</span>
+                <span style={{background: 'transparent'}}> Refral Code</span>
               </label>{' '}
               <br />
               <button
