@@ -34,8 +34,9 @@ import UserDash from './Pages/user/UserDash';
 import axios from 'axios';
 import { localUrl } from './API/api';
 import ErrorModel from './components/UI/ErrorModel/ErrorModel';
-import AllUsers from "./Pages/admin/userList/allUsers";
- import Sponsor from "./Pages/sponsor/sponsor"
+import AllUsers from './Pages/admin/userList/allUsers';
+import Sponsor from './Pages/sponsor/sponsor';
+import Fourzerofour from './Pages/FourZero/Fourzerofour';
 
 function App() {
   const [isUserLoggedIn, setUserLoggedIn] = useState();
@@ -188,10 +189,10 @@ function App() {
         <Route exact path="/mechanica" element={<Mechanica />} />
         <Route exact path="/plexus" element={<Plexus />} />
         <Route exact path="/robozar" element={<Robozar />} />
-        <Route exact path="/workshop" element={<WorkshopForm />} />
+        {/* <Route exact path="/workshop" element={<WorkshopForm />} /> */}
         <Route exact path="/about" element={<AboutUs data={dataJson} />} />
         <Route exact path="/admin/domains" element={<DomainForm />} />
-       
+
         <Route
           exact
           path="/domain"
@@ -207,6 +208,7 @@ function App() {
           path="/admin/coordinators"
           element={<CoordinatorContent />}
         />
+        <Route exact path="/admin/workshop" element={<WorkshopForm />} />
         <Route
           exact
           path="/admin/workshop/delete"
@@ -216,6 +218,7 @@ function App() {
         <Route exact path="/admin" element={<AdminContent />} />
         <Route exact path="/admin/users" element={<AllUsers />} />
         <Route exact path="/sponsor" element={<Sponsor />} />
+        <Route path="*" element={<Fourzerofour />} />
       </Routes>
 
       <Footer />

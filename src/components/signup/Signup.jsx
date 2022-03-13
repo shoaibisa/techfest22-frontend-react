@@ -37,31 +37,38 @@ const Signup = () => {
 
   const onSubmitBtnClick = async e => {
     e.preventDefault();
-    // if (
-    //   email.trim().length === 0 ||
-    //   password.trim().length === 0 ||
-    //   name.trim().length === 0
-    // ) {
-    //   setErrosMade({
-    //     title: 'Error',
-    //     message: 'Field should not be empty',
-    //   });
-    //   return;
-    // }
-    // if (!email.trim().includes('@')) {
-    //   setErrosMade({
-    //     title: 'Error',
-    //     message: 'Invalid mail!',
-    //   });
-    //   return;
-    // }
+    if (
+      email.trim().length === 0 ||
+      password.trim().length === 0 ||
+      name.trim().length === 0
+    ) {
+      setErrosMade({
+        title: 'Error',
+        message: 'Field should not be empty',
+      });
+      return;
+    }
+    if (!email.trim().includes('@')) {
+      setErrosMade({
+        title: 'Error',
+        message: 'Invalid mail!',
+      });
+      return;
+    }
 
-    // if (name.trim().length < 5) {
-    //   setErrosMade({
-    //     title: 'Error',
-    //     message: 'Name should be 5 character long!',
-    //   });
-    // }
+    if (name.trim().length < 5) {
+      setErrosMade({
+        title: 'Error',
+        message: 'Name should be 5 character long!',
+      });
+    }
+
+    if (password.trim() !== confirmPassword.trim()) {
+      setErrosMade({
+        title: 'Error',
+        message: 'Password not matched!',
+      });
+    }
 
     const data = {
       name: name,
@@ -76,15 +83,19 @@ const Signup = () => {
       .post(`${localUrl}/signUp`, data)
       .then(result => {
         console.log(result);
-        if (
-          result.status !== 200 ||
-          (result.status !== 201 && result.data.isError)
-        ) {
+        if (result.status !== 200 || result.status !== 201) {
           setErrosMade({
             title: 'Error',
             message: result.data.message,
           });
           return;
+        }
+
+        if (result.status === 200 || result.status === 201) {
+          setErrosMade({
+            title: 'Success',
+            message: 'Now! verify your mail account.',
+          });
         }
       })
       .catch(err => {
@@ -137,7 +148,7 @@ const Signup = () => {
                   type="text"
                   placeholder=" "
                 />
-                <span style={{background: 'transparent'}}>Full Name</span>
+                <span style={{ background: 'transparent' }}>Full Name</span>
               </label>{' '}
               <br />
               <label>
@@ -150,7 +161,7 @@ const Signup = () => {
                   type="email"
                   placeholder=" "
                 />
-                <span style={{background: 'transparent'}}>Email</span>
+                <span style={{ background: 'transparent' }}>Email</span>
               </label>{' '}
               <br />
               <label>
@@ -163,7 +174,7 @@ const Signup = () => {
                   type="password"
                   placeholder=" "
                 />
-                <span style={{background: 'transparent'}}>Password</span>
+                <span style={{ background: 'transparent' }}>Password</span>
                 <p className="text-danger" id="pass"></p>
               </label>{' '}
               <br />
@@ -177,7 +188,9 @@ const Signup = () => {
                   type="text"
                   placeholder=" "
                 />
-                <span style={{background: 'transparent'}}>Confirm Password</span>
+                <span style={{ background: 'transparent' }}>
+                  Confirm Password
+                </span>
                 <p className="text-danger" id="cnfPass"></p>
               </label>
               <br />
@@ -191,7 +204,7 @@ const Signup = () => {
                   autocomplete="off"
                   placeholder=" "
                 />
-                <span style={{background: 'transparent'}}> Refral Code</span>
+                <span style={{ background: 'transparent' }}> Refral Code</span>
               </label>{' '}
               <br />
               <button
