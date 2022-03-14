@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css';
 import { NavLink } from 'react-router-dom';
 import Sliderslick from '../Slider/Sliderslick';
@@ -11,8 +11,22 @@ import building from '../../images/BUilding.svg';
 import footfall from '../../images/Footfall.svg';
 import dollar_svg from '../../images/Dollar-Svg.svg';
 import domain_png from '../../images/Domains Webp Home.webp';
+import axios from 'axios';
+import { localUrl } from '../../API/api';
 
 const Home = props => {
+  const [sponserData, setSponserData] = useState([]);
+
+  useEffect(() => {
+    axios.get(`${localUrl}/sponser/getAllSponsors`).then(sponRes => {
+      // let sponData = sponRes.data.map(s => {
+      //   return { title: s._id, imageSrc: s.photo };
+      // });
+      setSponserData(sponRes.data.data);
+      console.log(sponRes.data);
+    });
+  }, []);
+
   const gotoServices = () =>
     window.scrollTo({
       top: 850,
@@ -242,7 +256,8 @@ const Home = props => {
             <h1>Sponsors</h1>
             <div className="home__slider__line"></div>
           </div>
-          <Sliderslick data={props.data} />
+          {/* <Sliderslick data={props.data} /> */}
+          {sponserData && <Sliderslick data={sponserData} isBack={true} />}
         </div>
       </div>
     </div>
