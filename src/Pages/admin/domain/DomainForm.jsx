@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Multiselect } from 'multiselect-react-dropdown';
 import axios from 'axios';
 import { baseUrl } from '../../../API/api';
 import { localUrl } from '../../../API/api';
-import './DomainForm.css'
+import { Form, Button } from 'react-bootstrap';
 
 const DomainForm = () => {
   const [wsName, setwsName] = useState('');
@@ -162,44 +161,48 @@ const DomainForm = () => {
 
     return (
       <div>
-      <div className="superadmin_domainselection_mainheading">
-    <span>Domain</span>
-</div>
-<form className="super_admin_domain_form">
-    <table>
-<tr className="super_admin_domain_name">
-    <td>
-        <p>Domain Name</p>
-        <select>
-            <option value="Chemfor"> Chemfor</option>
-            <option value="Electrica"> Electrica</option>
-            <option value="Kermis"> Kermis</option>
-            <option value="Karyarachna"> Karyarachna</option>
-            <option value="Mechanica"> Mechanica</option>
-            <option value="Plexus"> Plexus</option>
-            <option value="Robozar"> Robozar</option>
-        </select>
-    </td>
-    <td>
-    <div>
-        <p>Domain Picture</p>
-    <input type="file" name="file"/>
-</div>
-</td>
-</tr>
-    <tr>
-        <td colspan="2">
-            <p>Enter Description(max 50 words)</p>
-            <textarea name="Description" cols="40" rows="4"placeholder="Write the Description Here"></textarea>
-        </td>
-    </tr>
-    <tr>
-    <td>
-    <button type="submit" className="submit_button">Save</button>
-    </td>
-    </tr>
-    </table>
-    </form>
+  
+    <div className="main">
+        <div className="container mt-5 pt-5" style={{width:'50%'}}>
+        <div className="col-sm-12">
+            <h2 style={{ color:'white'}}>Add Domain</h2>
+          </div>
+              <Form>
+                <Form.Group className="mb-3">
+                <Form.Label style={{color:'white'}}>Name</Form.Label>
+                  <Form.Control  style={{ color:'white',background: 'transparent'}} size="sm"  type="text" placeholder="Enter Name *" required />
+                </Form.Group>
+                <Form.Group className="mb-3">
+                <Form.Label style={{color:'white'}}>Domain Name</Form.Label>
+                <Form.Select  style={{ color:'white',background: 'transparent'}} aria-label="Default select example">
+                <option style={{ color:'black'}} >---select---</option>
+                 <option style={{ color:'black'}} value="1">One</option>
+                  <option style={{ color:'black'}} value="2">Two</option>
+                  <option style={{ color:'black'}} value="3">Three</option>
+                  </Form.Select>
+                  </Form.Group>
+                  <Form.Group controlId="form.Textarea" className="mb-3">
+                <Form.Label style={{color:'white'}}>Domain Description</Form.Label>
+            <Form.Control style={{ color:'white',background: 'transparent'}} as="textarea" rows={4} placeholder="Enter Description(max 50 words) *" required/>
+            </Form.Group>
+                <Form.Group controlId="formFileSm" className="mb-3">
+                  <Form.Label style={{color:'white'}}>Uplode Image</Form.Label>
+                  <Form.Control    style={{background: 'transparent'}} type="file" size="sm" />
+                </Form.Group>
+  
+        
+                <Button
+                  style={{ width: '100%' }}
+                  variant="success"
+                  type="submit"
+                  block
+                >
+                  Add Domain
+                </Button>
+              </Form>
+            </div>
+          </div>
+    
     </div>
       // <div
       //   className="workshopForm"

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Multiselect } from 'multiselect-react-dropdown';
+import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import { baseUrl } from '../../../API/api';
 import { localUrl } from '../../../API/api';
@@ -294,13 +295,7 @@ const CoordinatorForm = () => {
           <br />
           <label>
             <span>Student Coordinator </span>
-            <Multiselect
-              onSelect={getstudentCoordinator}
-              // onChange={getstudentCoordinator}
-              options={dataC}
-              displayValue="coordinator"
-              showCheckbox="true"
-            />
+            
           </label>
           <br />
           <br />
@@ -313,7 +308,46 @@ const CoordinatorForm = () => {
             Submit
           </button>
         </form>
-      </div>
+        <Form>
+                <Form.Group className="mb-3">
+                <Form.Label style={{color:'white'}}>Name</Form.Label>
+                  <Form.Control  style={{ color:'white',background: 'transparent'}} size="sm"  type="text" placeholder="Enter Name *" required />
+                </Form.Group>
+                <Form.Group className="mb-3">
+                <Form.Label style={{color:'white'}}>Domain Name</Form.Label>
+                <Form.Select  style={{ color:'white',background: 'transparent'}} aria-label="Default select example">
+                <option style={{ color:'black'}} >---select---</option>
+                 <option style={{ color:'black'}} value="1">One</option>
+                  <option style={{ color:'black'}} value="2">Two</option>
+                  <option style={{ color:'black'}} value="3">Three</option>
+                  </Form.Select>
+                  </Form.Group>
+                  <Form.Group controlId="form.Textarea" className="mb-3">
+                <Form.Label style={{color:'white'}}>Domain Description</Form.Label>
+            <Form.Control style={{ color:'white',background: 'transparent'}} as="textarea" rows={4} placeholder="Enter Description(max 50 words) *" required/>
+            </Form.Group>
+                <Form.Group controlId="formFileSm" className="mb-3">
+                  <Form.Label style={{color:'white'}}>Uplode Image</Form.Label>
+                  <Form.Control    style={{background: 'transparent'}} type="file" size="sm" />
+                </Form.Group>
+        <Multiselect
+              onSelect={getstudentCoordinator}
+              // onChange={getstudentCoordinator}
+              options={dataC}
+              displayValue="coordinator"
+              showCheckbox="true"
+            />
+             <Button
+                  style={{ width: '100%' }}
+                  variant="success"
+                  type="submit"
+                  block
+                >
+                  Add Domain
+                </Button>
+              </Form>
+            </div>
+         
     );
   }
 };

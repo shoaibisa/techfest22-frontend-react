@@ -86,7 +86,7 @@ const Navbar = props => {
                     exact="true"
                     to="/dashboard"
                   >
-                    Dahboard
+                    Dashboard
                   </NavLink>{' '}
                 </li>
                 <li className="nav-item dropdown text-light">
@@ -117,6 +117,26 @@ const Navbar = props => {
                         to="/admin/domain"
                       >
                         Domain
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        className="dropdown-item  text-light line"
+                        activeClassName="active "
+                        exact
+                        to="/admin/user"
+                      >
+                        Users
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        className="dropdown-item  text-light line"
+                        activeClassName="active "
+                        exact
+                        to="/admin/coordinator"
+                      >
+                        Coordinator
                       </NavLink>
                     </li>
                     <li>
