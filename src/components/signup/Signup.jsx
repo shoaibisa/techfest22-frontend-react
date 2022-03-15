@@ -84,10 +84,10 @@ const Signup = () => {
     await axios
       .post(`${localUrl}/signUp`, data)
       .then(result => {
-        console.log(result);
+        //console.log(result);
         if (result.status !== 200 || result.status !== 201) {
           setErrosMade({
-            title: 'Error',
+            title: result.data.title,
             message: result.data.message,
           });
           return;
