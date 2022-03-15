@@ -13,7 +13,7 @@ import dollar_svg from '../../images/Dollar-Svg.svg';
 import domain_png from '../../images/Domains Webp Home.webp';
 
 import axios from 'axios';
-import { localUrl } from '../../API/api';
+import { baseUrl, localUrl } from '../../API/api';
 import LoaderSpin from '../UI/loader/LoaderSpin';
 
 const Home = props => {
@@ -23,7 +23,7 @@ const Home = props => {
 
   useEffect(() => {
     setIsLoading(true);
-    axios.get(`${localUrl}/sponser/getAllSponsors`).then(sponRes => {
+    axios.get(`${baseUrl}/sponser/getAllSponsors`).then(sponRes => {
       // let sponData = sponRes.data.map(s => {
       //   return { title: s._id, imageSrc: s.photo };
       // });

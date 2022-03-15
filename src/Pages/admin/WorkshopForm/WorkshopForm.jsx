@@ -27,7 +27,7 @@ const WorkshopForm = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`${localUrl}/coordinator/get-all-details`)
+    fetch(`${baseUrl}/coordinator/get-all-details`)
       .then(res => res.json())
       .then(
         result => {

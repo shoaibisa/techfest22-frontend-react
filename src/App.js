@@ -30,7 +30,7 @@ import AdminContent from './Pages/admin/AdminContent';
 import CoordinatorForm from './Pages/admin/coordinator/CoordinatorForm';
 import UserDash from './Pages/user/UserDash';
 import axios from 'axios';
-import { localUrl } from './API/api';
+import { baseUrl, localUrl } from './API/api';
 import ErrorModel from './components/UI/ErrorModel/ErrorModel';
 import AllUsers from './Pages/admin/userList/allUsers';
 import Sponsor from './Pages/admin/sponsor/sponsor';
@@ -67,7 +67,7 @@ function App() {
     const fetchdata = await axios({
       method: 'post',
       data: authData,
-      url: `${localUrl}/signIn`,
+      url: `${baseUrl}/signIn`,
     });
     if (
       fetchdata.status !== 200 ||
@@ -221,7 +221,11 @@ function App() {
         <Route exact path="/admin/domain" element={<DomainForm />} />
         <Route exact path="/admin/event" element={<EventForm />} />
         <Route exact path="admin/coordinator" element={<AllCoordinator />} />
-        <Route exact path="admin/coordinator/add" element={<CoordinatorForm/>} />
+        <Route
+          exact
+          path="admin/coordinator/add"
+          element={<CoordinatorForm />}
+        />
         <Route path="*" element={<Fourzerofour />} />
       </Routes>
       <Footer />
