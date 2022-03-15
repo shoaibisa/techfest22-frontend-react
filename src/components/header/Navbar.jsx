@@ -32,7 +32,7 @@ const Navbar = props => {
             <span className="navbar-toggler-icon">
               <i
                 className="fa fa-bars"
-                style={{ color: 'white', fontSize: '28px' }}
+                style={{ color: 'white', fontSize: '28px',margin:"-8px 0 0 -7px" }}
               ></i>
             </span>
           </button>
@@ -71,7 +71,7 @@ const Navbar = props => {
                     activeClassName="active "
                     data-toggle="pill"
                     aria-current="page"
-                    exact="true"
+                    
                     to="/"
                   >
                     Home
@@ -83,7 +83,6 @@ const Navbar = props => {
                     activeClassName="active "
                     data-toggle="pill"
                     aria-current="page"
-                    exact="true"
                     to="/dashboard"
                   >
                     Dashboard
@@ -92,7 +91,6 @@ const Navbar = props => {
                 <li className="nav-item dropdown text-light">
                   <NavLink
                     className="nav-link dropdown-toggle mx-3 text-light line"
-                    exact
                     to="/admin"
                     id="offcanvasNavbarDropdown"
                     role="button"
@@ -113,7 +111,7 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item  text-light line"
                         activeClassName="active "
-                        exact
+
                         to="/admin/domain"
                       >
                         Domain
@@ -123,7 +121,7 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item  text-light line"
                         activeClassName="active "
-                        exact
+                        
                         to="/admin/user"
                       >
                         Users
@@ -133,7 +131,7 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item  text-light line"
                         activeClassName="active "
-                        exact
+                      
                         to="/admin/coordinator"
                       >
                         Coordinator
@@ -143,7 +141,7 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item text-light line"
                         activeClassName="active "
-                        exact
+                        
                         to="/admin/event"
                       >
                         Events
@@ -153,7 +151,7 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item text-light line"
                         activeClassName="active "
-                        exact
+                        
                         to="/admin/workshop"
                       >
                         Workshop
@@ -163,7 +161,7 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item text-light line"
                         activeClassName="active "
-                        exact
+                        
                         to="/admin/sponsor"
                       >
                         Sponser
@@ -176,7 +174,7 @@ const Navbar = props => {
                     className="nav-link mx-3 line text-light"
                     data-toggle="pill"
                     aria-current="page"
-                    exact="true"
+
                     to="/about"
                   >
                     About Us
@@ -186,7 +184,7 @@ const Navbar = props => {
                   <NavLink
                     className="nav-link mx-3 text-light line"
                     data-toggle="pill"
-                    exact
+                    
                     to="/workshop"
                   >
                     Workshops
@@ -195,7 +193,7 @@ const Navbar = props => {
                 <li className="nav-item dropdown text-light">
                   <NavLink
                     className="nav-link dropdown-toggle mx-3 text-light line"
-                    exact
+                    
                     to="/domain"
                     id="offcanvasNavbarDropdown"
                     role="button"
@@ -216,7 +214,7 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item  text-light line"
                         activeClassName="active "
-                        exact
+                        
                         to="Chemfor"
                       >
                         Chemfor
@@ -226,7 +224,7 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item text-light line"
                         activeClassName="active "
-                        exact
+                        
                         to="Electrica"
                       >
                         Electrica
@@ -236,7 +234,7 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item text-light line"
                         activeClassName="active "
-                        exact
+                        
                         to="Kermis"
                       >
                         Kermis
@@ -246,7 +244,7 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item text-light line"
                         activeClassName="active "
-                        exact
+                        
                         to="Karyarachna"
                       >
                         Karyarachna
@@ -256,7 +254,7 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item text-light line"
                         activeClassName="active "
-                        exact
+                        
                         to="Mechanica"
                       >
                         Mechanica
@@ -266,7 +264,7 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item text-light line"
                         activeClassName="active "
-                        exact
+
                         to="Plexus"
                       >
                         Plexus
@@ -276,7 +274,7 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item text-light line"
                         activeClassName="active "
-                        exact
+                        
                         to="Robozar"
                       >
                         Robozar
@@ -289,7 +287,7 @@ const Navbar = props => {
                     className="nav-link  mx-3 text-light line"
                     aria-current="page"
                     activeClassName="active "
-                    exact
+                    
                     to="/ca"
                   >
                     CA Portal
@@ -300,7 +298,7 @@ const Navbar = props => {
                     className="btn btn-md btn-outline-light active mx-3"
                     activeClassName="active "
                     onClick={props.onLogout}
-                    exact
+                    
                     to="/"
                     data-toggle="button"
                     aria-pressed="true"
@@ -314,7 +312,7 @@ const Navbar = props => {
                   <NavLink
                     className="btn btn-md btn-outline-light active mx-3"
                     activeClassName="active "
-                    exact
+                    
                     to="/signin"
                     data-toggle="button"
                     aria-pressed="true"
