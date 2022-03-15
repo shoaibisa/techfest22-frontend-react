@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import Sliderslick from '../Slider/Sliderslick';
 import homepage__gifvideo from '../../images/homepage--gif.webm';
 import homepage_gif from '../../images/hompage-gif-logo.webp';
@@ -11,19 +11,24 @@ import building from '../../images/BUilding.svg';
 import footfall from '../../images/Footfall.svg';
 import dollar_svg from '../../images/Dollar-Svg.svg';
 import domain_png from '../../images/Domains Webp Home.webp';
+
 import axios from 'axios';
 import { localUrl } from '../../API/api';
+import LoaderSpin from '../UI/loader/LoaderSpin';
 
 const Home = props => {
   const [sponserData, setSponserData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const navigation = useNavigate();
 
   useEffect(() => {
+    setIsLoading(true);
     axios.get(`${localUrl}/sponser/getAllSponsors`).then(sponRes => {
       // let sponData = sponRes.data.map(s => {
       //   return { title: s._id, imageSrc: s.photo };
       // });
       setSponserData(sponRes.data.data);
-      console.log(sponRes.data);
+      setIsLoading(false);
     });
   }, []);
 
@@ -257,7 +262,14 @@ const Home = props => {
             <div className="home__slider__line"></div>
           </div>
           {/* <Sliderslick data={props.data} /> */}
-          {sponserData && <Sliderslick data={sponserData} isBack={true} />}
+          {isLoading && (
+            <div style={{ textAlign: 'center', marginTop: '10rem' }}>
+              <LoaderSpin />{' '}
+            </div>
+          )}
+          {sponserData && !isLoading ? (
+            <Sliderslick data={sponserData} isBack={true} />
+          ) : null}
         </div>
       </div>
     </div>

@@ -1,111 +1,109 @@
 body {
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden !important;
-    background-color: rgb(0, 0, 0);
-    color: #fff;
-    
-  }
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden !important;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+}
 .super_admin_background {
-    background-image: url("../../../images/SuperAdmin/Stagnant\ BG\ Webp.webp") !important;
-    background-size: 100% !important;
-    background-repeat: no-repeat !important;
+  background-image: url('../../../images/SuperAdmin/Stagnant\ BG\ Webp.webp') !important;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
 }
 
 .blockquote-footer {
-    color: #ffff;
+  color: #ffff;
 }
 
 .py-5,
 .pt-5 {
-    padding-top: 6rem!important;
+  padding-top: 6rem !important;
 }
 
-
-
 .container {
-   
-    height: 100% !important;
+  height: 100% !important;
 }
 
 .text-light td {
-    border-top: 0px !important;
+  border-top: 0px !important;
 }
 
 .removeBg {
-    background: transparent !important;
-    border: 1px solid #fff !important;
-    border-radius: 25px !important;
+  background: transparent !important;
+  border: 1px solid #fff !important;
+  border-radius: 25px !important;
 }
 
-
-
 .collapse1 {
-overflow-y: scroll !important;
-height: 200px !important;
+  overflow-y: scroll !important;
+  height: 200px !important;
 }
 
 .collapse1::-webkit-scrollbar {
-width: 8px !important;
+  width: 8px !important;
 }
 
 .collapse1::-webkit-scrollbar-track {
-background: #eee !important;
-border-radius: 10px !important;
+  background: #eee !important;
+  border-radius: 10px !important;
 }
 
 .collapse1::-webkit-scrollbar-thumb {
-border-radius: 1rem !important;
-background-color: #41f115 !important;
-background-image: linear-gradient(to top, #41f115 0%, #41f115 100%) !important;
+  border-radius: 1rem !important;
+  background-color: #41f115 !important;
+  background-image: linear-gradient(
+    to top,
+    #41f115 0%,
+    #41f115 100%
+  ) !important;
 }
 
 .vl {
-    flex: 0 0 0.666667% !important;
-    max-width: 0.666667% !important;
-    border-left: 2px solid white !important;
-    height: 250px !important;
+  flex: 0 0 0.666667% !important;
+  max-width: 0.666667% !important;
+  border-left: 2px solid white !important;
+  height: 250px !important;
 }
 
 .fa-lightbulb:before {
-    content: "\f0eb" !important;
-    font-size: 25px !important;
+  content: '\f0eb' !important;
+  font-size: 25px !important;
 }
 
 .fa-tools:before {
-    content: "\f7d9";
-    font-size: 25px;
+  content: '\f7d9';
+  font-size: 25px;
 }
 
 .maintenance {
-    -webkit-filter: invert(1);
-    filter: invert(1);
-    margin-right: 5px;
+  -webkit-filter: invert(1);
+  filter: invert(1);
+  margin-right: 5px;
 }
 
 .idea {
-    -webkit-filter: invert(1);
-    filter: invert(1);
-    margin-right: 5px;
+  -webkit-filter: invert(1);
+  filter: invert(1);
+  margin-right: 5px;
 }
 
 @media only screen and (max-width: 990px) {
-    .vl {
-        border-bottom: 2px solid white;
-        border-left: none;
-        min-width: 94%;
-        padding: 10px 0px;
-        margin-bottom: 15px;
-    }
-    .row {
-        flex-direction: column;
-    }
+  .vl {
+    border-bottom: 2px solid white;
+    border-left: none;
+    min-width: 94%;
+    padding: 10px 0px;
+    margin-bottom: 15px;
+  }
+  .row {
+    flex-direction: column;
+  }
 }
 /*--------------  next section----------------------- */
 
 .gradient {
-    background: #031C04;
-    background: -webkit-radial-gradient(center, #031C04, #010101);
-    background: -moz-radial-gradient(center, #031C04, #010101);
-    background: radial-gradient(ellipse at center, #031C04, #010101);
+  background: #031c04;
+  background: -webkit-radial-gradient(center, #031c04, #010101);
+  background: -moz-radial-gradient(center, #031c04, #010101);
+  background: radial-gradient(ellipse at center, #031c04, #010101);
 }
