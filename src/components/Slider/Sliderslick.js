@@ -38,7 +38,7 @@ const Sliderslick = props => {
     ));
   }
 
-  console.log(SliderImageList);
+  // console.log(SliderImageList);
 
   return (
     <div className="Slider_container">

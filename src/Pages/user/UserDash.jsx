@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { localUrl } from '../../API/api';
+import { baseUrl, localUrl } from '../../API/api';
 import ErrorModel from '../../components/UI/ErrorModel/ErrorModel';
 
 import './UserDash.css';
@@ -10,7 +10,7 @@ const UserDash = props => {
 
   useEffect(() => {
     axios
-      .get(`${localUrl}/user/getUserById`, {
+      .get(`${baseUrl}/user/getUserById`, {
         headers: {
           Authorization: 'Bearer ' + props.token,
         },
@@ -225,7 +225,9 @@ const UserDash = props => {
                     <tr>
                       <td>Organisation/College Name</td>
                       <td></td>
-                      <td className="dashboard_profile_table_td">{user.collegeName}</td>
+                      <td className="dashboard_profile_table_td">
+                        {user.collegeName}
+                      </td>
                     </tr>
                     <tr>
                       <td>
@@ -243,7 +245,9 @@ const UserDash = props => {
                         <sub>(only applicable for college student)</sub>
                       </td>
                       <td></td>
-                      <td className="dashboard_profile_table_td">{user.yearOfStudy}</td>
+                      <td className="dashboard_profile_table_td">
+                        {user.yearOfStudy}
+                      </td>
                     </tr>
                     <tr>
                       <td>Date of Birth</td>

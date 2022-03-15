@@ -261,15 +261,15 @@ const Home = props => {
             <h1>Sponsors</h1>
             <div className="home__slider__line"></div>
           </div>
-          {/* <Sliderslick data={props.data} /> */}
-          {isLoading && (
+          <Sliderslick data={props.data} />
+          {/* {isLoading && (
             <div style={{ textAlign: 'center', marginTop: '10rem' }}>
               <LoaderSpin />{' '}
             </div>
           )}
           {sponserData && !isLoading ? (
             <Sliderslick data={sponserData} isBack={true} />
-          ) : null}
+          ) : null} */}
         </div>
       </div>
     </div>
