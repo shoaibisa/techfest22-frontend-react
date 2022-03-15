@@ -61,6 +61,7 @@ const Signup = () => {
         title: 'Error',
         message: 'Name should be 5 character long!',
       });
+      return;
     }
 
     if (password.trim() !== confirmPassword.trim()) {
@@ -68,6 +69,7 @@ const Signup = () => {
         title: 'Error',
         message: 'Password not matched!',
       });
+      return;
     }
 
     const data = {
@@ -204,7 +206,10 @@ const Signup = () => {
                   autocomplete="off"
                   placeholder=" "
                 />
-                <span style={{ background: 'transparent' }}> Refral Code</span>
+                <span style={{ background: 'transparent' }}>
+                  {' '}
+                  Referral Code
+                </span>
               </label>{' '}
               <br />
               <button
