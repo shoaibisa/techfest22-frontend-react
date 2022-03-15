@@ -14,7 +14,9 @@ const AdminContent = () => {
     });
   }, []);
   return (
-    <div>
+    <div className="main">
+        <div className="container mt-5 pt-5" style={{ width: '100%' }}>
+          <div className="col-sm-12"></div>
       <div className="full_page_domain">
         <div className="domain_right_side_page">
           <div className="superadmin_welcomeoutercontainer">
@@ -54,6 +56,7 @@ const AdminContent = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

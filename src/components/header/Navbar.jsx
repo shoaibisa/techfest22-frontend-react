@@ -144,7 +144,7 @@ const Navbar = props => {
                         className="dropdown-item text-light line"
                         activeClassName="active "
                         exact
-                        to="/admin/enents"
+                        to="/admin/event"
                       >
                         Events
                       </NavLink>
