@@ -24,7 +24,7 @@ const Sponsor = () => {
   };
 
   const onSubmitClick = e => {
-    // console.log(e.target.value);
+    console.log(name);
     e.preventDefault();
 
     // return console.log(sImage);
@@ -41,33 +41,35 @@ const Sponsor = () => {
     sData.append('name', name);
     sData.append('link', sponserLink);
 
-    axios
-      .post(`${baseUrl}/sponser/addSponsor`, sData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-        },
-      })
-      .then(result => {
-        if (result.status !== 201 || result.status !== 200) {
-          setErrosMade({
-            title: result.data.title,
-            message: result.data.message,
-          });
-          return;
-        }
+    console.log(sData);
 
-        setErrosMade({
-          title: result.data.title,
-          message: result.data.message,
-        });
+    // axios
+    //   .post(`${localUrl}/sponser/addSponsor`, sData, {
+    //     headers: {
+    //       'Content-Type': 'multipart/form-data',
+    //       'Access-Control-Allow-Origin': '*',
+    //       'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+    //     },
+    //   })
+    //   .then(result => {
+    //     if (result.status !== 201 || result.status !== 200) {
+    //       setErrosMade({
+    //         title: result.data.title,
+    //         message: result.data.message,
+    //       });
+    //       return;
+    //     }
 
-        setName('');
-        setSimage(null);
-        setSponserLink('');
-        console.log(result.data);
-      });
+    //     setErrosMade({
+    //       title: result.data.title,
+    //       message: result.data.message,
+    //     });
+
+    //     setName('');
+    //     setSimage(null);
+    //     setSponserLink('');
+    //     console.log(result.data);
+    //   });
   };
 
   const onErrosMadeHandle = () => {

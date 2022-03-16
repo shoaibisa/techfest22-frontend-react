@@ -81,7 +81,7 @@ const Signup = () => {
           (result.status !== 201 && result.data.isError)
         ) {
           setErrosMade({
-            title: 'Error',
+            title: result.data.title,
             message: result.data.message,
           });
           return;
