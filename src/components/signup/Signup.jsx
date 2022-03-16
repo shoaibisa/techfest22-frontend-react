@@ -61,15 +61,6 @@ const Signup = () => {
         title: 'Error',
         message: 'Name should be 5 character long!',
       });
-      return;
-    }
-
-    if (password.trim() !== confirmPassword.trim()) {
-      setErrosMade({
-        title: 'Error',
-        message: 'Password not matched!',
-      });
-      return;
     }
 
     const data = {
@@ -80,24 +71,20 @@ const Signup = () => {
       confirmPassword: confirmPassword,
     };
 
-    // console.log(data);
+    console.log(data);
     await axios
-      .post(`${baseUrl}/signUp`, data)
+      .post(`${localUrl}/signUp`, data)
       .then(result => {
-        //console.log(result);
-        if (result.status !== 200 || result.status !== 201) {
+        console.log(result);
+        if (
+          result.status !== 200 ||
+          (result.status !== 201 && result.data.isError)
+        ) {
           setErrosMade({
-            title: result.data.title,
+            title: 'Error',
             message: result.data.message,
           });
           return;
-        }
-
-        if (result.status === 200 || result.status === 201) {
-          setErrosMade({
-            title: 'Success',
-            message: 'Now! verify your mail account.',
-          });
         }
       })
       .catch(err => {
@@ -150,7 +137,7 @@ const Signup = () => {
                   type="text"
                   placeholder=" "
                 />
-                <span style={{ background: 'transparent' }}>Full Name</span>
+                <span>Full Name</span>
               </label>{' '}
               <br />
               <label>
@@ -163,7 +150,7 @@ const Signup = () => {
                   type="email"
                   placeholder=" "
                 />
-                <span style={{ background: 'transparent' }}>Email</span>
+                <span>Email</span>
               </label>{' '}
               <br />
               <label>
@@ -176,7 +163,7 @@ const Signup = () => {
                   type="password"
                   placeholder=" "
                 />
-                <span style={{ background: 'transparent' }}>Password</span>
+                <span>Password</span>
                 <p className="text-danger" id="pass"></p>
               </label>{' '}
               <br />
@@ -190,9 +177,7 @@ const Signup = () => {
                   type="text"
                   placeholder=" "
                 />
-                <span style={{ background: 'transparent' }}>
-                  Confirm Password
-                </span>
+                <span>Confirm Password</span>
                 <p className="text-danger" id="cnfPass"></p>
               </label>
               <br />
@@ -206,10 +191,7 @@ const Signup = () => {
                   autocomplete="off"
                   placeholder=" "
                 />
-                <span style={{ background: 'transparent' }}>
-                  {' '}
-                  Referral Code
-                </span>
+                <span>Refral Code</span>
               </label>{' '}
               <br />
               <button
