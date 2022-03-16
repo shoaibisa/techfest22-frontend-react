@@ -63,13 +63,6 @@ const Signup = () => {
       });
     }
 
-    if (password.trim() !== confirmPassword.trim()) {
-      setErrosMade({
-        title: 'Error',
-        message: 'Password not matched!',
-      });
-    }
-
     const data = {
       name: name,
       email: email,
@@ -78,24 +71,20 @@ const Signup = () => {
       confirmPassword: confirmPassword,
     };
 
-    // console.log(data);
+    console.log(data);
     await axios
-      .post(`${localUrl}/signUp`, data)
+      .post(`${baseUrl}/signUp`, data)
       .then(result => {
         console.log(result);
-        if (result.status !== 200 || result.status !== 201) {
+        if (
+          result.status !== 200 ||
+          (result.status !== 201 && result.data.isError)
+        ) {
           setErrosMade({
             title: 'Error',
             message: result.data.message,
           });
           return;
-        }
-
-        if (result.status === 200 || result.status === 201) {
-          setErrosMade({
-            title: 'Success',
-            message: 'Now! verify your mail account.',
-          });
         }
       })
       .catch(err => {
@@ -204,7 +193,7 @@ const Signup = () => {
                   autocomplete="off"
                   placeholder=" "
                 />
-                <span style={{ background: 'transparent' }}> Refral Code</span>
+                <span style={{ background: 'transparent' }}>Refral Code</span>
               </label>{' '}
               <br />
               <button

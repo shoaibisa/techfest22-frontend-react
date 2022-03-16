@@ -206,51 +206,7 @@ background-image: linear-gradient(to top, #41f115 0%, #41f115 100%);
 }
 
 /*---------- the css of the content starts here --------------*/
-.side-bar {
-  width: 200px;
-  padding: 20px;
-  background-color: rgb(14, 14, 14);
-  border-radius: 5px;
-}
 
-.side-bar-logo-outercontainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.side-bar-logo {
-  width: 100px;
-}
-
-.side-bar-logo img {
-  width: 100%;
-}
-
-.side-bar-ul {
-  padding: 5px;
-}
-
-.side-bar-navlist {
-  list-style: none;
-  text-align: center;
-  margin: 20px 0px 20px 0px;
-}
-
-.side-bar-navlist a {
-  text-decoration: none;
-  margin: 5px;
-  color: white;
-}
-
-@media (max-width:768px) {
-  .side-bar {
-      width: 127px;
-  }
-  .domain_right_side_page{
-      margin-left: 2rem;
-  }
-}
 /*------------the domain coordinator---------*/
 
 .domain_right_side_page{

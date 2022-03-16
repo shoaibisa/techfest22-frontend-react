@@ -28,15 +28,15 @@ import DomainForm from './Pages/admin/domain/DomainForm';
 import DeleteWorkshop from './Pages/admin/WorkshopForm/DeleteWorkshop';
 import AdminContent from './Pages/admin/AdminContent';
 import CoordinatorForm from './Pages/admin/coordinator/CoordinatorForm';
-import CoordinatorContent from './Pages/admin/coordinator/CoordinatorContent';
-
 import UserDash from './Pages/user/UserDash';
 import axios from 'axios';
-import { localUrl } from './API/api';
+import { baseUrl, localUrl } from './API/api';
 import ErrorModel from './components/UI/ErrorModel/ErrorModel';
 import AllUsers from './Pages/admin/userList/allUsers';
 import Sponsor from './Pages/admin/sponsor/sponsor';
 import Fourzerofour from './Pages/FourZero/Fourzerofour';
+import EventForm from './Pages/admin/EventForm/EventForm';
+import AllCoordinator from './Pages/admin/coordinator/CoordinatorList/AllCoordinator';
 
 function App() {
   const [isUserLoggedIn, setUserLoggedIn] = useState();
@@ -67,7 +67,7 @@ function App() {
     const fetchdata = await axios({
       method: 'post',
       data: authData,
-      url: `${localUrl}/signIn`,
+      url: `${baseUrl}/signIn`,
     });
     if (
       fetchdata.status !== 200 ||
@@ -203,11 +203,11 @@ function App() {
           path="/admin/coordinators/add"
           element={<CoordinatorForm />}
         />
-        <Route
+        {/* <Route
           exact
           path="/admin/coordinators"
           element={<CoordinatorContent />}
-        />
+        /> */}
         <Route exact path="/admin/workshop" element={<WorkshopForm />} />
         <Route
           exact
@@ -219,10 +219,15 @@ function App() {
         <Route exact path="/admin/users" element={<AllUsers />} />
         <Route exact path="/admin/sponsor" element={<Sponsor />} />
         <Route exact path="/admin/domain" element={<DomainForm />} />
-        <Route exact path="/admin/events" element={<Sponsor />} />
+        <Route exact path="/admin/event" element={<EventForm />} />
+        <Route exact path="admin/coordinator" element={<AllCoordinator />} />
+        <Route
+          exact
+          path="admin/coordinator/add"
+          element={<CoordinatorForm />}
+        />
         <Route path="*" element={<Fourzerofour />} />
       </Routes>
-
       <Footer />
     </div>
   );

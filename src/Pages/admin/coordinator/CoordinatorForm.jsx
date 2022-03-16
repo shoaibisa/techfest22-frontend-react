@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Multiselect } from 'multiselect-react-dropdown';
 import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import { baseUrl } from '../../../API/api';
@@ -161,24 +160,24 @@ const CoordinatorForm = () => {
     });
 
     return (
-      <div
-        className="workshopForm"
-        style={{
-          display: 'flex',
-          justifyContent: 'flex-start',
-          margin: '100px 50px',
-        }}
-      >
-        <form
-          onSubmit=" return myFormValidation()"
-          name="signupForm"
-          action=""
-          className=""
-        >
-          <h1 className="" href="/#">
-            Workshop Form
-          </h1>
-          {/* <label className="">
+      // <div
+      //   className="workshopForm"
+      //   style={{
+      //     display: 'flex',
+      //     justifyContent: 'flex-start',
+      //     margin: '100px 50px',
+      //   }}
+      // >
+      //   <form
+      //     onSubmit=" return myFormValidation()"
+      //     name="signupForm"
+      //     action=""
+      //     className=""
+      //   >
+      //     <h1 className="" href="/#">
+      //       Workshop Form
+      //     </h1>
+          /* <label className="">
             <span>Image </span>
             <input
               name="workshop"
@@ -190,8 +189,8 @@ const CoordinatorForm = () => {
               placeholder=" "
             />
             <p className="text-danger" id="pass"></p>
-          </label> */}
-          <label class="btn btn-default btn-file ">
+          </label> */
+        /* <label class="btn btn-default btn-file ">
             Image browse{' '}
             <input
               type="file"
@@ -280,73 +279,82 @@ const CoordinatorForm = () => {
           <br />
           <label>
             <span>End Date </span>
-            {/* <p className="text-danger" id=""></p> */}
-            <input
-              name="endDate"
-              value={endDate}
-              onChange={getendDate}
-              required
-              autoComplete="off"
-              type="date"
-              placeholder=" "
-            />
-            <p className="text-danger" id=""></p>
-          </label>
-          <br />
-          <label>
-            <span>Student Coordinator </span>
+            {/* <p className="text-danger" id=""></p> */
+            // <input
+            //   name="endDate"
+            //   value={endDate}
+            //   onChange={getendDate}
+            //   required
+            //   autoComplete="off"
+            //   type="date"
+            //   placeholder=" "
+            // />
+            // <p className="text-danger" id=""></p>
+        //   </label>
+        //   <br />
+        //   <label>
+        //     <span>Student Coordinator </span>
             
-          </label>
-          <br />
-          <br />
-          <button
-            type="button"
-            onClick={onSubmitBtnClick}
-            disabled={isLoading}
-            className="btn__color mb-3"
-          >
-            Submit
-          </button>
-        </form>
-        <Form>
+        //   </label>
+        //   <br />
+        //   <br />
+        //   <button
+        //     type="button"
+        //     onClick={onSubmitBtnClick}
+        //     disabled={isLoading}
+        //     className="btn__color mb-3"
+        //   >
+        //     Submit
+        //   </button>
+        // </form> */
+        // <Form>
+        <div className="main">
+        <div className="container mt-5 pt-5" style={{width:'50%'}}>
+        <div className="col-sm-12">
+            <h2 style={{ color:'white'}}>Add Coordinator</h2>
+    <Form>
                 <Form.Group className="mb-3">
                 <Form.Label style={{color:'white'}}>Name</Form.Label>
-                  <Form.Control  style={{ color:'white',background: 'transparent'}} size="sm"  type="text" placeholder="Enter Name *" required />
+                  <Form.Control  style={{ color:'white',background: 'transparent'}} size="sm"  type="text" placeholder="Enter Name *" />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                <Form.Label style={{color:'white'}}>Domain Name</Form.Label>
-                <Form.Select  style={{ color:'white',background: 'transparent'}} aria-label="Default select example">
-                <option style={{ color:'black'}} >---select---</option>
-                 <option style={{ color:'black'}} value="1">One</option>
-                  <option style={{ color:'black'}} value="2">Two</option>
-                  <option style={{ color:'black'}} value="3">Three</option>
-                  </Form.Select>
-                  </Form.Group>
+                <Form.Label style={{color:'white'}}>Email</Form.Label>
+                  <Form.Control  style={{ color:'white',background: 'transparent'}} size="sm"  type="email" placeholder="Enter Email *" />
+                </Form.Group>
                   <Form.Group controlId="form.Textarea" className="mb-3">
-                <Form.Label style={{color:'white'}}>Domain Description</Form.Label>
-            <Form.Control style={{ color:'white',background: 'transparent'}} as="textarea" rows={4} placeholder="Enter Description(max 50 words) *" required/>
+                <Form.Label style={{color:'white'}}>Number</Form.Label>
+            <Form.Control style={{ color:'white',background: 'transparent'}} type="tel"id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" size="sm" placeholder="Enter your phone no. *" />
             </Form.Group>
                 <Form.Group controlId="formFileSm" className="mb-3">
                   <Form.Label style={{color:'white'}}>Uplode Image</Form.Label>
                   <Form.Control    style={{background: 'transparent'}} type="file" size="sm" />
                 </Form.Group>
-        <Multiselect
-              onSelect={getstudentCoordinator}
-              // onChange={getstudentCoordinator}
-              options={dataC}
-              displayValue="coordinator"
-              showCheckbox="true"
-            />
+                <Form.Group className="mb-3">
+                <Form.Label style={{color:'white'}}>Coordinator type</Form.Label>
+                <Form.Select  style={{ color:'white',background: 'transparent'}} aria-label="Default select example">
+                <option style={{ color:'black'}} >---select---</option>
+                 <option style={{ color:'black'}} value="1">Student</option>
+                  <option style={{ color:'black'}} value="2">Faculty</option>
+                  </Form.Select>
+                  </Form.Group>
+                  <Form.Group className="mb-3">
+                  <Form.Label style={{color:'white'}}>Coordinator Desigination</Form.Label>
+                  <Form.Control  style={{ color:'white',background: 'transparent'}} size="sm"  type="text" placeholder="Enter coodinator desigination *" />
+                </Form.Group>
+  
              <Button
                   style={{ width: '100%' }}
                   variant="success"
                   type="submit"
                   block
                 >
-                  Add Domain
+                  Add Coordinator
                 </Button>
               </Form>
-            </div>
+              </div>
+              </div>
+              
+    </div>
          
     );
   }

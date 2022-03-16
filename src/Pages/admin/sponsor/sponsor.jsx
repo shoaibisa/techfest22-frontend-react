@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { localUrl } from '../../../API/api';
+import { baseUrl, localUrl } from '../../../API/api';
 import ErrorModel from '../../../components/UI/ErrorModel/ErrorModel';
 
 const Sponsor = () => {
@@ -42,7 +42,7 @@ const Sponsor = () => {
     sData.append('link', sponserLink);
 
     axios
-      .post(`${localUrl}/sponser/addSponsor`, sData, {
+      .post(`${baseUrl}/sponser/addSponsor`, sData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Access-Control-Allow-Origin': '*',
