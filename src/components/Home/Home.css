@@ -58,7 +58,7 @@
     display: none;
   }
   .homepage_gif_mobile {
-    display: block;
+    display: block !important;
   }
   .scroll__text {
     display: none;
