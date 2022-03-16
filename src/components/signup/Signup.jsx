@@ -61,6 +61,15 @@ const Signup = () => {
         title: 'Error',
         message: 'Name should be 5 character long!',
       });
+      return;
+    }
+
+    if (password.trim() !== confirmPassword.trim()) {
+      setErrosMade({
+        title: 'Error',
+        message: 'Password did not matched!',
+      });
+      return;
     }
 
     const data = {
@@ -73,7 +82,7 @@ const Signup = () => {
 
     console.log(data);
     await axios
-      .post(`${baseUrl}/signUp`, data)
+      .post(`${localUrl}/signUp`, data)
       .then(result => {
         console.log(result);
         if (
