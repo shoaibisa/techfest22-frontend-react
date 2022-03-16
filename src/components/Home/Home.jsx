@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import Sliderslick from '../Slider/Sliderslick';
 import homepage__gifvideo from '../../images/Untitled.webm';
 import homepage_gif from '../../images/hompage-gif-logo.webp';
-import homepage_gif_mobile_vid from '../../images/Gif-mobile- in gif (1).gif';
+import homepage_gif_mobile from '../../images/Untitled (1).webm';
 // import homapage_gif_vid from '../../images/gif/desk-view.gif';
 import workshop_home_png from '../../images/Png-Workshops-home-Webp.webp';
 import building from '../../images/BUilding.svg';
@@ -81,10 +81,11 @@ const Home = props => {
           height="100%"
           loop="loop"
           autoplay
-          muted="true"
+          // muted="true"
           preload="auto"
+          playsInline
         >
-          <source src={homepage_gif_mobile_vid} type="video/mp4" />
+          <source src={homepage_gif_mobile} type="video/webm" />
           Your browser does not support the video tag.
         </video>
         {/* <img
