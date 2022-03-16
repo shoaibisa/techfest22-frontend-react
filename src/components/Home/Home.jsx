@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './Home.css';
 import { NavLink, useNavigate } from 'react-router-dom';
 import Sliderslick from '../Slider/Sliderslick';
-import homepage__gifvideo from '../../images/homepage--gif.webm';
+import homepage__gifvideo from '../../images/Untitled.webm';
 import homepage_gif from '../../images/hompage-gif-logo.webp';
-import homepage_gif_mobile_vid from '../../images/hompage-gif-mobile.webm';
+import homepage_gif_mobile_vid from '../../images/Gif-mobile- in gif (1).gif';
 // import homapage_gif_vid from '../../images/gif/desk-view.gif';
 import workshop_home_png from '../../images/Png-Workshops-home-Webp.webp';
 import building from '../../images/BUilding.svg';
@@ -77,7 +77,6 @@ const Home = props => {
 
         <video
           className="homepage_gif_mobile"
-          onclick="myFunction()"
           width="100%"
           height="100%"
           loop="loop"
@@ -85,7 +84,7 @@ const Home = props => {
           muted="true"
           preload="auto"
         >
-          <source src={homepage_gif_mobile_vid} type="video/webm" />
+          <source src={homepage_gif_mobile_vid} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         {/* <img

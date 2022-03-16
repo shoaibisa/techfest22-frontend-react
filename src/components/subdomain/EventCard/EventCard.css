@@ -1,14 +1,23 @@
 
 .Robo{
     background-color: black;
-    
+
+    /* margin-top: 20rem; */
+}
+.Robo__line{
+    width: 100%;
+    background-color: white;
+    height: 2px;
+    margin-top: 20rem;
+    /* margin-top: 18rem; */
 }
 .Robozar__bottom{
-    background-image: url("../../../images/Domain/bgoverlay-left.png"),url("../../../images/Domain/background-overlay-right.png");
-    background-position: left,right;
-    background-repeat: no-repeat;
-    background-size: 60% ,60%;
+    /* background-image: url("../../../images/Domain/bgoverlay-left.png"),url("../../../images/Domain/background-overlay-right.png"); */
+
+    justify-content: space-evenly;
     padding-top: 10rem;
+    
+
 }
 .robozar_main_container{
     min-height: 80vh;
@@ -168,4 +177,68 @@
         border-radius: 5px;
         display: inline-block;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* new section here */
+
+
+
+
+
+.Robozar__bottom__left img{
+    height: 251px;
+    width: 250px;
+    border-radius: 8px;
+}
+.Robozar__bottom__left__calender p{
+    letter-spacing: 1px;
+}
+.Robozar__bottom__middle p{
+    /* margin-bottom: 5rem; */
+    width: 660px;
+    height: 152px;
+}
+.Robozar__bottom__middle__button button{
+    margin-top: 1rem;
+}
+.Event__cordinator1__right img{
+    height: 61px;
+    width: 61px;
+    border-radius: 50%;
+}
+.Event__cordinator{
+    margin-top: 5rem;
+    width: 100%;
+    margin-left: -10rem;
+}
+.Event__cordinator1__left p:last-child{
+    margin-top: -.8rem;
+}
+.Event__cordinator1__left p:first-child{
+    margin-top: .3rem;
+}
+.regitration__fee .fa{
+    font-size: 30px;
+    margin-top: .3rem;
+    margin-right: .4rem;
+}
+.regitration__fee__icon{
+    margin-left: 8rem;
 }

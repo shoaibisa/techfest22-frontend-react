@@ -212,7 +212,7 @@ const UserDash = props => {
                       </td>
                       <td className="dashboard_gapping"></td>
                       <td className="dashboard_profile_table_td dashboard_profile_right_cell">
-                        <i className="fa fa-edit"></i>
+                        <i className="fa fa-edit" ></i>
                       </td>
                     </tr>
                     <tr>
