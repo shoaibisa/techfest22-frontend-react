@@ -23,10 +23,7 @@ const Home = props => {
 
   useEffect(() => {
     setIsLoading(true);
-    axios.get(`${baseUrl}/sponser/getAllSponsors`).then(sponRes => {
-      // let sponData = sponRes.data.map(s => {
-      //   return { title: s._id, imageSrc: s.photo };
-      // });
+    axios.get(`${localUrl}/sponser/getAllSponsors`).then(sponRes => {
       setSponserData(sponRes.data.data);
       setIsLoading(false);
     });
@@ -206,7 +203,6 @@ const Home = props => {
           </div>
         </div>
 
-        {/* <Sponsor/> */}
         <div className="container__college__people__money1 cards-container ">
           <div className="college__people__money">
             <div className="row text-light text-center">
@@ -261,15 +257,15 @@ const Home = props => {
             <h1>Sponsors</h1>
             <div className="home__slider__line"></div>
           </div>
-          <Sliderslick data={props.data} />
-          {/* {isLoading && (
+          {/* <Sliderslick data={props.data} /> */}
+          {isLoading && (
             <div style={{ textAlign: 'center', marginTop: '10rem' }}>
               <LoaderSpin />{' '}
             </div>
           )}
           {sponserData && !isLoading ? (
             <Sliderslick data={sponserData} isBack={true} />
-          ) : null} */}
+          ) : null}
         </div>
       </div>
     </div>

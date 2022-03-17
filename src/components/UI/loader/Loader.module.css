@@ -1,12 +1,17 @@
 .loader {
-  display: inline-block;
-  position: relative;
+  /* display: inline-block;
+  position: relative; */
+  position: fixed;
   width: 64px;
   height: 64px;
+  top: 40vh;
+  left: 96vh;
+  z-index: 100;
+  overflow: hidden;
 }
 .loader div {
-  box-sizing: border-box;
-  display: block;
+  /* box-sizing: border-box;
+  display: block; */
   position: absolute;
   width: 51px;
   height: 51px;
@@ -31,5 +36,11 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 768) {
+  .loader {
+    left: 10vh;
   }
 }
