@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Modal } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { localUrl } from '../../../../API/api';
 import img from '../../../../images/Footfall.svg';
+import { CoordinatorContext } from './contexts/CoordinatorContext';
+
 const Coordinator = ({ user }) => {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
+  const { deleteCo } = useContext(CoordinatorContext);
+  const onDeleteCoordinator = () => {
+    deleteCo(user._id);
+  };
   return (
     <>
       <td className="">
@@ -42,7 +48,12 @@ const Coordinator = ({ user }) => {
             &#xE254;
           </i>
         </NavLink>
-        <a href="#deleteEmployeeModal" className="delete" data-toggle="modal">
+        <a
+          href="#deleteEmployeeModal"
+          onClick={onDeleteCoordinator}
+          className="delete"
+          data-toggle="modal"
+        >
           <i
             style={{ color: 'white' }}
             className="material-icons"

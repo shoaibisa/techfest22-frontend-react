@@ -30,7 +30,11 @@ const CoordinatorList = () => {
   //   });
   // }, []);
 
-  console.log(coordinator);
+  // const deleteCo = props => {
+  //   console.log('ji', props);
+  // };
+
+  // console.log(coordinator);
 
   return (
     <>
@@ -38,7 +42,7 @@ const CoordinatorList = () => {
         <div className="row">
           <div className="col-sm-6">
             <h2>
-              COORDINATOR <b>LIST</b>
+              COORDINATORS <b>LIST</b>
             </h2>
           </div>
           <div className="col-sm-6">
@@ -49,7 +53,7 @@ const CoordinatorList = () => {
             >
               <i className="material-icons">&#xE147;</i>{' '}
               <span style={{ background: 'transparent', padding: '2px' }}>
-                Add New User
+                Add New Coordinator
               </span>
             </Button>
           </div>

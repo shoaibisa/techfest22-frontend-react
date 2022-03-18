@@ -6,13 +6,15 @@ import { localUrl } from '../../../../../API/api';
 export const CoordinatorContext = createContext();
 const CoordinatorContextProvider = props => {
   const [coordinator, setCoordinator] = useState([]);
-
+  const deleteCo = async props => {
+    await axios.delete(`${localUrl}/coordinator/delete/${props}`);
+  };
   useEffect(() => {
     axios.get(`${localUrl}/coordinator/get-all-details`).then(results => {
       // console.log(results);
       setCoordinator(results.data.c);
     });
-  }, []);
+  }, [deleteCo]);
 
   const [users] = useState([
     {
@@ -106,7 +108,7 @@ const CoordinatorContextProvider = props => {
   ]);
   // const sortedUsers = users.sort((a, b) => (a.name < b.name ? -1 : 1));
   return (
-    <CoordinatorContext.Provider value={{ coordinator }}>
+    <CoordinatorContext.Provider value={{ coordinator, deleteCo }}>
       {props.children}
     </CoordinatorContext.Provider>
   );
