@@ -1,30 +1,54 @@
-import React,{useState} from "react";
-import { Modal} from "react-bootstrap";
-import { NavLink } from "react-router-dom";
-import img from '../../../../images/Footfall.svg'
-const User = ({user}) => {
+import React, { useState } from 'react';
+import { Modal } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import { localUrl } from '../../../../API/api';
+import img from '../../../../images/Footfall.svg';
+const Coordinator = ({ user }) => {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
-    const handleClose = () => setShow(false); 
+  const handleClose = () => setShow(false);
   return (
     <>
-      <td className=""><img src={img} style={{width: "50px",
-  height: "50px",
-  background: "white",
-  borderRadius: "50%"}} alt=""/></td>
-      <td>{user.name}</td>
-      <td>{user.email}</td>
-      <td>{user.type}</td>
-      <td>{user.desigination}</td>
-      <td>{user.phone}</td>
+      <td className="">
+        <img
+          src={`${localUrl}/profile/${user.photo}`}
+          style={{
+            width: '50px',
+            height: '50px',
+            background: 'white',
+            borderRadius: '50%',
+          }}
+          alt=""
+        />
+      </td>
+      <td>{user.coordinatorName}</td>
+      <td>{user.coordinatorType}</td>
+      <td>{user.coordinatorEmail}</td>
+      <td>{user.coordinatorDesignation}</td>
+      <td>{user.coordinatorPhone}</td>
       <td>
-        <NavLink to="" className="edit" data-toggle="modal" onClick={handleShow}>
-          <i  style={{color:'white'}} className="material-icons" data-toggle="tooltip" title="Edit">
+        <NavLink
+          to=""
+          className="edit"
+          data-toggle="modal"
+          onClick={handleShow}
+        >
+          <i
+            style={{ color: 'white' }}
+            className="material-icons"
+            data-toggle="tooltip"
+            title="Edit"
+          >
             &#xE254;
           </i>
         </NavLink>
         <a href="#deleteEmployeeModal" className="delete" data-toggle="modal">
-          <i  style={{color:'white'}} className="material-icons" data-toggle="tooltip" title="Delete">
+          <i
+            style={{ color: 'white' }}
+            className="material-icons"
+            data-toggle="tooltip"
+            title="Delete"
+          >
             &#xE872;
           </i>
         </a>
@@ -32,9 +56,9 @@ const User = ({user}) => {
       <Modal
         show={show}
         onHide={handleClose}
-        style={{ backgroundColor: "transparent" }}
+        style={{ backgroundColor: 'transparent' }}
       ></Modal>
     </>
   );
 };
-export default User;
+export default Coordinator;

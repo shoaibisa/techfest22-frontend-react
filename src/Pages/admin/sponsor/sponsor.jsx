@@ -121,7 +121,7 @@ const Sponsor = () => {
                 type="text"
                 placeholder="Enter Name *"
                 // required
-
+                value={name}
                 onChange={getName}
               />
             </Form.Group>

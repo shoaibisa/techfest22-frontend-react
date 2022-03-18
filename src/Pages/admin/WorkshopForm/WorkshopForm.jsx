@@ -22,7 +22,7 @@ const WorkshopForm = () => {
   const [selectedImage, setselectedImage] = useState(null);
   const [errosMade, setErrosMade] = useState(); //undefined
 
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setIsLoading(true);
