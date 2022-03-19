@@ -25,12 +25,12 @@
   border-right: 2px solid #fff;
 }
 .About__Us__part1__techfest__logo img {
-  height: 230px;
-  width: 275px;
+  height: 250px;
+  width: 300px;
 }
 .About__Us__part1__SLIET__logo img {
-  height: 230px;
-  width: 275px;
+  height: 260px;
+  width: 270px;
 }
 .About__Us__part1__SLIET__logo {
   display: flex;
@@ -148,6 +148,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .About__Us__part2__text
+  {
+    text-align: justify !important;
   }
   .college {
     border: none;
@@ -371,6 +375,9 @@
   }
   .website_year-declaration{
     margin-right: 3.9rem
+  }
+  .website_year-declaration {
+    margin-left: 6rem;
   }
 }
 @media screen and (max-width: 376px) {

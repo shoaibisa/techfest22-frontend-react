@@ -229,7 +229,7 @@ const AboutUs = (props) => {
       {/* Sponser */}
       <div className="aboutUs__slider aboutUs__slider__last">
       <div class="Website_sponsor_heading">
-        <h1>Our Previous Sponsor</h1>
+        <h1>Our Sponsor</h1>
       </div>
   
      <Sliderslick data={props.data.sponser} />

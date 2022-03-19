@@ -1,5 +1,4 @@
 .home{
-  background-color: black;
   margin-top: -4rem;
 }
 .homepage_gif {
@@ -11,6 +10,7 @@
 }
 .homepage_gif_mobile {
   display: none;
+  margin-top: -5rem;
 }
 .workShop_Animation {
   animation: animate 3s linear infinite;
@@ -19,7 +19,13 @@
   margin-top: -4rem;
 }
 
-
+.logo_section_button_section__Sign_Up:hover{
+  color: green !important;
+}
+.logo_section_button_section__About_Us:hover{
+  background-color: rgb(202, 199, 199);
+  color: black !important;
+}
 .home__slider__line{
   height: 2px;
   width: 60%;
@@ -40,6 +46,9 @@
   font-size: 50px;
   font-family: "heading font";
 }
+.bottomSection{
+  background  : rgb(0, 0, 0,0.1);
+}
 
 @keyframes animate {
   50% {
@@ -59,6 +68,7 @@
   }
   .homepage_gif_mobile {
     display: block !important;
+    padding-top: -9rem !important;
   }
   .scroll__text {
     display: none;
@@ -70,6 +80,10 @@
   }
   .scroll {
     bottom: 0rem;
+    display: none;
+  }
+  .scroll__goto{
+    display: none;
   }
 }
 @media screen and (max-width:769px) {
@@ -151,7 +165,7 @@
 
 .logo_section_about__heading h2 {
   font-size: 2.9rem;
-  font-family: Helvetica;
+  font-family: "helveticaregular";
 }
 
 .logo_section_button_section__About_Us {
@@ -268,6 +282,9 @@ html {
   .blockquote {
     font-size: 1.1rem;
   }
+  .container__college__people__money1{
+    margin-left: 1rem !important;
+  }
 }
 /* workshop car par is hare ------------------------------ */
 
@@ -275,7 +292,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0) !important;
 }
 
 .cards-container_card1 {
@@ -300,7 +317,7 @@ html {
 
 .cards-container_card1_description-container_content {
   margin: 21px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "helveticaregular";
   word-spacing: 1px;
   font-weight: lighter;
 }
@@ -308,6 +325,10 @@ html {
 .cards-container_card1_description-container_btn {
   padding: 5px;
   margin: 15px;
+}
+.cards-container_card1_description-container_btn a:hover{
+  background-color: rgb(202, 199, 199);
+  color: black !important;
 }
 
 .cards-container_card1_description-container_btn a {
@@ -347,14 +368,18 @@ html {
 
 .cards-container_card2_description-container_content {
   margin: 21px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:"helveticaregular";
   word-spacing: 1px;
   font-weight: lighter;
-}
+} 
 
 .cards-container_card2_description-container_btn {
   padding: 5px;
   margin: 15px;
+}
+.cards-container_card2_description-container_btn a:hover{
+  background-color: rgb(202, 199, 199);
+  color: black !important;
 }
 
 .cards-container_card2_description-container_btn a {
@@ -405,7 +430,11 @@ html {
   }
   .blockquote p {
     font-size: 15px;
+    text-align: justify !important;
   }
+}
+.blockquote p{
+  font-family: "helveticaregular";
 }
 /* This is the footer section ................... */
 
@@ -416,3 +445,4 @@ html {
   }
   
 }
+

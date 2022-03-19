@@ -1,26 +1,14 @@
 
 .Robo{
     background-color: black;
+}
 
-    /* margin-top: 20rem; */
-}
-.Robo__line{
-    width: 100%;
-    background-color: white;
-    height: 2px;
-    margin-top: 20rem;
-    /* margin-top: 18rem; */
-}
 .Robozar__bottom{
-    /* background-image: url("../../../images/Domain/bgoverlay-left.png"),url("../../../images/Domain/background-overlay-right.png"); */
-
-    justify-content: space-evenly;
     padding-top: 10rem;
-    
 
 }
 .robozar_main_container{
-    min-height: 80vh;
+    /* min-height: 80vh; */
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -28,6 +16,8 @@
     justify-content: center;
     color: white;
     padding-bottom: -1rem;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
 }
 .robozar_container{
     width: 90%;
@@ -63,11 +53,21 @@
 }
 .robozar_register_button{
     text-decoration: none;
-    background-color:rgb(18, 189, 18);
+    color: white;
+    background: linear-gradient(
+      to right,
+      rgb(0, 36, 0) 0%,
+      rgb(0, 87, 0) 0%,
+      rgb(0, 138, 0) 72%,
+      rgb(82, 177, 82) 100%
+    ) !important;
     color: white;
     padding: 5px 20px;
     border-radius: 5px;
     display: inline-block;
+}
+.robozar_register_button:hover{
+    color: green !important;
 }
 .robozar_problem_statement_button{
     text-decoration: none;
@@ -78,6 +78,10 @@
     margin-left: 15px;
     border-radius: 5px;
     display: inline-block;
+}.robozar_problem_statement_button:hover{
+
+    background-color: rgb(202, 199, 199);
+    color: black !important;
 }
 .robozar_right_content h1,h2{
     font-size: medium;
@@ -119,9 +123,10 @@
         height: 400px;
     }
     .robozar_left_content{
-         margin:30px;
+        margin:30px;
         align-items: center;
         justify-content: center;
+       
     }
     .robozar_right_container{
         width: 70%;
@@ -136,6 +141,13 @@
         margin-bottom:10rem;
         margin-top: 12rem;
     }
+    .robozar_left_content p{
+        text-align: justify;
+        line-height: 1;
+    }
+      .robozar_right_container{
+        margin-top: -2rem !important;
+    }
 }
 @media screen and (max-width:381px) {
     .robozar_main_container{
@@ -148,18 +160,22 @@
         background-size: 80% ,100%;
     }
     .robozar_right_container{
-        margin-top: -2rem !important;
+        margin-top: -1rem !important;
     }
-}
-@media(max-width:360px) {
+    .robozar_main_container{
+        min-height: 105vh !important;
+    }
+    .robozar_container{
+        padding-bottom: 5rem;
+    }
+    .robozar_problem_statement_button{
+        margin-left: 0rem;
+        margin-top: 0.5rem
+    }
 
-    .robozar_left_container{
-        height: 500px;
-        width: 90%;
-        /* margin-left: -.5rem; */
-    }
 }
-@media(max-width:360px) {
+
+/* @media(max-width:360px) {
     .robozar_left_container{
         height: 500px;
         width: 90%;
@@ -177,7 +193,12 @@
         border-radius: 5px;
         display: inline-block;
     }
-}
+       .robozar_left_container{
+        height: 500px;
+        width: 90%;
+    }
+} */
+
 
 
 
@@ -197,48 +218,3 @@
 
 
 /* new section here */
-
-
-
-
-
-.Robozar__bottom__left img{
-    height: 251px;
-    width: 250px;
-    border-radius: 8px;
-}
-.Robozar__bottom__left__calender p{
-    letter-spacing: 1px;
-}
-.Robozar__bottom__middle p{
-    /* margin-bottom: 5rem; */
-    width: 660px;
-    height: 152px;
-}
-.Robozar__bottom__middle__button button{
-    margin-top: 1rem;
-}
-.Event__cordinator1__right img{
-    height: 61px;
-    width: 61px;
-    border-radius: 50%;
-}
-.Event__cordinator{
-    margin-top: 5rem;
-    width: 100%;
-    margin-left: -10rem;
-}
-.Event__cordinator1__left p:last-child{
-    margin-top: -.8rem;
-}
-.Event__cordinator1__left p:first-child{
-    margin-top: .3rem;
-}
-.regitration__fee .fa{
-    font-size: 30px;
-    margin-top: .3rem;
-    margin-right: .4rem;
-}
-.regitration__fee__icon{
-    margin-left: 8rem;
-}

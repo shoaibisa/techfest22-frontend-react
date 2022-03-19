@@ -37,6 +37,7 @@ import Sponsor from './Pages/admin/sponsor/sponsor';
 import Fourzerofour from './Pages/FourZero/Fourzerofour';
 import EventForm from './Pages/admin/EventForm/EventForm';
 import AllCoordinator from './Pages/admin/coordinator/CoordinatorList/AllCoordinator';
+import Workshop from "./Pages/workshop/Workshop"
 
 function App() {
   const [isUserLoggedIn, setUserLoggedIn] = useState();
@@ -189,7 +190,7 @@ function App() {
         <Route exact path="/mechanica" element={<Mechanica />} />
         <Route exact path="/plexus" element={<Plexus />} />
         <Route exact path="/robozar" element={<Robozar />} />
-        {/* <Route exact path="/workshop" element={<WorkshopForm />} /> */}
+        <Route exact path="/workshop" element={<Workshop />} />
         <Route exact path="/about" element={<AboutUs data={dataJson} />} />
         <Route exact path="/admin/domains" element={<DomainForm />} />
 

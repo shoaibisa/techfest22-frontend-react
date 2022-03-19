@@ -1,0 +1,14 @@
+@font-face {
+    font-family: helveticaregular;
+    src: url("./font/HelveticaNowDisplay-Regular.ttf");
+}
+@font-face {
+    font-family: bestinClass;
+    src: url("./font/BEST\ IN\ CLASS.ttf");
+}
+p{
+    font-family: "helveticaregular" !important;
+}
+a{
+    font-family: "helveticaregular" !important;
+}

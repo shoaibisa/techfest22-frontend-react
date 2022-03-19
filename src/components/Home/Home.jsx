@@ -24,9 +24,6 @@ const Home = props => {
   useEffect(() => {
     setIsLoading(true);
     axios.get(`${baseUrl}/sponser/getAllSponsors`).then(sponRes => {
-      // let sponData = sponRes.data.map(s => {
-      //   return { title: s._id, imageSrc: s.photo };
-      // });
       setSponserData(sponRes.data.data);
       setIsLoading(false);
     });
@@ -34,21 +31,13 @@ const Home = props => {
 
   const gotoServices = () =>
     window.scrollTo({
-      top: 850,
+      top:1050,
       behavior: 'smooth',
-      // You can also assign value "auto"
-      // to the behavior parameter.
     });
 
   return (
     <div className="home">
       <div className="home__video py-5">
-        {/* <img
-          className="homepage_gif"
-          alt=""
-          style={{ width: '100%', overflow: 'hidden' }}
-          src={homapage_gif_vid}
-        /> */}
         <video
           className="homepage_gif"
           loop={true}
@@ -61,39 +50,19 @@ const Home = props => {
             type="video/webm"
           />
         </video>
-
-        {/* <video
-          className="homepage_gif_mobile"
-          loop={true}
-          autoPlay={true}
-          muted={true}
-        >
-          <source
-            style={{ width: '100%' }}
-            src={homepage_gif_mobile_vid}
-            type="video/webm"
-          />
-        </video> */}
-
         <video
           className="homepage_gif_mobile"
           width="100%"
           height="100%"
           loop="loop"
           autoplay
-          // muted="true"
+          muted="true"
           preload="auto"
           playsInline
         >
           <source src={homepage_gif_mobile} type="video/webm" />
           Your browser does not support the video tag.
         </video>
-        {/* <img
-          className="homepage_gif_mobile"
-          alt=""
-          style={{ width: '100%', overflow: 'hidden' }}
-          src={homapage_gif_vid}
-        /> */}
         <div className="scroll d-flex">
           <div className="scroll__text" onClick={gotoServices}>
             <h6>Scroll Down</h6>
@@ -118,7 +87,7 @@ const Home = props => {
                 <div className="">
                   <figure className="text-center">
                     <blockquote className="blockquote">
-                      <p className=" text-justify">
+                      <p className=" ">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Odio architecto et dolorem sapiente as pernatur dolore
                         autem culpa deleniti praesentium deserunt expedita eos
@@ -183,7 +152,7 @@ const Home = props => {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               </div>
               <div className="cards-container_card1_description-container_btn">
-                <a href="/#">Learn More</a>
+                <NavLink to={"/workshop"}>Learn More</NavLink>
               </div>
             </div>
           </div>

@@ -1,0 +1,41 @@
+
+.Robozar__bottom__left img{
+    height: 251px;
+    width: 250px;
+    border-radius: 8px;
+}
+.Robozar__bottom__left__calender p{
+    letter-spacing: 1px;
+}
+.Robozar__bottom__middle p{
+    /* margin-bottom: 5rem; */
+    width: 660px;
+    height: 152px;
+}
+.Robozar__bottom__middle__button button{
+    margin-top: 1rem;
+}
+.Event__cordinator1__right img{
+    height: 61px;
+    width: 61px;
+    border-radius: 50%;
+}
+.Event__cordinator{
+    margin-top: 5rem;
+    width: 100%;
+    margin-left: -10rem;
+}
+.Event__cordinator1__left p:last-child{
+    margin-top: -.8rem;
+}
+.Event__cordinator1__left p:first-child{
+    margin-top: .3rem;
+}
+.regitration__fee .fa{
+    font-size: 30px;
+    margin-top: .3rem;
+    margin-right: .4rem;
+}
+.regitration__fee__icon{
+    margin-left: 8rem;
+}

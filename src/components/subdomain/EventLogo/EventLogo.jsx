@@ -21,7 +21,7 @@ const EventLogo = (props) =>{
         <div className="Robozar__content"
             >
             <h1>{props.title}</h1>
-            <h4>Explore Events</h4>
+            <h6>Explore Events</h6>
             <p>{props.subTitle}</p>
         </div>
     </div>
