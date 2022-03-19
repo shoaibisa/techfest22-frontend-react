@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { baseUrl, localUrl } from '../../../API/api';
 import ErrorModel from '../../../components/UI/ErrorModel/ErrorModel';
+import { imgFileCheck } from '../../../Helper/ErrorHandle';
 
 const Sponsor = () => {
   const [name, setName] = useState('');
@@ -20,14 +21,27 @@ const Sponsor = () => {
   };
 
   const getSimage = e => {
-    setSimage(e.target.files[0]);
+    if (imgFileCheck(e.target.files[0].name)) {
+      setSimage(e.target.files[0]);
+    } else {
+      setSimage(null);
+      setErrosMade({
+        title: 'Error',
+        message: 'Only jpg/jpeg and png files are allowed!',
+      });
+    }
   };
 
   const onSubmitClick = e => {
-    // console.log(e.target.value);
     e.preventDefault();
 
-    // return console.log(sImage);
+    if (!sImage) {
+      setErrosMade({
+        title: 'Error',
+        message: 'Only jpg/jpeg and png files are allowed!',
+      });
+      return;
+    }
 
     if (name.trim().length === 0 || sponserLink.trim().length === 0) {
       setErrosMade({
@@ -36,13 +50,16 @@ const Sponsor = () => {
       });
       return;
     }
+
     let sData = new FormData();
     sData.append('sponserImg', sImage);
     sData.append('name', name);
     sData.append('link', sponserLink);
 
+    console.log(sData);
+    // return console.log(name);
     axios
-      .post(`${baseUrl}/sponser/addSponsor`, sData, {
+      .post(`${localUrl}/sponser/addSponsor`, sData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Access-Control-Allow-Origin': '*',
@@ -66,7 +83,14 @@ const Sponsor = () => {
         setName('');
         setSimage(null);
         setSponserLink('');
-        console.log(result.data);
+        // console.log(result.data);
+      })
+      .catch(err => {
+        setErrosMade({
+          title: 'Error',
+          message: err,
+        });
+        console.log(err);
       });
   };
 
@@ -97,7 +121,7 @@ const Sponsor = () => {
                 type="text"
                 placeholder="Enter Name *"
                 // required
-
+                value={name}
                 onChange={getName}
               />
             </Form.Group>

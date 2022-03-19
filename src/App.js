@@ -35,9 +35,13 @@ import ErrorModel from './components/UI/ErrorModel/ErrorModel';
 import AllUsers from './Pages/admin/userList/allUsers';
 import Sponsor from './Pages/admin/sponsor/sponsor';
 import Fourzerofour from './Pages/FourZero/Fourzerofour';
-import EventForm from './Pages/admin/EventForm/EventForm';
+import EventForm from './Pages/admin/event/EventForm';
 import AllCoordinator from './Pages/admin/coordinator/CoordinatorList/AllCoordinator';
+
 import Workshop from "./Pages/workshop/Workshop"
+
+import EventAll from './Pages/admin/event/EventAll';
+
 
 function App() {
   const [isUserLoggedIn, setUserLoggedIn] = useState();
@@ -220,7 +224,9 @@ function App() {
         <Route exact path="/admin/users" element={<AllUsers />} />
         <Route exact path="/admin/sponsor" element={<Sponsor />} />
         <Route exact path="/admin/domain" element={<DomainForm />} />
-        <Route exact path="/admin/event" element={<EventForm />} />
+        <Route exact path="/admin/event" element={<EventAll />} />
+        <Route exact path="/admin/event/add" element={<EventForm />} />
+
         <Route exact path="admin/coordinator" element={<AllCoordinator />} />
         <Route
           exact

@@ -32,7 +32,11 @@ const Navbar = props => {
             <span className="navbar-toggler-icon">
               <i
                 className="fa fa-bars"
-                style={{ color: 'white', fontSize: '28px',margin:"-8px 0 0 -7px" }}
+                style={{
+                  color: 'white',
+                  fontSize: '28px',
+                  margin: '-8px 0 0 -7px',
+                }}
               ></i>
             </span>
           </button>
@@ -71,7 +75,6 @@ const Navbar = props => {
                     activeClassName="active "
                     data-toggle="pill"
                     aria-current="page"
-                    
                     to="/"
                   >
                     Home
@@ -110,8 +113,7 @@ const Navbar = props => {
                     <li>
                       <NavLink
                         className="dropdown-item  text-light line"
-                        activeClassName="active "
-
+                        activeclassname="active"
                         to="/admin/domain"
                       >
                         Domain
@@ -121,8 +123,7 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item  text-light line"
                         activeClassName="active "
-                        
-                        to="/admin/user"
+                        to="/admin/users"
                       >
                         Users
                       </NavLink>
@@ -131,7 +132,6 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item  text-light line"
                         activeClassName="active "
-                      
                         to="/admin/coordinator"
                       >
                         Coordinator
@@ -140,8 +140,6 @@ const Navbar = props => {
                     <li>
                       <NavLink
                         className="dropdown-item text-light line"
-                        activeClassName="active "
-                        
                         to="/admin/event"
                       >
                         Events
@@ -151,7 +149,6 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item text-light line"
                         activeClassName="active "
-                        
                         to="/admin/workshop"
                       >
                         Workshop
@@ -161,7 +158,6 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item text-light line"
                         activeClassName="active "
-                        
                         to="/admin/sponsor"
                       >
                         Sponser
@@ -174,7 +170,6 @@ const Navbar = props => {
                     className="nav-link mx-3 line text-light"
                     data-toggle="pill"
                     aria-current="page"
-
                     to="/about"
                   >
                     About Us
@@ -184,7 +179,6 @@ const Navbar = props => {
                   <NavLink
                     className="nav-link mx-3 text-light line"
                     data-toggle="pill"
-                    
                     to="/workshop"
                   >
                     Workshops
@@ -193,7 +187,6 @@ const Navbar = props => {
                 <li className="nav-item dropdown text-light">
                   <NavLink
                     className="nav-link dropdown-toggle mx-3 text-light line"
-                    
                     to="/domain"
                     id="offcanvasNavbarDropdown"
                     role="button"
@@ -214,7 +207,6 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item  text-light line"
                         activeClassName="active "
-                        
                         to="Chemfor"
                       >
                         Chemfor
@@ -224,7 +216,6 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item text-light line"
                         activeClassName="active "
-                        
                         to="Electrica"
                       >
                         Electrica
@@ -234,7 +225,6 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item text-light line"
                         activeClassName="active "
-                        
                         to="Kermis"
                       >
                         Kermis
@@ -244,7 +234,6 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item text-light line"
                         activeClassName="active "
-                        
                         to="Karyarachna"
                       >
                         Karyarachna
@@ -254,7 +243,6 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item text-light line"
                         activeClassName="active "
-                        
                         to="Mechanica"
                       >
                         Mechanica
@@ -264,7 +252,6 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item text-light line"
                         activeClassName="active "
-
                         to="Plexus"
                       >
                         Plexus
@@ -274,7 +261,6 @@ const Navbar = props => {
                       <NavLink
                         className="dropdown-item text-light line"
                         activeClassName="active "
-                        
                         to="Robozar"
                       >
                         Robozar
@@ -287,7 +273,6 @@ const Navbar = props => {
                     className="nav-link  mx-3 text-light line"
                     aria-current="page"
                     activeClassName="active "
-                    
                     to="/ca"
                   >
                     CA Portal
@@ -298,7 +283,6 @@ const Navbar = props => {
                     className="btn btn-md btn-outline-light active mx-3"
                     activeClassName="active "
                     onClick={props.onLogout}
-                    
                     to="/"
                     data-toggle="button"
                     aria-pressed="true"
@@ -312,7 +296,6 @@ const Navbar = props => {
                   <NavLink
                     className="btn btn-md btn-outline-light active mx-3"
                     activeClassName="active "
-                    
                     to="/signin"
                     data-toggle="button"
                     aria-pressed="true"

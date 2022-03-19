@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './WorkshopForm.css';
-import AdminContent from '../AdminContent';
 import { Multiselect } from 'multiselect-react-dropdown';
 import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
@@ -23,11 +22,11 @@ const WorkshopForm = () => {
   const [selectedImage, setselectedImage] = useState(null);
   const [errosMade, setErrosMade] = useState(); //undefined
 
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`${baseUrl}/coordinator/get-all-details`)
+    fetch(`${localUrl}/coordinator/get-all-details`)
       .then(res => res.json())
       .then(
         result => {
@@ -116,6 +115,7 @@ const WorkshopForm = () => {
     zData.append('wLinkDrive', wDriveLink);
     zData.append('startDate', startDate);
     zData.append('endDate', endDate);
+    //return console.log(zData);
     // zData.append('studentCoordinator', sc);
     axios
       .post(`${localUrl}/workshop/create`, zData, {

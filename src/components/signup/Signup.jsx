@@ -61,6 +61,15 @@ const Signup = () => {
         title: 'Error',
         message: 'Name should be 5 character long!',
       });
+      return;
+    }
+
+    if (password.trim() !== confirmPassword.trim()) {
+      setErrosMade({
+        title: 'Error',
+        message: 'Password did not matched!',
+      });
+      return;
     }
 
     const data = {
@@ -81,7 +90,7 @@ const Signup = () => {
           (result.status !== 201 && result.data.isError)
         ) {
           setErrosMade({
-            title: 'Error',
+            title: result.data.title,
             message: result.data.message,
           });
           return;
