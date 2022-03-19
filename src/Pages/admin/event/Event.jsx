@@ -13,6 +13,12 @@ const Event = ({ event }) => {
   const onDeleteEvent = () => {
     deleteEvent(event._id);
   };
+
+  console.log(event.studentCoordinator);
+
+  // let cn = '';
+  // event.studentCoordinator.map(s => (cn += s.coordinatorName + ' '));
+  // console.log(cn);
   return (
     <>
       <td className="">
@@ -31,7 +37,7 @@ const Event = ({ event }) => {
       <td>{event.eventMode}</td>
       <td>{event.domain}</td>
       <td>{event.date}</td>
-      <td>{event.studentCoordinator}</td>
+      {event && 'hii'}
       <td>
         <NavLink
           to=""
