@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Multiselect } from 'multiselect-react-dropdown';
 import { Form, Button } from 'react-bootstrap';
 const EventForm = () => {
+  const [eName, setEname] = useState('');
+  const [eDescription, setEDescription] = useState('');
+  const [selectedImage, setEimage] = useState('');
+
   return (
     <div className="main">
       <div className="container mt-5 pt-5" style={{ width: '50%' }}>

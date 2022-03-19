@@ -13,8 +13,14 @@ const Event = ({ event }) => {
   const onDeleteEvent = () => {
     deleteEvent(event._id);
   };
-
-  console.log(event.studentCoordinator);
+  let cn = '';
+  if (event.studentCoordinator.length > 0) {
+    const ccn = event.studentCoordinator.map(e => e.coordinatorName);
+    cn = ccn.join();
+  } else {
+    cn = 'Not any coordinator';
+  }
+  console.log(cn);
 
   // let cn = '';
   // event.studentCoordinator.map(s => (cn += s.coordinatorName + ' '));
@@ -37,7 +43,7 @@ const Event = ({ event }) => {
       <td>{event.eventMode}</td>
       <td>{event.domain}</td>
       <td>{event.date}</td>
-      {event && 'hii'}
+      {event && <td>{cn}</td>}
       <td>
         <NavLink
           to=""
