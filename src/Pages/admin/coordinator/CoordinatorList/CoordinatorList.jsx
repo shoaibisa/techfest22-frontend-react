@@ -1,19 +1,19 @@
-import { Modal, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { useContext, useState, useEffect } from 'react';
+import { useContext} from 'react';
 import { CoordinatorContext } from './contexts/CoordinatorContext';
 import Coordinator from './Coordinator';
-import UpdateCoordinator from './UpdateCoordinator';
-import Pagenation from './pagenation';
+// import UpdateCoordinator from './UpdateCoordinator';
+// import Pagenation from './pagenation';
 import axios from 'axios';
 import { localUrl } from '../../../../API/api';
 
 const CoordinatorList = () => {
   const { coordinator } = useContext(CoordinatorContext);
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
 
   const handleAddCo = () => navigate('/admin/coordinator/add');
-  const handleClose = () => setShow(false);
+  // const handleClose = () => setShow(false);
   const navigate = useNavigate();
   // const [currentPage, setCurrentPage] = useState(1);
   // const [userPerPage] = useState(9);
@@ -89,7 +89,7 @@ const CoordinatorList = () => {
         currentUser={currentUser}
         sortedUsers={sortedUsers}
       /> */}
-      <Modal
+      {/* <Modal
         show={show}
         onHide={handleClose}
         style={{ backgroundColor: 'transparent' }}
@@ -110,7 +110,7 @@ const CoordinatorList = () => {
             Close Button
           </Button>
         </Modal.Footer>
-      </Modal>
+      </Modal> */}
     </>
   );
 };

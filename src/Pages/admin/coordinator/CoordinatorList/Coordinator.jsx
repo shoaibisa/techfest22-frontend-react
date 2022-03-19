@@ -1,13 +1,15 @@
 import React, { useState, useContext } from 'react';
-import { Modal } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { Modal,Button } from 'react-bootstrap';
+import { NavLink,useNavigate  } from 'react-router-dom';
 import { localUrl } from '../../../../API/api';
 import img from '../../../../images/Footfall.svg';
+import UpdateCoordinator from './UpdateCoordinator';
 import { CoordinatorContext } from './contexts/CoordinatorContext';
 
 const Coordinator = ({ user }) => {
   const [show, setShow] = useState(false);
-  const handleShow = () => setShow(true);
+  const navigate = useNavigate();
+  const handleShow = () => navigate('/admin/coordinator/add');
   const handleClose = () => setShow(false);
   const { deleteCo } = useContext(CoordinatorContext);
   const onDeleteCoordinator = () => {
@@ -68,7 +70,25 @@ const Coordinator = ({ user }) => {
         show={show}
         onHide={handleClose}
         style={{ backgroundColor: 'transparent' }}
-      ></Modal>
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Add Coordinator</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <UpdateCoordinator />
+        </Modal.Body>
+
+        <Modal.Footer>
+          <Button
+            style={{ width: '100%' }}
+            varient="secondary"
+            onClick={handleClose}
+          >
+            Close Button
+          </Button>
+        </Modal.Footer>
+        </Modal>
+
     </>
   );
 };
