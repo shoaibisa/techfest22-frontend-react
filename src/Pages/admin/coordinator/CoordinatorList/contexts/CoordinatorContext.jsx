@@ -9,6 +9,10 @@ const CoordinatorContextProvider = props => {
   const deleteCo = async props => {
     await axios.delete(`${localUrl}/coordinator/delete/${props}`);
   };
+
+  const updateCo = async props => {
+    console.log(props);
+  };
   useEffect(() => {
     axios.get(`${localUrl}/coordinator/get-all-details`).then(results => {
       // console.log(results);

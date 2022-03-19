@@ -1,40 +1,18 @@
 import { Modal, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { useContext, useState, useEffect } from 'react';
-import { CoordinatorContext } from './contexts/CoordinatorContext';
-import Coordinator from './Coordinator';
-import UpdateCoordinator from './UpdateCoordinator';
-import Pagenation from './pagenation';
-import axios from 'axios';
-import { localUrl } from '../../../../API/api';
 
-const CoordinatorList = () => {
-  const { coordinator } = useContext(CoordinatorContext);
+import axios from 'axios';
+import { EventContext } from './EventContext';
+import Event from './Event';
+
+const EventList = () => {
+  const { event } = useContext(EventContext);
   const [show, setShow] = useState(false);
 
-  const handleAddCo = () => navigate('/admin/coordinator/add');
+  const handleAddCo = () => navigate('/admin/event/add');
   const handleClose = () => setShow(false);
   const navigate = useNavigate();
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const [userPerPage] = useState(9);
-  // const [coordinator, setCoordinator] = useState([]);
-  // const currentUser =
-  // const indexOfLastUser = currentPage * userPerPage;
-  // const indexOfFirstUser = indexOfLastUser - userPerPage;
-  // // const currentUser = sortedUsers.slice(indexOfFirstUser, indexOfLastUser);
-  // const totalPagesNum = Math.ceil(sortedUsers.length / userPerPage);
-  // useEffect(() => {
-  //   axios.get(`${localUrl}/coordinator/get-all-details`).then(results => {
-  //     console.log(results.data.c);
-  //     setCoordinator(results.data.c);
-  //   });
-  // }, []);
-
-  // const deleteCo = props => {
-  //   console.log('ji', props);
-  // };
-
-  // console.log(coordinator);
 
   return (
     <>
@@ -42,7 +20,7 @@ const CoordinatorList = () => {
         <div className="row">
           <div className="col-sm-6">
             <h2>
-              COORDINATORS <b>LIST</b>
+              EVENTS <b>LIST</b>
             </h2>
           </div>
           <div className="col-sm-6">
@@ -53,7 +31,7 @@ const CoordinatorList = () => {
             >
               <i className="material-icons">&#xE147;</i>{' '}
               <span style={{ background: 'transparent', padding: '2px' }}>
-                Add New Coordinator
+                Add New EVENT
               </span>
             </Button>
           </div>
@@ -65,20 +43,17 @@ const CoordinatorList = () => {
           <tr>
             <th>Photo </th>
             <th>Name </th>
-            <th>Email</th>
-            <th>Coordinator Type</th>
-            <th>Desigination</th>
-            <th>Phone</th>
+            <th>Event Mode</th>
+            <th>Domain Type</th>
+            <th>Date</th>
+            <th>Student Coordinators</th>
           </tr>
         </thead>
         <tbody>
-          {coordinator &&
-            coordinator.map(user => (
-              <tr
-                style={{ borderStyle: 'none', color: 'white' }}
-                key={user._id}
-              >
-                <Coordinator user={user} />
+          {event &&
+            event.map(e => (
+              <tr style={{ borderStyle: 'none', color: 'white' }} key={e._id}>
+                <Event event={e} />
               </tr>
             ))}
         </tbody>
@@ -95,11 +70,9 @@ const CoordinatorList = () => {
         style={{ backgroundColor: 'transparent' }}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Add Coordinator</Modal.Title>
+          <Modal.Title>Add Event</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          <UpdateCoordinator />
-        </Modal.Body>
+        <Modal.Body>{/* <UpdateCoordinator /> */}</Modal.Body>
 
         <Modal.Footer>
           <Button
@@ -114,4 +87,4 @@ const CoordinatorList = () => {
     </>
   );
 };
-export default CoordinatorList;
+export default EventList;

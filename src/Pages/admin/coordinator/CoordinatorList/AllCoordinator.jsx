@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import CoordinatorList from './CoordinatorList';
 import './AllCoordinator.css';
-import CoordinatorContextProvider from './contexts/CoordinatorContext';
+import UserContextProvider from './contexts/CoordinatorContext';
 function AllCoordinator() {
   return (
     <>
@@ -10,9 +10,9 @@ function AllCoordinator() {
         <div className="container-fluid mt-3 pt-3">
           <div className="table-responsive">
             <div className="table-wrapper">
-              <CoordinatorContextProvider>
+              <UserContextProvider>
                 <CoordinatorList />
-              </CoordinatorContextProvider>
+              </UserContextProvider>
             </div>
           </div>
         </div>
