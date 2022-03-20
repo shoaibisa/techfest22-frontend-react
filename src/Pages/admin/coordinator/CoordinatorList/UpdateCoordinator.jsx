@@ -113,6 +113,8 @@ const UpdateCoordinator = () => {
     zData.append('coordinatorDesignation', cDeg);
     zData.append('imageUrl', imageUrl);
 
+    return console.log(zData);
+
     axios
       .put(`${localUrl}/coordinator/update/${cccid}`, zData, {
         headers: {

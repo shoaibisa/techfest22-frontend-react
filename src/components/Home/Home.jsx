@@ -24,9 +24,7 @@ const Home = props => {
   useEffect(() => {
     setIsLoading(true);
 
-    axios.get(`${baseUrl}/sponser/getAllSponsors`).then(sponRes => {
-
-
+    axios.get(`${localUrl}/sponser/getAllSponsors`).then(sponRes => {
       setSponserData(sponRes.data.data);
       setIsLoading(false);
     });
@@ -34,7 +32,7 @@ const Home = props => {
 
   const gotoServices = () =>
     window.scrollTo({
-      top:1050,
+      top: 1050,
       behavior: 'smooth',
     });
 
@@ -155,7 +153,7 @@ const Home = props => {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               </div>
               <div className="cards-container_card1_description-container_btn">
-                <NavLink to={"/workshop"}>Learn More</NavLink>
+                <NavLink to={'/workshop'}>Learn More</NavLink>
               </div>
             </div>
           </div>

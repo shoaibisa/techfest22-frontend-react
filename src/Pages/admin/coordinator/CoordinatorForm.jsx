@@ -79,7 +79,7 @@ const CoordinatorForm = () => {
     zData.append('coordinatorEmail', cEmail);
     zData.append('coordinatorType', cType);
     zData.append('coordinatorDesignation', cDeg);
-
+    // return console.log(zData);
     axios
       .post(`${localUrl}/coordinator/creating`, zData, {
         headers: {

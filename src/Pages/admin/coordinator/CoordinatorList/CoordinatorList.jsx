@@ -1,6 +1,6 @@
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { useContext} from 'react';
+import { useContext } from 'react';
 import { CoordinatorContext } from './contexts/CoordinatorContext';
 import Coordinator from './Coordinator';
 // import UpdateCoordinator from './UpdateCoordinator';
@@ -50,6 +50,7 @@ const CoordinatorList = () => {
               onClick={handleAddCo}
               className="btn btn-success"
               data-toggle="modal"
+              title="Add Coordinator"
             >
               <i className="material-icons">&#xE147;</i>{' '}
               <span style={{ background: 'transparent', padding: '2px' }}>
