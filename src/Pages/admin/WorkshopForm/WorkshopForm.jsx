@@ -3,8 +3,7 @@ import './WorkshopForm.css';
 import { Multiselect } from 'multiselect-react-dropdown';
 import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
-import { baseUrl } from '../../../API/api';
-import { localUrl } from '../../../API/api';
+import { baseUrl,localUrl } from '../../../API/api';
 import ErrorModel from '../../../components/UI/ErrorModel/ErrorModel';
 import LoaderSpin from '../../../components/UI/loader/LoaderSpin';
 
@@ -313,7 +312,7 @@ const WorkshopForm = () => {
                   type="submit"
                   block
                 >
-                  Add Domain
+                  Add Workshop
                 </Button>
               </Form>
             </div>
