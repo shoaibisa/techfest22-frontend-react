@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
-import { Modal,Button } from 'react-bootstrap';
-import { NavLink,useNavigate  } from 'react-router-dom';
+import { Modal, Button } from 'react-bootstrap';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { localUrl } from '../../../../API/api';
 import img from '../../../../images/Footfall.svg';
 import UpdateCoordinator from './UpdateCoordinator';
@@ -9,7 +9,11 @@ import { CoordinatorContext } from './contexts/CoordinatorContext';
 const Coordinator = ({ user }) => {
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
-  const handleShow = () => navigate('/admin/coordinator/add');
+  const navTOupdate = () => {
+    // console.log(user._id);
+    navigate('/admin/coordinator/update', { state: { id: user._id } });
+  };
+
   const handleClose = () => setShow(false);
   const { deleteCo } = useContext(CoordinatorContext);
   const onDeleteCoordinator = () => {
@@ -35,11 +39,11 @@ const Coordinator = ({ user }) => {
       <td>{user.coordinatorDesignation}</td>
       <td>{user.coordinatorPhone}</td>
       <td>
-        <NavLink
-          to=""
+        <a
+          style={{ cursor: 'pointer' }}
           className="edit"
           data-toggle="modal"
-          onClick={handleShow}
+          onClick={navTOupdate}
         >
           <i
             style={{ color: 'white' }}
@@ -49,7 +53,7 @@ const Coordinator = ({ user }) => {
           >
             &#xE254;
           </i>
-        </NavLink>
+        </a>
         <a
           href="#deleteEmployeeModal"
           onClick={onDeleteCoordinator}
@@ -87,8 +91,7 @@ const Coordinator = ({ user }) => {
             Close Button
           </Button>
         </Modal.Footer>
-        </Modal>
-
+      </Modal>
     </>
   );
 };

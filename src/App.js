@@ -38,10 +38,10 @@ import Fourzerofour from './Pages/FourZero/Fourzerofour';
 import EventForm from './Pages/admin/event/EventForm';
 import AllCoordinator from './Pages/admin/coordinator/CoordinatorList/AllCoordinator';
 
-import Workshop from "./Pages/workshop/Workshop"
+import Workshop from './Pages/workshop/Workshop';
 
 import EventAll from './Pages/admin/event/EventAll';
-
+import UpdateCoordinator from './Pages/admin/coordinator/CoordinatorList/UpdateCoordinator';
 
 function App() {
   const [isUserLoggedIn, setUserLoggedIn] = useState();
@@ -232,6 +232,11 @@ function App() {
           exact
           path="admin/coordinator/add"
           element={<CoordinatorForm />}
+        />
+        <Route
+          exact
+          path="admin/coordinator/update"
+          element={<UpdateCoordinator />}
         />
         <Route path="*" element={<Fourzerofour />} />
       </Routes>
