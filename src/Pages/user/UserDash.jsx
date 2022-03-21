@@ -1,10 +1,13 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { baseUrl, localUrl } from '../../API/api';
 import ErrorModel from '../../components/UI/ErrorModel/ErrorModel';
 
 import './UserDash.css';
 const UserDash = props => {
+
+  const navigate = useNavigate()
   const [errosMade, setErrosMade] = useState();
   const [user, setUser] = useState(null);
 
@@ -25,6 +28,10 @@ const UserDash = props => {
     setErrosMade(null);
   };
 
+  const onPayBtnClick = () => {
+    navigate("/user/pay")
+  }
+
   return (
     <div className="body">
       {errosMade && (
@@ -43,6 +50,7 @@ const UserDash = props => {
                   <div className="text-center text-light">
                     <figure className="text-center text-light">
                       <blockquote className="blockquote">
+                        <button style={{width: "120px", height: "40px", background: "#00FF00", borderRadius: "10px"}} onClick={onPayBtnClick}>Pay</button>
                         <h2>Namaste! {user && user.name}</h2>
                       </blockquote>
                       <figcaption className="blockquote-footer">

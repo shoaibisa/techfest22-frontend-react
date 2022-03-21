@@ -3,12 +3,19 @@ import axios from 'axios';
 import React, { useEffect } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { localUrl } from '../../../API/api';
+import {useNavigate} from 'react-router-dom';
+
+
+
 const UserPay = () => {
+
   useEffect(() => {});
 
   const payPro = () => {
     axios.post(`${localUrl}/pay/user`).then(results => {
       console.log(results);
+      // navigate(`${results.data.url}`)
+      window.location.href = results.data.url
     });
     console.log('clickef');
   };

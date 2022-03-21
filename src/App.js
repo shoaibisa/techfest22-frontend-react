@@ -239,7 +239,7 @@ function App() {
           element={<UpdateCoordinator />}
         />
         <Route path="*" element={<Fourzerofour />} />
-        <Route exact path="admin/pay" element={<PayNow />} />
+        <Route exact path="user/pay" element={<PayNow />} />
       </Routes>
 
       <Footer />
