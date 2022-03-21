@@ -28,11 +28,12 @@
     justify-content: center;
 }
 .robozar_left_container{
-    width: 60%;
-    height: 400px;
-    background-image: url("../../../images/Domain/thisisengineering-raeng-4w0XkDe2Ee8-unsplash\ 2.png");
+   
+   /* background-image: url("../../../images/Domain/thisisengineering-raeng-4w0XkDe2Ee8-unsplash\ 2.png");*/
     background-size: cover;
     border-radius: 15px;
+    width: 60%;
+    height: 400px;
 }
 
 .robozar_right_container{

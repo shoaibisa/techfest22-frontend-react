@@ -42,6 +42,7 @@ import Workshop from './Pages/workshop/Workshop';
 
 import EventAll from './Pages/admin/event/EventAll';
 import UpdateCoordinator from './Pages/admin/coordinator/CoordinatorList/UpdateCoordinator';
+import PayNow from './Pages/user/payment/UserPay';
 
 function App() {
   const [isUserLoggedIn, setUserLoggedIn] = useState();
@@ -226,7 +227,6 @@ function App() {
         <Route exact path="/admin/domain" element={<DomainForm />} />
         <Route exact path="/admin/event" element={<EventAll />} />
         <Route exact path="/admin/event/add" element={<EventForm />} />
-
         <Route exact path="admin/coordinator" element={<AllCoordinator />} />
         <Route
           exact
@@ -239,7 +239,9 @@ function App() {
           element={<UpdateCoordinator />}
         />
         <Route path="*" element={<Fourzerofour />} />
+        <Route exact path="user/pay" element={<PayNow />} />
       </Routes>
+
       <Footer />
     </div>
   );

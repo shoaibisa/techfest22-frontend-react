@@ -20,7 +20,7 @@ const Event = ({ event }) => {
   } else {
     cn = 'Not any coordinator';
   }
-  console.log(cn);
+  // console.log(cn);
 
   // let cn = '';
   // event.studentCoordinator.map(s => (cn += s.coordinatorName + ' '));

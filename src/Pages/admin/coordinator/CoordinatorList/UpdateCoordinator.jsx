@@ -102,7 +102,7 @@ const UpdateCoordinator = () => {
       return;
     }
 
-    //   return console.log(wsName);
+    console.log(wsName);
 
     let zData = new FormData();
     zData.append('coordinator', selectedImage);
@@ -113,7 +113,7 @@ const UpdateCoordinator = () => {
     zData.append('coordinatorDesignation', cDeg);
     zData.append('imageUrl', imageUrl);
 
-    return console.log(zData);
+    // return console.log(zData);
 
     axios
       .put(`${localUrl}/coordinator/update/${cccid}`, zData, {

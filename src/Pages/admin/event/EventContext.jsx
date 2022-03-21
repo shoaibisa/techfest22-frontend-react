@@ -7,7 +7,8 @@ export const EventContext = createContext();
 const EventContextProvider = props => {
   const [event, setEvent] = useState([]);
 
-  const deleteEvent = props => {
+  const deleteEvent = async props => {
+    await axios.delete(`${localUrl}/event/deleteEvent/${props}`);
     console.log(props);
   };
 
@@ -16,7 +17,7 @@ const EventContextProvider = props => {
       //   console.log(results.data);
       setEvent(results.data.data);
     });
-  }, []);
+  }, [deleteEvent]);
   return (
     <EventContext.Provider value={{ event, deleteEvent }}>
       {props.children}

@@ -15,7 +15,7 @@ const CoordinatorContextProvider = props => {
   };
   useEffect(() => {
     axios.get(`${localUrl}/coordinator/get-all-details`).then(results => {
-      // console.log(results);
+       console.log(results);
       setCoordinator(results.data.c);
     });
   }, [deleteCo]);
