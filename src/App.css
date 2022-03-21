@@ -6,6 +6,10 @@
     font-family: bestinClass;
     src: url("./font/BEST\ IN\ CLASS.ttf");
 }
+@font-face {
+    font-family: Vipnagorgialla;
+    src: url("./font/vipnagorgialla.ttf");
+}
 p{
     font-family: "helveticaregular" !important;
 }

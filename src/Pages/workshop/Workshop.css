@@ -1,41 +1,250 @@
-
 .Robozar__bottom__left img{
-    height: 251px;
     width: 250px;
-    border-radius: 8px;
+    height: 251px;
+    border-radius: 5px;
 }
-.Robozar__bottom__left__calender p{
-    letter-spacing: 1px;
+.Workshop__bttom__section{
+    justify-content: space-between;
+    margin-bottom: 5rem;
+    width: 100%;
+    padding-top:13rem;
 }
-.Robozar__bottom__middle p{
-    /* margin-bottom: 5rem; */
-    width: 660px;
-    height: 152px;
+.Robozar__bottom__middle{
+    flex: .5;
 }
-.Robozar__bottom__middle__button button{
-    margin-top: 1rem;
+.workshop__right__top{
+    justify-content: space-around;
 }
+.workshop__right__bottom{
+    justify-content: space-around;
+    
+}
+.Robozar__bottom__middle h1{
+    font-family: "Vipnagorgialla";
+    font-size: 25px;
+    font-style: italic;
+}
+.regitration__fee p{
+    font-family: "Vipnagorgialla";
+    /* font-size: large; */
+    font-weight: 700;
+    letter-spacing: 2px;
+    font: optional;
+    font-style: italic;
+    margin-left: -2rem;
+
+}
+.regitration__fee{
+
+}
+
+
+
+
 .Event__cordinator1__right img{
-    height: 61px;
     width: 61px;
+    height: 61px;
     border-radius: 50%;
 }
+.Event__cordinator2__right img{
+    width: 61px;
+    height: 61px;
+    border-radius: 50%;
+}
+.workshop__right__bottom{
+        margin-top: 3rem;
+    
+}
+.Robozar__bottom__middle__button button{
+    height: fit-content;
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
+
+.workshop__price{
+    margin-left: 4rem;
+    margin-top: -1rem;
+}
+.worksop__register__btn{
+    background-color: aliceblue;
+    color: black;
+    border-radius: 3px;
+    border: .5px solid white;
+    outline: none;
+    padding: 5px;
+}
+.worksop__register__btn:hover{
+    color: white;
+    background: transparent;
+    /* border: .5px solid white; */
+}
+.worksop__shedule__btn{
+    color: white;
+    border-radius: 3px;
+    
+    border: .5px solid white;
+    padding: 5px;
+    background-color: transparent;
+}
+.worksop__shedule__btn:hover{
+    color: black;
+    background-color: white;
+}
+
+@media screen and (max-width:1026px) {
+
+    .Robozar__bottom__left img{
+    width: 200px;
+    height: 201px;
+}
+.workshop__right__bottom{
+    margin-top: 1rem;
+    margin-left: 2rem;
+
+}
+.Robozar__bottom__middle__button button{
+  
+    margin-top: -1rem;
+    margin-left: 1rem;
+}
 .Event__cordinator{
-    margin-top: 5rem;
-    width: 100%;
-    margin-left: -10rem;
+    margin-top: -2rem;
 }
-.Event__cordinator1__left p:last-child{
-    margin-top: -.8rem;
 }
-.Event__cordinator1__left p:first-child{
-    margin-top: .3rem;
+@media screen and (max-width:896px) {
+
+    .Robozar__bottom__left img{
+    width: 150px;
+    height: 151px;
 }
-.regitration__fee .fa{
-    font-size: 30px;
-    margin-top: .3rem;
-    margin-right: .4rem;
+.workshop__right__bottom{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    font-size: 7px;
+
 }
-.regitration__fee__icon{
-    margin-left: 8rem;
+.Robozar__bottom__middle__button button{
+  
+    margin-top: -1rem;
+    margin-left: 1rem;
+}
+.Event__cordinator{
+    margin-top: -2rem;
+}
+.Robozar__bottom__middle__para p{
+    font-size: 12px;
+}
+.Robozar__bottom__left__calender p{
+    font-size: 10px;
+   
+}
+}
+@media screen and (max-width:780px) {
+
+    .Robozar__bottom__left img{
+    width: 150px;
+    height: 151px;
+}
+.workshop__right__bottom{
+    margin-top: -1rem;
+    margin-left: 2rem;
+    font-size: 7px;
+
+}
+.Robozar__bottom__middle__button button{
+  
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.Event__cordinator{
+    margin-top: -1rem;
+}
+.Robozar__bottom__middle__para p{
+    font-size: 10px;
+}
+.Robozar__bottom__left__calender p{
+    font-size: 10px;
+   
+}
+}
+
+@media screen and (max-width:763px) {
+    .Workshop__bttom__section{
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+    .workshop__right__top{
+        flex-direction: column;
+    }
+    .workshop__right__bottom{
+        flex-direction: column;
+        text-align: center;
+    }
+    .Robozar__bottom__middle__para p{
+        text-align: center;
+    }
+    .regitration__fee{
+        text-align: center;
+        margin: auto;
+        align-items: center;
+    }
+    .workshop__price{
+        text-align: center;
+    }
+    .Robozar__bottom__left img{
+        width: 340px;
+        height: 251px;
+    }
+    .Robozar__bottom__middle{
+        text-align: center;
+        margin: auto;
+    }
+    .Event__cordinator{
+        margin-top: 2rem;
+        margin-top: 2rem;
+    }
+    .Event__cordinator p{
+        font-size: 10px;
+    }
+    .Robozar__bottom__middle__button{
+        font-size: 15px;
+        text-align: center;
+        margin-left: 2rem;
+        margin-top: 2rem;
+
+    }
+    .mobileview__workshop__time{
+        display: flex;
+    }
+    .Robozar__bottom__left__clock{
+        margin-left: 7rem;
+    }
+    .Robozar__bottom__left__clock .fa{
+        margin-top: 5px;
+    }
+    .Workshop__bttom__section{
+        padding-top: 14rem;
+    }
+    
+}
+
+@media screen and (max-width:380px) {
+    .Event__cordinator{
+        margin-left: -2rem;
+    }
+}
+@media screen and (max-width:363px) {
+    .Robozar__bottom__left img{
+        width: 300px;
+        height: 241px;
+    }
+    .Robozar__bottom__left__clock{
+        /* font-size: 1px; */
+        margin-left: 4rem;
+    }
+    .Robozar__bottom__middle h1{
+        font-size: 20px;
+    }
 }

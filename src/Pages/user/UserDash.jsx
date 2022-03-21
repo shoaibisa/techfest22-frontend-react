@@ -244,7 +244,7 @@ const UserDash = props => {
                       <td className="dashboard_profile_table_td dashboard_profile_right_cell">
 
                       </td>
-                      <td><i className="fa fa-edit" onClick={()=>setShow(true)} >      </i></td>
+                      <td><i className="fa fa-edit Edit__info__button" onClick={()=>setShow(true)} >      </i></td>
                     </tr>
 
 
@@ -354,7 +354,7 @@ const UserDash = props => {
                               </div>
 
                             </div>
-                            <button className="Edit__info__button" type="submit">Save</button>
+                            <button className="Save__info__button" type="submit">Save</button>
                           </div>
 
                         </div> : null

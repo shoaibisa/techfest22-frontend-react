@@ -368,7 +368,7 @@ color: white;
 
 .modal-content{
  
-  background: linear-gradient( 90deg, rgba(10, 37, 13, 0.9) 58%, rgba(7, 112, 21, 0.9) 98%);
+  background: linear-gradient( 90deg, rgba(5, 70, 12, 0.9) 58%, rgba(4, 112, 18, 0.9) 98%);
 
   color: #fff;
   width: 200rem;
@@ -439,15 +439,27 @@ color: white;
 }
 
 .Edit__info__button{
-  background-color: rgba(13, 148, 31, 0.5);
   margin-bottom: .5rem;
   color: #fff;
   outline: none;
   border: none;
   border-radius: 5px;
+  position: relative;
 }
 .Edit__info__button:hover{
   color: green;
+}
+.Save__info__button{
+  background-color: rgb(25, 129, 7);
+  outline: none;
+  border: none;
+  width: 10rem;
+  margin: auto;
+  border-radius: 5px  ;
+  
+}
+.Save__info__button:hover{
+  color: #113b06;
 }
 
 @media screen and (max-width:1026px) {
@@ -458,11 +470,15 @@ color: white;
   .OPenEdit{
     margin-left: -3rem !important; 
   }
+  .Edit__info__button,.responsivetabledata{
+    margin-right: 20rem !important;
+  }
   
 }
 @media screen and (max-width:775px) {
   .OPenEdit{
     margin-left: -4rem !important;
+    margin-top: -5rem;
   }
   .modal-content{
     width: 41rem !important;
@@ -474,10 +490,17 @@ color: white;
   .personal_information{
     margin-top: 2rem !important;
   }
+  
+  .Edit__info__button,.responsivetabledata{
+    margin-left: 20rem !important;
+  }
 }
 @media screen and (max-width:478px) {
   .OPenEdit{
     margin-left: -5rem !important;
+  }
+  .Edit__info__button,.responsivetabledata{
+    margin-left: 9rem !important;
   }
   .modal-content{
     width: 28rem !important;
@@ -497,6 +520,9 @@ color: white;
   }
   .modal-content{
     width: 23rem !important;
+  }
+  .Edit__info__button,.responsivetabledata{
+    margin-left: 6rem !important;
   }
   
 }
