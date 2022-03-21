@@ -42,8 +42,7 @@ import Workshop from './Pages/workshop/Workshop';
 
 import EventAll from './Pages/admin/event/EventAll';
 import UpdateCoordinator from './Pages/admin/coordinator/CoordinatorList/UpdateCoordinator';
-import  PayNow from './Pages/user/payment/UserPay';
-
+import PayNow from './Pages/user/payment/UserPay';
 
 function App() {
   const [isUserLoggedIn, setUserLoggedIn] = useState();
@@ -242,7 +241,7 @@ function App() {
         <Route path="*" element={<Fourzerofour />} />
         <Route exact path="admin/pay" element={<PayNow />} />
       </Routes>
-       
+
       <Footer />
     </div>
   );
