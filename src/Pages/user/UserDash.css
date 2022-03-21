@@ -8,7 +8,7 @@
   background-size: 100%  !important;
   background-repeat: no-repeat !important;
   background-attachment: fixed;
-  height: 280vh;
+  height: 310vh;
   
 }
 .Dashboard__body{
@@ -343,10 +343,10 @@ color: white;
   padding: 1rem;
   position: absolute !important;
   margin-right: 1px;
+  margin-top: -30rem !important;
+ 
+  
 
-}
-.EditInfo__display{
-  display: block;
 }
 .content_box{
   position: relative;
@@ -482,6 +482,8 @@ color: white;
   }
   .modal-content{
     width: 41rem !important;
+    
+   
   }
   .contact_information{
     margin-bottom: 1rem !important;
@@ -497,13 +499,14 @@ color: white;
 }
 @media screen and (max-width:478px) {
   .OPenEdit{
-    margin-left: -5rem !important;
+    margin-left: -3rem !important;
+    padding-bottom: 10rem !important;
   }
   .Edit__info__button,.responsivetabledata{
     margin-left: 9rem !important;
   }
   .modal-content{
-    width: 28rem !important;
+    width: 23rem !important;
   }
   .contact_information{
     margin-bottom: 1rem !important;
@@ -516,10 +519,10 @@ color: white;
 }
 @media screen and (max-width:375px) {
   .OPenEdit{
-    margin-left: -5.5rem !important;
+    margin-left: -3.5rem !important;
   }
   .modal-content{
-    width: 23rem !important;
+    width: 20rem !important;
   }
   .Edit__info__button,.responsivetabledata{
     margin-left: 6rem !important;
