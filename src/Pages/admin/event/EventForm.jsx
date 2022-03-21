@@ -12,8 +12,8 @@ const EventForm = () => {
   const [eDescription, setEDescription] = useState('');
   const [eImage, setEimage] = useState(null);
   const [eDrive, setEdrive] = useState('');
-  const [eDate, setEdate] = useState('');
-  const [eEdate, setEeDate] = useState('');
+  const [eStartDate, setEstartdate] = useState('');
+  const [eEndDate, setEndDate] = useState('');
   const [studentCoordinator, setstudentCoordinator] = useState([]);
   // const [facultyCoordinator, setFacultyCoordinator] = useState([]);
   const [coordinatorItems, setCoordinatorItems] = useState([]);
@@ -45,11 +45,11 @@ const EventForm = () => {
   const getEdrive = e => {
     setEdrive(e.target.value);
   };
-  const getEdate = e => {
-    setEdate(e.target.value);
+  const getStartdate = e => {
+    setEstartdate(e.target.value);
   };
-  const getEeDate = e => {
-    setEeDate(e.target.value);
+  const getendDate = e => {
+    setEndDate(e.target.value);
   };
   const getEtype = e => {
     setEtype(e.target.value.toLowerCase());
@@ -83,7 +83,7 @@ const EventForm = () => {
       return;
     }
 
-    if (eDate >= eEdate) {
+    if (eStartDate >= eEndDate) {
       setErrosMade({
         title: 'Error',
         message: 'Start time should not be greater than End time',
@@ -98,7 +98,8 @@ const EventForm = () => {
     let zData = new FormData();
     zData.append('name', eName);
     zData.append('description', eDescription);
-    zData.append('date', eDate);
+    zData.append('startDate', eStartDate);
+    zData.append('endDate', eEndDate);
     zData.append('eventMode', eventType);
     zData.append('domain', eDomain);
     zData.append('event', eImage);
@@ -138,8 +139,8 @@ const EventForm = () => {
         setEDescription('');
         setEimage(null);
         setEdrive('');
-        setEdate('');
-        setEeDate('');
+        setEstartdate('');
+        setEndDate('');
         setstudentCoordinator([]);
         setEtype('');
         setEdomain('');
@@ -308,7 +309,7 @@ const EventForm = () => {
                       type="datetime-local"
                       name="dob"
                       placeholder="Date of Birth"
-                      onChange={getEdate}
+                      onChange={getStartdate}
                     />
                   </Form.Group>
 
@@ -321,7 +322,7 @@ const EventForm = () => {
                       type="datetime-local"
                       name="dob"
                       placeholder="Date of Birth"
-                      onChange={getEeDate}
+                      onChange={getendDate}
                     />
                   </Form.Group>
                 </div>

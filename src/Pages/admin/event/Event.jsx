@@ -42,7 +42,8 @@ const Event = ({ event }) => {
       <td>{event.name}</td>
       <td>{event.eventMode}</td>
       <td>{event.domain}</td>
-      <td>{event.date}</td>
+      <td>{event.startDate}</td>
+      <td>{event.endDate}</td>
       {event && <td>{cn}</td>}
       <td>
         <NavLink

@@ -7,7 +7,12 @@ import { NavLink } from "react-router-dom";
 
 
 const EventCard = (props) => {
+    let  dateEvent= props.endDate.split('T');
+     console.log(dateEvent);
+     let date=dateEvent[0].split('-');
+      let time=dateEvent[1].split(':')
 
+    
     return (
         <div className="Robo">
             {/* <div className="Robo__line"></div> */}
@@ -22,8 +27,8 @@ const EventCard = (props) => {
                                     {props.subTitle}
                                 </p>
                                 <br />
-                                <NavLink to="/" className="robozar_register_button">Register Here</NavLink>
-                                <NavLink to="/" className="robozar_problem_statement_button">Problem Statement</NavLink>
+                                <NavLink to="" className="robozar_register_button">Register Here</NavLink>
+                                <a href={props.link} target="_blank" className="robozar_problem_statement_button">Problem Statement</a>
                             </div>
                         </div>
                         <div className="robozar_right_container">
@@ -31,13 +36,20 @@ const EventCard = (props) => {
                                 <h2> Prize Worth</h2>
                                 <h1>{props.amount}</h1> <br />
 
-                                <p> <i className=" fa fa-light fa-calendar"></i>Register before {props.date}</p>
-                                <p><i class="fa fa-clock-o"></i>{props.time}</p>
+                                <p> <i className=" fa fa-light fa-calendar"></i>Register before {`${date[1]}/ ${date[2]}`}</p>
+                                <p><i class="fa fa-clock-o"></i> {`${time[0]}:${time[1]}`}</p>
                                 <br />
-                                <p className="robozar_right_content_eventcoordinator">Event Coordinator</p>
-                                <p>{props.mobile1}</p>
-                                <p className="robozar_right_content_eventcoordinator">Event Coordinator</p>
-                                <p>{props.mobile2}</p>
+                                {
+                                    props.studentCoordinator.map((s)=>(
+                                        <div key={s._id}>
+                                        <p className="robozar_right_content_eventcoordinator">{s.coordinatorName}</p>
+                                       <p>{s.coordinatorPhone}</p>
+                                        </div>
+                                        
+                                    ))  
+                                }
+                               
+                            
                             </div>
                         </div>
                     </div>

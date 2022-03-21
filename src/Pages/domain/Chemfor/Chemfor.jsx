@@ -8,7 +8,7 @@ import pngwing from '../../../../src/images/Domain/pngwing 3.png';
 import axios from 'axios';
 import { createContext, useEffect, useState } from 'react';
 import { localUrl } from '../../../API/api';
-import ChemforContextProvider from './chemforContext';
+
 
 const Chemfor = () => {
      const [eData,setEdata]= useState();
@@ -27,7 +27,7 @@ const Chemfor = () => {
         {
             eData &&  eData.map((e)=>(
             <EventCard key={e._id} title ={e.name} imgurl={`${localUrl}/profile/${e.photo}`}
-           subTitle={e.description} amount="Rs.300" date={e.date} time="11.59 P.M" mobile1={e.studentCoordinator.map((p)=>(p.coordinatorPhone))} mobile2="+91XXXXXXXXXX"/>
+           subTitle={e.description} amount="Rs.300" endDate={e.endDate}  link={e.driveLink}  studentCoordinator={e.studentCoordinator} />
             ))
         }
         
