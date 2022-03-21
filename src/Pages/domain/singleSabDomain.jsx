@@ -3,7 +3,7 @@ import axios from 'axios';
 import { ChemforContext } from './Chemfor/chemforContext';
 import Chemfor from './Chemfor/Chemfor';
 const singleSabDomain = () => {
-const { chemfor } = useContext(ChemforContext);
+//const { chemfor } = useContext(ChemforContext);
   return <>
    
    <div className="subdomain">
