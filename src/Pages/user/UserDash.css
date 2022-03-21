@@ -4,6 +4,11 @@
   overflow-x: hidden !important;
   background-color: rgb(0, 0, 0) !important;
   color: #fff !important;
+  background-image: url("../../images/dashboard/Stagnant\ BG\ Webp.webp");
+  background-size: 100%  !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed;
+  height: 280vh;
   
 }
 .Dashboard__body{
@@ -23,11 +28,7 @@ p {
 
 /*------------ Nav End Hear ................*/
 
-.home_background {
-  background-image: url("../../images/dashboard/Stagnant\ BG\ Webp.webp");
-  background-size: 100%  !important;
-  background-repeat: no-repeat !important;
-}
+
 
 .blockquote-footer {
   color: #ffff  !important;
@@ -47,12 +48,6 @@ p {
 
 .text-light td {
   border-top: 0px !important;
-}
-
-.removeBg {
-  background: transparent !important;
-  border: 1px solid #fff  !important;
-  border-radius: 25px  !important;
 }
 
 
@@ -121,10 +116,10 @@ background-image: linear-gradient(to top, #41f115 0%, #41f115 100%)  !important;
 /*--------------  next section----------------------- */
 
 .gradient {
-  background: #031C04 !important;
-  background: -webkit-radial-gradient(center, #031C04, #010101) !important;
-  background: -moz-radial-gradient(center, #031C04, #010101) !important;
-  background: radial-gradient(ellipse at center, #031C04, #010101) !important;
+  /* background: #031C04 !important; */
+  /* background: -webkit-radial-gradient(center, #031C04, #010101) !important; */
+  /* background: -moz-radial-gradient(center, #031C04, #010101) !important; */
+  /* background: radial-gradient(ellipse at center, #031C04, #010101) !important; */
 }
 
 /* This is the footer section ................... */
@@ -144,8 +139,10 @@ background-image: linear-gradient(to top, #41f115 0%, #41f115 100%)  !important;
   margin: 5%;
 }
 .dashboard_profile_container .fa-edit{
-  font-size: 20px;
+  font-size: 30px;
   cursor: pointer;
+  margin-left: 30rem;
+  position: relative;
 }
 .dashboard_profile{
   border:2px solid white;
@@ -165,9 +162,9 @@ background-image: linear-gradient(to top, #41f115 0%, #41f115 100%)  !important;
   width: 80%;
   margin: 5%;
 }
-.dashboard_profile_table_td{
+/* .dashboard_profile_table_td{
   float: right;
-}
+} */
 .dashboard_hr{
   width: 100%;
   margin-bottom: 10px;
@@ -275,6 +272,10 @@ color: white;
       width: 94%;
       margin-bottom: 5px;
   }
+  .dashboard_profile_left_cell4{
+    width: unset;
+    /* border: none; */
+  }
 }
 @media(max-width:400px){
   .dashboard_both_table{
@@ -312,3 +313,192 @@ color: white;
       background-size: 23rem;
   }
 }
+
+
+.TableRow{
+  width: 100% !important;
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* popup css.................... */
+
+
+
+.modal-content{
+  width: 50rem !important;
+  padding: 1rem;
+  position: absolute !important;
+  margin-right: 1px;
+
+}
+.EditInfo__display{
+  display: block;
+}
+.content_box{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.EditClose{
+  width: 5rem;
+  background-color: rgb(0, 0, 0,0);
+  color: rgb(25, 129, 7);
+  outline: none;
+  border: none;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.modal-content{
+ 
+  background: linear-gradient( 90deg, rgba(10, 37, 13, 0.9) 58%, rgba(7, 112, 21, 0.9) 98%);
+
+  color: #fff;
+  width: 200rem;
+
+}
+
+.form{
+  text-align: left;
+  border-bottom: 2px solid #fff;
+
+}
+.OPenEdit{
+  width: 50%;
+  margin-left: 5rem;
+ 
+}
+.input_Profile_Information{
+  background-color: rgb(5, 20, 5,0);
+  outline: none;
+  border: none;
+  color: white;
+  margin-left: 1rem;
+}
+.form-input{
+  border: none;
+  background: none;
+  /* padding-bottom: 2px; */
+  text-align: center;
+  margin-top: 2px;
+  width: 100%;
+  outline: none;
+  color: #fff;
+  background-color: rgb(7, 65, 7,0.1);
+
+  background-color: rgba(9, 71, 9, 0);
+}
+.form-input option{
+  background:rgb(9, 43, 9);
+}
+
+.form-input2{
+  border: none;
+  background: none;
+
+  text-align: center;
+  color: #fff;
+  
+
+}
+.personal_information{
+
+  width: fit-content;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: -2rem;
+  flex: .5;
+}
+.contact_information{
+  margin-top: 2rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20rem;
+  margin-left: 3rem;
+  flex: .5;
+  
+}
+
+.Edit__info__button{
+  background-color: rgba(13, 148, 31, 0.5);
+  margin-bottom: .5rem;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.Edit__info__button:hover{
+  color: green;
+}
+
+@media screen and (max-width:1026px) {
+  .content_box{
+    flex-direction:column;
+    
+  }
+  .OPenEdit{
+    margin-left: -3rem !important; 
+  }
+  
+}
+@media screen and (max-width:775px) {
+  .OPenEdit{
+    margin-left: -4rem !important;
+  }
+  .modal-content{
+    width: 41rem !important;
+  }
+  .contact_information{
+    margin-bottom: 1rem !important;
+    margin-left: unset !important;
+  }
+  .personal_information{
+    margin-top: 2rem !important;
+  }
+}
+@media screen and (max-width:478px) {
+  .OPenEdit{
+    margin-left: -5rem !important;
+  }
+  .modal-content{
+    width: 28rem !important;
+  }
+  .contact_information{
+    margin-bottom: 1rem !important;
+    margin-left: unset !important;
+  }
+  .personal_information{
+    margin-top: 2rem !important;
+  }
+  
+}
+@media screen and (max-width:375px) {
+  .OPenEdit{
+    margin-left: -5.5rem !important;
+  }
+  .modal-content{
+    width: 23rem !important;
+  }
+  
+}
+
+
