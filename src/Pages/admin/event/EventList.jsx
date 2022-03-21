@@ -45,7 +45,8 @@ const EventList = () => {
             <th>Name </th>
             <th>Event Mode</th>
             <th>Domain Type</th>
-            <th>Date</th>
+            <th>Date Start Event</th>
+            <th>Date End Event</th>
             <th>Student Coordinators</th>
           </tr>
         </thead>
