@@ -27,7 +27,7 @@ const WorkshopForm = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`${localUrl}/coordinator/get-all-details`, {
+    fetch(`${baseUrl}/coordinator/get-all-details`, {
       headers: {
         Authorization: 'Bearer ' + authContext.token,
       },
@@ -123,7 +123,7 @@ const WorkshopForm = () => {
     //return console.log(zData);
     // zData.append('studentCoordinator', sc);
     axios
-      .post(`${localUrl}/workshop/create`, zData, {
+      .post(`${baseUrl}/workshop/create`, zData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Access-Control-Allow-Origin': '*',

@@ -6,7 +6,7 @@ import AuthContext from '../../../auth/authContext';
 import ErrorModel from '../../../components/UI/ErrorModel/ErrorModel';
 import { imgFileCheck } from '../../../Helper/ErrorHandle';
 
-const Sponsor = () => {
+const SponsorForm = () => {
   const authContext = useContext(AuthContext);
   const [name, setName] = useState('');
   const [sponserLink, setSponserLink] = useState('');
@@ -58,10 +58,10 @@ const Sponsor = () => {
     sData.append('name', name);
     sData.append('link', sponserLink);
 
-    console.log(sData);
+    // console.log(sData);
     // return console.log(name);
     axios
-      .post(`${localUrl}/sponser/addSponsor`, sData, {
+      .post(`${baseUrl}/sponser/addSponsor`, sData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Access-Control-Allow-Origin': '*',
@@ -164,4 +164,4 @@ const Sponsor = () => {
   );
 };
 
-export default Sponsor;
+export default SponsorForm;

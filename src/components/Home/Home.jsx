@@ -24,7 +24,7 @@ const Home = props => {
   useEffect(() => {
     setIsLoading(true);
 
-    axios.get(`${localUrl}/sponser/getAllSponsors`).then(sponRes => {
+    axios.get(`${baseUrl}/sponser/getAllSponsors`).then(sponRes => {
       setSponserData(sponRes.data.data);
       setIsLoading(false);
     });

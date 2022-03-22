@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import CaPortal from './Pages/caportal/Caportal';
 import Navbar from './components/header/Navbar';
@@ -6,7 +6,6 @@ import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import Forgot from './Pages/ForgotPassword/Forgot';
 import './App.css';
-// import Domain from "./Pages/domain/Domain";
 import Chemfor from './Pages/domain/Chemfor/Chemfor';
 import SignIn from './components/signin/Signin';
 import SignUp from './components/signup/Signup';
@@ -29,11 +28,8 @@ import DeleteWorkshop from './Pages/admin/WorkshopForm/DeleteWorkshop';
 import AdminContent from './Pages/admin/AdminContent';
 import CoordinatorForm from './Pages/admin/coordinator/CoordinatorForm';
 import UserDash from './Pages/user/UserDash';
-import axios from 'axios';
-import { baseUrl, localUrl } from './API/api';
 import ErrorModel from './components/UI/ErrorModel/ErrorModel';
 import AllUsers from './Pages/admin/userList/allUsers';
-import Sponsor from './Pages/admin/sponsor/sponsor';
 import Fourzerofour from './Pages/FourZero/Fourzerofour';
 import EventForm from './Pages/admin/event/EventForm';
 import AllCoordinator from './Pages/admin/coordinator/CoordinatorList/AllCoordinator';
@@ -44,6 +40,8 @@ import EventAll from './Pages/admin/event/EventAll';
 import UpdateCoordinator from './Pages/admin/coordinator/CoordinatorList/UpdateCoordinator';
 import PayNow from './Pages/user/payment/UserPay';
 import AuthContext from './auth/authContext';
+import SponsorForm from './Pages/admin/sponsor/SponsorForm';
+import SponsorAll from './Pages/admin/sponsor/AllSponsor';
 
 function App() {
   const authContext = useContext(AuthContext);
@@ -121,7 +119,10 @@ function App() {
           <Route exact path="/admin/users" element={<AllUsers />} />
         )}
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
-          <Route exact path="/admin/sponsor" element={<Sponsor />} />
+          <Route exact path="/admin/sponsor" element={<SponsorAll />} />
+        )}
+        {authContext.isUserLoggedIn && authContext.userRole == 569 && (
+          <Route exact path="/admin/sponsor/add" element={<SponsorForm />} />
         )}
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
           <Route exact path="/admin/domain" element={<DomainForm />} />

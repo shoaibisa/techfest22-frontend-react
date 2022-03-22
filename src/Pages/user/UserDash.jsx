@@ -21,6 +21,16 @@ const UserDash = props => {
         },
       })
       .then(result => {
+        if (
+          result.status != 200 ||
+          (result.status != 201 && result.data.isError)
+        ) {
+          setErrosMade({
+            title: 'Auth Error',
+            message: 'Wrong user auth!',
+          });
+          return;
+        }
         setUser(result.data.user);
       });
   }, [authContext.login]);

@@ -83,7 +83,7 @@ const CoordinatorForm = () => {
     zData.append('coordinatorDesignation', cDeg);
     // return console.log(zData);
     axios
-      .post(`${localUrl}/coordinator/creating`, zData, {
+      .post(`${baseUrl}/coordinator/creating`, zData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Access-Control-Allow-Origin': '*',

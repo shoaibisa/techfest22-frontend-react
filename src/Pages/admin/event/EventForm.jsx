@@ -25,7 +25,7 @@ const EventForm = () => {
   const [eDomain, setEdomain] = useState('');
   useEffect(() => {
     setIsLoading(true);
-    fetch(`${localUrl}/coordinator/get-all-details`, {
+    fetch(`${baseUrl}/coordinator/get-all-details`, {
       headers: {
         Authorization: 'Bearer ' + authContext.token,
       },
@@ -113,7 +113,7 @@ const EventForm = () => {
     zData.append('studentCoordinator', dataSc);
 
     axios
-      .post(`${localUrl}/event/addEvent`, zData, {
+      .post(`${baseUrl}/event/addEvent`, zData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Access-Control-Allow-Origin': '*',

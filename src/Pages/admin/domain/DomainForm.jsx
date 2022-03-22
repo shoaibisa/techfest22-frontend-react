@@ -77,7 +77,7 @@ const DomainForm = () => {
       return await axios(
         {
           method: 'post',
-          url: `${localUrl}/workshop/create`,
+          url: `${baseUrl}/workshop/create`,
           data: zData,
           headers: {
             'Content-Type': 'multipart/form-data',
@@ -134,7 +134,7 @@ const DomainForm = () => {
   };
 
   useEffect(() => {
-    fetch(`${localUrl}/coordinator/get-all-details`)
+    fetch(`${baseUrl}/coordinator/get-all-details`)
       .then(res => res.json())
       .then(
         result => {
@@ -161,49 +161,73 @@ const DomainForm = () => {
 
     return (
       <div>
-  
-    <div className="main">
-        <div className="container mt-5 pt-5" style={{width:'50%'}}>
-        <div className="col-sm-12">
-            <h2 style={{ color:'white'}}>Add Domain</h2>
-          </div>
-              <Form>
-                <Form.Group className="mb-3">
-                <Form.Label style={{color:'white'}}>Name</Form.Label>
-                  <Form.Control  style={{ color:'white',background: 'transparent'}} size="sm"  type="text" placeholder="Enter Name *" required />
-                </Form.Group>
-                <Form.Group className="mb-3">
-                <Form.Label style={{color:'white'}}>Domain Name</Form.Label>
-                <Form.Select  style={{ color:'white',background: 'transparent'}} aria-label="Default select example">
-                <option style={{ color:'black'}} >---select---</option>
-                 <option style={{ color:'black'}} value="1">One</option>
-                  <option style={{ color:'black'}} value="2">Two</option>
-                  <option style={{ color:'black'}} value="3">Three</option>
-                  </Form.Select>
-                  </Form.Group>
-                  <Form.Group controlId="form.Textarea" className="mb-3">
-                <Form.Label style={{color:'white'}}>Domain Description</Form.Label>
-            <Form.Control style={{ color:'white',background: 'transparent'}} as="textarea" rows={4} placeholder="Enter Description(max 50 words) *" required/>
-            </Form.Group>
-                <Form.Group controlId="formFileSm" className="mb-3">
-                  <Form.Label style={{color:'white'}}>Uplode Image</Form.Label>
-                  <Form.Control    style={{background: 'transparent'}} type="file" size="sm" />
-                </Form.Group>
-  
-        
-                <Button
-                  style={{ width: '100%' }}
-                  variant="success"
-                  type="submit"
-                  block
-                >
-                  Add Domain
-                </Button>
-              </Form>
+        <div className="main">
+          <div className="container mt-5 pt-5" style={{ width: '50%' }}>
+            <div className="col-sm-12">
+              <h2 style={{ color: 'white' }}>Add Domain</h2>
             </div>
+            <Form>
+              <Form.Group className="mb-3">
+                <Form.Label style={{ color: 'white' }}>Name</Form.Label>
+                <Form.Control
+                  style={{ color: 'white', background: 'transparent' }}
+                  size="sm"
+                  type="text"
+                  placeholder="Enter Name *"
+                  required
+                />
+              </Form.Group>
+              <Form.Group className="mb-3">
+                <Form.Label style={{ color: 'white' }}>Domain Name</Form.Label>
+                <Form.Select
+                  style={{ color: 'white', background: 'transparent' }}
+                  aria-label="Default select example"
+                >
+                  <option style={{ color: 'black' }}>---select---</option>
+                  <option style={{ color: 'black' }} value="1">
+                    One
+                  </option>
+                  <option style={{ color: 'black' }} value="2">
+                    Two
+                  </option>
+                  <option style={{ color: 'black' }} value="3">
+                    Three
+                  </option>
+                </Form.Select>
+              </Form.Group>
+              <Form.Group controlId="form.Textarea" className="mb-3">
+                <Form.Label style={{ color: 'white' }}>
+                  Domain Description
+                </Form.Label>
+                <Form.Control
+                  style={{ color: 'white', background: 'transparent' }}
+                  as="textarea"
+                  rows={4}
+                  placeholder="Enter Description(max 50 words) *"
+                  required
+                />
+              </Form.Group>
+              <Form.Group controlId="formFileSm" className="mb-3">
+                <Form.Label style={{ color: 'white' }}>Uplode Image</Form.Label>
+                <Form.Control
+                  style={{ background: 'transparent' }}
+                  type="file"
+                  size="sm"
+                />
+              </Form.Group>
+
+              <Button
+                style={{ width: '100%' }}
+                variant="success"
+                type="submit"
+                block
+              >
+                Add Domain
+              </Button>
+            </Form>
           </div>
-    
-    </div>
+        </div>
+      </div>
       // <div
       //   className="workshopForm"
       //   style={{
@@ -313,7 +337,7 @@ const DomainForm = () => {
       //         value={startDate}
       //         onChange={getstartDate}
       //         required
-      //         autoComplete="off" 
+      //         autoComplete="off"
       //         type="date"
       //         placeholder=" "
       //       />

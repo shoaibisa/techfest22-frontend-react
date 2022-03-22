@@ -54,7 +54,10 @@ function Signin(props) {
       };
       await authContext.login(userData);
 
-      navigate('/dashboard');
+      if (fetchdata.data.userRole === 569) {
+        navigate('/admin');
+      }
+      if (fetchdata.data.userRole === 0) navigate('/dashboard');
 
       // console.log(fetchdata);
     }
