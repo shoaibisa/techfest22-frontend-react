@@ -1,15 +1,15 @@
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
-import { CoordinatorContext } from './contexts/CoordinatorContext';
-import Coordinator from './Coordinator';
+import { SponsorContext } from './sponsorList/contexts';
+import Sponser from './sponser';
 // import UpdateCoordinator from './UpdateCoordinator';
 // import Pagenation from './pagenation';
 import axios from 'axios';
-import { localUrl } from '../../../../API/api';
+import { localUrl } from '../../../API/api';
 
-const CoordinatorList = () => {
-  const { coordinator } = useContext(CoordinatorContext);
+const SponserList = () => {
+  const { sponser } = useContext(SponsorContext);
   // const [show, setShow] = useState(false);
 
   const handleAddCo = () => navigate('/admin/coordinator/add');
@@ -35,7 +35,7 @@ const CoordinatorList = () => {
   // };
 
   // console.log(coordinator);
-
+  console.log(sponser);
   return (
     <>
       <div className="table-title">
@@ -66,18 +66,15 @@ const CoordinatorList = () => {
           <tr>
             <th>Photo </th>
             <th>Name </th>
-            <th>Email</th>
-            <th>Coordinator Type</th>
-            <th>Desigination</th>
-            <th>Phone</th>
+            <th>Link</th>
           </tr>
         </thead>
         <tbody>
-          {coordinator &&
-            coordinator.map(user => (
+          {sponser &&
+            sponser.map(user => (
               <tr style={{ borderStyle: 'none', color: 'white' }}
                 key={user._id}
-              ><Coordinator user={user} />
+              ><Sponser sponser={user} />
               </tr>
             ))}
         </tbody>
@@ -113,4 +110,4 @@ const CoordinatorList = () => {
     </>
   );
 };
-export default CoordinatorList;
+export default SponserList;
