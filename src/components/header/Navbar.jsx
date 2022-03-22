@@ -1,11 +1,18 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 //images import
 import headerLogo from '../../images/header-logo.png';
+import AuthContext from '../../auth/authContext';
 
 const Navbar = props => {
+  const navigate = useNavigate();
+  const authContext = useContext(AuthContext);
+  const logOutHandler = async () => {
+    await authContext.logout();
+    navigate('/');
+  };
   return (
     <>
       <div
@@ -80,91 +87,95 @@ const Navbar = props => {
                     Home
                   </NavLink>{' '}
                 </li>
-                <li className="nav-item">
-                  <NavLink
-                    className="nav-link mx-3 text-light line "
-                    activeClassName="active "
-                    data-toggle="pill"
-                    aria-current="page"
-                    to="/dashboard"
-                  >
-                    Dashboard
-                  </NavLink>{' '}
-                </li>
-                <li className="nav-item dropdown text-light">
-                  <NavLink
-                    className="nav-link dropdown-toggle mx-3 text-light line"
-                    to="/admin"
-                    id="offcanvasNavbarDropdown"
-                    role="button"
-                    aria-expanded="false"
-                  >
-                    Admin
-                  </NavLink>
+                {authContext.isUserLoggedIn && authContext.userRole == 0 && (
+                  <li className="nav-item">
+                    <NavLink
+                      className="nav-link mx-3 text-light line "
+                      activeClassName="active "
+                      data-toggle="pill"
+                      aria-current="page"
+                      to="/dashboard"
+                    >
+                      Dashboard
+                    </NavLink>{' '}
+                  </li>
+                )}
+                {authContext.isUserLoggedIn && authContext.userRole == 569 && (
+                  <li className="nav-item dropdown text-light">
+                    <NavLink
+                      className="nav-link dropdown-toggle mx-3 text-light line"
+                      to="/admin"
+                      id="offcanvasNavbarDropdown"
+                      role="button"
+                      aria-expanded="false"
+                    >
+                      Admin
+                    </NavLink>
 
-                  <ul
-                    className="dropdown-menu "
-                    aria-labelledby="offcanvasNavbarDropdown"
-                    style={{
-                      backgroundColor: 'rgb(17, 34, 13)',
-                      width: '100%',
-                    }}
-                  >
-                    <li>
-                      <NavLink
-                        className="dropdown-item  text-light line"
-                        activeclassname="active"
-                        to="/admin/domain"
-                      >
-                        Domain
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        className="dropdown-item  text-light line"
-                        activeClassName="active "
-                        to="/admin/users"
-                      >
-                        Users
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        className="dropdown-item  text-light line"
-                        activeClassName="active "
-                        to="/admin/coordinator"
-                      >
-                        Coordinator
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        className="dropdown-item text-light line"
-                        to="/admin/event"
-                      >
-                        Events
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        className="dropdown-item text-light line"
-                        activeClassName="active "
-                        to="/admin/workshop"
-                      >
-                        Workshop
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        className="dropdown-item text-light line"
-                        activeClassName="active "
-                        to="/admin/sponsor"
-                      >
-                        Sponser
-                      </NavLink>
-                    </li>
-                  </ul>
-                </li>
+                    <ul
+                      className="dropdown-menu "
+                      aria-labelledby="offcanvasNavbarDropdown"
+                      style={{
+                        backgroundColor: 'rgb(17, 34, 13)',
+                        width: '100%',
+                      }}
+                    >
+                      <li>
+                        <NavLink
+                          className="dropdown-item  text-light line"
+                          activeclassname="active"
+                          to="/admin/domain"
+                        >
+                          Domain
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          className="dropdown-item  text-light line"
+                          activeClassName="active "
+                          to="/admin/users"
+                        >
+                          Users
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          className="dropdown-item  text-light line"
+                          activeClassName="active "
+                          to="/admin/coordinator"
+                        >
+                          Coordinator
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          className="dropdown-item text-light line"
+                          to="/admin/event"
+                        >
+                          Events
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          className="dropdown-item text-light line"
+                          activeClassName="active "
+                          to="/admin/workshop"
+                        >
+                          Workshop
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          className="dropdown-item text-light line"
+                          activeClassName="active "
+                          to="/admin/sponsor"
+                        >
+                          Sponser
+                        </NavLink>
+                      </li>
+                    </ul>
+                  </li>
+                )}
                 <li className="nav-item">
                   <NavLink
                     className="nav-link mx-3 line text-light"
@@ -278,21 +289,21 @@ const Navbar = props => {
                     CA Portal
                   </NavLink>
                 </li>
-                {props.isAuth && (
-                  <NavLink
+                {authContext.isUserLoggedIn && (
+                  <button
                     className="btn btn-md btn-outline-light active mx-3"
                     activeClassName="active "
-                    onClick={props.onLogout}
-                    to="/"
+                    onClick={logOutHandler}
+                    //  to="/"
                     data-toggle="button"
                     aria-pressed="true"
                     autoComplete="off"
                     role="button"
                   >
                     Log out
-                  </NavLink>
+                  </button>
                 )}
-                {!props.isAuth && (
+                {!authContext.isUserLoggedIn && (
                   <NavLink
                     className="btn btn-md btn-outline-light active mx-3"
                     activeClassName="active "

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import CaPortal from './Pages/caportal/Caportal';
 import Navbar from './components/header/Navbar';
@@ -43,100 +43,15 @@ import Workshop from './Pages/workshop/Workshop';
 import EventAll from './Pages/admin/event/EventAll';
 import UpdateCoordinator from './Pages/admin/coordinator/CoordinatorList/UpdateCoordinator';
 import PayNow from './Pages/user/payment/UserPay';
+import AuthContext from './auth/authContext';
 
 function App() {
+  const authContext = useContext(AuthContext);
   const [isUserLoggedIn, setUserLoggedIn] = useState();
   const [errosMade, setErrosMade] = useState();
   const [userId, serUserId] = useState(null);
   const [token, setToken] = useState();
   const navigate = useNavigate();
-
-  //in first load
-  useEffect(() => {
-    const token = localStorage.getItem('jswToken');
-    const expiryDate = localStorage.getItem('expiryDate');
-    if (!token || !expiryDate) {
-      return;
-    }
-    if (new Date(expiryDate) <= new Date()) {
-      logOutHandler();
-      return;
-    }
-    const userId = localStorage.getItem('userId');
-    setToken(token);
-    const remainingMilliseconds =
-      new Date(expiryDate).getTime() - new Date().getTime();
-    setUserLoggedIn(true);
-  }, []);
-
-  const userLoginHandle = async authData => {
-    const fetchdata = await axios({
-      method: 'post',
-      data: authData,
-      url: `${baseUrl}/signIn`,
-    });
-    if (
-      fetchdata.status !== 200 ||
-      (fetchdata.status !== 201 && fetchdata.data.isError)
-    ) {
-      setErrosMade({
-        title: 'Error',
-        message: fetchdata.data.message,
-      });
-      // return;
-    }
-    // setErrosMade(null);
-    if (
-      fetchdata.status === 200 ||
-      (fetchdata.status === 201 && fetchdata.data.isSucces)
-    ) {
-      setErrosMade(false);
-      localStorage.setItem('jswToken', fetchdata.data.token);
-      localStorage.setItem('userId', fetchdata.data.userId);
-      const remainingMilliseconds = 60 * 60 * 1000; //1h
-      const expiryDate = new Date(new Date().getTime() + remainingMilliseconds);
-      localStorage.setItem('expiryDate', expiryDate.toISOString());
-      setToken(fetchdata.data.token);
-      setUserLoggedIn(true);
-      navigate('/dashboard');
-
-      console.log(fetchdata);
-    }
-
-    // fetchdata.then(result => {
-    //   console.log(result);
-    // });
-
-    // const userLoginHandle = async authData => {
-    // axios
-    //   .post(`${localUrl}/signIn`, authData)
-    //   .then(result => {
-    //     if (
-    //       result.status !== 200 ||
-    //       result.status !== 201 ||
-    //       result.status === 400
-    //     ) {
-    //       // setErrosMade({
-    //       //   title: 'Error',
-    //       //   message: result.data.message,
-    //       // });
-    //       // //  return;
-    //       throw new Error('fhj');
-    //     }
-
-    //     return result;
-    //   })
-    //   .then(resData => {
-    //     console.log(resData);
-    //   })
-    //   .catch(err => {
-    //     setErrosMade({
-    //       title: 'Error',
-    //       message: err,
-    //     });
-    //     // return;
-    //   });
-  };
 
   const logOutHandler = () => {
     setUserLoggedIn(false);
@@ -150,30 +65,6 @@ function App() {
   const onErrosMadeHandle = () => {
     setErrosMade(null);
   };
-
-  let routes = (
-    <Route>
-      <Route
-        exact
-        path="/signin"
-        element={<SignIn onLogin={userLoginHandle} />}
-      />
-      <Route exact path="/signup" element={<SignUp />} />
-      <Route exact path="/forgot" element={<Forgot />} />
-    </Route>
-  );
-
-  if (isUserLoggedIn) {
-    routes = (
-      <Route>
-        <Route
-          exact
-          path="/dashboard"
-          element={<UserDash isAuth={isUserLoggedIn} token={token} />}
-        />
-      </Route>
-    );
-  }
 
   return (
     <div className="App">
@@ -198,48 +89,85 @@ function App() {
         <Route exact path="/workshop" element={<Workshop />} />
         <Route exact path="/about" element={<AboutUs data={dataJson} />} />
         <Route exact path="/admin/domains" element={<DomainForm />} />
-
-        <Route
-          exact
-          path="/domain"
-          element={<Domain data={dataJson.domain} />}
-        />
-        <Route
-          exact
-          path="/admin/coordinators/add"
-          element={<CoordinatorForm />}
-        />
-        {/* <Route
-          exact
-          path="/admin/coordinators"
-          element={<CoordinatorContent />}
-        /> */}
-        <Route exact path="/admin/workshop" element={<WorkshopForm />} />
-        <Route
-          exact
-          path="/admin/workshop/delete"
-          element={<DeleteWorkshop />}
-        />
-        {routes}
-        <Route exact path="/admin" element={<AdminContent />} />
-        <Route exact path="/admin/users" element={<AllUsers />} />
-        <Route exact path="/admin/sponsor" element={<Sponsor />} />
-        <Route exact path="/admin/domain" element={<DomainForm />} />
-        <Route exact path="/admin/event" element={<EventAll />} />
-        <Route exact path="/admin/event/add" element={<EventForm />} />
-        <Route exact path="admin/coordinator" element={<AllCoordinator />} />
-        <Route
-          exact
-          path="admin/coordinator/add"
-          element={<CoordinatorForm />}
-        />
-        <Route
-          exact
-          path="admin/coordinator/update"
-          element={<UpdateCoordinator />}
-        />
+        //admin routes
+        {authContext.isUserLoggedIn && authContext.userRole == 569 && (
+          <Route
+            exact
+            path="/domain"
+            element={<Domain data={dataJson.domain} />}
+          />
+        )}
+        {authContext.isUserLoggedIn && authContext.userRole == 569 && (
+          <Route
+            exact
+            path="/admin/coordinators/add"
+            element={<CoordinatorForm />}
+          />
+        )}
+        {authContext.isUserLoggedIn && authContext.userRole == 569 && (
+          <Route exact path="/admin/workshop" element={<WorkshopForm />} />
+        )}{' '}
+        {authContext.isUserLoggedIn && authContext.userRole == 569 && (
+          <Route
+            exact
+            path="/admin/workshop/delete"
+            element={<DeleteWorkshop />}
+          />
+        )}
+        {authContext.isUserLoggedIn && authContext.userRole == 569 && (
+          <Route exact path="/admin" element={<AdminContent />} />
+        )}
+        {authContext.isUserLoggedIn && authContext.userRole == 569 && (
+          <Route exact path="/admin/users" element={<AllUsers />} />
+        )}
+        {authContext.isUserLoggedIn && authContext.userRole == 569 && (
+          <Route exact path="/admin/sponsor" element={<Sponsor />} />
+        )}
+        {authContext.isUserLoggedIn && authContext.userRole == 569 && (
+          <Route exact path="/admin/domain" element={<DomainForm />} />
+        )}
+        {authContext.isUserLoggedIn && authContext.userRole == 569 && (
+          <Route exact path="/admin/event" element={<EventAll />} />
+        )}
+        {authContext.isUserLoggedIn && authContext.userRole == 569 && (
+          <Route exact path="/admin/event/add" element={<EventForm />} />
+        )}
+        {authContext.isUserLoggedIn && authContext.userRole == 569 && (
+          <Route exact path="admin/coordinator" element={<AllCoordinator />} />
+        )}
+        {authContext.isUserLoggedIn && authContext.userRole == 569 && (
+          <Route
+            exact
+            path="admin/coordinator/add"
+            element={<CoordinatorForm />}
+          />
+        )}
+        {authContext.isUserLoggedIn && authContext.userRole == 569 && (
+          <Route
+            exact
+            path="admin/coordinator/update"
+            element={<UpdateCoordinator />}
+          />
+        )}
+        //user routes
+        {!authContext.isUserLoggedIn && (
+          <Route exact path="/signin" element={<SignIn />} />
+        )}
+        {!authContext.isUserLoggedIn && (
+          <Route exact path="/signup" element={<SignUp />} />
+        )}
+        {authContext.isUserLoggedIn && authContext.userRole == 0 && (
+          <Route
+            exact
+            path="/dashboard"
+            element={<UserDash isAuth={isUserLoggedIn} token={token} />}
+          />
+        )}
+        {authContext.isUserLoggedIn && authContext.userRole == 0 && (
+          <Route exact path="user/pay" element={<PayNow />} />
+        )}
+        <Route exact path="/forgot" element={<Forgot />} />
         <Route path="*" element={<Fourzerofour />} />
-        <Route exact path="user/pay" element={<PayNow />} />
       </Routes>
 
       <Footer />

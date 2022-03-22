@@ -1,27 +1,63 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import './Signin.css';
 import { NavLink, useNavigate } from 'react-router-dom';
 import signup_gif from '../../images/Signup gif.webm';
 import { baseUrl } from '../../API/api';
 import { localUrl } from '../../API/api';
 import axios from 'axios';
-import UserDash from '../../Pages/user/UserDash';
 import ErrorModel from '../UI/ErrorModel/ErrorModel';
+import AuthContext from '../../auth/authContext';
 
 function Signin(props) {
   // const [isLoading, setIsLoading] = useState(false);
+  const authContext = useContext(AuthContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const [errosMade, setErrosMade] = useState(); //undefined
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const getEmail = e => {
     setEmail(e.target.value);
   };
   const getpassword = e => {
     setPassword(e.target.value);
+  };
+
+  const userLoginHandle = async authData => {
+    const fetchdata = await axios({
+      method: 'post',
+      data: authData,
+      url: `${baseUrl}/signIn`,
+    });
+    if (
+      fetchdata.status !== 200 ||
+      (fetchdata.status !== 201 && fetchdata.data.isError)
+    ) {
+      setErrosMade({
+        title: 'Error',
+        message: fetchdata.data.message,
+      });
+      // return;
+    }
+    // setErrosMade(null);
+    if (
+      fetchdata.status === 200 ||
+      (fetchdata.status === 201 && fetchdata.data.isSucces)
+    ) {
+      setErrosMade(false);
+      const userData = {
+        token: fetchdata.data.token,
+        userId: fetchdata.data.userId,
+        userRole: fetchdata.data.userRole,
+      };
+      await authContext.login(userData);
+
+      navigate('/dashboard');
+
+      // console.log(fetchdata);
+    }
   };
 
   const onSubmitBtnClick = async e => {
@@ -46,7 +82,8 @@ function Signin(props) {
       password: password,
     };
 
-    props.onLogin(zData);
+    userLoginHandle(zData);
+
     // console.log(zData);
 
     // // try {

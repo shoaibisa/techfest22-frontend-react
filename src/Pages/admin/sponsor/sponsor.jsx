@@ -1,11 +1,13 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { baseUrl, localUrl } from '../../../API/api';
+import AuthContext from '../../../auth/authContext';
 import ErrorModel from '../../../components/UI/ErrorModel/ErrorModel';
 import { imgFileCheck } from '../../../Helper/ErrorHandle';
 
 const Sponsor = () => {
+  const authContext = useContext(AuthContext);
   const [name, setName] = useState('');
   const [sponserLink, setSponserLink] = useState('');
   const [sImage, setSimage] = useState('');
@@ -64,6 +66,7 @@ const Sponsor = () => {
           'Content-Type': 'multipart/form-data',
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+          Authorization: 'Bearer ' + authContext.token,
         },
       })
       .then(result => {
@@ -140,7 +143,7 @@ const Sponsor = () => {
             <Form.Group controlId="formFileSm" className="mb-3">
               <Form.Label style={{ color: 'white' }}>Uplode Image</Form.Label>
               <Form.Control
-                style={{ background: 'transparent' }}
+                style={{ background: 'transparent', color: 'white' }}
                 type="file"
                 size="sm"
                 onChange={getSimage}

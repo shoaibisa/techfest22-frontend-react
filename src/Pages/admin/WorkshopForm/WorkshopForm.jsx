@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './WorkshopForm.css';
 import { Multiselect } from 'multiselect-react-dropdown';
 import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
-import { baseUrl,localUrl } from '../../../API/api';
+import { baseUrl, localUrl } from '../../../API/api';
 import ErrorModel from '../../../components/UI/ErrorModel/ErrorModel';
 import LoaderSpin from '../../../components/UI/loader/LoaderSpin';
+import AuthContext from '../../../auth/authContext';
 
 // import { NavLink } from 'react-router-dom';
 
 const WorkshopForm = () => {
+  const authContext = useContext(AuthContext);
   const [wsName, setwsName] = useState('');
   const [wsDesc, setwsDesc] = useState('');
   const [wDriveLink, setWdriveLink] = useState('');
@@ -25,7 +27,11 @@ const WorkshopForm = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`${localUrl}/coordinator/get-all-details`)
+    fetch(`${localUrl}/coordinator/get-all-details`, {
+      headers: {
+        Authorization: 'Bearer ' + authContext.token,
+      },
+    })
       .then(res => res.json())
       .then(
         result => {
@@ -122,6 +128,7 @@ const WorkshopForm = () => {
           'Content-Type': 'multipart/form-data',
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+          Authorization: 'Bearer ' + authContext.token,
         },
         onUploadProgress: ProgressEvent => {
           console.log(
@@ -134,7 +141,7 @@ const WorkshopForm = () => {
       .then(results => {
         setIsLoading(true);
         if (results.status !== 200 || results.status !== 200) {
-          console.log(results);
+          // console.log(results);
           setErrosMade({
             title: results.data.title,
             message: results.data.message,

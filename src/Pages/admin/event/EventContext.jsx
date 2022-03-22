@@ -1,15 +1,21 @@
 import axios from 'axios';
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import { localUrl } from '../../../API/api';
+import AuthContext from '../../../auth/authContext';
 
 export const EventContext = createContext();
 
 const EventContextProvider = props => {
+  const authContext = useContext(AuthContext);
   const [event, setEvent] = useState([]);
 
   const deleteEvent = async props => {
-    await axios.delete(`${localUrl}/event/deleteEvent/${props}`);
-    console.log(props);
+    await axios.delete(`${localUrl}/event/deleteEvent/${props}`, {
+      headers: {
+        Authorization: 'Bearer ' + authContext.token,
+      },
+    });
+    //console.log(props);
   };
 
   useEffect(() => {

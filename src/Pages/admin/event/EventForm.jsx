@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Multiselect } from 'multiselect-react-dropdown';
 import { Form, Button } from 'react-bootstrap';
 import { baseUrl, localUrl } from '../../../API/api';
@@ -6,8 +6,10 @@ import LoaderSpin from '../../../components/UI/loader/LoaderSpin';
 import ErrorModel from '../../../components/UI/ErrorModel/ErrorModel';
 import { imgFileCheck } from '../../../Helper/ErrorHandle';
 import axios from 'axios';
+import AuthContext from '../../../auth/authContext';
 
 const EventForm = () => {
+  const authContext = useContext(AuthContext);
   const [eName, setEname] = useState('');
   const [eDescription, setEDescription] = useState('');
   const [eImage, setEimage] = useState(null);
@@ -23,7 +25,11 @@ const EventForm = () => {
   const [eDomain, setEdomain] = useState('');
   useEffect(() => {
     setIsLoading(true);
-    fetch(`${localUrl}/coordinator/get-all-details`)
+    fetch(`${localUrl}/coordinator/get-all-details`, {
+      headers: {
+        Authorization: 'Bearer ' + authContext.token,
+      },
+    })
       .then(res => res.json())
       .then(
         result => {
@@ -112,6 +118,7 @@ const EventForm = () => {
           'Content-Type': 'multipart/form-data',
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+          Authorization: 'Bearer ' + authContext.token,
         },
         onUploadProgress: ProgressEvent => {
           console.log(
