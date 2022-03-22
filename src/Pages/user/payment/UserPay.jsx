@@ -1,14 +1,49 @@
 //import React, { useState } from 'react';
 import axios from 'axios';
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { baseUrl, localUrl } from '../../../API/api';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import AuthContext from '../../../auth/authContext';
+import ErrorModel from '../../../components/UI/ErrorModel/ErrorModel';
 
 const UserPay = () => {
   const authContext = useContext(AuthContext);
+  const [errosMade, setErrosMade] = useState();
+  const [user, setUser] = useState(null);
+  const [searchParams] = useSearchParams();
 
+  useEffect(() => {
+    const payMentStatus = searchParams.get('paystatus');
+    if (payMentStatus) {
+      setErrosMade({
+        title: 'Payment Success',
+        message: 'Your payment recorded successfully!',
+      });
+    }
+    axios
+      .get(`${baseUrl}/user/getUserById`, {
+        headers: {
+          Authorization: 'Bearer ' + authContext.token,
+        },
+      })
+      .then(result => {
+        if (
+          result.status != 200 ||
+          (result.status != 201 && result.data.isError)
+        ) {
+          setErrosMade({
+            title: 'Auth Error',
+            message: 'Wrong user auth!',
+          });
+          return;
+        }
+        setUser(result.data.user);
+      });
+  }, []);
+  const onErrosMadeHandle = () => {
+    setErrosMade(null);
+  };
   const paySilver = async () => {
     const userPayData = {
       price: 300,
@@ -44,6 +79,13 @@ const UserPay = () => {
   };
   return (
     <>
+      {errosMade && (
+        <ErrorModel
+          title={errosMade.title}
+          message={errosMade.message}
+          onErrosClick={onErrosMadeHandle}
+        />
+      )}
       <div className="main">
         <div className="container-fluid mt-5 pt-5 center">
           <Button
