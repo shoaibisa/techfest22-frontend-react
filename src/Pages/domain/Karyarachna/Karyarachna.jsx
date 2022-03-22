@@ -2,7 +2,7 @@ import React from "react";
 import './Karyarachna.css';
 import EventCard from "../../../components/subdomain/EventCard/EventCard";
 import EventLogo from "../../../components/subdomain/EventLogo/EventLogo";
-import pngwing from '../../../../src/images/Domain/pngwing 3.png';
+import Karyrachna from '../../../../src/images/Domain/Karyarachna.webp';
 //import { useContext } from 'react';
 //import { ChemforContext } from './chemforContext';
 import axios from 'axios';
@@ -21,7 +21,7 @@ const Chemfor = () => {
     return(
         <>
        <div className="subdomain">
-        <EventLogo imgsrc={pngwing}
+        <EventLogo imgsrc={Karyrachna}
         title="Karyarachna" subTitle="They are doing what we do, eventually might do it all.
         You build what can work for you, We bring this which can make you better at building. Do participate to build better."/>
         {

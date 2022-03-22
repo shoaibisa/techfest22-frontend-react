@@ -1,7 +1,16 @@
 import React from 'react';
 import Slider from 'react-slick';
+import Robozarimg from '../../images/Domain/Robozar.webp'
+import Electricaimg from '../../images/Domain/Electrica.webp'
+import Genesisimg from '../../images/Domain/Genesis.webp'
+import Kermisimg from '../../images/Domain/Kermis.webp'
+import Plexusimg from '../../images/Domain/Plexus.webp'
+import Mechanicaimg from '../../images/Domain/Mechanica.webp'
+import Chemforimg from '../../images/Domain/Chemfor.webp'
+import Karyarachnaimg from '../../images/Domain/Karyarachna.webp'
+import { NavLink } from 'react-router-dom';
+
 import './Domain.css';
-// import SimpleSlider from '../../components/DomainSlider/Domainslider';
 const Domain = (props) => {
 
   var settings = {
@@ -12,6 +21,9 @@ const Domain = (props) => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 1800,
+    Responsive:{
+      
+    }
 
   };
 
@@ -55,265 +67,74 @@ const Domain = (props) => {
       </div>
 
 
-      <div className="  container ">
-
-
-
-        <div className="text-center domains__section text-light container mt-3 pt-3">
-          <div className=" text-center domains__section__heading">
-            <h2 className="">Domains</h2>
-          </div>
-          <div className="text-center domains__section__paragraph">
-            <div className="">
-              <figure className="text-center">
-                <blockquote className="blockquote">
-                  <p className="">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Odio architecto et dolorem sapiente as pernatur dolore autem
-                    culpa deleniti praesentium deserunt expedita eos
-                    reprehenderit dignissimos voluptatibus, omnis fuga non
-                    facilis possimus.
-                  </p>
-                </blockquote>
-              </figure>
-            </div>
-
-            <div className=""></div>
+      <div className=" domain__card  container  ">
+       <div className="Domain__card__row1 d-flex">
+       <div class="card card__Style">
+          <img src={Robozarimg} class="card-img-top"  />
+          <div class="card-body Domain__card__body">
+            <h5 class="card-title">Robozar</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <NavLink to="/robozar" className="Domain__button"><a href="#" class=" Domain__button">Read more</a></NavLink>
           </div>
         </div>
-
-
-        <div className="gradient">
-          <div className="card-group container mt-5 pt-5 mb-5 pb-5 cards ">
-            <div className="row1 mt-5">
-              <div className="flip-card  card1 mt-3 mx-2">
-                <div className="flip-card-inner " style={{ marginLeft: '1rem' }}>
-                  <div className="flip-card-front ">
-                    <img
-                      src={props.data[0].imageSrc}
-                      alt="Avatar "
-                      style={{ width: '230px', height: '230px;' }}
-                    />
-                    <div className="bottom-right ">
-                      <h4> Electrica</h4>
-                      <p>Explore</p>
-                    </div>
-                  </div>
-                  <div className="flip-card-back ">
-                    <h1>John Doe</h1>
-                    <p>Architect & Engineer</p>
-                    <p>We love that guy</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flip-card mt-3 mx-2 ">
-                <div className="flip-card-inner  " style={{ marginLeft: '1rem' }}>
-                  <div className="flip-card-front ">
-                    <img
-                      src={props.data[0].imageSrc}
-                      alt="Avatar "
-                      style={{ width: '230px', height: '230px' }}
-                    />
-                    <div className="bottom-right ">
-                      <h4> Electrica</h4>
-                      <p>Explore</p>
-                    </div>
-                  </div>
-                  <div className="flip-card-back ">
-                    <h1>John Doe</h1>
-                    <p>Architect & Engineer</p>
-                    <p>We love that guy</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flip-card mt-3 mx-2 ">
-                <div
-                  className="flip-card-inner "
-                  style={{ marginLeft: "1rem", marginRight: "1rem" }}
-                >
-                  <div className="flip-card-front ">
-                    <img
-                      src={props.data[0].imageSrc}
-                      alt="Avatar "
-                      style={{ width: "230px", height: "230px" }}
-                    />
-                    <div className="bottom-right ">
-                      <h4> Electrica</h4>
-                      <p>Explore</p>
-                    </div>
-                  </div>
-                  <div className="flip-card-back ">
-                    <h1>John Doe</h1>
-                    <p>Architect & Engineer</p>
-                    <p>We love that guy</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flip-card mt-3 mx-2 ">
-                <div
-                  className="flip-card-inner "
-                  style={{ marginLeft: "1rem", marginRight: "1rem" }}
-                >
-                  <div className="flip-card-front ">
-                    <img
-                      src={props.data[0].imageSrc}
-                      alt="Avatar "
-                      style={{ width: "230px", height: "230px" }}
-                    />
-                    <div className="bottom-right ">
-                      <h4> Electrica</h4>
-                      <p>Explore</p>
-                    </div>
-                  </div>
-                  <div className="flip-card-back ">
-                    <h1>John Doe</h1>
-                    <p>Architect & Engineer</p>
-                    <p>We love that guy</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flip-card mt-3 mx-2 ">
-                <div
-                  className="flip-card-inner "
-                  style={{ marginLeft: "1rem", marginRight: "1rem" }}
-                >
-                  <div className="flip-card-front ">
-                    <img
-                      src={props.data[0].imageSrc}
-                      alt="Avatar "
-                      style={{ width: "230px", height: "230px" }}
-                    />
-                    <div className="bottom-right ">
-                      <h4> Electrica</h4>
-                      <p>Explore</p>
-                    </div>
-                  </div>
-                  <div className="flip-card-back ">
-                    <h1>John Doe</h1>
-                    <p>Architect & Engineer</p>
-                    <p>We love that guy</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flip-card mt-3 mx-2 ">
-                <div
-                  className="flip-card-inner "
-                  style={{ marginLeft: "1rem", marginRight: "1rem" }}
-                >
-                  <div className="flip-card-front ">
-                    <img
-                      src={props.data[0].imageSrc}
-                      alt="Avatar "
-                      style={{ width: "230px", height: "230px" }}
-                    />
-                    <div className="bottom-right ">
-                      <h4> Electrica</h4>
-                      <p>Explore</p>
-                    </div>
-                  </div>
-                  <div className="flip-card-back ">
-                    <h1>John Doe</h1>
-                    <p>Architect & Engineer</p>
-                    <p>We love that guy</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flip-card mt-3 mx-2 ">
-                <div
-                  className="flip-card-inner "
-                  style={{ marginLeft: "1rem", marginRight: "1rem" }}
-                >
-                  <div className="flip-card-front ">
-                    <img
-                      src={props.data[0].imageSrc}
-                      alt="Avatar "
-                      style={{ width: "230px", height: "230px" }}
-                    />
-                    <div className="bottom-right ">
-                      <h4> Electrica</h4>
-                      <p>Explore</p>
-                    </div>
-                  </div>
-                  <div className="flip-card-back ">
-                    <h1>John Doe</h1>
-                    <p>Architect & Engineer</p>
-                    <p>We love that guy</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flip-card mt-3 mx-2 ">
-                <div
-                  className="flip-card-inner "
-                  style={{ marginLeft: "1rem", marginRight: "1rem" }}
-                >
-                  <div className="flip-card-front ">
-                    <img
-                      src={props.data[0].imageSrc}
-                      alt="Avatar "
-                      style={{ width: "230px", height: "230px" }}
-                    />
-                    <div className="bottom-right ">
-                      <h4> Electrica</h4>
-                      <p>Explore</p>
-                    </div>
-                  </div>
-                  <div className="flip-card-back ">
-                    <h1>John Doe</h1>
-                    <p>Architect & Engineer</p>
-                    <p>We love that guy</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flip-card mt-3 mx-2 ">
-                <div
-                  className="flip-card-inner "
-                  style={{ marginLeft: "1rem", marginRight: "1rem" }}
-                >
-                  <div className="flip-card-front ">
-                    <img
-                      src={props.data[0].imageSrc}
-                      alt="Avatar "
-                      style={{ width: "230px", height: "230px" }}
-                    />
-                    <div className="bottom-right ">
-                      <h4> Electrica</h4>
-                      <p>Explore</p>
-                    </div>
-                  </div>
-                  <div className="flip-card-back ">
-                    <h1>John Doe</h1>
-                    <p>Architect & Engineer</p>
-                    <p>We love that guy</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flip-card mt-3 mx-2 ">
-                <div
-                  className="flip-card-inner "
-                  style={{ marginLeft: "1rem", marginRight: "1rem" }}
-                >
-                  <div className="flip-card-front ">
-                    <img
-                      src={props.data[0].imageSrc}
-                      alt="Avatar "
-                      style={{ width: "230px", height: "230px" }}
-                    />
-                    <div className="bottom-right ">
-                      <h4> Electrica</h4>
-                      <p>Explore</p>
-                    </div>
-                  </div>
-                  <div className="flip-card-back ">
-                    <h1>John Doe</h1>
-                    <p>Architect & Engineer</p>
-                    <p>We love that guy</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
+        <div class="card card__Style">
+          <img src={Electricaimg}class="card-img-top"  />
+          <div class="card-body Domain__card__body">
+            <h5 class="card-title">Electrica</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <NavLink to = "/electrica" className="Domain__button"><a href="#" class="Domain__button ">Read more</a></NavLink>
           </div>
         </div>
+        <div class="card card__Style">
+          <img src={Kermisimg} class="card-img-top"  />
+          <div class="card-body Domain__card__body">
+            <h5 class="card-title">Kermis</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <NavLink to = "/kermis" className="Domain__button"><a href="#" class="Domain__button ">Read more</a></NavLink>
+          </div>
+        </div>
+       </div>
+       <div className="Domain__card__row2 d-flex">
+       <div class="card card__Style">
+          <img src={Plexusimg} class="card-img-top"  />
+          <div class="card-body Domain__card__body">
+            <h5 class="card-title">Plexus</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <NavLink to = "/plexus" className="Domain__button"><a href="#" class="Domain__button ">Read more</a></NavLink>
+          </div>
+        </div>
+        <div class="card card__Style">
+          <img src= {Mechanicaimg} class="card-img-top"  />
+          <div class="card-body Domain__card__body">
+            <h5 class="card-title">Mechanica</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <NavLink to = "/mechanica" className="Domain__button"><a href="#" class="Domain__button ">Read more</a></NavLink>          </div>
+        </div>
+        <div class="card card__Style">
+          <img src={Chemforimg} class="card-img-top"  />
+          <div class="card-body Domain__card__body">
+            <h5 class="card-title">Chemfor</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <NavLink to = "/chemfor" className="Domain__button"><a href="#" class="Domain__button ">Read more</a></NavLink>          </div>
+        </div>
+       </div>
+       <div className=" Domain__card__row3 d-flex ">
+       <div class="card card__Style">
+          <img src={Karyarachnaimg} class="card-img-top"  />
+          <div class="card-body Domain__card__body">
+            <h5 class="card-title">Karyarachna</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <NavLink to = "/karyarachna" className="Domain__button"><a href="#" class="Domain__button ">Read more</a></NavLink>          </div>
+        </div>
+       <div class="card card__Style">
+          <img src={Genesisimg} class="card-img-top"  />
+          <div class="card-body Domain__card__body">
+            <h5 class="card-title">Genesis</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <NavLink to = "/genesis" className="Domain__button"><a href="#" class="Domain__button ">Read more</a></NavLink>          </div>
+        </div>
+       </div>
+
       </div>
 
     </div>
