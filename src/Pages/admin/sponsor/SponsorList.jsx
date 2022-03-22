@@ -2,8 +2,6 @@ import { Modal, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { useContext, useState, useEffect } from 'react';
 
-import axios from 'axios';
-
 import SponsorSingleContent from './SponsorSingleContent';
 import { SponserContext } from './SponserContext';
 

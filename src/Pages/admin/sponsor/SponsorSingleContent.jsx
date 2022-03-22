@@ -4,12 +4,12 @@ import { NavLink } from 'react-router-dom';
 import { baseUrl, localUrl } from '../../../API/api';
 import { SponserContext } from './SponserContext';
 
-const SponsorSingleContent = ({ sponsor }) => {
+const SponsorSingleContent = sponsor => {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
   const { deleteSponsor } = useContext(SponserContext);
-  //   console.log(sponsor);
+  console.log(sponsor);
 
   const onDeleteSponsor = () => {
     deleteSponsor(sponsor._id);

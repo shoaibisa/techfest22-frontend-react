@@ -15,7 +15,9 @@ const EventContextProvider = props => {
         Authorization: 'Bearer ' + authContext.token,
       },
     });
-    //console.log(props);
+    const newEvent = event.filter(w => w._id !== props);
+    setEvent(newEvent);
+    // console.log(newEvent);
   };
 
   useEffect(() => {

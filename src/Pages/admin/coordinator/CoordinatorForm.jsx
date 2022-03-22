@@ -183,7 +183,7 @@ const CoordinatorForm = () => {
                 <Form.Control
                   style={{ background: 'transparent', color: 'white' }}
                   type="file"
-                  // accept="image/*"
+                  accept=".png, .jpg, .jpeg"
                   size="sm"
                   onChange={getImageHandle}
                 />
