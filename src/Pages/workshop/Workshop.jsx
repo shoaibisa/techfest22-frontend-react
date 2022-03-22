@@ -1,30 +1,29 @@
 import React from "react";
 import './Workshop.css';
 import EventLogo from "../../components/subdomain/EventLogo/EventLogo";
-import pngwing from '../../images/Domain/pngwing 3.png';
+import Workshopimg from '../../images/Workshop.png';
 
 
 const Workshop = (props) => {
     return (
         <div>
-            <EventLogo imgsrc={pngwing} 
-            
-    
-            title="Robozar" subTitle="They are doing what we do, eventually might do it all.
+            <EventLogo imgsrc={Workshopimg}
+
+
+                title="Robozar" subTitle="They are doing what we do, eventually might do it all.
             You build what can work for you, We bring this which can make you better at building. Do participate to build better."/>
-            <div
-                    className="Workshop__bttom__section d-flex container mt-5">
+            <div className="Workshop__bttom__section d-flex container mt-5">
                 <div className="Robozar__bottom__left p-2">
                     <img src="https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.jpg" alt="" />
                     <div className="mobileview__workshop__time">
-                    <div className="Robozar__bottom__left__calender mt-2 d-flex">
-                        <i class=" fa fa-solid mx-1 fa-calendar"></i>
-                        <p>register before: <span>09/07</span></p>
-                    </div>
-                    <div className="Robozar__bottom__left__clock d-flex">
-                        <i className="fa fa-clock-o mx-1"></i>
-                        <p>11:59 pm</p>
-                    </div>
+                        <div className="Robozar__bottom__left__calender mt-2 d-flex">
+                            <i class=" fa fa-solid mx-1 fa-calendar"></i>
+                            <p>register before: <span>09/07</span></p>
+                        </div>
+                        <div className="Robozar__bottom__left__clock d-flex">
+                            <i className="fa fa-clock-o mx-1"></i>
+                            <p>11:59 pm</p>
+                        </div>
                     </div>
                 </div>
                 <div className="workshop__right">
@@ -37,10 +36,10 @@ const Workshop = (props) => {
                         </div>
                         <div className="regitration__fee">
                             <p>Registration fee</p>
-                             <div className="workshop__price d-flex">
-                             <i className="fa fa-inr mx-2 mt-1" ></i>
-                             <h5>500</h5>
-                             </div>
+                            <div className="workshop__price d-flex">
+                                <i className="fa fa-inr mx-2 mt-1" ></i>
+                                <h5>500</h5>
+                            </div>
                         </div>
                     </div>
 
