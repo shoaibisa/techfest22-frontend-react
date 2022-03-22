@@ -88,13 +88,11 @@ function App() {
         <Route exact path="/about" element={<AboutUs data={dataJson} />} />
         <Route exact path="/admin/domains" element={<DomainForm />} />
         //admin routes
-        {authContext.isUserLoggedIn && authContext.userRole == 569 && (
-          <Route
-            exact
-            path="/domain"
-            element={<Domain data={dataJson.domain} />}
-          />
-        )}
+        <Route
+          exact
+          path="/domain"
+          element={<Domain data={dataJson.domain} />}
+        />
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
           <Route
             exact
