@@ -94,7 +94,7 @@ const UserPay = () => {
       )}
       {user && user.paymentDetails.isSuccess && (
         <div className="container-fluid mt-5 pt-5 center">
-          <h1>You have alredy paid!</h1>
+          <h1>You have already paid!</h1>
         </div>
       )}
       <div className="main">
