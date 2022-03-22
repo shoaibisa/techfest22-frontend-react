@@ -3,13 +3,13 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 import { baseUrl, localUrl } from '../../../API/api';
 import AuthContext from '../../../auth/authContext';
 
-export const EventContext = createContext();
+export const SponserContext = createContext();
 
-const EventContextProvider = props => {
+const SponserContextProvider = props => {
   const authContext = useContext(AuthContext);
-  const [event, setEvent] = useState([]);
+  const [sponser, setSponser] = useState([]);
 
-  const deleteEvent = async props => {
+  const deleteSponser = async props => {
     await axios.delete(`${baseUrl}/event/deleteEvent/${props}`, {
       headers: {
         Authorization: 'Bearer ' + authContext.token,
@@ -19,16 +19,17 @@ const EventContextProvider = props => {
   };
 
   useEffect(() => {
-    axios.get(`${baseUrl}/event/getAllEvents`).then(results => {
-      // console.log(results.data);
-      setEvent(results.data.data);
+    axios.get(`${baseUrl}/sponser/getAllSponsors`).then(results => {
+      //   console.log(results.data);
+      setSponser(results.data.data);
     });
   }, []);
+  //console.log(sponser);
   return (
-    <EventContext.Provider value={{ event, deleteEvent }}>
+    <SponserContext.Provider value={{ sponser, deleteSponser }}>
       {props.children}
-    </EventContext.Provider>
+    </SponserContext.Provider>
   );
 };
 
-export default EventContextProvider;
+export default SponserContextProvider;

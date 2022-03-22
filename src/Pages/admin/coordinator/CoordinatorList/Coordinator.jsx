@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { localUrl } from '../../../../API/api';
+import { baseUrl, localUrl } from '../../../../API/api';
 import img from '../../../../images/Footfall.svg';
 import UpdateCoordinator from './UpdateCoordinator';
 import { CoordinatorContext } from './contexts/CoordinatorContext';
@@ -23,7 +23,7 @@ const Coordinator = ({ user }) => {
     <>
       <td className="">
         <img
-          src={`${localUrl}/profile/${user.photo}`}
+          src={`${baseUrl}/profile/${user.photo}`}
           style={{
             width: '50px',
             height: '50px',

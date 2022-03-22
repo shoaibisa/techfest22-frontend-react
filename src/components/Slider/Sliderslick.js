@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import './Sliderslick.css';
 
 import SliderImage from './SliderImage';
-import { localUrl } from '../../API/api';
+import { baseUrl, localUrl } from '../../API/api';
 const Sliderslick = props => {
   var settings = {
     infinite: true,
@@ -30,7 +30,7 @@ const Sliderslick = props => {
   // http://localhost:4000/profile
   if (props.isBack) {
     SliderImageList = props.data.map(s => (
-      <SliderImage src={`${localUrl}/profile/${s.imageSrc}`} key={s._id} />
+      <SliderImage src={`${baseUrl}/profile/${s.imageSrc}`} key={s._id} />
     ));
   } else {
     SliderImageList = props.data.map(s => (

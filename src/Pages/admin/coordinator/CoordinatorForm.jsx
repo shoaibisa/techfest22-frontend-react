@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import { baseUrl } from '../../../API/api';
@@ -6,8 +6,10 @@ import { localUrl } from '../../../API/api';
 import ErrorModel from '../../../components/UI/ErrorModel/ErrorModel';
 import LoaderSpin from '../../../components/UI/loader/LoaderSpin';
 import { imgFileCheck } from '../../../Helper/ErrorHandle';
+import AuthContext from '../../../auth/authContext';
 
 const CoordinatorForm = () => {
+  const authContext = useContext(AuthContext);
   const [wsName, setwsName] = useState('');
   const [cEmail, setCemail] = useState('');
   const [cNumber, setCnumber] = useState('');
@@ -81,11 +83,12 @@ const CoordinatorForm = () => {
     zData.append('coordinatorDesignation', cDeg);
     // return console.log(zData);
     axios
-      .post(`${localUrl}/coordinator/creating`, zData, {
+      .post(`${baseUrl}/coordinator/creating`, zData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+          Authorization: 'Bearer ' + authContext.token,
         },
         onUploadProgress: ProgressEvent => {
           console.log(
@@ -96,7 +99,7 @@ const CoordinatorForm = () => {
         },
       })
       .then(results => {
-        console.log(results);
+        // console.log(results);
         setIsLoading(true);
         if (results.status !== 200 || results.status !== 200) {
           setErrosMade({

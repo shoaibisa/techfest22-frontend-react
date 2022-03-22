@@ -2,34 +2,24 @@ import React, { useState, useContext } from 'react';
 import { Modal } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { baseUrl, localUrl } from '../../../API/api';
+import { SponserContext } from './SponserContext';
 
-import { EventContext } from './EventContext';
-
-const Event = ({ event }) => {
+const SponsorSingleContent = ({ sponsor }) => {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
-  const { deleteEvent } = useContext(EventContext);
-  const onDeleteEvent = () => {
-    deleteEvent(event._id);
-  };
-  let cn = '';
-  if (event.studentCoordinator.length > 0) {
-    const ccn = event.studentCoordinator.map(e => e.coordinatorName);
-    cn = ccn.join();
-  } else {
-    cn = 'Not any coordinator';
-  }
-  // console.log(cn);
+  const { deleteSponsor } = useContext(SponserContext);
+  //   console.log(sponsor);
 
-  // let cn = '';
-  // event.studentCoordinator.map(s => (cn += s.coordinatorName + ' '));
-  // console.log(cn);
+  const onDeleteSponsor = () => {
+    deleteSponsor(sponsor._id);
+  };
+
   return (
     <>
       <td className="">
         <img
-          src={`${baseUrl}/profile/${event.photo}`}
+          src={`${baseUrl}/profile/${sponsor.imageSrc}`}
           style={{
             width: '50px',
             height: '50px',
@@ -39,12 +29,9 @@ const Event = ({ event }) => {
           alt=""
         />
       </td>
-      <td>{event.name}</td>
-      <td>{event.eventMode}</td>
-      <td>{event.domain}</td>
-      <td>{event.startDate}</td>
-      <td>{event.endDate}</td>
-      {event && <td>{cn}</td>}
+      <td>{sponsor.title}</td>
+      <td>{sponsor.link}</td>
+
       <td>
         <NavLink
           to=""
@@ -63,7 +50,7 @@ const Event = ({ event }) => {
         </NavLink>
         <a
           href="#deleteEmployeeModal"
-          onClick={onDeleteEvent}
+          onClick={onDeleteSponsor}
           className="delete"
           data-toggle="modal"
         >
@@ -85,4 +72,4 @@ const Event = ({ event }) => {
     </>
   );
 };
-export default Event;
+export default SponsorSingleContent;
