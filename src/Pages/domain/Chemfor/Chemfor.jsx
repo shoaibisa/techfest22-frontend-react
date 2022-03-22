@@ -1,8 +1,10 @@
 import React from 'react';
 import './Chemfor.css';
+
 import EventCard from '../../../components/subdomain/EventCard/EventCard';
 import EventLogo from '../../../components/subdomain/EventLogo/EventLogo';
-import pngwing from '../../../../src/images/Domain/pngwing 3.png';
+import Chemforimg from '../../../../src/images/Domain/Chemfor.webp';
+
 //import { useContext } from 'react';
 //import { ChemforContext } from './chemforContext';
 import axios from 'axios';
@@ -21,7 +23,7 @@ const Chemfor = () => {
     <>
       <div className="subdomain">
         <EventLogo
-          imgsrc={pngwing}
+          imgsrc={Chemforimg}
           title="Chemfor"
           subTitle="They are doing what we do, eventually might do it all.
         You build what can work for you, We bring this which can make you better at building. Do participate to build better."
@@ -44,4 +46,5 @@ const Chemfor = () => {
     </>
   );
 };
+
 export default Chemfor;

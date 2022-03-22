@@ -1,8 +1,5 @@
 .Mainomainbody {
-  margin: 0px;
-  padding: 0px;
   overflow-x: hidden !important;
-  background-color: #000 !important;
   background: url(../../images/Stagnant-BG-Webp.webp);
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,10 +16,8 @@
 }
 .Mainomainbody__slider .slick-dots{
       color: white;
+      list-style: none;
       
-}
-.Mainomainbody__slider .slick-dots:hover{
-  color: white !important;
 }
 .Mainomainbody__slider li button{
   background-color: rgb(240, 247, 240);
@@ -32,235 +27,108 @@
   height: 1rem;
   list-style: none;
 }
+.Mainomainbody__slider li{
+  list-style: none;
+}
 
 .Mainomainbody__slider li.slick-active button
 {
   background-color: rgb(44, 155, 0);
   
 }
-html {
-  scroll-behavior: smooth;
-}
-
-p {
-  font-family: helvetica !important;
-  opacity: 0.8;
-}
-
-li::after {
-  width: 0;
-  height: 2px;
-  content: '';
-  background: rgb(65, 241, 21);
-  display: block;
-  transition: 0.5s;
-}
-
-li:hover::after {
-  width: 100%;
-}
-
 .nav-item a.active {
   border-bottom: 2px solid rgb(65, 241, 21);
 }
-
-.dropdown-menu li a:hover {
-  background-color: rgb(17, 34, 13) !important;
-}
-
 button:active {
   transform: scale(1.1);
 }
 
-/*------------ Nav End Hear ................*/
-
-/*--------------  next section----------------------- */
-
-.silder {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.domains__slideshow__myslides {
-  display: none;
-}
-
-img {
-  vertical-align: middle;
-}
-
-/* Slideshow container */
-
-.domains__slideshow__container {
-  /* max-width: 1000px;
-    position: relative;
-    margin: auto;
-    max-height: fit-content;
-    margin-top: 5rem; */
-}
-
-.domains__slideshow__myslides img {
-  width: 100%;
-  height: 400px;
-  border-radius: 30px;
-}
-
-/* The Domains__slide__button__dots/bullets/indicators */
-
-.Domains__slide__button__dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.Domains__slide__button {
-  text-align: center;
-}
-
-.active1,
-.Domains__slide__button__dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-
-.domains__slideshow__fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.domains__section {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.row1 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.flip-card {
-  background-color: transparent;
-  width: 230px;
-  height: 230px;
-  perspective: 1000px;
-  cursor: pointer;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-.flip-card-back {
-  background-color: black;
-  color: white;
-  transform: rotateY(180deg);
-  border: 1px solid white;
-}
-
-.bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-  text-align: right;
-  color: white;
-}
-@media screen and (max-width: 768px) {
-  .row1 {
-    justify-content: center;
-  }
-}
-
-@media screen and (max-width: 490px) {
-  .row1 {
-    flex-direction: column;
-  }
-  .domains__section {
-    width: 100%;
-  }
-  .gradient{
-    margin-left: 2.8rem;
-  }
-  .Mainomainbody__slider img{
-    height: 13rem;
-  }
-}
-@media screen and (max-width: 382px) {
- 
-  .gradient{
-    margin-left: 1.5rem;
-  }
-}
-@media screen and (max-width: 332px) {
- 
-  .gradient{
-    margin-left: unset;
-  }
-  .Mainomainbody__slider img{
-    height: 10rem;
-  }
-}
 
 /* This is the footer section ................... */
+.domain__card{
+  margin-bottom: 5rem;
+  margin-top: 7rem;
+}
+.Domain__button{
+outline: none;
+border: none;
+background-color: rgb(44, 155, 0);
+text-decoration: none !important;
+padding: 7px;
+border-radius: 5px;
+color: white;
+}
+.Domain__button:hover{
+  color: green;
+}
+.card__Style{
+  width: 18rem;
+  background-color: rgb(0,0,0,0);
+  border: 1px solid white;
+  padding: 2px;
+  transition: all .5s ease;
+  margin-right: 1rem;
+  color: white !important;
+  margin-top: 1rem;
+}
+.card__Style img{
+  height: 14rem;
+}
+.card__Style:hover{
+  transform: scale(1.06);
+  transition: all .5s ease;
+}
+.Domain__card__row1{
+  justify-content: space-around;
+}
 
+.Domain__card__row2{
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+.Domain__card__row3{
+  justify-content: space-evenly;
+  margin-left: 2rem;
+  margin-top: 3rem;
+}
+
+
+@media screen and (max-width:750px) {
+  
+  .Domain__card__row1{
+    display: block !important;
+    margin-left: 1rem;
+  }
+  .Domain__card__row2{
+    display: block !important;
+   
+    margin-left: 1rem;
+  }
+  .Domain__card__row3{
+    display: block !important;
+    margin-left: 1rem;
+  }
+  .card__Style {
+    width: 23rem;
+  }
+}
+@media screen and (max-width:423px)
+{
+  .card__Style {
+    width: 20rem;
+  } 
+ 
+  
+}
+@media screen and  (max-width:440px) {
+  .Mainomainbody__slider img{
+    height: 15rem;
+  }
+  
+}
+@media screen and (max-width:375px)
+{
+  .card__Style {
+    width: 16.5rem;
+  } 
+}
