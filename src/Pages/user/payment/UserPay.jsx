@@ -86,22 +86,29 @@ const UserPay = () => {
           onErrosClick={onErrosMadeHandle}
         />
       )}
-      <div className="main">
+      {user && user.paymentDetails.isSuccess && (
         <div className="container-fluid mt-5 pt-5 center">
-          <Button
-            variant="success"
-            style={{ marginBottom: '10px' }}
-            type="submit"
-            block
-            onClick={paySilver}
-          >
-            <h1> 300 Silver</h1>
-          </Button>
-          <br />
-          <Button variant="success" type="submit" block onClick={payGold}>
-            <h1> 600 Gold</h1>
-          </Button>
+          <h1>You have alredy paid!</h1>
         </div>
+      )}
+      <div className="main">
+        {user && !user.paymentDetails.isSuccess && (
+          <div className="container-fluid mt-5 pt-5 center">
+            <Button
+              variant="success"
+              style={{ marginBottom: '10px' }}
+              type="submit"
+              block
+              onClick={paySilver}
+            >
+              <h1> 300 Silver</h1>
+            </Button>
+            <br />
+            <Button variant="success" type="submit" block onClick={payGold}>
+              <h1> 600 Gold</h1>
+            </Button>
+          </div>
+        )}
       </div>
     </>
   );
