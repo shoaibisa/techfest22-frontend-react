@@ -15,10 +15,16 @@ const UserPay = () => {
 
   useEffect(() => {
     const payMentStatus = searchParams.get('paystatus');
-    if (payMentStatus) {
+    if (payMentStatus === 'true') {
       setErrosMade({
         title: 'Payment Success',
         message: 'Your payment recorded successfully!',
+      });
+    }
+    if (payMentStatus === 'false') {
+      setErrosMade({
+        title: 'Payment Failed',
+        message: 'Your payment was failed!',
       });
     }
     axios
