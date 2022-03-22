@@ -7,14 +7,14 @@ import AuthContext from '../../../../auth/authContext';
 export const SponsorContext = createContext();
 const SponsorContextProvider = props => {
   const authContext = useContext(AuthContext);
-  const [sponsor, setSponsor] = useState([]);
+  const [sponser, setSponsor] = useState([]);
   const deleteSp = async props => {
     await axios.delete(`${baseUrl}/sponser/delete/${props}`, {
       headers: {
         Authorization: 'Bearer ' + authContext.token,
       },
     });
-    const newSponsor = sponsor.filter(c => c._id !== props);
+    const newSponsor = sponser.filter(c => c._id !== props);
     setSponsor(newSponsor);
   };
 
@@ -37,7 +37,7 @@ const SponsorContextProvider = props => {
 
   // const sortedUsers = users.sort((a, b) => (a.name < b.name ? -1 : 1));
   return (
-    <SponsorContext.Provider value={{ sponsor, deleteSp }}>
+    <SponsorContext.Provider value={{ sponser, deleteSp }}>
       {props.children}
     </SponsorContext.Provider>
   );
