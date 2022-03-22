@@ -4,10 +4,10 @@ import { v4 as uuidv4 } from 'uuid';
 import { baseUrl, localUrl } from '../../../../../API/api';
 import AuthContext from '../../../../../auth/authContext';
 
-export const CoordinatorContext = createContext();
-const CoordinatorContextProvider = props => {
+export const sponsorContext = createContext();
+const sponsorContextProvider = props => {
   const authContext = useContext(AuthContext);
-  const [coordinator, setCoordinator] = useState([]);
+  const [sponsor, setSponsor] = useState([]);
   const deleteCo = async props => {
     await axios.delete(`${baseUrl}/coordinator/delete/${props}`, {
       headers: {
@@ -24,13 +24,13 @@ const CoordinatorContextProvider = props => {
   
   useEffect(() => {
     axios
-      .get(`${baseUrl}/coordinator/get-all-details`, {
+      .get(`${baseUrl}/sponser/`, {
         headers: {
           Authorization: 'Bearer ' + authContext.token,
         },
       })
       .then(results => {
-        setCoordinator(results.data.c);
+        setSponsor(results.data.data);
       });
   }, []);
 

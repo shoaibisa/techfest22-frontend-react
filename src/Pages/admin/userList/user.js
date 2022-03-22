@@ -5,8 +5,7 @@ const User = ({user}) => {
     <>
       <td>{user.name}</td>
       <td>{user.email}</td>
-      <td>{user.address}</td>
-      <td>{user.phone}</td>
+      
       <td>
         <a href="#editEmployeeModal" className="edit" data-toggle="modal">
           <i  style={{color:'white'}} className="material-icons" data-toggle="tooltip" title="Edit">
