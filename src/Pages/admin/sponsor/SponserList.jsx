@@ -10,31 +10,10 @@ import { localUrl } from '../../../API/api';
 
 const SponserList = () => {
   const { sponser } = useContext(SponsorContext);
-  // const [show, setShow] = useState(false);
 
   const handleAddCo = () => navigate('/admin/coordinator/add');
-  // const handleClose = () => setShow(false);
+
   const navigate = useNavigate();
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const [userPerPage] = useState(9);
-  // const [coordinator, setCoordinator] = useState([]);
-  // const currentUser =
-  // const indexOfLastUser = currentPage * userPerPage;
-  // const indexOfFirstUser = indexOfLastUser - userPerPage;
-  // // const currentUser = sortedUsers.slice(indexOfFirstUser, indexOfLastUser);
-  // const totalPagesNum = Math.ceil(sortedUsers.length / userPerPage);
-  // useEffect(() => {
-  //   axios.get(`${localUrl}/coordinator/get-all-details`).then(results => {
-  //     console.log(results.data.c);
-  //     setCoordinator(results.data.c);
-  //   });
-  // }, []);
-
-  // const deleteCo = props => {
-  //   console.log('ji', props);
-  // };
-
-  // console.log(coordinator);
   console.log(sponser);
   return (
     <>
@@ -72,9 +51,11 @@ const SponserList = () => {
         <tbody>
           {sponser &&
             sponser.map(user => (
-              <tr style={{ borderStyle: 'none', color: 'white' }}
+              <tr
+                style={{ borderStyle: 'none', color: 'white' }}
                 key={user._id}
-              ><Sponser sponser={user} />
+              >
+                <Sponser sponser={user} />
               </tr>
             ))}
         </tbody>
