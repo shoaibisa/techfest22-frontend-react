@@ -8,7 +8,7 @@
     margin-bottom: 5rem;
     width: 100%;
     padding-top:13rem;
-    border-bottom: 1px solid white;
+    border-bottom: 5px solid white;
 }
 .Robozar__bottom__middle{
     flex: .5;
@@ -69,10 +69,10 @@
 .worksop__register__btn{
     background-color: aliceblue;
     color: black;
-    border-radius: 3px;
+    border-radius: 10px;
     border: .5px solid white;
     outline: none;
-    padding: 5px;
+    padding: 7px;
 }
 .worksop__register__btn:hover{
     color: white;
@@ -81,10 +81,10 @@
 }
 .worksop__shedule__btn{
     color: white;
-    border-radius: 3px;
+    border-radius: 10px;
     
     border: .5px solid white;
-    padding: 5px;
+    padding: 7px;
     background-color: transparent;
 }
 .worksop__shedule__btn:hover{

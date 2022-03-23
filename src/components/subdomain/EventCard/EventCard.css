@@ -53,22 +53,18 @@
     transform: scale(1.05);
 }
 .robozar_register_button{
-    text-decoration: none;
-    color: white;
-    background: linear-gradient(
-      to right,
-      rgb(0, 36, 0) 0%,
-      rgb(0, 87, 0) 0%,
-      rgb(0, 138, 0) 72%,
-      rgb(82, 177, 82) 100%
-    ) !important;
-    color: white;
-    padding: 5px 20px;
-    border-radius: 5px;
-    display: inline-block;
+    background: #27FE04  !important;
+    color: #000 !important;
+    font-style: normal !important;
+    font-weight: 400;
+    border-radius: 10px !important;
+    font-family: "helveticaregular";
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .robozar_register_button:hover{
-    color: green !important;
+    color: white !important;
 }
 .robozar_problem_statement_button{
     text-decoration: none;
@@ -77,9 +73,11 @@
     color: white;
     padding: 5px 20px;
     margin-left: 15px;
-    border-radius: 5px;
+    border-radius: 10px !important;
     display: inline-block;
-}.robozar_problem_statement_button:hover{
+    outline: none;
+}
+.robozar_problem_statement_button:hover{
 
     background-color: rgb(202, 199, 199);
     color: black !important;

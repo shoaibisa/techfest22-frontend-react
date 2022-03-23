@@ -52,14 +52,17 @@ button:active {
 .Domain__button{
 outline: none;
 border: none;
-background-color: rgb(44, 155, 0);
-text-decoration: none !important;
+background: #27FE04  !important;
+color: #000 !important;
+font-style: normal !important;
+font-weight: 400;
+border-radius: 10px !important;
+font-family: "helveticaregular";
 padding: 7px;
-border-radius: 5px;
-color: white;
+text-decoration: none;
 }
 .Domain__button:hover{
-  color: green;
+  color:white !important;
 }
 .card__Style{
   width: 18rem;
