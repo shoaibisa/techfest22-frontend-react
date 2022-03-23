@@ -14,11 +14,14 @@ const CoordinatorContextProvider = props => {
         Authorization: 'Bearer ' + authContext.token,
       },
     });
+    const newCoordinator = coordinator.filter(c => c._id !== props);
+    setCoordinator(newCoordinator);
   };
 
   const updateCo = async props => {
     console.log(props);
   };
+  
   useEffect(() => {
     axios
       .get(`${baseUrl}/coordinator/get-all-details`, {

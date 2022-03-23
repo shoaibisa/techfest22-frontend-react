@@ -1,4 +1,4 @@
-# React Code For Techfest'22
+# React Code For Techfest'22 Front End
 
 ## To setup
 ### npm install

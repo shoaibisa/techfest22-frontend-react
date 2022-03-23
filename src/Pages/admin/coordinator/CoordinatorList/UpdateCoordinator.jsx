@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import ErrorModel from '../../../../components/UI/ErrorModel/ErrorModel';
 import LoaderSpin from '../../../../components/UI/loader/LoaderSpin';
 import { imgFileCheck } from '../../../../Helper/ErrorHandle';
-import { localUrl } from '../../../../API/api';
+import { baseUrl, localUrl } from '../../../../API/api';
 import { useLocation } from 'react-router-dom';
+import AuthContext from '../../../../auth/authContext';
 const UpdateCoordinator = () => {
+  const authContext = useContext(AuthContext);
   const [wsName, setwsName] = useState('');
   const [cEmail, setCemail] = useState('');
   const [cNumber, setCnumber] = useState('');
@@ -17,32 +19,37 @@ const UpdateCoordinator = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [errosMade, setErrosMade] = useState(); //undefined
   const [fetched, setFetched] = useState(false);
-
   const cId = useLocation();
   let cccid = cId.state != null ? cId.state.id : '6230c1e3eb2653bdad716000';
   useEffect(async () => {
-    await axios.get(`${localUrl}/coordinator/get/${cccid}`).then(results => {
-      console.log(results);
+    await axios
+      .get(`${baseUrl}/coordinator/get/${cccid}`, {
+        headers: {
+          Authorization: 'Bearer ' + authContext.token,
+        },
+      })
+      .then(results => {
+        //  console.log(results);
 
-      if (
-        results.status !== 200 ||
-        (results.status !== 201 && results.data.isError)
-      ) {
-        setErrosMade({
-          title: results.data.title,
-          message: results.data.message,
-        });
-        return;
-      }
-      setErrosMade(false);
-      setwsName(results.data.data.coordinatorName);
-      setCemail(results.data.data.coordinatorEmail);
-      setCnumber(results.data.data.coordinatorPhone);
-      setCtype(results.data.data.coordinatorType);
-      setCdeg(results.data.data.coordinatorDesignation);
-      setImageUrl(results.data.data.photo);
-      // setselectedImage();
-    });
+        if (
+          results.status !== 200 ||
+          (results.status !== 201 && results.data.isError)
+        ) {
+          setErrosMade({
+            title: results.data.title,
+            message: results.data.message,
+          });
+          return;
+        }
+        setErrosMade(false);
+        setwsName(results.data.data.coordinatorName);
+        setCemail(results.data.data.coordinatorEmail);
+        setCnumber(results.data.data.coordinatorPhone);
+        setCtype(results.data.data.coordinatorType);
+        setCdeg(results.data.data.coordinatorDesignation);
+        setImageUrl(results.data.data.photo);
+        // setselectedImage();
+      });
 
     return () => {};
   }, []);

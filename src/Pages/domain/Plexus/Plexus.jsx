@@ -6,13 +6,13 @@ import Plexus from '../../../../src/images/Domain/Plexus.webp';
 //import { ChemforContext } from './chemforContext';
 import axios from 'axios';
 import { createContext, useEffect, useState } from 'react';
-import { localUrl } from '../../../API/api';
+import { localUrl,baseUrl } from '../../../API/api';
 
 
 const Chemfor = () => {
      const [eData,setEdata]= useState();
     useEffect(() => {
-        axios.get(`${localUrl}/event/getByDomain/plexus`).then(results => {
+        axios.get(`${baseUrl}/event/getByDomain/plexus`).then(results => {
              setEdata(results.data.data);
            console.log(results.data.data);
         });

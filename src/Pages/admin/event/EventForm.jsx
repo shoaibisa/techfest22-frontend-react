@@ -244,6 +244,7 @@ const EventForm = () => {
                     style={{ background: 'transparent', color: 'white' }}
                     type="file"
                     size="sm"
+                    accept=".png, .jpg, .jpeg"
                     onChange={getImageHandle}
                   />
                 </Form.Group>

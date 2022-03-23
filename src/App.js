@@ -41,7 +41,7 @@ import UpdateCoordinator from './Pages/admin/coordinator/CoordinatorList/UpdateC
 import PayNow from './Pages/user/payment/UserPay';
 import AuthContext from './auth/authContext';
 import SponsorForm from './Pages/admin/sponsor/SponsorForm';
-import SponsorAll from './Pages/admin/sponsor/AllSponsor';
+ import SponsorAll from './Pages/admin/sponsor/AllSponsor';
 
 function App() {
   const authContext = useContext(AuthContext);
@@ -117,11 +117,11 @@ function App() {
           <Route exact path="/admin/users" element={<AllUsers />} />
         )}
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
-          <Route exact path="/admin/sponsor" element={<SponsorAll />} />
-        )}
+          <Route exact path="/admin/sponsor" element={<SponsorAll />} /> 
+        )} 
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
-          <Route exact path="/admin/sponsor/add" element={<SponsorForm />} />
-        )}
+         <Route exact path="/admin/sponsor/add" element={<SponsorForm />} />
+        )} 
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
           <Route exact path="/admin/domain" element={<DomainForm />} />
         )}

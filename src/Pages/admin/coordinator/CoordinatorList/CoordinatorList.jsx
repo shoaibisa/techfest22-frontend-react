@@ -75,11 +75,9 @@ const CoordinatorList = () => {
         <tbody>
           {coordinator &&
             coordinator.map(user => (
-              <tr
-                style={{ borderStyle: 'none', color: 'white' }}
+              <tr style={{ borderStyle: 'none', color: 'white' }}
                 key={user._id}
-              >
-                <Coordinator user={user} />
+              ><Coordinator user={user} />
               </tr>
             ))}
         </tbody>
