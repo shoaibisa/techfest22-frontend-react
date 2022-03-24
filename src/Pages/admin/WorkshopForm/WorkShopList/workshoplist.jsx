@@ -1,16 +1,14 @@
-import { Modal, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { WorkshopContext } from './contexts/contexts';
+import Workshop from './workshop';
 
-import { EventContext } from './EventContext';
-import Event from './Event';
+const WorkshopList = () => {
+  const { workshop } = useContext(WorkshopContext);
 
-const EventList = () => {
-  const { event } = useContext(EventContext);
-  const [show, setShow] = useState(false);
-
-  const handleAddCo = () => navigate('/admin/event/add');
-  const handleClose = () => setShow(false);
+  const handleAddWo = () => navigate('/admin/workshop/add');
+  // const handleClose = () => setShow(false);
   const navigate = useNavigate();
 
   return (
@@ -19,18 +17,19 @@ const EventList = () => {
         <div className="row">
           <div className="col-sm-6">
             <h2>
-              EVENTS <b>LIST</b>
+              WORKSHOP <b>LIST</b>
             </h2>
           </div>
           <div className="col-sm-6">
             <Button
-              onClick={handleAddCo}
+              onClick={handleAddWo}
               className="btn btn-success"
               data-toggle="modal"
+              title="Add Workshop"
             >
               <i className="material-icons">&#xE147;</i>{' '}
               <span style={{ background: 'transparent', padding: '2px' }}>
-                Add New EVENT
+                Add New Workshop
               </span>
             </Button>
           </div>
@@ -41,20 +40,23 @@ const EventList = () => {
         <thead className="title">
           <tr>
             <th>Photo </th>
-            <th>Name </th>
-            <th>Event Mode</th>
-            <th>Domain Type</th>
-            <th>Date Start Event</th>
-            <th>Date End Event</th>
-            <th>Student Coordinators</th>
+            <th>Workshop Name </th>
+            <th>Workshop Mode</th>
+            <th>Link</th>
+            <th>End Time</th>
+            <th>Student coordinator</th>
+            <th>Faculty coordinator</th>
             <th>Action</th>
           </tr>
         </thead>
         <tbody>
-          {event &&
-            event.map(e => (
-              <tr style={{ borderStyle: 'none', color: 'white' }} key={e._id}>
-                <Event event={e} />
+          {workshop &&
+            workshop.map(w => (
+              <tr
+                style={{ borderStyle: 'none', color: 'white' }}
+                key={w._id}
+              >
+                <Workshop pWorkshop ={w} />
               </tr>
             ))}
         </tbody>
@@ -65,15 +67,17 @@ const EventList = () => {
         currentUser={currentUser}
         sortedUsers={sortedUsers}
       /> */}
-      <Modal
+      {/* <Modal
         show={show}
         onHide={handleClose}
         style={{ backgroundColor: 'transparent' }}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Add Event</Modal.Title>
+          <Modal.Title>Add Coordinator</Modal.Title>
         </Modal.Header>
-        <Modal.Body>{/* <UpdateCoordinator /> */}</Modal.Body>
+        <Modal.Body>
+          <UpdateCoordinator />
+        </Modal.Body>
 
         <Modal.Footer>
           <Button
@@ -84,8 +88,8 @@ const EventList = () => {
             Close Button
           </Button>
         </Modal.Footer>
-      </Modal>
+      </Modal> */}
     </>
   );
 };
-export default EventList;
+export default WorkshopList;

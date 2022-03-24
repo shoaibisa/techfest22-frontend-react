@@ -41,7 +41,10 @@ import UpdateCoordinator from './Pages/admin/coordinator/CoordinatorList/UpdateC
 import PayNow from './Pages/user/payment/UserPay';
 import AuthContext from './auth/authContext';
 import SponsorForm from './Pages/admin/sponsor/SponsorForm';
- import SponsorAll from './Pages/admin/sponsor/AllSponsor';
+import SponsorAll from './Pages/admin/sponsor/AllSponsor';
+
+//import WorkShopForm from './Pages/admin/WorkshopForm/WorkshopForm';
+import WorkshopAll from './Pages/admin/WorkshopForm/WorkShopList/AllWorkshop';
 
 function App() {
   const authContext = useContext(AuthContext);
@@ -101,8 +104,8 @@ function App() {
           />
         )}
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
-          <Route exact path="/admin/workshop" element={<WorkshopForm />} />
-        )}{' '}
+          <Route exact path="/admin/workshop/add" element={<WorkshopForm />} />
+        )}
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
           <Route
             exact
@@ -116,12 +119,18 @@ function App() {
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
           <Route exact path="/admin/users" element={<AllUsers />} />
         )}
+
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
           <Route exact path="/admin/sponsor" element={<SponsorAll />} /> 
         )} 
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
          <Route exact path="/admin/sponsor/add" element={<SponsorForm />} />
         )} 
+        {authContext.isUserLoggedIn && authContext.userRole == 569 && (
+          <Route exact path="/admin/workshop/" element={<WorkshopAll />} /> 
+        )} 
+
+
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
           <Route exact path="/admin/domain" element={<DomainForm />} />
         )}

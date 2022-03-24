@@ -266,6 +266,7 @@ const UpdateCoordinator = () => {
                 variant="success"
                 type="submit"
                 block
+                onClick={onSubmitBtnClick}
               >
                 Add Coordinator
               </Button>
