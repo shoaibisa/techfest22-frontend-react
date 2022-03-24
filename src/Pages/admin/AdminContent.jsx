@@ -6,11 +6,13 @@ import axios from 'axios';
 import { baseUrl, localUrl } from '../../API/api';
 import AuthContext from '../../auth/authContext';
 import LoaderSpin from '../../components/UI/loader/LoaderSpin';
+import ErrorModel from '../../components/UI/ErrorModel/ErrorModel';
 
 const AdminContent = () => {
   const authContext = useContext(AuthContext);
   const [tfData, setTfData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [errosMade, setErrosMade] = useState();
 
   useEffect(() => {
     setIsLoading(true);
@@ -21,13 +23,33 @@ const AdminContent = () => {
         },
       })
       .then(fethData => {
-        // console.log(fethData.data);
+        if (
+          fethData.status != 200 ||
+          (fethData.status != 201 && fethData.data.authError)
+        ) {
+          setErrosMade({
+            title: 'Auth Error',
+            message: 'Wrong user auth!',
+          });
+          authContext.logout();
+          return;
+        }
         setTfData(fethData.data);
       });
     setIsLoading(false);
   }, []);
+  const onErrosMadeHandle = () => {
+    setErrosMade(null);
+  };
   return (
     <>
+      {errosMade && (
+        <ErrorModel
+          title={errosMade.title}
+          message={errosMade.message}
+          onErrosClick={onErrosMadeHandle}
+        />
+      )}
       <div style={{ textAlign: 'center', marginTop: '10rem' }}>
         {isLoading && <LoaderSpin />}
       </div>

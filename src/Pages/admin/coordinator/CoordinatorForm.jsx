@@ -99,7 +99,10 @@ const CoordinatorForm = () => {
         },
       })
       .then(results => {
-        // console.log(results);
+        if (results.data.authError) {
+          authContext.logout();
+          return;
+        }
         setIsLoading(true);
         if (results.status !== 200 || results.status !== 200) {
           setErrosMade({

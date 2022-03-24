@@ -15,6 +15,7 @@ const WorkshopForm = () => {
   const [wsName, setwsName] = useState('');
   const [wsDesc, setwsDesc] = useState('');
   const [wDriveLink, setWdriveLink] = useState('');
+  const [workshopMode, setWorkshopMode] = useState('');
   const [startDate, setstartDate] = useState('');
   const [endDate, setendDate] = useState('');
   const [studentCoordinator, setstudentCoordinator] = useState([]);
@@ -67,6 +68,10 @@ const WorkshopForm = () => {
     setFacultyCoordinator(selectedList);
   };
 
+  const getWtype = e => {
+    setWorkshopMode(e.target.value.toLowerCase());
+  };
+
   const getImageHandle = e => {
     setselectedImage(e.target.files[0]);
     //console.log(e.target.files[0]);
@@ -117,6 +122,7 @@ const WorkshopForm = () => {
     zData.append('facultyCoordinator', dataFc);
     zData.append('wsName', wsName);
     zData.append('wsDesc', wsDesc);
+    zData.append('workshopMode', workshopMode);
     zData.append('wLinkDrive', wDriveLink);
     zData.append('startDate', startDate);
     zData.append('endDate', endDate);
@@ -160,6 +166,7 @@ const WorkshopForm = () => {
         setstudentCoordinator([]);
         setFacultyCoordinator([]);
         setselectedImage(null);
+        setWorkshopMode('');
       })
       .catch(err => {
         setIsLoading(true);
@@ -259,6 +266,7 @@ const WorkshopForm = () => {
                     onChange={getWdrveLink}
                   />
                 </Form.Group>
+
                 <div
                   className=""
                   style={{ display: 'flex', justifyContent: 'space-between' }}
@@ -289,6 +297,22 @@ const WorkshopForm = () => {
                     />
                   </Form.Group>
                 </div>
+                <Form.Group className="mb-3">
+                  <Form.Label style={{ color: 'white' }}>Event Mode</Form.Label>
+                  <Form.Select
+                    style={{ color: 'white', background: 'transparent' }}
+                    aria-label="Default select example"
+                    onChange={getWtype}
+                  >
+                    <option style={{ color: 'black' }}>---select---</option>
+                    <option style={{ color: 'black' }} value="online">
+                      Online
+                    </option>
+                    <option style={{ color: 'black' }} value="offline">
+                      Offline
+                    </option>
+                  </Form.Select>
+                </Form.Group>
                 <Form.Group controlId="formFileSm" className="mb-3">
                   <Form.Label style={{ color: 'white' }}>
                     Student Coordinator

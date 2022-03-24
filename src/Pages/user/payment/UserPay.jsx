@@ -42,6 +42,7 @@ const UserPay = () => {
             title: 'Auth Error',
             message: 'Wrong user auth!',
           });
+          authContext.logout();
           return;
         }
         setUser(result.data.user);
@@ -80,7 +81,7 @@ const UserPay = () => {
         Authorization: 'Bearer ' + authContext.token,
       },
     });
-    console.log('clickef');
+    //  return console.log('clickef');
     window.location.href = fetchdata.data.url;
   };
   return (

@@ -129,7 +129,7 @@ const EventForm = () => {
         },
       })
       .then(results => {
-        console.log(results);
+        // console.log(results);
         setIsLoading(true);
         if (results.status !== 200 || results.status !== 200) {
           setErrosMade({

@@ -4,22 +4,37 @@ import AuthContext from '../../../auth/authContext';
 import ErrorModel from '../../UI/ErrorModel/ErrorModel';
 import axios from 'axios';
 import { localUrl, baseUrl } from '../../../API/api';
+import { useNavigate } from 'react-router-dom';
 // import background_overlay_right from '../../../images/Domain/background-overlay-right.png';
 // import bgoverlay_left from '../../../images/Domain/bgoverlay-left.png';
 
 const EventCard = props => {
+  const navigate = useNavigate();
   const authContext = useContext(AuthContext);
   const [errosMade, setErrosMade] = useState(); //undefined
   const [user, setUser] = useState(null);
   let dateEvent = props.endDate.split('T');
   let date = dateEvent[0].split('-');
   let time = dateEvent[1].split(':');
-
+  let eventDateRegister = new Date(props.endDate);
+  let getTodayDate = new Date();
+  console.log(eventDateRegister);
   const onRegisterClick = async () => {
     if (!authContext.isUserLoggedIn) {
       setErrosMade({
         title: 'Auth Error',
         message: 'Plz Login First!',
+      });
+      setTimeout(() => {
+        navigate('/signin');
+      }, 2000);
+      return;
+    }
+
+    if (eventDateRegister <= getTodayDate) {
+      setErrosMade({
+        title: 'Registration Time',
+        message: 'Time of the register is over!',
       });
       return;
     }
@@ -38,18 +53,47 @@ const EventCard = props => {
         title: 'Auth Error',
         message: 'Wrong user auth!',
       });
+      authContext.logout();
       return;
     }
     setUser(fetchUser.data.user);
+    // console.log(props.event);
 
-    if (!fetchUser.data.user.hapPaidEntry) {
+    const fetchedPushEvent = await axios.post(
+      `${baseUrl}/user/pushEvent`,
+      props.event,
+      {
+        headers: {
+          Authorization: 'Bearer ' + authContext.token,
+        },
+      }
+    );
+    if (fetchedPushEvent.data.authError) {
       setErrosMade({
-        title: 'Payment',
-        message: 'Plz pay first!',
+        title: 'Auth Error',
+        message: 'Wrong user auth!',
       });
+      authContext.logout();
       return;
     }
-    //axios.post(``)
+    // console.log(fetchedPushEvent);
+    if (fetchedPushEvent.data.payError) {
+      setErrosMade({
+        title: fetchedPushEvent.data.title,
+        message: fetchedPushEvent.data.message,
+      });
+      setTimeout(() => {
+        navigate('/user/pay');
+      }, 3000);
+      return;
+    }
+
+    if (fetchedPushEvent.data.isError) {
+      setErrosMade({
+        title: fetchedPushEvent.data.title,
+        message: fetchedPushEvent.data.message,
+      });
+    }
   };
 
   const onErrosMadeHandle = () => {
@@ -100,10 +144,10 @@ const EventCard = props => {
                 <p>
                   {' '}
                   <i className=" fa fa-light fa-calendar"></i>Register before{' '}
-                  {`${date[1]}/ ${date[2]}`}
+                  {`${date[2]}/ ${date[1]}`}
                 </p>
                 <p>
-                  <i class="fa fa-clock-o"></i> {`${time[0]}:${time[1]}`}
+                  <i className="fa fa-clock-o"></i> {`${time[0]}:${time[1]}`}
                 </p>
                 <br />
                 {props.studentCoordinator.map(s => (

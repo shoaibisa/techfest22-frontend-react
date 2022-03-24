@@ -29,6 +29,7 @@ const UserDash = props => {
             title: 'Auth Error',
             message: 'Wrong user auth!',
           });
+          authContext.logout();
           return;
         }
         setUser(result.data.user);
@@ -78,7 +79,7 @@ const UserDash = props => {
                         <h2>Namaste! {user && user.name}</h2>
                       </blockquote>
                       <figcaption className="blockquote-footer">
-                        Your Unique tF ID is {user._id}
+                        Your Unique referral tF ID is {user.referralCode}
                       </figcaption>
                     </figure>
                   </div>
@@ -108,45 +109,21 @@ const UserDash = props => {
                                 <td></td>
                                 <td>Today</td>
                               </tr> */}
+                              {user.events.length === 0 && (
+                                <tr>
+                                  <td>Not any Registered Events</td>
+                                </tr>
+                              )}
                               {user.events.map(event => {
                                 return (
                                   <tr>
                                     <td>{event.name}</td>
                                     <td></td>
-                                    <td>{event.date}</td>
+                                    {/* {var a ="n"} */}
+                                    <td>{event.endDate.split('T')[0]}</td>
                                   </tr>
                                 );
                               })}
-                              {/* <tr>
-                              <td>Name of Event</td>
-                              <td></td>
-                              <td>20/4</td>
-                            </tr>
-                            <tr>
-                              <td>Name of Event</td>
-                              <td></td>
-                              <td>20/4</td>
-                            </tr>
-                            <tr>
-                              <td>Name of Event</td>
-                              <td></td>
-                              <td>20/4</td>
-                            </tr>
-                            <tr>
-                              <td>Name of Event</td>
-                              <td></td>
-                              <td>20/4</td>
-                            </tr>
-                            <tr>
-                              <td>Name of Event</td>
-                              <td></td>
-                              <td>20/4</td>
-                            </tr>
-                            <tr>
-                              <td>Name of Event</td>
-                              <td></td>
-                              <td>20/4</td>
-                            </tr> */}
                             </tbody>
                           </table>
                         </div>
@@ -173,12 +150,17 @@ const UserDash = props => {
                         <div className="collapse1 p-4 mt-4">
                           <table className="table text-light">
                             <tbody>
+                              {user.workshops.length === 0 && (
+                                <tr>
+                                  <td>Not any Registered Workshops</td>
+                                </tr>
+                              )}
                               {user.workshops.map(workshop => {
                                 return (
                                   <tr>
                                     <td>{workshop.name}</td>
                                     <td></td>
-                                    <td>{workshop.date}</td>
+                                    <td>{workshop.endDate}</td>
                                   </tr>
                                 );
                               })}

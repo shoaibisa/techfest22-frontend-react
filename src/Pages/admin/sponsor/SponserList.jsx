@@ -3,25 +3,21 @@ import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { SponsorContext } from './sponsorList/contexts';
 import Sponser from './sponser';
-// import UpdateCoordinator from './UpdateCoordinator';
-// import Pagenation from './pagenation';
-import axios from 'axios';
-import { localUrl } from '../../../API/api';
 
 const SponserList = () => {
   const { sponser } = useContext(SponsorContext);
 
-  const handleAddCo = () => navigate('/admin/coordinator/add');
+  const handleAddCo = () => navigate('/admin/sponsor/add');
 
   const navigate = useNavigate();
-  console.log(sponser);
+
   return (
     <>
       <div className="table-title">
         <div className="row">
           <div className="col-sm-6">
             <h2>
-              COORDINATORS <b>LIST</b>
+              SPONSERS <b>LIST</b>
             </h2>
           </div>
           <div className="col-sm-6">
@@ -33,7 +29,7 @@ const SponserList = () => {
             >
               <i className="material-icons">&#xE147;</i>{' '}
               <span style={{ background: 'transparent', padding: '2px' }}>
-                Add New Coordinator
+                Add New SPONSERS
               </span>
             </Button>
           </div>

@@ -11,7 +11,6 @@ import { createContext, useEffect, useState } from 'react';
 import { baseUrl, localUrl } from '../../../API/api';
 
 const Chemfor = () => {
-
   const [eData, setEdata] = useState();
   useEffect(() => {
     axios.get(`${baseUrl}/event/getByDomain/karyarachna`).then(results => {
@@ -39,6 +38,7 @@ const Chemfor = () => {
               amount="Rs.300"
               endDate={e.endDate}
               link={e.driveLink}
+              event={e}
               studentCoordinator={e.studentCoordinator}
             />
           ))}
