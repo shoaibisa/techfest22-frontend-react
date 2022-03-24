@@ -54,7 +54,7 @@ const Workshop = ({ pWorkshop }) => {
       <td>{pWorkshop.workshopName}</td>
       <td>{pWorkshop.workshopMode}</td>
       <td>{pWorkshop.wDriveLink}</td>
-      <td>{`${dateEvent[0]} /  g${time[0]}: ${time[1]}`}</td>
+      <td>{`${dateEvent[0]} / ${time[0]}: ${time[1]}`}</td>
       <td>{cn}</td>
       <td>{fc}</td>
       <td>
