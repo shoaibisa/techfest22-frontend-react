@@ -33,6 +33,10 @@ const Workshop = ({ pWorkshop }) => {
   } else {
     fc = 'Not any coordinator';
   }
+
+  let dateEvent = pWorkshop.endDate.split('T');
+  let date = dateEvent[0].split('-');
+  let time = dateEvent[1].split(':');
   return (
     <>
       <td className="">
@@ -50,7 +54,7 @@ const Workshop = ({ pWorkshop }) => {
       <td>{pWorkshop.workshopName}</td>
       <td>{pWorkshop.workshopMode}</td>
       <td>{pWorkshop.wDriveLink}</td>
-      <td>{pWorkshop.endDate}</td>
+      <td>{`${dateEvent[0]} /  g${time[0]}: ${time[1]}`}</td>
       <td>{cn}</td>
       <td>{fc}</td>
       <td>
