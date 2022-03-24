@@ -96,6 +96,10 @@ const UserPay = () => {
       {user && user.paymentDetails.isSuccess && (
         <div className="container-fluid mt-5 pt-5 center">
           <h1>You have already paid!</h1>
+          <h2>
+            Your subscription is{' '}
+            {user.paymentDetails.subscriptionType === '300' ? 'SILVER' : 'GOLD'}
+          </h2>
         </div>
       )}
       <div className="main">
