@@ -25,7 +25,7 @@ const Workshop = props => {
         subTitle="They are doing what we do, eventually might do it all.
             You build what can work for you, We bring this which can make you better at building. Do participate to build better."
       />
-      <div className="Workshop__bttom__section d-flex container mt-5">
+      {/* <div className="Workshop__bttom__section d-flex container mt-5">
         <div className="Robozar__bottom__left p-2">
           <img
             src="https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.jpg"
@@ -100,7 +100,7 @@ const Workshop = props => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {workshopData &&
         workshopData.map(w => <WorkshopCard key={w._id} workshop={w} />)}
     </div>

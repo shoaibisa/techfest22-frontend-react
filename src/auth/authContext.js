@@ -56,7 +56,7 @@ export const AuthContextProvider = props => {
     userLoggedIn = true;
 
     const remainingTime = calculateRemainingTime(expiryDate);
-    console.log(remainingTime);
+
     resetLogoutTimer = setTimeout(logOutHandler, remainingTime);
   };
 

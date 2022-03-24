@@ -5,20 +5,17 @@ import ErrorModel from '../../UI/ErrorModel/ErrorModel';
 import axios from 'axios';
 import { localUrl, baseUrl } from '../../../API/api';
 import { useNavigate } from 'react-router-dom';
-// import background_overlay_right from '../../../images/Domain/background-overlay-right.png';
-// import bgoverlay_left from '../../../images/Domain/bgoverlay-left.png';
 
 const EventCard = props => {
   const navigate = useNavigate();
   const authContext = useContext(AuthContext);
   const [errosMade, setErrosMade] = useState(); //undefined
-  const [user, setUser] = useState(null);
   let dateEvent = props.endDate.split('T');
   let date = dateEvent[0].split('-');
   let time = dateEvent[1].split(':');
   let eventDateRegister = new Date(props.endDate);
   let getTodayDate = new Date();
-  console.log(eventDateRegister);
+
   const onRegisterClick = async () => {
     if (!authContext.isUserLoggedIn) {
       setErrosMade({
@@ -56,8 +53,6 @@ const EventCard = props => {
       authContext.logout();
       return;
     }
-    setUser(fetchUser.data.user);
-    // console.log(props.event);
 
     const fetchedPushEvent = await axios.post(
       `${baseUrl}/user/pushEvent`,
@@ -76,7 +71,7 @@ const EventCard = props => {
       authContext.logout();
       return;
     }
-    console.log(fetchedPushEvent);
+    // console.log(fetchedPushEvent);
     if (fetchedPushEvent.data.payError) {
       setErrosMade({
         title: fetchedPushEvent.data.title,
@@ -130,6 +125,7 @@ const EventCard = props => {
                 </button>
                 <a
                   href={props.link}
+                  rel="noreferrer"
                   target="_blank"
                   className="robozar_problem_statement_button"
                 >

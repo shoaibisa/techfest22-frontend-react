@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import './Signin.css';
 import { NavLink, useNavigate } from 'react-router-dom';
 import signup_gif from '../../images/Signup gif.webm';

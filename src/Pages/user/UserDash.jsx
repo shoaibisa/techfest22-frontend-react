@@ -3,7 +3,6 @@ import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { baseUrl, localUrl } from '../../API/api';
 import ErrorModel from '../../components/UI/ErrorModel/ErrorModel';
-import Modal from 'react-modal';
 
 import './UserDash.css';
 import AuthContext from '../../auth/authContext';
@@ -22,8 +21,8 @@ const UserDash = props => {
       })
       .then(result => {
         if (
-          result.status != 200 ||
-          (result.status != 201 && result.data.isError)
+          result.status !== 200 ||
+          (result.status !== 201 && result.data.isError)
         ) {
           setErrosMade({
             title: 'Auth Error',
@@ -65,7 +64,6 @@ const UserDash = props => {
                   <div className="text-center text-light">
                     <figure className="text-center text-light">
                       <blockquote className="blockquote">
-
                         <h2>Namaste! {user && user.name}</h2>
                       </blockquote>
                       <figcaption className="blockquote-footer">
@@ -76,10 +74,16 @@ const UserDash = props => {
                 </div>
                 <div className="payment__select">
                   <div className="payment__select__icon">
-                  <i class='fa fa-info-circle'></i>
+                    <i class="fa fa-info-circle"></i>
                     <h3>Registration Fee</h3>
-                    <p>Pay one time registration fee and hustle <br /> through the plethora of Events at techFEST'22</p>
-                    <button className='payment__select__button' onClick={onPayBtnClick}>
+                    <p>
+                      Pay one time registration fee and hustle <br /> through
+                      the plethora of Events at techFEST'22
+                    </p>
+                    <button
+                      className="payment__select__button"
+                      onClick={onPayBtnClick}
+                    >
                       Pay
                     </button>
                   </div>
@@ -116,7 +120,7 @@ const UserDash = props => {
                               )}
                               {user.events.map(event => {
                                 return (
-                                  <tr>
+                                  <tr key={event._id}>
                                     <td>{event.name}</td>
                                     <td></td>
                                     {/* {var a ="n"} */}
@@ -157,10 +161,10 @@ const UserDash = props => {
                               )}
                               {user.workshops.map(workshop => {
                                 return (
-                                  <tr>
-                                    <td>{workshop.name}</td>
+                                  <tr key={workshop._id}>
+                                    <td>{workshop.workshopName}</td>
                                     <td></td>
-                                    <td>{workshop.endDate}</td>
+                                    <td>{workshop.endDate.split('T')[0]}</td>
                                   </tr>
                                 );
                               })}
@@ -280,21 +284,21 @@ const UserDash = props => {
                                     value=""
                                     className="form-input2"
                                   />
-                                  <label className='mx-1'> Student</label>
+                                  <label className="mx-1"> Student</label>
                                   <input
                                     type="radio"
                                     name="YouAre"
                                     value=""
                                     className="form-input2"
                                   />
-                                  <label className='mx-1'> Faculty</label>
+                                  <label className="mx-1"> Faculty</label>
                                   <input
                                     type="radio"
                                     name="YouAre"
                                     value=""
                                     className="form-input2"
                                   />
-                                  <label className='mx-1'> Professional</label>
+                                  <label className="mx-1"> Professional</label>
                                   <input
                                     type="radio"
                                     name="YouAre"
