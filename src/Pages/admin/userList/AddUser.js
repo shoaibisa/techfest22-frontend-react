@@ -2,8 +2,9 @@ import { Form, Button } from "react-bootstrap";
 const AddUser = () => {
   return (
     <>
+    
       <Form>
-        <Form.Group className="mb-3">
+        <Form.Group  className="mb-3">
           <Form.Control type="text" placeholder="Name *" required />
         </Form.Group>
         <Form.Group className="mb-3">

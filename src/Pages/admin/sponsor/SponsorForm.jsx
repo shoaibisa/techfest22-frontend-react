@@ -121,10 +121,10 @@ const SponsorForm = () => {
       )}
       <div className="main">
         <div className="container mt-5 pt-5" style={{ width: '50%' }}>
-          <div className="col-sm-12">
+          <div className="col-sm-12 pb-3">
             <h2 style={{ color: 'white' }}>Add Sponsor</h2>
           </div>
-          <Form onSubmit={onSubmitClick}>
+          <Form className="pb-3" onSubmit={onSubmitClick}>
             <Form.Group className="mb-3">
               <Form.Label style={{ color: 'white' }}>Name</Form.Label>
               <Form.Control
