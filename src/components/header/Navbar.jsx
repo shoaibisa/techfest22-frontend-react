@@ -123,15 +123,6 @@ const Navbar = props => {
                       <li>
                         <NavLink
                           className="dropdown-item  text-light line"
-                          activeclassname="active"
-                          to="/admin/domain"
-                        >
-                          Domain
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                          className="dropdown-item  text-light line"
                           activeClassName="active "
                           to="/admin/users"
                         >

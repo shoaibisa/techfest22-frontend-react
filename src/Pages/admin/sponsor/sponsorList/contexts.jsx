@@ -8,7 +8,7 @@ const SponsorContextProvider = props => {
   const authContext = useContext(AuthContext);
   const [sponser, setSponsor] = useState([]);
   const deleteSp = async props => {
-    await axios.delete(`${localUrl}/sponser/delete/${props}`, {
+    await axios.delete(`${baseUrl}/sponser/delete/${props}`, {
       headers: {
         Authorization: 'Bearer ' + authContext.token,
       },
@@ -23,14 +23,13 @@ const SponsorContextProvider = props => {
 
   useEffect(() => {
     axios
-      .get(`${localUrl}/sponser/getAllSponsors`, {
+      .get(`${baseUrl}/sponser/getAllSponsors`, {
         headers: {
           Authorization: 'Bearer ' + authContext.token,
         },
       })
       .then(results => {
         setSponsor(results.data.data);
-        console.log(results.data.data);
       });
   }, []);
 

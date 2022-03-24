@@ -1,40 +1,15 @@
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { CoordinatorContext } from './contexts/CoordinatorContext';
 import Coordinator from './Coordinator';
-// import UpdateCoordinator from './UpdateCoordinator';
-// import Pagenation from './pagenation';
-import axios from 'axios';
-import { localUrl } from '../../../../API/api';
 
 const CoordinatorList = () => {
   const { coordinator } = useContext(CoordinatorContext);
-  // const [show, setShow] = useState(false);
 
   const handleAddCo = () => navigate('/admin/coordinator/add');
   // const handleClose = () => setShow(false);
   const navigate = useNavigate();
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const [userPerPage] = useState(9);
-  // const [coordinator, setCoordinator] = useState([]);
-  // const currentUser =
-  // const indexOfLastUser = currentPage * userPerPage;
-  // const indexOfFirstUser = indexOfLastUser - userPerPage;
-  // // const currentUser = sortedUsers.slice(indexOfFirstUser, indexOfLastUser);
-  // const totalPagesNum = Math.ceil(sortedUsers.length / userPerPage);
-  // useEffect(() => {
-  //   axios.get(`${localUrl}/coordinator/get-all-details`).then(results => {
-  //     console.log(results.data.c);
-  //     setCoordinator(results.data.c);
-  //   });
-  // }, []);
-
-  // const deleteCo = props => {
-  //   console.log('ji', props);
-  // };
-
-  // console.log(coordinator);
 
   return (
     <>
@@ -75,9 +50,11 @@ const CoordinatorList = () => {
         <tbody>
           {coordinator &&
             coordinator.map(user => (
-              <tr style={{ borderStyle: 'none', color: 'white' }}
+              <tr
+                style={{ borderStyle: 'none', color: 'white' }}
                 key={user._id}
-              ><Coordinator user={user} />
+              >
+                <Coordinator user={user} />
               </tr>
             ))}
         </tbody>

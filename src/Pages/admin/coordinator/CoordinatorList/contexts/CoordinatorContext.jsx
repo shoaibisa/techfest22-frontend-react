@@ -21,7 +21,7 @@ const CoordinatorContextProvider = props => {
   const updateCo = async props => {
     console.log(props);
   };
-  
+
   useEffect(() => {
     axios
       .get(`${baseUrl}/coordinator/get-all-details`, {
@@ -30,6 +30,13 @@ const CoordinatorContextProvider = props => {
         },
       })
       .then(results => {
+        if (
+          results.status != 200 ||
+          (results.status != 201 && results.data.authError)
+        ) {
+          authContext.logout();
+          return;
+        }
         setCoordinator(results.data.c);
       });
   }, []);

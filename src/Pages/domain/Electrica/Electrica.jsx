@@ -1,4 +1,3 @@
-
 import React from 'react';
 import './Electrica.css';
 import EventCard from '../../../components/subdomain/EventCard/EventCard';
@@ -19,7 +18,6 @@ const Electrica = () => {
 
   return (
     <div className="subdomain">
-
       <EventLogo
         imgsrc={Electricaimg}
         title="Electica"
@@ -38,6 +36,7 @@ const Electrica = () => {
             amount="Rs.300"
             endDate={e.endDate}
             link={e.driveLink}
+            event={e}
             studentCoordinator={e.studentCoordinator}
           />
         ))}

@@ -8,17 +8,12 @@ import { SponsorContext } from './sponsorList/contexts';
 
 const Sponsor = ({ sponser }) => {
   const [show, setShow] = useState(false);
-  const navigate = useNavigate();
-    
-  const handleClose = () => setShow(false);
+
   const { deleteSp } = useContext(SponsorContext);
   const onDeleteSponsor = () => {
     deleteSp(sponser._id);
   };
-   console.log(sponser);
 
-
-   
   return (
     <>
       <td className="">
@@ -35,7 +30,7 @@ const Sponsor = ({ sponser }) => {
       </td>
       <td>{sponser.title}</td>
       <td>{sponser.link}</td>
-      
+
       <td>
         <a
           href="#deleteEmployeeModal"

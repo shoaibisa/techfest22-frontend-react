@@ -9,7 +9,6 @@ const UserContextProvider = props => {
   const authContext = useContext(AuthContext);
   const [users, setUser] = useState([]);
 
-
   useEffect(() => {
     axios
       .get(`${baseUrl}/user/allUsers`, {
@@ -18,14 +17,15 @@ const UserContextProvider = props => {
         },
       })
       .then(results => {
-         console.log(results.data.data);
-         setUser(results.data.data);
-        
+        if (results.data.authError) {
+          authContext.logout();
+          return;
+        }
+        setUser(results.data.data);
       });
   }, []);
 
-
-   //const sortedUsers = users.sort((a, b) => (a.name < b.name ? -1 : 1));
+  //const sortedUsers = users.sort((a, b) => (a.name < b.name ? -1 : 1));
   return (
     <UserContext.Provider value={{ users }}>
       {props.children}

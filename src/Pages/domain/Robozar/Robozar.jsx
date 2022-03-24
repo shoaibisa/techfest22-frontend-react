@@ -35,6 +35,7 @@ const Chemfor = () => {
               subTitle={e.description}
               amount="Rs.300"
               endDate={e.endDate}
+              event={e}
               link={e.driveLink}
               studentCoordinator={e.studentCoordinator}
             />

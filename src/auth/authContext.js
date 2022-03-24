@@ -1,7 +1,5 @@
 import { createContext, useState } from 'react';
-
-// export const userSignIn()
-
+let resetLogoutTimer;
 const AuthContext = createContext({
   token: '',
   isUserLoggedIn: false,
@@ -12,11 +10,12 @@ const AuthContext = createContext({
 
 export const AuthContextProvider = props => {
   const localtoken = localStorage.getItem('jswToken');
-  const expiryDate = localStorage.getItem('expiryDate');
+  const localExpiryDate = localStorage.getItem('expiryDate');
   const localUerRole = localStorage.getItem('userRole');
   const userId = localStorage.getItem('userId');
   const [token, setToken] = useState(localtoken);
   const [userRole, setUserRole] = useState(localUerRole);
+  const [expiryDate, setExpiryDate] = useState(localExpiryDate);
   let userLoggedIn = !!token;
 
   // if (!localtoken || !expiryDate || !localUerRole) {
@@ -27,11 +26,22 @@ export const AuthContextProvider = props => {
   //   //   return;
   // }
 
-  //   setToken(token);
+  const calculateRemainingTime = expiryDate => {
+    const remainingMilliseconds =
+      new Date(expiryDate).getTime() - new Date().getTime();
+    return remainingMilliseconds;
+  };
 
-  const remainingMilliseconds =
-    new Date(expiryDate).getTime() - new Date().getTime();
-  // setUserLoggedIn(true);
+  const logOutHandler = () => {
+    localStorage.removeItem('jswToken');
+    localStorage.removeItem('userId');
+    localStorage.removeItem('userRole');
+    localStorage.removeItem('expiryDate');
+    setToken(null);
+    if (resetLogoutTimer) {
+      clearTimeout(resetLogoutTimer);
+    }
+  };
 
   const loginHandler = user => {
     // console.log(user);
@@ -44,14 +54,10 @@ export const AuthContextProvider = props => {
     setToken(user.token);
     setUserRole(user.userRole);
     userLoggedIn = true;
-  };
 
-  const logOutHandler = () => {
-    localStorage.removeItem('jswToken');
-    localStorage.removeItem('userId');
-    localStorage.removeItem('userRole');
-    localStorage.removeItem('expiryDate');
-    setToken(null);
+    const remainingTime = calculateRemainingTime(expiryDate);
+    console.log(remainingTime);
+    resetLogoutTimer = setTimeout(logOutHandler, remainingTime);
   };
 
   const authContextValue = {

@@ -70,11 +70,20 @@ const SponsorForm = () => {
         },
       })
       .then(result => {
+        if (result.data.authError) {
+          setErrosMade({
+            title: 'Auth Error',
+            message: 'Wrong user auth!',
+          });
+          authContext.logout();
+          return;
+        }
         if (result.status !== 201 || result.status !== 200) {
           setErrosMade({
             title: result.data.title,
             message: result.data.message,
           });
+
           return;
         }
 
