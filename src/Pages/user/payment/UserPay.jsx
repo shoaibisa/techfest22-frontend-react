@@ -6,6 +6,8 @@ import { baseUrl, localUrl } from '../../../API/api';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import AuthContext from '../../../auth/authContext';
 import ErrorModel from '../../../components/UI/ErrorModel/ErrorModel';
+import "./Payment.css"
+import vactorPay from "../../../images/Vectorpayment.png"
 
 const UserPay = () => {
   const authContext = useContext(AuthContext);
@@ -84,7 +86,7 @@ const UserPay = () => {
     window.location.href = fetchdata.data.url;
   };
   return (
-    <>
+    <div className='payBody'>
       {errosMade && (
         <ErrorModel
           title={errosMade.title}
@@ -99,24 +101,46 @@ const UserPay = () => {
       )}
       <div className="main">
         {user && !user.paymentDetails.isSuccess && (
-          <div className="container-fluid mt-5 pt-5 center">
-            <Button
-              variant="success"
-              style={{ marginBottom: '10px' }}
-              type="submit"
-              block
-              onClick={paySilver}
-            >
-              <h1> 300 Silver</h1>
-            </Button>
-            <br />
-            <Button variant="success" type="submit" block onClick={payGold}>
-              <h1> 600 Gold</h1>
-            </Button>
+          <div className="final__pay">
+            <div className='Make__pay__final'>
+              <div className="verify__payment">
+                <div className="verify__payment__top center">
+                  <h3>Select your option</h3>
+                  <p>Select your preffered option and pay </p>
+                </div>
+                <div className="verify__payment__card">
+                  <div className="verify__payment__card__left">
+                    <h6>Register for Online Events</h6>
+                    <p>Get a chance to compete nationwide through online events</p>
+                    <Button className='Payment__maker___button mt-4'
+                      variant="success"
+                      style={{ marginBottom: '10px' }}
+                      type="submit"
+                      block
+                      onClick={paySilver}
+                    >
+                      299
+                    </Button>
+                  </div>
+                  <div className="verify__payment__card__right">
+                    <h6>Register for Online Events</h6>
+                    <p>Witness the techFEST at the best with comfortable
+                      stay and compete through various LIVE Events</p>
+                    <Button className='Payment__maker___button' variant="success" type="submit" block onClick={payGold}>
+                      599
+                    </Button>
+
+                  </div>
+                </div>
+
+
+              </div>
+              <img className='vector__pay__image' src={vactorPay} alt="" />
+            </div>
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
 export default UserPay;

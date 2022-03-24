@@ -59,28 +59,28 @@ const UserDash = props => {
         <div className="Dashboard__body">
           <div className="Main">
             <div className="home_background">
-              <div className="container mt-4 pt-5">
+              <div className="container mt-1 pt-2">
                 <div className="text-center py-5 mt-4">
                   <div className="text-center text-light">
                     <figure className="text-center text-light">
                       <blockquote className="blockquote">
-                        <button
-                          style={{
-                            width: '120px',
-                            height: '40px',
-                            background: '#00FF00',
-                            borderRadius: '10px',
-                          }}
-                          onClick={onPayBtnClick}
-                        >
-                          Pay
-                        </button>
+
                         <h2>Namaste! {user && user.name}</h2>
                       </blockquote>
                       <figcaption className="blockquote-footer">
                         Your Unique tF ID is {user._id}
                       </figcaption>
                     </figure>
+                  </div>
+                </div>
+                <div className="payment__select">
+                  <div className="payment__select__icon">
+                  <i class='fa fa-info-circle'></i>
+                    <h3>Registration Fee</h3>
+                    <p>Pay one time registration fee and hustle <br /> through the plethora of Events at techFEST'22</p>
+                    <button className='payment__select__button' onClick={onPayBtnClick}>
+                      Pay
+                    </button>
                   </div>
                 </div>
               </div>
@@ -294,30 +294,30 @@ const UserDash = props => {
                                   <br />
                                   <input
                                     type="radio"
-                                    name="option1"
+                                    name="YouAre"
                                     value=""
                                     className="form-input2"
                                   />
-                                  <label> Student</label>
+                                  <label className='mx-1'> Student</label>
                                   <input
                                     type="radio"
-                                    name="option2"
+                                    name="YouAre"
                                     value=""
                                     className="form-input2"
                                   />
-                                  <label> Faculty</label>
+                                  <label className='mx-1'> Faculty</label>
                                   <input
                                     type="radio"
-                                    name="option3"
+                                    name="YouAre"
                                     value=""
                                     className="form-input2"
                                   />
-                                  <label> Working Professional</label>
+                                  <label className='mx-1'> Professional</label>
                                   <input
                                     type="radio"
-                                    name="option4"
+                                    name="YouAre"
                                     value=""
-                                    className="form-input2"
+                                    className="form-input2 "
                                   />
                                   <label className="form-input"> Others</label>
                                 </form>

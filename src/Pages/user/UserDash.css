@@ -321,7 +321,69 @@ color: white;
   justify-content: space-between !important;
 }
 
+.payment__select__icon{
 
+}
+.payment__select__button{
+  width: 120px;
+  height: 40px;
+  background: #00FF00;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  margin-bottom: -1rem;
+
+  
+}
+.payment__select{
+  text-align: center;
+  margin-top: -2rem;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  padding: 5px;
+  width: 30rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: auto;
+  box-shadow: 0px 1px 15px 10px green
+}
+.payment__select__icon .fa{
+  font-size: 35px;
+  color: green;
+
+}
+.payment__select__icon h3{
+  color: green;
+  font-family: "helveticaregular";
+  font-weight: 700;
+}
+.payment__select__icon p{
+  color: rgb(0, 0, 0) !important;
+  font-family:"helveticaregular" ;
+  opacity: 5 !important;
+}
+@media screen and (max-width:550px) {
+  .payment__select{
+    width: 25rem;
+  }
+  
+}
+@media screen and (max-width:450px) {
+  .payment__select{
+    width: 22rem;
+  }
+  
+}
+@media screen and (max-width:350px) {
+  .payment__select__icon p{
+    font-size: 13px;
+  }
+  .payment__select{
+    width: 17rem;
+  }
+  
+}
 
 
 
@@ -368,7 +430,7 @@ color: white;
 
 .modal-content{
  
-  background: linear-gradient( 90deg, rgba(5, 70, 12, 0.9) 58%, rgba(4, 112, 18, 0.9) 98%);
+  background: linear-gradient( 90deg, rgba(5, 70, 12) 58%, rgba(4, 112, 18) 98%);
 
   color: #fff;
   width: 200rem;
@@ -427,6 +489,9 @@ color: white;
   margin-top: -2rem;
   flex: .5;
 }
+.personal_information form input{
+  margin-top: -1rem;
+}
 .contact_information{
   margin-top: 2rem;
   border: 2px solid #fff;
@@ -436,6 +501,9 @@ color: white;
   margin-left: 3rem;
   flex: .5;
   
+}
+.contact_information form input{
+  margin-top: -1rem;
 }
 
 .Edit__info__button{
