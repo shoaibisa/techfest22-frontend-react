@@ -76,7 +76,7 @@ const EventCard = props => {
       authContext.logout();
       return;
     }
-    // console.log(fetchedPushEvent);
+    console.log(fetchedPushEvent);
     if (fetchedPushEvent.data.payError) {
       setErrosMade({
         title: fetchedPushEvent.data.title,
@@ -150,6 +150,7 @@ const EventCard = props => {
                   <i className="fa fa-clock-o"></i> {`${time[0]}:${time[1]}`}
                 </p>
                 <br />
+                <p>Mode : {props.event.eventMode}</p>
                 {props.studentCoordinator.map(s => (
                   <div key={s._id}>
                     <p className="robozar_right_content_eventcoordinator">
