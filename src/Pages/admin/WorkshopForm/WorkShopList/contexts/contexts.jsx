@@ -8,7 +8,7 @@ const WorkshopContextProvider = props => {
   const authContext = useContext(AuthContext);
   const [workshop, setWorkshop] = useState([]);
   const deleteWo = async props => {
-    await axios.delete(`${baseUrl}/workshop/delete/${props}`, {
+    await axios.delete(`${baseUrl}/workshop/del/${props}`, {
       headers: {
         Authorization: 'Bearer ' + authContext.token,
       },
