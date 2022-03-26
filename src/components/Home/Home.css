@@ -1,5 +1,5 @@
 .home{
-  margin-top: -4rem;
+  margin-top: -2rem;
 }
 .homepage_gif {
   display: block;
@@ -10,7 +10,6 @@
 }
 .homepage_gif_mobile {
   display: none;
-  margin-top: -5rem;
 }
 .workShop_Animation {
   animation: animate 3s linear infinite;

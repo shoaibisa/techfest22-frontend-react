@@ -7,6 +7,9 @@
     color: black;
     border-radius: 8px;
     box-shadow: 0px 1px 15px 10px green;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 .verify__payment__top{
     text-align: center;
@@ -68,6 +71,16 @@
     .verify__payment__card__left{
       color: red;
     }
+
+  }
+  @media screen and(max-width:1000px) {
+    .final__pay{
+      
+      width: 20rem;
+    }
+
+    
+   
 
   }
  

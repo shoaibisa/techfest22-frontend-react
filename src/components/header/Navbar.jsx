@@ -268,6 +268,15 @@ const Navbar = props => {
                         Robozar
                       </NavLink>
                     </li>
+                    <li>
+                      <NavLink
+                        className="dropdown-item text-light line"
+                        activeClassName="active "
+                        to="genesis"
+                      >
+                        Genesis
+                      </NavLink>
+                    </li>
                   </ul>
                 </li>
                 <li className="nav-item">

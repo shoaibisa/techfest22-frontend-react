@@ -54,12 +54,9 @@ const Home = props => {
         <video
           className="homepage_gif_mobile"
           width="100%"
-          height="100%"
-          loop="loop"
-          autoplay
-          muted="true"
-          preload="auto"
-          playsInline
+          loop={true}
+          autoPlay = {true}
+          muted={true}
         >
           <source src={homepage_gif_mobile} type="video/webm" />
           Your browser does not support the video tag.

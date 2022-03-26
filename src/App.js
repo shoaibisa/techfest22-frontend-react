@@ -22,6 +22,7 @@ import Karyarachna from './Pages/domain/Karyarachna/Karyarachna';
 import Mechanica from './Pages/domain/Mechanica/Mechanica';
 import Plexus from './Pages/domain/Plexus/Plexus';
 import Robozar from './Pages/domain/Robozar/Robozar';
+import Genesis from './Pages/domain/Genesis/Genesis';
 import WorkshopForm from './Pages/admin/WorkshopForm/WorkshopForm';
 import DomainForm from './Pages/admin/domain/DomainForm';
 import DeleteWorkshop from './Pages/admin/WorkshopForm/DeleteWorkshop';
@@ -84,6 +85,7 @@ function App() {
         <Route exact path="/mechanica" element={<Mechanica />} />
         <Route exact path="/plexus" element={<Plexus />} />
         <Route exact path="/robozar" element={<Robozar />} />
+        <Route exact path="/genesis" element={<Genesis />} />
         <Route exact path="/workshop" element={<Workshop />} />
         <Route exact path="/about" element={<AboutUs data={dataJson} />} />
         <Route exact path="/admin/domains" element={<DomainForm />} />

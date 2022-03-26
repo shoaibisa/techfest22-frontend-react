@@ -24,7 +24,7 @@ const Chemfor = () => {
       <div className="subdomain">
         <EventLogo
           imgsrc={Chemforimg}
-          title="Chemfor"
+          title="CHEMFOR"
           subTitle="They are doing what we do, eventually might do it all.
         You build what can work for you, We bring this which can make you better at building. Do participate to build better."
         />
