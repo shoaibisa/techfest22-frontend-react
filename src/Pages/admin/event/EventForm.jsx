@@ -275,11 +275,8 @@ const EventForm = () => {
                 </Form.Group>
                 <Form.Group className="mb-3">
                   <Form.Label style={{ color: 'white' }}>Domain</Form.Label>
-                  <Form.Select
-                    style={{ color: 'white', background: 'transparent' }}
-                    aria-label="Default select example"
-                    onChange={getEdomain}
-                  >
+                  <Form.Select style={{ color: 'white', background: 'transparent' }} aria-label="Default select example" onChange={getEdomain}>
+
                     <option style={{ color: 'black' }}>---select---</option>
                     <option style={{ color: 'black' }} value="chemfor">
                       Chemfor
@@ -302,6 +299,10 @@ const EventForm = () => {
                     <option style={{ color: 'black' }} value="robozar">
                       Robozar
                     </option>
+                    <option style={{ color: 'black' }} value="genesis">
+                    Genesis
+                    </option>
+                  
                   </Form.Select>
                 </Form.Group>
                 <div
