@@ -45,6 +45,7 @@ const CoordinatorList = () => {
             <th>Coordinator Type</th>
             <th>Desigination</th>
             <th>Phone</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>

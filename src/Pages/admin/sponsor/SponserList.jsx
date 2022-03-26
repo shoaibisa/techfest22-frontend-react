@@ -42,6 +42,7 @@ const SponserList = () => {
             <th>Photo </th>
             <th>Name </th>
             <th>Link</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>

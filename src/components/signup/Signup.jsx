@@ -80,7 +80,6 @@ const Signup = () => {
       confirmPassword: confirmPassword,
     };
 
-    console.log(data);
     await axios
       .post(`${baseUrl}/signUp`, data)
       .then(result => {

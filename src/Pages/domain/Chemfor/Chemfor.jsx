@@ -8,7 +8,7 @@ import Chemforimg from '../../../../src/images/Domain/Chemfor.webp';
 //import { useContext } from 'react';
 //import { ChemforContext } from './chemforContext';
 import axios from 'axios';
-import { createContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { baseUrl, localUrl } from '../../../API/api';
 
 const Chemfor = () => {

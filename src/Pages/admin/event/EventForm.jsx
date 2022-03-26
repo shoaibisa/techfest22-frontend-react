@@ -209,9 +209,9 @@ const EventForm = () => {
 
         <div className="main">
           <div className="container mt-5 pt-5" style={{ width: '50%' }}>
-            <div className="col-sm-12">
+            <div className="col-sm-12 pb-3">
               <h2 style={{ color: 'white' }}>Add Event</h2>
-              <Form onSubmit={onSubmitBtnClick}>
+              <Form className="pb-5" onSubmit={onSubmitBtnClick}>
                 <Form.Group className="mb-3">
                   <Form.Label style={{ color: 'white' }}>Name</Form.Label>
                   <Form.Control
