@@ -9,6 +9,7 @@
   background-repeat: no-repeat !important;
   background-attachment: fixed;
   height: 310vh;
+  margin-top: -2rem !important;
   
 }
 .Dashboard__body{
@@ -335,10 +336,14 @@ color: white;
 
   
 }
+.payment__select__button:hover{
+  background-color: green;
+  color: white;
+}
 .payment__select{
   text-align: center;
   margin-top: -2rem;
-  background-color: white;
+  background-color: rgb(10, 9, 9) !important;
   border-radius: 5px;
   color: black;
   padding: 5px;
@@ -350,16 +355,16 @@ color: white;
 }
 .payment__select__icon .fa{
   font-size: 35px;
-  color: green;
+  color: #00FF00;
 
 }
 .payment__select__icon h3{
-  color: green;
+  color: #00FF00;
   font-family: "helveticaregular";
   font-weight: 700;
 }
 .payment__select__icon p{
-  color: rgb(0, 0, 0) !important;
+  color: rgb(255, 255, 255) !important;
   font-family:"helveticaregular" ;
   opacity: 5 !important;
 }

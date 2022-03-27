@@ -108,11 +108,11 @@ const UserDash = props => {
                         <div className="collapse1 p-4 mt-4 mb-2">
                           <table className="table text-light">
                             <tbody>
-                              {/* <tr>
+                              <tr>
                                 <td>Name of Event</td>
                                 <td></td>
-                                <td>Today</td>
-                              </tr> */}
+                                <td>Time</td>
+                              </tr>
                               {user.events.length === 0 && (
                                 <tr>
                                   <td>Not any Registered Events</td>
@@ -154,6 +154,11 @@ const UserDash = props => {
                         <div className="collapse1 p-4 mt-4">
                           <table className="table text-light">
                             <tbody>
+                            <tr>
+                                <td>Name of Worshop</td>
+                                <td></td>
+                                <td>Time</td>
+                              </tr>
                               {user.workshops.length === 0 && (
                                 <tr>
                                   <td>Not any Registered Workshops</td>

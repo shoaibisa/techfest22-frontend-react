@@ -1,6 +1,7 @@
 
 .Robo{
     background-color: black;
+    margin-top: -2rem;
 }
 
 .Robozar__bottom{
@@ -169,34 +170,31 @@
     }
     .robozar_problem_statement_button{
         margin-left: 0rem;
-        margin-top: 0.5rem
+        margin-top: 0.5rem;
+        font-size: 14px;
     }
+   
 
 }
 
-/* @media(max-width:360px) {
-    .robozar_left_container{
-        height: 500px;
-        width: 90%;
-    }
-    .robozar_right_container{
-        width: 70%;
-        margin-top: -90px;
-    }
-    .robozar_main_container{
-        margin-bottom: 100px;
+ @media screen and  (max-width:360px) {
+    
+    .register__button__event{
+        margin-top: -25px;
     }
     .robozar_problem_statement_button{
-        padding: 5px 20px;
-        margin: 10px auto auto 0px;
-        border-radius: 5px;
-        display: inline-block;
+        
+        font-size: 12px;
+        margin-left: 3px;
     }
-       .robozar_left_container{
-        height: 500px;
-        width: 90%;
+    .robozar_register_button{
+        font-size: 12px;
+        margin-left: -7px;
     }
-} */
+    .robozar_right_container{
+        font-size: 12px;
+    }
+} 
 
 
 

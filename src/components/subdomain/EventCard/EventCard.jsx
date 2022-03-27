@@ -117,7 +117,8 @@ const EventCard = props => {
                 <br />
                 <p>{props.subTitle}</p>
                 <br />
-                <button
+               <div className="register__button__event">
+               <button
                   onClick={onRegisterClick}
                   className="robozar_register_button"
                 >
@@ -131,6 +132,7 @@ const EventCard = props => {
                 >
                   Problem Statement
                 </a>
+               </div>
               </div>
             </div>
             <div className="robozar_right_container">
