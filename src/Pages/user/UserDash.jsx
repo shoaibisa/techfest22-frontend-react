@@ -11,6 +11,15 @@ const UserDash = props => {
   const navigate = useNavigate();
   const [errosMade, setErrosMade] = useState();
   const [user, setUser] = useState(null);
+  const [dob, setDob] = useState()
+  const [collegeName, setCollegeName] = useState()
+  const [couse, setCourse] = useState()
+  const [branch, setBranch] = useState()
+  const [yearOfStudy, setYearOfStudy] = useState()
+  const [phone, setPhone] = useState()
+  const [whatsapp, setWhatsApp] = useState()
+  const [telegram, setTelegram] = useState()
+
 
   useEffect(() => {
     axios
@@ -45,6 +54,21 @@ const UserDash = props => {
   const onPayBtnClick = () => {
     navigate('/user/pay');
   };
+
+  const onSaveClick = async() => {
+    console.log(1)
+    const saveUser = {
+      dob: dob,
+      phone: phone,
+      whatsappPhoneNumber: whatsapp,
+      telegramPhoneNumber: telegram
+    }
+    await axios.post(`${baseUrl}/updateUser`, {data: saveUser}).then(res => {
+      alert(`Profile updated  ${res}`)
+    }).catch((err) => {
+      alert(`${err.message}`)
+    })
+  }
 
   return (
     <div className="body">
@@ -276,6 +300,9 @@ const UserDash = props => {
                                   </label>
                                   <input
                                     type="date"
+                                    onChange={(e) => {
+                                      setDob(e.target.value)
+                                    }}
                                     className="input_Profile_Information  form-input1"
                                     name="birthday"
                                   />
@@ -488,6 +515,9 @@ const UserDash = props => {
                                     id="number"
                                     name="number"
                                     value=""
+                                    onChange={(e) => {
+                                      setPhone(e.target.value)
+                                    }}
                                     className="form-input"
                                   />
                                 </form>
@@ -498,6 +528,9 @@ const UserDash = props => {
                                   <input
                                     type="text"
                                     id="number"
+                                    onChange={(e) => {
+                                      setWhatsApp(e.target.value)
+                                    }}
                                     name="number"
                                     value=""
                                     className="form-input"
@@ -510,6 +543,9 @@ const UserDash = props => {
                                   <input
                                     type="text"
                                     id="number"
+                                    onChange={(e) => {
+                                      setTelegram(e.target.value)
+                                    }}
                                     name="number"
                                     value=""
                                     className="form-input"
@@ -519,7 +555,7 @@ const UserDash = props => {
                             </div>
                             <button
                               className="Save__info__button"
-                              type="submit"
+                              onClick={onSaveClick()}
                             >
                               Save
                             </button>
