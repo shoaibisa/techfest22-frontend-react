@@ -264,6 +264,8 @@ const UserDash = props => {
                                   </label>
                                   <input
                                     type="text"
+                                    value={user.name}
+                                    disabled='true'
                                     className="form-input"
                                     placeholder=""
                                   />
@@ -469,9 +471,10 @@ const UserDash = props => {
                                   </label>
                                   <input
                                     type="e-mail"
+                                    value={user.email}
                                     id="e-mail"
                                     name="e-mail"
-                                    value=""
+                                    disabled="true"
                                     className="form-input"
                                   />
                                 </form>
