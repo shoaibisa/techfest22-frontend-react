@@ -71,6 +71,13 @@ const Signup = () => {
       });
       return;
     }
+    if (password.length < 5) {
+      setErrosMade({
+        title: 'Error',
+        message: 'Password should be more tham five character long',
+      });
+      return;
+    }
 
     const data = {
       name: name,

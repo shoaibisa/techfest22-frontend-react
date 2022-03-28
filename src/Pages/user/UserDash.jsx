@@ -251,7 +251,7 @@ const UserDash = props => {
                           <div class="modal-content  ">
                             <button
                               className="EditClose"
-                              onClick={() => setShow(false)}
+                              onClick={() => setShow( )}
                             >
                               X
                             </button>
