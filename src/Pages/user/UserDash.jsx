@@ -1,27 +1,31 @@
 import axios from 'axios';
 import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { baseUrl, localUrl } from '../../API/api';
+import { baseUrl } from '../../API/api';
 import ErrorModel from '../../components/UI/ErrorModel/ErrorModel';
 
 import './UserDash.css';
 import AuthContext from '../../auth/authContext';
+import { formatDate } from '../../Helper/helper';
 const UserDash = props => {
   const authContext = useContext(AuthContext);
   const navigate = useNavigate();
-  const [errosMade, setErrosMade] = useState();
+  const [errosMade, setErrosMade] = useState('');
   const [user, setUser] = useState(null);
-  const [dob, setDob] = useState()
-  const [collegeName, setCollegeName] = useState()
-  const [course, setCourse] = useState()
-  const [branch, setBranch] = useState()
-  const [yearOfStudy, setYearOfStudy] = useState()
-  const [phone, setPhone] = useState()
-  const [whatsapp, setWhatsApp] = useState()
-  const [telegram, setTelegram] = useState()
+  const [dob, setDob] = useState();
+  const [collegeName, setCollegeName] = useState();
+  const [course, setCourse] = useState();
+  const [branch, setBranch] = useState();
+  const [yearOfStudy, setYearOfStudy] = useState();
+  const [phone, setPhone] = useState();
+  const [whatsapp, setWhatsApp] = useState();
+  const [telegram, setTelegram] = useState();
 
   const onSaveClick = () => {
     const saveUser = {
+      name: user.name,
+      email: user.email,
+      instituteAddress : '',
       dob: dob,
       phone: phone,
       whatsappPhoneNumber: whatsapp,
@@ -30,14 +34,37 @@ const UserDash = props => {
       course: course,
       branchOfStudy: branch,
       yearOfStudy: yearOfStudy,
-    }
-    axios.post(`${baseUrl}/updateUser`, {data: saveUser}).then(res => {
-      alert(`Profile updated  ${res}`)
-    }).catch((err) => {
-      setErrosMade(err)
-    })
-  }
+    };
+    axios
+      .post(
+        `${baseUrl}/user/updateUser`,
+        {data: saveUser},
+        {
+          headers: {
+            // 'Content-Type': 'multipart/form-data',
+            // 'Access-Control-Allow-Origin': '*',
+            // 'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+            Authorization: 'Bearer ' + authContext.token,
+          },
+        }
+      )
+      .then(res => {
+        if (res.data.isError) {
+          setErrosMade(res.data);
+        }
+        else{
+          setErrosMade("Updated successfully")
+        }
+        window.location.href = "/dashboard"
+      })
+      .catch(err => {
+        setErrosMade(err);
+      });
+  };
 
+  // if(user.dob){
+  //   console.log(user.dob.toDateString())
+  // }
 
   useEffect(() => {
     axios
@@ -181,7 +208,7 @@ const UserDash = props => {
                         <div className="collapse1 p-4 mt-4">
                           <table className="table text-light">
                             <tbody>
-                            <tr>
+                              <tr>
                                 <td>Name of Worshop</td>
                                 <td></td>
                                 <td>Time</td>
@@ -278,7 +305,7 @@ const UserDash = props => {
                           <div class="modal-content  ">
                             <button
                               className="EditClose"
-                              onClick={() => setShow( )}
+                              onClick={() => setShow()}
                             >
                               X
                             </button>
@@ -292,7 +319,7 @@ const UserDash = props => {
                                   <input
                                     type="text"
                                     value={user.name}
-                                    disabled='true'
+                                    disabled="true"
                                     className="form-input"
                                     placeholder=""
                                   />
@@ -303,8 +330,8 @@ const UserDash = props => {
                                   </label>
                                   <input
                                     type="date"
-                                    onChange={(e) => {
-                                      setDob(e.target.value)
+                                    onChange={e => {
+                                      setDob(e.target.value);
                                     }}
                                     className="input_Profile_Information  form-input1"
                                     name="birthday"
@@ -353,8 +380,8 @@ const UserDash = props => {
                                     id="College__Name"
                                     name="College__Name"
                                     className="form-input"
-                                    onChange={(e) => {
-                                      setCollegeName(e.target.value)
+                                    onChange={e => {
+                                      setCollegeName(e.target.value);
                                     }}
                                   >
                                     <option
@@ -380,8 +407,8 @@ const UserDash = props => {
                                     id="Course_Enrolled"
                                     name="Course_Enrolled"
                                     className="form-input"
-                                    onChange={(e) => {
-                                      setCourse(e.target.value)
+                                    onChange={e => {
+                                      setCourse(e.target.value);
                                     }}
                                   >
                                     <option
@@ -411,8 +438,8 @@ const UserDash = props => {
                                     id="Branch_of_Study"
                                     name="Branch_of_Study"
                                     className="form-input"
-                                    onChange={(e) => {
-                                      setBranch(e.target.value)
+                                    onChange={e => {
+                                      setBranch(e.target.value);
                                     }}
                                   >
                                     <option
@@ -485,7 +512,7 @@ const UserDash = props => {
                                     id="Year_of_Study"
                                     name="Year_of_Study"
                                     className="form-input"
-                                    onChange={(e) => 
+                                    onChange={e =>
                                       setYearOfStudy(e.target.value)
                                     }
                                   >
@@ -530,8 +557,8 @@ const UserDash = props => {
                                     id="number"
                                     name="number"
                                     value={phone}
-                                    onChange={(e) => {
-                                      setPhone(e.target.value)
+                                    onChange={e => {
+                                      setPhone(e.target.value);
                                     }}
                                     className="form-input"
                                   />
@@ -543,8 +570,8 @@ const UserDash = props => {
                                   <input
                                     type="text"
                                     id="number"
-                                    onChange={(e) => {
-                                      setWhatsApp(e.target.value)
+                                    onChange={e => {
+                                      setWhatsApp(e.target.value);
                                     }}
                                     name="number"
                                     value={whatsapp}
@@ -558,8 +585,8 @@ const UserDash = props => {
                                   <input
                                     type="text"
                                     id="number"
-                                    onChange={(e) => {
-                                      setTelegram(e.target.value)
+                                    onChange={e => {
+                                      setTelegram(e.target.value);
                                     }}
                                     name="number"
                                     value={telegram}
@@ -568,7 +595,7 @@ const UserDash = props => {
                                 </div>
                               </div>
                             </div>
-                              <button
+                            <button
                               className="Save__info__button"
                               onClick={onSaveClick}
                             >
@@ -600,7 +627,7 @@ const UserDash = props => {
                     <tr className="TableRow">
                       <td>Date of Birth</td>
 
-                      <td className="">{user.dob}</td>
+                      <td className="">{user.dob.toString().substring(0, 10)}</td>
                     </tr>
                   </table>
 
