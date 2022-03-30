@@ -13,12 +13,30 @@ const UserDash = props => {
   const [user, setUser] = useState(null);
   const [dob, setDob] = useState()
   const [collegeName, setCollegeName] = useState()
-  const [couse, setCourse] = useState()
+  const [course, setCourse] = useState()
   const [branch, setBranch] = useState()
   const [yearOfStudy, setYearOfStudy] = useState()
   const [phone, setPhone] = useState()
   const [whatsapp, setWhatsApp] = useState()
   const [telegram, setTelegram] = useState()
+
+  const onSaveClick = () => {
+    const saveUser = {
+      dob: dob,
+      phone: phone,
+      whatsappPhoneNumber: whatsapp,
+      telegramPhoneNumber: telegram,
+      collegeName: collegeName,
+      course: course,
+      branchOfStudy: branch,
+      yearOfStudy: yearOfStudy,
+    }
+    axios.post(`${baseUrl}/updateUser`, {data: saveUser}).then(res => {
+      alert(`Profile updated  ${res}`)
+    }).catch((err) => {
+      setErrosMade(err)
+    })
+  }
 
 
   useEffect(() => {
@@ -42,7 +60,7 @@ const UserDash = props => {
         }
         setUser(result.data.user);
       });
-  }, [authContext.login]);
+  }, [authContext, authContext.login]);
 
   //error message
   const onErrosMadeHandle = () => {
@@ -54,21 +72,6 @@ const UserDash = props => {
   const onPayBtnClick = () => {
     navigate('/user/pay');
   };
-
-  const onSaveClick = async() => {
-    console.log(1)
-    const saveUser = {
-      dob: dob,
-      phone: phone,
-      whatsappPhoneNumber: whatsapp,
-      telegramPhoneNumber: telegram
-    }
-    await axios.post(`${baseUrl}/updateUser`, {data: saveUser}).then(res => {
-      alert(`Profile updated  ${res}`)
-    }).catch((err) => {
-      alert(`${err.message}`)
-    })
-  }
 
   return (
     <div className="body">
@@ -294,7 +297,7 @@ const UserDash = props => {
                                     placeholder=""
                                   />
                                 </form>
-                                <form action="#" className="form">
+                                <div className="form">
                                   <label className="form-input1">
                                     Date Of Birth
                                   </label>
@@ -306,8 +309,8 @@ const UserDash = props => {
                                     className="input_Profile_Information  form-input1"
                                     name="birthday"
                                   />
-                                </form>
-                                <form action="push" className="form ">
+                                </div>
+                                <div className="form ">
                                   <label className="form-input1">
                                     You are a :{' '}
                                   </label>
@@ -340,8 +343,8 @@ const UserDash = props => {
                                     className="form-input2 "
                                   />
                                   <label className="form-input"> Others</label>
-                                </form>
-                                <form action="#" className="form">
+                                </div>
+                                <div className="form">
                                   <label className="form-input1">
                                     College Name
                                   </label>
@@ -350,6 +353,9 @@ const UserDash = props => {
                                     id="College__Name"
                                     name="College__Name"
                                     className="form-input"
+                                    onChange={(e) => {
+                                      setCollegeName(e.target.value)
+                                    }}
                                   >
                                     <option
                                       value="SLIET"
@@ -365,8 +371,8 @@ const UserDash = props => {
                                       Other
                                     </option>
                                   </select>
-                                </form>
-                                <form action="#" className="form">
+                                </div>
+                                <div className="form">
                                   <label className="form-input1">
                                     Course Enrolled
                                   </label>
@@ -374,6 +380,9 @@ const UserDash = props => {
                                     id="Course_Enrolled"
                                     name="Course_Enrolled"
                                     className="form-input"
+                                    onChange={(e) => {
+                                      setCourse(e.target.value)
+                                    }}
                                   >
                                     <option
                                       value="Bachelors_Of_Engineering"
@@ -394,14 +403,17 @@ const UserDash = props => {
                                       Other
                                     </option>
                                   </select>
-                                </form>
-                                <form action="#" className="form">
+                                </div>
+                                <div className="form">
                                   <label>Branch of Study</label>
                                   <br />
                                   <select
                                     id="Branch_of_Study"
                                     name="Branch_of_Study"
                                     className="form-input"
+                                    onChange={(e) => {
+                                      setBranch(e.target.value)
+                                    }}
                                   >
                                     <option
                                       value="Chemical_Engineering"
@@ -464,8 +476,8 @@ const UserDash = props => {
                                       Mechanical Engineering
                                     </option>
                                   </select>
-                                </form>
-                                <form action="#" className="form">
+                                </div>
+                                <div className="form">
                                   <label className="form-input1">
                                     Year of Study
                                   </label>
@@ -473,6 +485,9 @@ const UserDash = props => {
                                     id="Year_of_Study"
                                     name="Year_of_Study"
                                     className="form-input"
+                                    onChange={(e) => 
+                                      setYearOfStudy(e.target.value)
+                                    }
                                   >
                                     <option value="1" className="form-input">
                                       1
@@ -487,11 +502,11 @@ const UserDash = props => {
                                       4
                                     </option>
                                   </select>
-                                </form>
+                                </div>
                               </div>
                               <div className="contact_information">
                                 <h3>Contact Information</h3>
-                                <form action="#" className="form">
+                                <div className="form">
                                   <label for="email" className="form-input1">
                                     E-mail id(Enter your SLIET E-mail id if
                                     SLIET student)
@@ -504,8 +519,8 @@ const UserDash = props => {
                                     disabled="true"
                                     className="form-input"
                                   />
-                                </form>
-                                <form action="#" className="form">
+                                </div>
+                                <div className="form">
                                   <label className="form-input1">
                                     Phone Number
                                   </label>
@@ -514,14 +529,14 @@ const UserDash = props => {
                                     type="text"
                                     id="number"
                                     name="number"
-                                    value=""
+                                    value={phone}
                                     onChange={(e) => {
                                       setPhone(e.target.value)
                                     }}
                                     className="form-input"
                                   />
-                                </form>
-                                <form action="#" className="form">
+                                </div>
+                                <div className="form">
                                   <label className="form-input1">
                                     What's app Number
                                   </label>
@@ -532,11 +547,11 @@ const UserDash = props => {
                                       setWhatsApp(e.target.value)
                                     }}
                                     name="number"
-                                    value=""
+                                    value={whatsapp}
                                     className="form-input"
                                   />
-                                </form>
-                                <form action="#" className="form">
+                                </div>
+                                <div className="form">
                                   <label className="form-input1">
                                     Telegram Number
                                   </label>
@@ -547,15 +562,15 @@ const UserDash = props => {
                                       setTelegram(e.target.value)
                                     }}
                                     name="number"
-                                    value=""
+                                    value={telegram}
                                     className="form-input"
                                   />
-                                </form>
+                                </div>
                               </div>
                             </div>
-                            <button
+                              <button
                               className="Save__info__button"
-                              onClick={onSaveClick()}
+                              onClick={onSaveClick}
                             >
                               Save
                             </button>
