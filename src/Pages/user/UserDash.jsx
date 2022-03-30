@@ -25,7 +25,7 @@ const UserDash = props => {
     const saveUser = {
       name: user.name,
       email: user.email,
-      instituteAddress : '',
+      instituteAddress: '',
       dob: dob,
       phone: phone,
       whatsappPhoneNumber: whatsapp,
@@ -38,7 +38,7 @@ const UserDash = props => {
     axios
       .post(
         `${baseUrl}/user/updateUser`,
-        {data: saveUser},
+        { data: saveUser },
         {
           headers: {
             // 'Content-Type': 'multipart/form-data',
@@ -51,11 +51,10 @@ const UserDash = props => {
       .then(res => {
         if (res.data.isError) {
           setErrosMade(res.data);
+        } else {
+          setErrosMade('Updated successfully');
         }
-        else{
-          setErrosMade("Updated successfully")
-        }
-        window.location.href = "/dashboard"
+        window.location.href = '/dashboard';
       })
       .catch(err => {
         setErrosMade(err);
@@ -126,22 +125,24 @@ const UserDash = props => {
                     </figure>
                   </div>
                 </div>
-                <div className="payment__select">
-                  <div className="payment__select__icon">
-                    <i class="fa fa-info-circle"></i>
-                    <h3>Registration Fee</h3>
-                    <p>
-                      Pay one time registration fee and hustle <br /> through
-                      the plethora of Events at techFEST'22
-                    </p>
-                    <button
-                      className="payment__select__button"
-                      onClick={onPayBtnClick}
-                    >
-                      Pay
-                    </button>
+                {!user.hasPaidEntry && (
+                  <div className="payment__select">
+                    <div className="payment__select__icon">
+                      <i class="fa fa-info-circle"></i>
+                      <h3>Registration Fee</h3>
+                      <p>
+                        Pay one time registration fee and hustle <br /> through
+                        the plethora of Events at techFEST'22
+                      </p>
+                      <button
+                        className="payment__select__button"
+                        onClick={onPayBtnClick}
+                      >
+                        Pay
+                      </button>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
               <div className="container  Main px-0 mt-5 pt-5">
                 <div className="row justify-content-around">
@@ -627,7 +628,9 @@ const UserDash = props => {
                     <tr className="TableRow">
                       <td>Date of Birth</td>
 
-                      <td className="">{user.dob.toString().substring(0, 10)}</td>
+                      <td className="">
+                        {user.dob.toString().substring(0, 10)}
+                      </td>
                     </tr>
                   </table>
 
