@@ -618,7 +618,7 @@ const UserDash = props => {
                       <td>Organisation/College Name</td>
 
                       <td className="">
-                        Sant longowal institute of engineering and technology
+                        {user.collegeName && user.collegeName}
                       </td>
                     </tr>
                     <tr className="TableRow">
