@@ -602,5 +602,15 @@ color: white;
   }
   
 }
+.table1 {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.th1, .td1 {
+  padding: 8px;
+  text-align: left;
+  /* border-bottom: 1px solid #ddd; */
+}
 
 
