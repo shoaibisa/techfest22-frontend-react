@@ -25,6 +25,9 @@
   background-color: rgb(202, 199, 199);
   color: black !important;
 }
+.logo_section__button_section{
+  margin-bottom: 2rem;
+}
 .home__slider__line{
   height: 2px;
   width: 60%;
@@ -173,17 +176,17 @@
 .btn-green{
   background-image: linear-gradient(
     to top right,
-    rgba(18, 54, 22, 1),
+    rgb(12, 75, 19),
     rgba(21, 197, 45, 0.842)
   );
-  color: #000 !important;
+  color: #fff !important;
   font-style: normal !important;
   font-weight: 400;
   border-radius: 10px !important;
   font-family: "helveticaregular";
 }
 .btn-green:hover{
-  color: white !important;
+  color: #000 !important;
 }
 
 .btn-none,
