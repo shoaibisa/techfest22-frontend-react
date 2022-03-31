@@ -9,6 +9,7 @@ import AuthContext from '../../auth/authContext';
 
 const UserDash = props => {
   const authContext = useContext(AuthContext);
+  const [college, setCollege] = useState();
   const navigate = useNavigate();
   const [errosMade, setErrosMade] = useState('');
   const [user, setUser] = useState(null);
@@ -85,6 +86,7 @@ const UserDash = props => {
           return;
         }
         setUser(result.data.user);
+        setCollege(result.data.user.collegeName)
       });
   }, [authContext, authContext.login]);
 
@@ -381,6 +383,7 @@ const UserDash = props => {
                                     id="College__Name"
                                     name="College__Name"
                                     className="form-input"
+                                    disabled={college!=null}
                                     onChange={e => {
                                       setCollegeName(e.target.value);
                                     }}

@@ -95,7 +95,7 @@ const EventCard = props => {
     setErrosMade(null);
   };
 
-  const [showreg, setshowreg] = useState(false)
+  const [showreg, setshowreg] = useState(false);
 
   return (
     <div className="Robo">
@@ -119,14 +119,20 @@ const EventCard = props => {
                 <br />
                 <p>{props.subTitle}</p>
                 <br />
-               <div className="register__button__event">
-               <button
-                  onClick={() => setshowreg(true)}
-                  className="robozar_register_button"
-                >
-                  Register Here
-                </button>
-
+                <div className="register__button__event">
+                  {/* <button
+                    onClick={onRegisterClick}
+                    className="robozar_register_button"
+                  >
+                    Register Here
+                  </button> */}
+                  <button
+                    onClick={onRegisterClick}
+                    className="robozar_register_button"
+                  >
+                    Register Here
+                  </button>
+                  {/* 
               { showreg ?(<div className="addTeam">
 
                     <div className="close__team">
@@ -136,22 +142,22 @@ const EventCard = props => {
 
               </div>):null
 
-              }
-                <a
-                  href={props.link}
-                  rel="noreferrer"
-                  target="_blank"
-                  className="robozar_problem_statement_button"
-                >
-                  Problem Statement
-                </a>
-               </div>
+              } */}
+                  <a
+                    href={props.link}
+                    rel="noreferrer"
+                    target="_blank"
+                    className="robozar_problem_statement_button"
+                  >
+                    Problem Statement
+                  </a>
+                </div>
               </div>
             </div>
             <div className="robozar_right_container">
               <div className="robozar_right_content">
                 <h2> Prize Worth</h2>
-                <h1>{props.amount}</h1> <br />
+                <h1>{props.event.ePrizeWorth}</h1> <br />
                 <p>
                   {' '}
                   <i className=" fa fa-light fa-calendar"></i>Register before{' '}
