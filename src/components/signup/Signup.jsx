@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Signup.css';
 import signup_gif from '../../images/Signup gif.webm';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { baseUrl, localUrl } from '../../API/api';
 // require('dotenv').config("../../../.env");
@@ -14,7 +14,7 @@ const Signup = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [referralCode, setReferralCode] = useState('');
   const [errosMade, setErrosMade] = useState(); //undefined
-
+const navigate = useNavigate()
   const getName = e => {
     setName(e.target.value);
   };
@@ -99,6 +99,9 @@ const Signup = () => {
             title: result.data.title,
             message: result.data.message,
           });
+          setTimeout(() => {
+            navigate("/signin")
+          }, 3000);
           return;
         }
       })

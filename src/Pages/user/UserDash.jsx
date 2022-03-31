@@ -287,9 +287,7 @@ const UserDash = props => {
                 <div className="dashboard_profile_container">
                   <table style={{ width: '100%' }}>
                     <tr className="TableRow">
-                      <td className="dashboard_profile_left_cell dashboard_table_heading">
-                        <b>Profile Information</b>
-                      </td>
+                     <tr className="TableRow"></tr>
                       <td className="dashboard_gapping"></td>
                       <td className="dashboard_profile_table_td dashboard_profile_right_cell"></td>
                       <td>
