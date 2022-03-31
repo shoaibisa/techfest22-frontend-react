@@ -9,7 +9,6 @@ import AuthContext from '../../auth/authContext';
 
 const UserDash = props => {
   const authContext = useContext(AuthContext);
-  const [college, setCollege] = useState();
   const navigate = useNavigate();
   const [errosMade, setErrosMade] = useState('');
   const [user, setUser] = useState(null);
@@ -86,7 +85,6 @@ const UserDash = props => {
           return;
         }
         setUser(result.data.user);
-        setCollege(result.data.user.collegeName)
       });
   }, [authContext, authContext.login]);
 
@@ -289,7 +287,9 @@ const UserDash = props => {
                 <div className="dashboard_profile_container">
                   <table style={{ width: '100%' }}>
                     <tr className="TableRow">
-                     <tr className="TableRow"></tr>
+                      <td className="dashboard_profile_left_cell dashboard_table_heading">
+                        <b>Profile Information</b>
+                      </td>
                       <td className="dashboard_gapping"></td>
                       <td className="dashboard_profile_table_td dashboard_profile_right_cell"></td>
                       <td>
@@ -383,7 +383,6 @@ const UserDash = props => {
                                     id="College__Name"
                                     name="College__Name"
                                     className="form-input"
-                                    disabled={college!=null}
                                     onChange={e => {
                                       setCollegeName(e.target.value);
                                     }}
@@ -673,10 +672,20 @@ const UserDash = props => {
                         className="dashboard_profile_left_cell dashboard_table_heading"
                         colspan="3"
                       >
-                        <b> Certificate & Rewards</b>
+                        <b> Team Member</b>
                       </td>
                     </tr>
                     <tr>
+                    <td>
+                        <i
+                          className="fa fa-edit Edit__info__button"
+                         
+                        >
+                          {' '}
+                        </i>
+                      </td>
+                      </tr>
+                    {/* <tr>
                       <td className="dashboard_table_sub_heading" colspan="3">
                         <b>Events Certificates</b>
                       </td>
@@ -730,69 +739,22 @@ const UserDash = props => {
                           Download
                         </a>
                       </td>
-                    </tr>
+                    </tr> */}
                   </table>
                   {/* <!---------------------------------Workshop and Certificates------------------------------> */}
-                  <table cellspacing="15px">
-                    <tr>
-                      <td
-                        className="dashboard_table_sub_heading dashboard_profile_left_cell"
-                        colspan="3"
-                      >
-                        <b>Workshop Certificates</b>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="dashboard_profile_left_cell3">
-                        Name of Event
-                      </td>
-                      <td>Today</td>
-                      <td className="dashboard_profile_left_cell4">
-                        <a
-                          download="/#"
-                          href="/#"
-                          className="dashboard_profile_button"
-                        >
-                          <i sid="dashboard_download_icon" className="fa">
-                            &#xf019;
-                          </i>
-                          Download
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Name of Event</td>
-                      <td>13/04</td>
-                      <td>
-                        <a
-                          download="/#"
-                          href="/#"
-                          className="dashboard_profile_button"
-                        >
-                          <i id="dashboard_download_icon" className="fa">
-                            &#xf019;
-                          </i>
-                          Download
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Name of Event</td>
-                      <td>13/04</td>
-                      <td>
-                        <a
-                          download="/#"
-                          href="/#"
-                          className="dashboard_profile_button"
-                        >
-                          <i id="dashboard_download_icon" className="fa">
-                            &#xf019;
-                          </i>
-                          Download
-                        </a>
-                      </td>
-                    </tr>
-                  </table>
+    <table className='table1'>
+  <tr className='tr1'>
+    <th className='th1'>Team Name</th>
+    <th className='th1'>Member Name</th>
+  <th className='th1'>Email</th>
+  </tr>
+  <tr className='tr1'>
+    <td className='td1'>Peter</td>
+    <td className='td1'>Griffin</td>
+    <td className='td1'>$100</td>
+  </tr>
+  
+</table>
                 </div>
               </div>
             </div>
