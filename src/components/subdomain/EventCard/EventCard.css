@@ -95,6 +95,30 @@
 .robozar_left_content{
     margin:30px 120px 30px 30px ;
 }
+
+
+
+
+
+
+
+
+
+/* team popup.................. */
+.addTeam{
+    width: 20rem;
+    height: 10rem;
+    background-color: white;
+    position: absolute;
+   margin-top: -5rem;
+}
+
+
+
+
+
+
+
 @media(max-width:860px) {
   .robozar_register_button{
       padding: 5px 8px;

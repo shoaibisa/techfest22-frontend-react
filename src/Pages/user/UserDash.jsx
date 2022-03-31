@@ -637,8 +637,8 @@ const UserDash = props => {
                   </table>
 
                   {/* <!-------------------Contact Information-------------> */}
-                  <table>
-                    <tr className="">
+                  <table  style={{ width: '100%' }}>
+                    <tr className="TableRow">
                       <td className="" colspan="2">
                         <b>Contact Information</b>
                       </td>

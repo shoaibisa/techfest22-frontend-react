@@ -95,6 +95,8 @@ const EventCard = props => {
     setErrosMade(null);
   };
 
+  const [showreg, setshowreg] = useState(false)
+
   return (
     <div className="Robo">
       {errosMade && (
@@ -119,11 +121,22 @@ const EventCard = props => {
                 <br />
                <div className="register__button__event">
                <button
-                  onClick={onRegisterClick}
+                  onClick={() => setshowreg(true)}
                   className="robozar_register_button"
                 >
                   Register Here
                 </button>
+
+              { showreg ?(<div className="addTeam">
+
+                    <div className="close__team">
+                    <i class="fa fa-close"></i>
+                    </div>
+
+
+              </div>):null
+
+              }
                 <a
                   href={props.link}
                   rel="noreferrer"
