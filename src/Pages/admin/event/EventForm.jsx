@@ -23,6 +23,7 @@ const EventForm = () => {
   const [errosMade, setErrosMade] = useState();
   const [eventType, setEtype] = useState('');
   const [eDomain, setEdomain] = useState('');
+  const [ePrizeWorth, setEprizeWorth] = useState('');
   useEffect(() => {
     setIsLoading(true);
     fetch(`${baseUrl}/coordinator/get-all-details`, {
@@ -65,6 +66,9 @@ const EventForm = () => {
   };
   const getstudentCoordinator = (selectedList, selectedItem) => {
     setstudentCoordinator(selectedList);
+  };
+  const getEPrize = e => {
+    setEprizeWorth(e.target.value);
   };
 
   // const getfacultyCoordinator = (selectedList, selectedItem) => {
@@ -111,7 +115,7 @@ const EventForm = () => {
     zData.append('event', eImage);
     zData.append('driveLink', eDrive);
     zData.append('studentCoordinator', dataSc);
-
+    zData.append('ePrizeWorth', ePrizeWorth);
     axios
       .post(`${baseUrl}/event/addEvent`, zData, {
         headers: {
@@ -236,6 +240,17 @@ const EventForm = () => {
                     value={eDescription}
                   />
                 </Form.Group>
+                <Form.Group controlId="form.Textarea" className="mb-3">
+                  <Form.Label style={{ color: 'white' }}>
+                    Prize Worth
+                  </Form.Label>
+                  <Form.Control
+                    style={{ color: 'white', background: 'transparent' }}
+                    type="number"
+                    placeholder="Enter Prize worth of event *"
+                    onChange={getEPrize}
+                  />
+                </Form.Group>
                 <Form.Group controlId="formFileSm" className="mb-3">
                   <Form.Label style={{ color: 'white' }}>
                     Uplode Image
@@ -275,8 +290,11 @@ const EventForm = () => {
                 </Form.Group>
                 <Form.Group className="mb-3">
                   <Form.Label style={{ color: 'white' }}>Domain</Form.Label>
-                  <Form.Select style={{ color: 'white', background: 'transparent' }} aria-label="Default select example" onChange={getEdomain}>
-
+                  <Form.Select
+                    style={{ color: 'white', background: 'transparent' }}
+                    aria-label="Default select example"
+                    onChange={getEdomain}
+                  >
                     <option style={{ color: 'black' }}>---select---</option>
                     <option style={{ color: 'black' }} value="chemfor">
                       Chemfor
@@ -300,9 +318,8 @@ const EventForm = () => {
                       Robozar
                     </option>
                     <option style={{ color: 'black' }} value="genesis">
-                    Genesis
+                      Genesis
                     </option>
-                  
                   </Form.Select>
                 </Form.Group>
                 <div
