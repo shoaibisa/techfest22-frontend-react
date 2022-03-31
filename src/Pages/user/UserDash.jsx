@@ -6,7 +6,7 @@ import ErrorModel from '../../components/UI/ErrorModel/ErrorModel';
 
 import './UserDash.css';
 import AuthContext from '../../auth/authContext';
-import { formatDate } from '../../Helper/helper';
+
 const UserDash = props => {
   const authContext = useContext(AuthContext);
   const navigate = useNavigate();
@@ -142,6 +142,8 @@ const UserDash = props => {
                       </button>
                     </div>
                   </div>
+
+                  
                 )}
               </div>
               <div className="container  Main px-0 mt-5 pt-5">
@@ -620,16 +622,16 @@ const UserDash = props => {
                       </td>
                     </tr>
                     <tr className="TableRow">
-                      <td className="">{user.course}</td>
+                      <td className="">{user.course && user.course}</td>
                     </tr>
                     <tr className="TableRow">
-                      <td className="">{user.yearOfStudy}</td>
+                      <td className="">{user.yearOfStudy && user.yearOfStudy}</td>
                     </tr>
                     <tr className="TableRow">
                       <td>Date of Birth</td>
 
                       <td className="">
-                        {user.dob.toString().substring(0, 10)}
+                        {user.dob && user.dob.toString().substring(0, 10)}
                       </td>
                     </tr>
                   </table>
