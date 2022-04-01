@@ -154,6 +154,7 @@ background-image: linear-gradient(to top, #41f115 0%, #41f115 100%)  !important;
 }
 
 .dashboard_certificate{
+ 
   border:2px solid white;
   border-radius: 20px;
   margin-top: 15%;
@@ -602,12 +603,12 @@ color: white;
   }
   
 }
-.table1 {
+table {
   border-collapse: collapse;
   width: 100%;
 }
 
-.th1, .td1 {
+th, td {
   padding: 8px;
   text-align: left;
   /* border-bottom: 1px solid #ddd; */

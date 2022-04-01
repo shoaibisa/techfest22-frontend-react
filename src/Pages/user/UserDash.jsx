@@ -297,7 +297,7 @@ const UserDash = props => {
                           className="fa fa-edit Edit__info__button"
                           onClick={() => setShow(true)}
                         >
-                          {' '}
+                          
                         </i>
                       </td>
                     </tr>
@@ -674,86 +674,30 @@ const UserDash = props => {
                       >
                         <b> Team Member</b>
                       </td>
-                    </tr>
-                    <tr>
-                    <td>
-                        <i
-                          className="fa fa-edit Edit__info__button"
-                         
-                        >
-                          {' '}
-                        </i>
-                      </td>
-                      </tr>
-                    {/* <tr>
-                      <td className="dashboard_table_sub_heading" colspan="3">
-                        <b>Events Certificates</b>
+                      <td
+                        className="dashboard_profile_left_cell dashboard_table_heading"
+                        colspan="3"
+                      >
+                        <b  className="fa fa-user-plus" aria-hidden="true"></b>
                       </td>
                     </tr>
-                    <tr className="dashboard_border">
-                      <td className="dashboard_profile_left_cell3">
-                        Name of Event
-                      </td>
-                      <td>Today</td>
-                      <td className="dashboard_profile_left_cell4 dashboard_border_remove">
-                        <a
-                          download="/#"
-                          href="/#"
-                          className="dashboard_profile_button"
-                        >
-                          <i id="dashboard_download_icon" className="fa">
-                            &#xf019;
-                          </i>
-                          Download
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Name of Event</td>
-                      <td>13/04</td>
-                      <td>
-                        <a
-                          download="/#"
-                          href="/#"
-                          className="dashboard_profile_button"
-                        >
-                          <i id="dashboard_download_icon" className="fa">
-                            &#xf019;
-                          </i>
-                          Download
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Name of Event</td>
-                      <td>13/04</td>
-                      <td>
-                        <a
-                          download="/#"
-                          href="/#"
-                          className="dashboard_profile_button"
-                        >
-                          <i id="dashboard_download_icon" className="fa">
-                            &#xf019;
-                          </i>
-                          Download
-                        </a>
-                      </td>
-                    </tr> */}
+                  
                   </table>
                   {/* <!---------------------------------Workshop and Certificates------------------------------> */}
-    <table className='table1'>
-  <tr className='tr1'>
-    <th className='th1'>Team Name</th>
-    <th className='th1'>Member Name</th>
-  <th className='th1'>Email</th>
+                 <table>
+  <tr>
+    <th>Team Name</th>
+    <th>Member Name</th>
+  <th>Email Id</th>
+  <th>Event Registered</th>
   </tr>
-  <tr className='tr1'>
-    <td className='td1'>Peter</td>
-    <td className='td1'>Griffin</td>
-    <td className='td1'>$100</td>
+  <tr>
+    <td>Peter</td>
+    <td>Griffin</td>
+    <td>$100</td>
+    <td></td>
   </tr>
-  
+ 
 </table>
                 </div>
               </div>
