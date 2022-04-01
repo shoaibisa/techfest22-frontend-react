@@ -9,6 +9,9 @@ import Mechanicaimg from '../../images/Domain/Mechanica.webp'
 import Chemforimg from '../../images/Domain/Chemfor.webp'
 import Karyarachnaimg from '../../images/Domain/Karyarachna.webp'
 import { NavLink } from 'react-router-dom';
+import fram1  from "../../images/Domain/Frame 2.webp"
+import fram2  from "../../images/Domain/Frame 3.webp"
+import fram3  from "../../images/Domain/Frame 4.webp"
 
 import './Domain.css';
 const Domain = (props) => {
@@ -37,32 +40,22 @@ const Domain = (props) => {
             style={{
               width: "100%"
             }}>
-            <img src={props.data[0].imageSrc} alt="" />
+            <img src={fram1} alt="" />
           </div>
           <div
             style={{
               width: "100%"
             }}>
-            <img src={props.data[0].imageSrc} alt="" />
+            <img src={fram2} alt="" />
           </div>
           <div style={{
             width: "100%"
           }}>
-            <img src={props.data[0].imageSrc} alt="" />
+            <img src={fram3} alt="" />
           </div>
-          <div style={{
-            width: "100%"
-          }}>
-            <img src={props.data[0].imageSrc} alt="" />
-          </div>
-          <div>
-            <img src={props.data[0].imageSrc} alt="" />
-          </div>
-          <div style={{
-            width: "100%"
-          }}>
-            <img src={props.data[0].imageSrc} alt="" />
-          </div>
+         
+         
+          
         </Slider>
       </div>
 

@@ -143,7 +143,7 @@ const UserDash = props => {
                     </div>
                   </div>
 
-                  
+
                 )}
               </div>
               <div className="container  Main px-0 mt-5 pt-5">
@@ -339,40 +339,6 @@ const UserDash = props => {
                                     className="input_Profile_Information  form-input1"
                                     name="birthday"
                                   />
-                                </div>
-                                <div className="form ">
-                                  <label className="form-input1">
-                                    You are a :{' '}
-                                  </label>
-                                  <br />
-                                  <input
-                                    type="radio"
-                                    name="YouAre"
-                                    value=""
-                                    className="form-input2"
-                                  />
-                                  <label className="mx-1"> Student</label>
-                                  <input
-                                    type="radio"
-                                    name="YouAre"
-                                    value=""
-                                    className="form-input2"
-                                  />
-                                  <label className="mx-1"> Faculty</label>
-                                  <input
-                                    type="radio"
-                                    name="YouAre"
-                                    value=""
-                                    className="form-input2"
-                                  />
-                                  <label className="mx-1"> Professional</label>
-                                  <input
-                                    type="radio"
-                                    name="YouAre"
-                                    value=""
-                                    className="form-input2 "
-                                  />
-                                  <label className="form-input"> Others</label>
                                 </div>
                                 <div className="form">
                                   <label className="form-input1">
@@ -622,9 +588,14 @@ const UserDash = props => {
                       </td>
                     </tr>
                     <tr className="TableRow">
+                      <td>Course</td>
                       <td className="">{user.course && user.course}</td>
                     </tr>
                     <tr className="TableRow">
+
+                    </tr>
+                    <tr className="TableRow">
+                      <td>Year Of Study</td>
                       <td className="">{user.yearOfStudy && user.yearOfStudy}</td>
                     </tr>
                     <tr className="TableRow">
@@ -637,7 +608,7 @@ const UserDash = props => {
                   </table>
 
                   {/* <!-------------------Contact Information-------------> */}
-                  <table  style={{ width: '100%' }}>
+                  <table style={{ width: '100%' }}>
                     <tr className="TableRow">
                       <td className="" colspan="2">
                         <b>Contact Information</b>
@@ -676,15 +647,15 @@ const UserDash = props => {
                       </td>
                     </tr>
                     <tr>
-                    <td>
+                      <td>
                         <i
                           className="fa fa-edit Edit__info__button"
-                         
+
                         >
                           {' '}
                         </i>
                       </td>
-                      </tr>
+                    </tr>
                     {/* <tr>
                       <td className="dashboard_table_sub_heading" colspan="3">
                         <b>Events Certificates</b>
@@ -742,19 +713,19 @@ const UserDash = props => {
                     </tr> */}
                   </table>
                   {/* <!---------------------------------Workshop and Certificates------------------------------> */}
-    <table className='table1'>
-  <tr className='tr1'>
-    <th className='th1'>Team Name</th>
-    <th className='th1'>Member Name</th>
-  <th className='th1'>Email</th>
-  </tr>
-  <tr className='tr1'>
-    <td className='td1'>Peter</td>
-    <td className='td1'>Griffin</td>
-    <td className='td1'>$100</td>
-  </tr>
-  
-</table>
+                  <table className='table1'>
+                    <tr className='tr1'>
+                      <th className='th1'>Team Name</th>
+                      <th className='th1'>Member Name</th>
+                      <th className='th1'>Email</th>
+                    </tr>
+                    <tr className='tr1'>
+                      <td className='td1'>Peter</td>
+                      <td className='td1'>Griffin</td>
+                      <td className='td1'>$100</td>
+                    </tr>
+
+                  </table>
                 </div>
               </div>
             </div>
