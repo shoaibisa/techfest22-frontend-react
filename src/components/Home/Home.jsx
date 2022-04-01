@@ -79,18 +79,14 @@ const Home = props => {
 
             <div className="text-center py-2  logo_section__about">
               <div className=" text-center logo_section_about__heading">
-                <h2 className="">The Ultimate Leap to Agri-Tech</h2>
+                <h2 className="">The Ultimate Leap to Agro-Tech</h2>
               </div>
               <div className="text-center logo_section_about__paragraph">
                 <div className="">
                   <figure className="text-center">
                     <blockquote className="blockquote">
                       <p className=" ">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Odio architecto et dolorem sapiente as pernatur dolore
-                        autem culpa deleniti praesentium deserunt expedita eos
-                        reprehenderit dignissimos voluptatibus, omnis fuga non
-                        facilis possimus.
+                      techFEST'22 is on the mission to revolutionize agro-technology. Explore with us how new advancements in technologies ranging from robotics and drones to computer vision software transform traditional methods of agriculture. With the young innovative minds competing to bring a change and supporting the backbone of our nation.
                       </p>
                     </blockquote>
                   </figure>
@@ -148,7 +144,7 @@ const Home = props => {
                 Workshops
               </div>
               <div className="cards-container_card1_description-container_content">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              In Workshops learning is something to be enjoyed, not endured. 
               </div>
               <div className="cards-container_card1_description-container_btn">
                 <NavLink to={'/workshop'}>Learn More</NavLink>
@@ -164,7 +160,7 @@ const Home = props => {
                 Domain
               </div>
               <div className="cards-container_card2_description-container_content">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Unleash your skills and test yourselves on National Battlegrounds with 8 Domains 
               </div>
               <div className="cards-container_card2_description-container_btn">
                 <NavLink to={'/domain'}>Learn More</NavLink>

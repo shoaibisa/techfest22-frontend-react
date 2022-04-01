@@ -193,7 +193,7 @@ const Navbar = props => {
                         activeClassName="active "
                         to="/frequentlyAsk"
                       >
-                        Contect Us
+                        Contact Us
                       </NavLink>
                     </li>
                   

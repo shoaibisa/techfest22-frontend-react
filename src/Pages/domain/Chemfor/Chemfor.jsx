@@ -25,8 +25,8 @@ const Chemfor = () => {
         <EventLogo
           imgsrc={Chemforimg}
           title="CHEMFOR"
-          subTitle="They are doing what we do, eventually might do it all.
-        You build what can work for you, We bring this which can make you better at building. Do participate to build better."
+          subTitle="Are you a laboratory expert or have an interest in the development of a product. This Domain is for you with a platform to attempt and make the best use of your knowledge in the food and chemical industry. 
+          It will help India become healthy and pollution free through projects on food development and events based on environment safety."
         />
         {eData &&
           eData.map(e => (

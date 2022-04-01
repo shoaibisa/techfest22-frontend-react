@@ -89,23 +89,10 @@ const AboutUs = (props) => {
           <div className="About__Us__About__Sliet__Heading">About SLIET</div>
           <div className="About__Us__About__Sliet__Description">
             <p>
-              Sant Longowal Institute of Engineering and Technology was
-              established as a 
-              tribute to revered saint Sant Harchand Singh Longowal. The
-              institute strives
-              to impart quality knowledge and technical skills by creating a
-              healthy competitive 
-              enviroment that encourages innovation and critical thinking among
-              students. At 
-              the academic level the institute offers various academic courses
-              of
-             
-              Undergraduate and PostGraduate programmes. Apart from academics,
-              SLIET is 
-              home to various co-cirrcular activities and communities such as
-              National Cadet
-              Corps-SLIET, Endeavour, SSDC, Juggernauts, Green rangers,
-              Institute Innovation cell, SARS, National Service Scheme, etc.
+            Established in 1989, Sant Longowal Institute of Engineering and Technology was set up in Longowal,
+             Punjab in the memory of Late Sh. Harchand Singh Ji Longowal. With the motto “Proud to be a part of team SLIET”,
+              the institute strives to play its part in society by providing technical education with the underlying belief that only
+               an educated youth holds the key to national upliftment.
             </p>
           </div>
         </div>

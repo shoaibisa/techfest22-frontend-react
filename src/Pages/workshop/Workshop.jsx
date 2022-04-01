@@ -22,8 +22,7 @@ const Workshop = props => {
       <EventLogo
         imgsrc={Workshopimg}
         title="WORKSHOP"
-        subTitle="They are doing what we do, eventually might do it all.
-            You build what can work for you, We bring this which can make you better at building. Do participate to build better."
+        subTitle="Learning is something to be enjoyed, not endured. With the Workshop lets you skip the lectures and do more of what you love."
       />
       
       {workshopData &&

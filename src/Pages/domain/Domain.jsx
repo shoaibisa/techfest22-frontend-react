@@ -73,7 +73,7 @@ const Domain = (props) => {
           <img src={Robozarimg} class="card-img-top"  />
           <div class="card-body Domain__card__body">
             <h5 class="card-title">Robozar</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">Ignite your passion in automation for agriculture.</p>
             <NavLink to="/robozar" className="Domain__button"><a href="#" class=" Domain__button">Read more</a></NavLink>
           </div>
         </div>
@@ -81,7 +81,7 @@ const Domain = (props) => {
           <img src={Electricaimg}class="card-img-top"  />
           <div class="card-body Domain__card__body">
             <h5 class="card-title">Electrica</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">The arena of all electrical/electronic/instrumentation engineers. Put the theory you learned into practical applications.</p>
             <NavLink to = "/electrica" className="Domain__button"><a href="#" class="Domain__button ">Read more</a></NavLink>
           </div>
         </div>
@@ -99,7 +99,8 @@ const Domain = (props) => {
           <img src={Plexusimg} class="card-img-top"  />
           <div class="card-body Domain__card__body">
             <h5 class="card-title">Plexus</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">This domain is designed for all the computerfiles who are trying a hand in any of these like ML, Competitive programming, web development, and even for all the young minds with only knowledge of the fundamentals of the computer.
+</p>
             <NavLink to = "/plexus" className="Domain__button"><a href="#" class="Domain__button ">Read more</a></NavLink>
           </div>
         </div>
@@ -107,7 +108,8 @@ const Domain = (props) => {
           <img src= {Mechanicaimg} class="card-img-top"  />
           <div class="card-body Domain__card__body">
             <h5 class="card-title">Mechanica</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">This domain welcomes all mechanical engineers to challenge their skills in CAD/CAM designing, details about fabrication, knowledge about trusses and fluid mechanics.
+</p>
             <NavLink to = "/mechanica" className="Domain__button"><a href="#" class="Domain__button ">Read more</a></NavLink>          </div>
         </div>
         <div class="card card__Style">
@@ -123,14 +125,14 @@ const Domain = (props) => {
           <img src={Karyarachnaimg} class="card-img-top"  />
           <div class="card-body Domain__card__body">
             <h5 class="card-title">Karyarachna</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">This amazing exhibit is an opportunity to showcase everything from models of aircraft and vehicles to exquisite art. This is the best platform to forge your creativity in the cut-throat competition…or simply kick-back and enjoy the extravaganza.</p>
             <NavLink to = "/karyarachna" className="Domain__button"><a href="#" class="Domain__button ">Read more</a></NavLink>          </div>
         </div>
        <div class="card card__Style">
           <img src={Genesisimg} class="card-img-top"  />
           <div class="card-body Domain__card__body">
             <h5 class="card-title">Genesis</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">Begin your journey of a thousand miles by taking one step to represent yourself and your idea.</p>
             <NavLink to = "/genesis" className="Domain__button"><a href="#" class="Domain__button ">Read more</a></NavLink>          </div>
         </div>
        </div>
