@@ -21,8 +21,8 @@ const Electrica = () => {
       <EventLogo
         imgsrc={Electricaimg}
         title="ELECTRICA"
-        subTitle="They are doing what we do, eventually might do it all.
-    You build what can work for you, We bring this which can make you better at building. Do participate to build better."
+        subTitle="The arena of all electrical/electronic/instrumentation engineers.
+        Put the theory you learned into practical applications."
       />
 
       {eData &&

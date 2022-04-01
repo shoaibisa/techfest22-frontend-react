@@ -24,8 +24,9 @@ const Chemfor = () => {
         <EventLogo
           imgsrc={Karyarachna}
           title="KARYARACHNA"
-          subTitle="They are doing what we do, eventually might do it all.
-        You build what can work for you, We bring this which can make you better at building. Do participate to build better."
+          subTitle="This amazing exhibit is an opportunity to showcase everything from models of aircraft and vehicles to exquisite art.
+           This is the best platform to forge your creativity in the cut-throat competition…or simply kick-back and enjoy the extravaganza.
+          "
         />
         {eData &&
           eData.map(e => (

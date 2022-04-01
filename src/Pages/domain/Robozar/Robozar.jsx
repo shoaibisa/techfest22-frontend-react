@@ -22,8 +22,8 @@ const Chemfor = () => {
         <EventLogo
           imgsrc={pngwing}
           title="ROBOZAR"
-          subTitle="They are doing what we do, eventually might do it all.
-        You build what can work for you, We bring this which can make you better at building. Do participate to build better."
+          subTitle="Ignite your passion in automation for agriculture.
+          "
         />
         {eData &&
           eData.map(e => (

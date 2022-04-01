@@ -22,8 +22,9 @@ const Chemfor = () => {
         <EventLogo
           imgsrc={Mechanica}
           title="MECHANICA"
-          subTitle="They are doing what we do, eventually might do it all.
-        You build what can work for you, We bring this which can make you better at building. Do participate to build better."
+          subTitle="This domain welcomes all mechanical engineers to challenge their skills in CAD/CAM designing,
+           details about fabrication, knowledge about trusses and fluid mechanics.
+          "
         />
         {eData &&
           eData.map(e => (

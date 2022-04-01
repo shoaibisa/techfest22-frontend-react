@@ -50,7 +50,7 @@ const AdminContent = () => {
           onErrosClick={onErrosMadeHandle}
         />
       )}
-      <div style={{ textAlign: 'center', marginTop: '10rem' }}>
+      <div style={{ textAlign: 'center' }}>
         {isLoading && <LoaderSpin />}
       </div>
 
