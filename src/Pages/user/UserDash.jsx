@@ -6,6 +6,7 @@ import ErrorModel from '../../components/UI/ErrorModel/ErrorModel';
 
 import './UserDash.css';
 import AuthContext from '../../auth/authContext';
+import AddTeamMembers from '../../components/UI/AddMembers/AddTeamMember';
 
 const UserDash = props => {
   const authContext = useContext(AuthContext);
@@ -20,7 +21,15 @@ const UserDash = props => {
   const [phone, setPhone] = useState();
   const [whatsapp, setWhatsApp] = useState();
   const [telegram, setTelegram] = useState();
+  const [isAddTeam, setIsAddTeam] = useState();
 
+  const onIsAddMembers = () => {
+    setIsAddTeam({
+      title: 'add',
+      message: 'hello',
+    });
+    console.log('jh');
+  };
   const onSaveClick = () => {
     const saveUser = {
       name: user.name,
@@ -92,6 +101,9 @@ const UserDash = props => {
   const onErrosMadeHandle = () => {
     setErrosMade(null);
   };
+  const onIsTeamMadeHandle = () => {
+    setIsAddTeam(null);
+  };
 
   const [show, setShow] = useState(false);
 
@@ -106,6 +118,13 @@ const UserDash = props => {
           title={errosMade.title}
           message={errosMade.message}
           onErrosClick={onErrosMadeHandle}
+        />
+      )}
+      {isAddTeam && (
+        <AddTeamMembers
+          title={isAddTeam.title}
+          message={isAddTeam.message}
+          onErrosClick={onIsTeamMadeHandle}
         />
       )}
       {user && (
@@ -142,8 +161,6 @@ const UserDash = props => {
                       </button>
                     </div>
                   </div>
-
-                  
                 )}
               </div>
               <div className="container  Main px-0 mt-5 pt-5">
@@ -296,9 +313,7 @@ const UserDash = props => {
                         <i
                           className="fa fa-edit Edit__info__button"
                           onClick={() => setShow(true)}
-                        >
-                          
-                        </i>
+                        ></i>
                       </td>
                     </tr>
 
@@ -625,7 +640,9 @@ const UserDash = props => {
                       <td className="">{user.course && user.course}</td>
                     </tr>
                     <tr className="TableRow">
-                      <td className="">{user.yearOfStudy && user.yearOfStudy}</td>
+                      <td className="">
+                        {user.yearOfStudy && user.yearOfStudy}
+                      </td>
                     </tr>
                     <tr className="TableRow">
                       <td>Date of Birth</td>
@@ -637,7 +654,7 @@ const UserDash = props => {
                   </table>
 
                   {/* <!-------------------Contact Information-------------> */}
-                  <table  style={{ width: '100%' }}>
+                  <table style={{ width: '100%' }}>
                     <tr className="TableRow">
                       <td className="" colspan="2">
                         <b>Contact Information</b>
@@ -678,27 +695,29 @@ const UserDash = props => {
                         className="dashboard_profile_left_cell dashboard_table_heading"
                         colspan="3"
                       >
-                        <b  className="fa fa-user-plus" aria-hidden="true"></b>
+                        <i
+                          className="fa fa-user-plus"
+                          aria-hidden="true"
+                          onClick={onIsAddMembers}
+                        ></i>
                       </td>
                     </tr>
-                  
                   </table>
                   {/* <!---------------------------------Workshop and Certificates------------------------------> */}
-                 <table>
-  <tr>
-    <th>Team Name</th>
-    <th>Member Name</th>
-  <th>Email Id</th>
-  <th>Event Registered</th>
-  </tr>
-  <tr>
-    <td>Peter</td>
-    <td>Griffin</td>
-    <td>$100</td>
-    <td></td>
-  </tr>
- 
-</table>
+                  <table>
+                    <tr>
+                      <th>Team Name</th>
+                      <th>Member Name</th>
+                      <th>Email Id</th>
+                      <th>Event Registered</th>
+                    </tr>
+                    <tr>
+                      <td>Peter</td>
+                      <td>Griffin</td>
+                      <td>$100</td>
+                      <td></td>
+                    </tr>
+                  </table>
                 </div>
               </div>
             </div>
