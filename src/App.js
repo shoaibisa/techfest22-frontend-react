@@ -43,6 +43,7 @@ import PayNow from './Pages/user/payment/UserPay';
 import AuthContext from './auth/authContext';
 import SponsorForm from './Pages/admin/sponsor/SponsorForm';
 import SponsorAll from './Pages/admin/sponsor/AllSponsor';
+import FrequentlyAsk  from './Pages/AboutUs/aboutus';
 
 //import WorkShopForm from './Pages/admin/WorkshopForm/WorkshopForm';
 import WorkshopAll from './Pages/admin/WorkshopForm/WorkShopList/AllWorkshop';
@@ -97,6 +98,11 @@ function App() {
           exact
           path="/domain"
           element={<Domain data={dataJson.domain} />}
+        />
+         <Route
+          exact
+          path="/frequentlyAsk"
+          element={<FrequentlyAsk/>}
         />
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
           <Route

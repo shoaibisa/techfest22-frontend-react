@@ -51,4 +51,11 @@ li:hover::after {
     }
   }
 
+  @media screen and (max-Width:1026px) {
+    
+    .nav-item{
+       font-size: 14px;
+    }
+  }
+
 

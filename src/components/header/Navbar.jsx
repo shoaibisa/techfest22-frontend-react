@@ -167,16 +167,39 @@ const Navbar = props => {
                     </ul>
                   </li>
                 )}
-                <li className="nav-item">
+               
+                <li className="nav-item dropdown text-light">
                   <NavLink
-                    className="nav-link mx-3 line text-light"
-                    data-toggle="pill"
-                    aria-current="page"
+                    className="nav-link dropdown-toggle mx-3 text-light line"
                     to="/about"
+                    id="offcanvasNavbarDropdown"
+                    role="button"
+                    aria-expanded="false"
                   >
-                    About Us
+                     About Us
                   </NavLink>
+
+                  <ul
+                    className="dropdown-menu "
+                    aria-labelledby="offcanvasNavbarDropdown"
+                    style={{
+                      backgroundColor: 'rgb(17, 34, 13)',
+                      width: '100%',
+                    }}
+                  >
+                    <li>
+                      <NavLink
+                        className="dropdown-item  text-light line"
+                        activeClassName="active "
+                        to="/frequentlyAsk"
+                      >
+                        Contect Us
+                      </NavLink>
+                    </li>
+                  
+                  </ul>
                 </li>
+
                 <li className="nav-item">
                   <NavLink
                     className="nav-link mx-3 text-light line"
@@ -186,6 +209,7 @@ const Navbar = props => {
                     Workshops
                   </NavLink>
                 </li>
+
                 <li className="nav-item dropdown text-light">
                   <NavLink
                     className="nav-link dropdown-toggle mx-3 text-light line"
