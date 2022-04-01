@@ -41,7 +41,9 @@
 
 
 
-
+.Event__cordinator2 {
+    margin-left: 2rem;
+}
 .Event__cordinator1__right img{
     width: 61px;
     height: 61px;
@@ -91,6 +93,9 @@
     color: black;
     background-color: white;
 }
+.regitration__fee p, h5{
+    font-size: 10px;
+}
 
 @media screen and (max-width:1026px) {
 
@@ -138,6 +143,9 @@
 .Robozar__bottom__left__calender p{
     font-size: 10px;
    
+}
+.Event__cordinator1__left p {
+    margin-left: 1rem;
 }
 }
 @media screen and (max-width:780px) {
