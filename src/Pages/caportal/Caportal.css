@@ -407,9 +407,9 @@ input:active {
   font-size: 1rem;
   color: #ffff;
   background: linear-gradient(
-    90deg,
-    rgba(18, 54, 22, 1) 58%,
-    rgba(21, 197, 45, 0.842) 98%
+    to bottom right,
+    rgba(18, 54, 22, 1),
+    rgba(21, 197, 45, 0.842)
   );
   border-radius: 8px;
   width: 16rem;

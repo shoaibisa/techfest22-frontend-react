@@ -132,6 +132,7 @@ const Home = props => {
       </div>
 
       {/* <!-- Scroll Down Button Start--> */}
+      <div className='banner--fadeBottom'/>
       <div className="bottomSection">
         <div className="cards-container">
           <div className="cards-container_card1">
@@ -144,7 +145,7 @@ const Home = props => {
             </div>
             <div className="cards-container_card1_description-container">
               <div className="cards-container_card1_description-container_title">
-                Workshop
+                Workshops
               </div>
               <div className="cards-container_card1_description-container_content">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
