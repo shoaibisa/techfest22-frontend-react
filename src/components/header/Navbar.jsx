@@ -196,6 +196,15 @@ const Navbar = props => {
                         Contact Us
                       </NavLink>
                     </li>
+                    <li>
+                      <NavLink
+                        className="dropdown-item  text-light line"
+                        activeClassName="active "
+                        to="/OurTeam"
+                      >
+                        Teams
+                      </NavLink>
+                    </li>
                   
                   </ul>
                 </li>

@@ -212,7 +212,145 @@
 
     
   }
+],
+   "teamMember":[
+    {
+      "name":"Meharpreet Singh",
+      "imgSrc":"img/teamImg/Meharpreet-Singh.jpg",
+      "role":"Core",
+      "phone":"",
+      "stauts":"core"
+    },{
+      "name":"Simram",
+      "imgSrc":"img/teamImg/IMG_20220401_143637.jpg",
+      "role":"Core",
+      "phone":"",
+      "stauts":"core"
+    },
+    {
+      "name":"Abhishek Yadav",
+      "imgSrc":"img/teamImg/GME-2030734.jpg",
+      "role":"Core",
+      "phone":"",
+      "stauts":"core"
+    },{
+      "name":"Sankha Maiti",
+      "imgSrc":"img/teamImg/Sankha Maiti.jpg",
+      "role":"Core",
+      "phone":"",
+      "stauts":"core"
+    },{
+      "name":"Nikhil",
+      "imgSrc":"img/teamImg/Nikhil.JPEG",
+      "role":"Core",
+      "phone":"",
+      "stauts":"core"
+    },
+    {
+      "name":"Satvik Raj Patel",
+      "imgSrc":"img/teamImg/Satvik Raj Patel.jpg",
+      "role":"Core",
+      "phone":"",
+      "stauts":"core"
+    },
+    {
+      "name":"Soham Das",
+      "imgSrc":"img/teamImg/Soham Das.jpeg",
+      "role":"Core",
+      "phone":"",
+      "stauts":"core"
+    },
+    {
+      "name":"Loknath",
+      "imgSrc":"img/teamImg/Loknath _1.jpg",
+      "role":"Core",
+      "phone":"",
+      "stauts":"core"
+    },{
+      "name":"Pragati",
+      "imgSrc":"img/teamImg/dummy.jpg",
+      "role":"Core",
+      "stauts":"core",
+      "phone":""
+    },
+     {
+       "name":"DIKSHA KUMARI",
+       "imgSrc":"img/teamImg/DIKSHA KUMARI.jpg",
+       "role":"Core",
+      "stauts":"core",
+       "phone":""
+     },
+     {
+      "name":"Praveen",
+      "imgSrc":"img/teamImg/dummy.jpg",
+      "role":"React Develper",
+      "phone":"6201783527",
+      "stauts":"web"
+    },{
+      "name":"Anubhav Rajput",
+      "imgSrc":"img/teamImg/dummy.jpg",
+      "role":"React Developer",
+      "stauts":"web",
+      "phone":"8877949888"
+    },
+    {
+      "name":"Mohammad Shoaib Akhtar",
+      "imgSrc":"img/teamImg/md.jpg",
+      "role":"Back End  & Server Managmentr",
+      "phone":"6201783527",
+      "stauts":"web"
+    },{
+      "name":"Preteek Rai",
+      "imgSrc":"img/teamImg/preteek.jpeg",
+      "role":"Back End  & Server Managment",
+      "phone":"6388503409",
+      "stauts":"web"
+    },{
+      "name":"Gaurav Kumar",
+      "imgSrc":"img/teamImg/dummy.jpg",
+      "role":"React Developer",
+      "phone":"6388503409",
+      "stauts":"web"
+    },
+    {
+      "name":"Ravi",
+      "imgSrc":"img/teamImg/dummy.jpg",
+      "role":"Front End",
+      "stauts":"web",
+      "phone":""
+    },
+    {
+      "name":"Himanshu",
+      "imgSrc":"img/teamImg/himanshu.jpg",
+      "role":"Front End",
+      "stauts":"web",
+      "phone":""
+    },
+    {
+      "name":"ABHIGYAN",
+      "imgSrc":"img/teamImg/ABHIGYAN.JPG",
+      "role":"Supervisory",
+      "stauts":"Supervisory",
+      "phone":""
+    },{
+      "name":"Karan chanana",
+      "imgSrc":"img/teamImg/Karan chanana.jpg",
+      "role":"Supervisory",
+      "stauts":"Supervisory",
+      "phone":""
+    },{
+      "name":"Dummay Name",
+      "imgSrc":"img/teamImg/IMG_7160.jpg",
+      "role":"Supervisory",
+      "stauts":"Supervisory",
+      "phone":""
+    },{
+      "name":"Dummay Name",
+      "imgSrc":"img/teamImg/SAVE_20220401_142407.jpg",
+      "role":"Supervisory",
+      "stauts":"Supervisory",
+      "phone":""
+    }
 
-
-]
+   ]
 }
