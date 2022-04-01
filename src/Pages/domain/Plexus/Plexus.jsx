@@ -22,8 +22,8 @@ const Chemfor = () => {
         <EventLogo
           imgsrc={Plexus}
           title="PLEXUS"
-          subTitle="They are doing what we do, eventually might do it all.
-        You build what can work for you, We bring this which can make you better at building. Do participate to build better."
+          subTitle="This domain is designed for all the computerfiles who are trying a hand in any of these like ML,
+           Competitive programming, web development, and even for all the young minds with only knowledge in fundamental of the computer."
         />
         {eData &&
           eData.map(e => (

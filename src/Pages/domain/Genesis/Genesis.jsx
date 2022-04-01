@@ -21,8 +21,7 @@ function Genesis() {
                 <EventLogo
                     imgsrc={Genesisimg}
                     title="GENESIS"
-                    subTitle="They are doing what we do, eventually might do it all.
-        You build what can work for you, We bring this which can make you better at building. Do participate to build better."
+                    subTitle="Begin your journey of a thousand miles by taking one step to represent yourself and your idea."
                 />
 
                 {eData &&

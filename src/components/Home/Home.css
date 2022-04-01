@@ -25,6 +25,9 @@
   background-color: rgb(202, 199, 199);
   color: black !important;
 }
+.logo_section__button_section{
+  margin-bottom: 2rem;
+}
 .home__slider__line{
   height: 2px;
   width: 60%;
@@ -171,15 +174,19 @@
 
 
 .btn-green{
-  background: #27FE04  !important;
-  color: #000 !important;
+  background-image: linear-gradient(
+    to top right,
+    rgb(12, 75, 19),
+    rgba(21, 197, 45, 0.842)
+  );
+  color: #fff !important;
   font-style: normal !important;
   font-weight: 400;
   border-radius: 10px !important;
   font-family: "helveticaregular";
 }
 .btn-green:hover{
-  color: white !important;
+  color: #000 !important;
 }
 
 .btn-none,
@@ -305,8 +312,9 @@ html {
 }
 
 .cards-container_card1_description-container_title {
-  font-family: "heading-font";
+  font-family: "heading font";
   font-size: large;
+  letter-spacing: 2px;
 }
 
 .cards-container_card1_description-container_content {
@@ -386,7 +394,17 @@ html {
 
 
 /* price money people icon section is here ---------------*/
-
+.banner--fadeBottom{
+   height: 7.4rem;
+    background-image: linear-gradient(
+        180deg,
+        transparent,
+        rgba(8, 7, 7, 0.91),
+        rgb(0, 0, 0)
+    );
+    margin-top: -5rem;
+    z-index: -1;
+}
 .row {
   display: flex;
   justify-content: space-between;
