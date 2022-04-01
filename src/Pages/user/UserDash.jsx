@@ -107,9 +107,9 @@ const UserDash = props => {
 
   const [show, setShow] = useState(false);
 
-  const onPayBtnClick = () => {
-    navigate('/user/pay');
-  };
+  // const onPayBtnClick = () => {
+  //   navigate('/user/pay');
+  // };
 
   return (
     <div className="body">
@@ -155,7 +155,9 @@ const UserDash = props => {
                       </p>
                       <button
                         className="payment__select__button"
-                        onClick={onPayBtnClick}
+                        onClick={() => {
+                          setErrosMade({message: "The payment process will begin shortly!"})
+                        }}
                       >
                         Pay
                       </button>
