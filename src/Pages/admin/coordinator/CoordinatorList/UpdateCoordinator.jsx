@@ -21,6 +21,7 @@ const UpdateCoordinator = () => {
   const [fetched, setFetched] = useState(false);
   const cId = useLocation();
   let cccid = cId.state != null ? cId.state.id : '6230c1e3eb2653bdad716000';
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {
     await axios
       .get(`${baseUrl}/coordinator/get/${cccid}`, {
@@ -52,7 +53,7 @@ const UpdateCoordinator = () => {
       });
 
     return () => {};
-  }, []);
+  }, [authContext.token, cccid]);
 
   const getwsName = e => {
     setwsName(e.target.value);
@@ -123,11 +124,12 @@ const UpdateCoordinator = () => {
     // return console.log(zData);
 
     axios
-      .put(`${localUrl}/coordinator/update/${cccid}`, zData, {
+      .put(`${baseUrl}/coordinator/update/${cccid}`, zData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+          Authorization: 'Bearer ' + authContext.token,
         },
         onUploadProgress: ProgressEvent => {
           console.log(
