@@ -97,6 +97,9 @@ const WorkshopCard = props => {
   const onErrosMadeHandle = () => {
     setErrosMade(null);
   };
+  const onMoreInfo = () => {
+    window.location.href = props.workshop.wDriveLink;
+  };
 
   return (
     <>
@@ -137,13 +140,13 @@ const WorkshopCard = props => {
                 <p className="">{props.workshop.wsDesc}</p>
               </div>
             </div>
-            <div className="regitration__fee">
+            {/* <div className="regitration__fee">
               <p>Registration fee</p>
               <div className="workshop__price d-flex">
                 <i className="fa fa-inr mx-2 mt-1"></i>
                 <h5>500</h5>
               </div>
-            </div>
+            </div> */}
             <div className="regitration__fee">
               <p>Workhsop Mode</p>
               <div className="workshop__price d-flex">
@@ -160,7 +163,9 @@ const WorkshopCard = props => {
               >
                 Register Now
               </button>
-              <button className="worksop__shedule__btn">view Schedule</button>
+              <button className="worksop__shedule__btn" onClick={onMoreInfo}>
+                More Info
+              </button>
             </div>
 
             <div className="Event__cordinator d-flex">
