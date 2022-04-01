@@ -69,7 +69,7 @@ function App() {
     setErrosMade(null);
   };
 
-  return (
+ return (
     <div className="App">
       <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler} />
       {errosMade && (
