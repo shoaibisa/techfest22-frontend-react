@@ -693,7 +693,7 @@ const UserDash = props => {
                       </td>
                       <td
                         className="dashboard_profile_left_cell dashboard_table_heading"
-                        colspan="3"
+                        colspan="2"
                       >
                         <i
                           className="fa fa-user-plus"
@@ -716,6 +716,7 @@ const UserDash = props => {
                       <td>Griffin</td>
                       <td>$100</td>
                       <td></td>
+                      <td><i class="fa fa-trash" aria-hidden="true"></i></td>
                     </tr>
                   </table>
                 </div>
