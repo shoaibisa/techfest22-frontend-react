@@ -9,7 +9,7 @@ import { useLocation } from 'react-router-dom';
 import AuthContext from '../../../../auth/authContext';
 const UpdateCoordinator = () => {
   const authContext = useContext(AuthContext);
-  const [wsName, setwsName] = useState('');
+  const [cName, setcName] = useState('');
   const [cEmail, setCemail] = useState('');
   const [cNumber, setCnumber] = useState('');
   const [cType, setCtype] = useState('');
@@ -43,7 +43,7 @@ const UpdateCoordinator = () => {
           return;
         }
         setErrosMade(false);
-        setwsName(results.data.data.coordinatorName);
+        setcName(results.data.data.coordinatorName);
         setCemail(results.data.data.coordinatorEmail);
         setCnumber(results.data.data.coordinatorPhone);
         setCtype(results.data.data.coordinatorType);
@@ -56,7 +56,7 @@ const UpdateCoordinator = () => {
   }, [authContext.token, cccid]);
 
   const getwsName = e => {
-    setwsName(e.target.value);
+    setcName(e.target.value);
   };
 
   const getEmail = e => {
@@ -95,10 +95,10 @@ const UpdateCoordinator = () => {
     //   return;
     // }
 
-    console.log(wsName, imageUrl);
+    console.log(cName, imageUrl);
 
     if (
-      wsName.trim().length === 0 ||
+      cName.trim().length === 0 ||
       cEmail.trim().length === 0 ||
       cNumber.trim().length === 0 ||
       cType.trim().length === 0
@@ -110,7 +110,7 @@ const UpdateCoordinator = () => {
       return;
     }
 
-    console.log(wsName);
+    console.log(cName);
 
     let zData = new FormData();
     zData.append('coordinator', selectedImage);
@@ -121,24 +121,23 @@ const UpdateCoordinator = () => {
     zData.append('coordinatorDesignation', cDeg);
     zData.append('imageUrl', imageUrl);
 
-    // return console.log(zData);
+    const data = {
+      coordinator: cccid,
+      coordinatorName: cName,
+      coordinatorPhone: cNumber,
+      coordinatorEmail: cEmail,
+      coordinatorType: cType,
+      coordinatorDesignation: cDeg,
+      imageUrl: imageUrl
+    }
 
-    axios
-      .put(`${baseUrl}/coordinator/update/${cccid}`, zData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-          Authorization: 'Bearer ' + authContext.token,
-        },
-        onUploadProgress: ProgressEvent => {
-          console.log(
-            'Upload image progress ' +
-              Math.round(ProgressEvent.loaded / ProgressEvent.total) * 100 +
-              ' '
-          );
-        },
-      })
+    console.log(data);
+
+    axios.put(`${baseUrl}/coordinator/update/${cccid}`, data, {
+      headers: {
+        Authorization: 'Bearer ' + authContext.token,
+      }
+    })
       .then(results => {
         console.log(results);
         setIsLoading(true);
@@ -192,7 +191,7 @@ const UpdateCoordinator = () => {
                   type="text"
                   placeholder="Enter Name *"
                   onChange={getwsName}
-                  value={wsName}
+                  value={cName}
                 />
               </Form.Group>
               <Form.Group className="mb-3">
