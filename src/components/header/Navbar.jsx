@@ -308,7 +308,9 @@ const Navbar = props => {
                     className="nav-link  mx-3 text-light line"
                     aria-current="page"
                     activeClassName="active "
-                    to="/ca"
+                    onClick={() => {
+                      window.location.replace("https://ca.techfestsliet.com")
+                    }}
                   >
                     CA Portal
                   </NavLink>
