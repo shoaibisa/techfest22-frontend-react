@@ -17,6 +17,7 @@ const OurTeam = props => {
 
   return (
     <>
+    <div className='Allsection'>
       <section id="team">
         <div className="container-fulid ml-3 pl-3 pr-5 mr-3 text-center">
           <div className="row mt-5 pt-5">
@@ -24,8 +25,8 @@ const OurTeam = props => {
               <h1 style={{ color: 'white' }}>Core Team</h1>
             </div>
           </div>
-          <div
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}
+          <div  className='cards'
+           
           >
             {coreTeamData &&
               coreTeamData.map(d => <SingleCard team={d} key={d.name} />)}
@@ -39,9 +40,7 @@ const OurTeam = props => {
               <h1 style={{ color: 'white' }}>Web Team</h1>
             </div>
           </div>
-          <div
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}
-          >
+          <div  className='cards'>
             {webTeamData &&
               webTeamData.map(d => <SingleCard team={d} key={d.name} />)}
           </div>
@@ -54,14 +53,13 @@ const OurTeam = props => {
               <h1 style={{ color: 'white' }}>Supervisory Team</h1>
             </div>
           </div>
-          <div
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}
-          >
+          <div className='cards' >
             {supTeamData &&
               supTeamData.map(d => <SingleCard team={d} key={d.name} />)}
           </div>
         </div>
       </section>
+      </div>
     </>
   );
 };

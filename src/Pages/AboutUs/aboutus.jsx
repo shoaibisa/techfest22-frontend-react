@@ -134,7 +134,7 @@ const Aboutus = () => {
                 </div>
               </div>
               <div>
-                <h2 className="text-center  mb-5">
+                <h2 className="text-center  h2 mb-5">
                   Don’t Think Twice , Simply Dial In
                 </h2>
                 <div
@@ -174,7 +174,7 @@ const Aboutus = () => {
             </div>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
                   <div>
-                    <p style={{ fontSize: '20px', margin:'0px', alignItems:'center' }}>
+                    <p style={{ fontSize: '20px', margin:'0px',  textAlign:'center' }}>
                        write us at </p>
                        <p style={{margin:'0px'}}>
                         <a  style={{textDecoration:'none', color:'green'}}  href="#"><br></br>support@techfestsliet.com</a>
@@ -182,7 +182,7 @@ const Aboutus = () => {
                   </div>
                 </div>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <img src={Freq} />
+                <img className='imge' src={Freq} />
               </div>
           </div>
         </div>

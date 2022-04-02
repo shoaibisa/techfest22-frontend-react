@@ -45,3 +45,17 @@
     background-color: #ffffff;
     box-shadow: inset 0 0px 0 rgb(0 0 0 / 13%);
 }
+.imge{
+	width: 80%;
+}
+.h2{
+	font-size: 23px;
+}
+@media screen and (max-width: 425px) {
+	.img{
+		 width: 80%;
+	}
+	.h2{
+		font-size: 18px;
+	}
+  }

@@ -1,19 +1,15 @@
 
 h1 {
     font-size: 36px;
-    /* color: #0000; */
-    /* font-weight: bold; */
+  
 }
 
 h4 {
     font-size: 24px;
-    /* color: black; */
-    /* font-weight: bold; */
+    
 }
 h5{
     font-size: 18px;
-    /* color: black; */
-    /* font-weight: bold; */
 }
 
 #team .card {
@@ -36,3 +32,30 @@ h5{
 #team .card:hover i {
     color: white;
 }
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+  }
+  .img{
+      width: 300px;
+      height: 300px;
+      object-fit: contain;
+  }
+  /* .image{
+
+  } */
+  @media   screen and (max-width: 426px) {
+  
+    .cards{
+    
+      grid-template-columns:repeat(1, 1fr) !important ;
+    }
+    
+    }@media screen and (max-width: 769px) {
+  
+        .cards{
+        
+          grid-template-columns:repeat(3, 1fr) !important ;
+        }
+        }
+   
