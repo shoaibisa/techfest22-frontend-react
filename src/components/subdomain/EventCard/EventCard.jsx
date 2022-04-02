@@ -116,7 +116,7 @@ const EventCard = props => {
           <div className="robozar_container">
             <div
               className="robozar_left_container"
-              style={{ backgroundImage: `url(${props.imgurl})` }}
+              style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(${props.imgurl})` }}
             >
               <div className="robozar_left_content">
                 <h1>{props.title}</h1>
