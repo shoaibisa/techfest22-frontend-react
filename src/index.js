@@ -4,12 +4,17 @@ import App from './App';
 import './Index.css';
 import { BrowserRouter } from 'react-router-dom';
 import { AuthContextProvider } from './auth/authContext';
-
-ReactDOM.render(
-  <AuthContextProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </AuthContextProvider>,
-  document.getElementById('root')
-);
+const loader = document.querySelector('.preloader');
+const addClass = () => loader.classList.add('d-none');
+setTimeout(() => {
+  // showLoader();
+  addClass();
+  ReactDOM.render(
+    <AuthContextProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </AuthContextProvider>,
+    document.getElementById('root')
+  );
+}, 6000);

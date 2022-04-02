@@ -156,7 +156,9 @@ const UserDash = props => {
                       <button
                         className="payment__select__button"
                         onClick={() => {
-                          setErrosMade({message: "The payment process will begin shortly!"})
+                          setErrosMade({
+                            message: 'The payment process will begin shortly!',
+                          });
                         }}
                       >
                         Pay
@@ -608,14 +610,12 @@ const UserDash = props => {
                       <td>Course</td>
                       <td className="">{user.course && user.course}</td>
                     </tr>
-                    <tr className="TableRow">
-
-
-                    </tr>
+                    <tr className="TableRow"></tr>
                     <tr className="TableRow">
                       <td>Year Of Study</td>
-                      <td className="">{user.yearOfStudy && user.yearOfStudy}</td>
-
+                      <td className="">
+                        {user.yearOfStudy && user.yearOfStudy}
+                      </td>
                     </tr>
                     <tr className="TableRow">
                       <td>Date of Birth</td>
@@ -664,37 +664,21 @@ const UserDash = props => {
                       >
                         <b> Team Member</b>
                       </td>
-
                     </tr>
                     <tr>
                       <td>
                         <i
                           className="fa fa-edit Edit__info__button"
-
+                          onClick={onIsAddMembers}
                         >
                           {' '}
                         </i>
                       </td>
                     </tr>
                     {/* <tr>
-                      <td className="dashboard_table_sub_heading" colspan="3">
-                        <b>Events Certificates</b>
-=======
-                      <td
-                        className="dashboard_profile_left_cell dashboard_table_heading"
-                        colspan="2"
-                      >
-                        <i
-                          className="fa fa-user-plus"
-                          aria-hidden="true"
-                          onClick={onIsAddMembers}
-                        ></i>
 
-                      </td>
-                    </tr>
-                  </table>
                   {/* <!---------------------------------Workshop and Certificates------------------------------> */}
-</table>
+                  </table>
                   <table>
                     <tr>
                       <th>Team Name</th>
@@ -707,9 +691,10 @@ const UserDash = props => {
                       <td>Griffin</td>
                       <td>$100</td>
                       <td></td>
-                      <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+                      <td>
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                      </td>
                     </tr>
-
                   </table>
                 </div>
               </div>
