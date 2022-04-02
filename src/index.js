@@ -5,6 +5,7 @@ import './Index.css';
 import { BrowserRouter } from 'react-router-dom';
 import { AuthContextProvider } from './auth/authContext';
 const loader = document.querySelector('.preloader');
+
 const addClass = () => loader.classList.add('d-none');
 setTimeout(() => {
   // showLoader();
