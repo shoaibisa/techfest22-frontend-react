@@ -212,6 +212,13 @@
   ],
   "teamMember": [
     {
+      "name": "Pragati",
+      "imgSrc": "img/teamImg/pragati.jpeg",
+      "role": "Core",
+      "stauts": "core",
+      "phone": ""
+    },
+    {
       "name": "Meharpreet Singh",
       "imgSrc": "img/teamImg/Meharpreet-Singh.jpg",
       "role": "Core",
@@ -267,13 +274,7 @@
       "phone": "",
       "stauts": "core"
     },
-    {
-      "name": "Pragati",
-      "imgSrc": "img/teamImg/dummy.jpg",
-      "role": "Core",
-      "stauts": "core",
-      "phone": ""
-    },
+
     {
       "name": "DIKSHA KUMARI",
       "imgSrc": "img/teamImg/DIKSHA KUMARI.jpg",
@@ -291,57 +292,64 @@
     {
       "name": "Anubhav Rajput",
       "imgSrc": "img/teamImg/anubhav.jpg",
-      "role": "React Developer",
+      "role": " Front End & React Developer",
       "stauts": "web",
       "phone": "8877949888"
     },
     {
       "name": "Mohammad Shoaib Akhtar",
       "imgSrc": "img/teamImg/md.jpg",
-      "role": "Back End  & Server Managmentr",
+      "role": "Back End,Server Management & React",
       "phone": "6201783527",
       "stauts": "web"
     },
     {
       "name": "Prateek Rai",
       "imgSrc": "img/teamImg/preteek.jpeg",
-      "role": "Back End  & Server Managment",
+      "role": "Back End  & Server Management",
       "phone": "6388503409",
       "stauts": "web"
     },
     {
       "name": "Gaurav Kumar",
       "imgSrc": "img/teamImg/dummy.jpg",
-      "role": "React Developer",
+      "role": " Front End & React Developer",
       "phone": "6388503409",
       "stauts": "web"
     },
     {
+      "name": "Ravi",
+      "imgSrc": "img/teamImg/dummy.jpg",
+      "role": "Front End Developer",
+      "stauts": "web",
+      "phone": ""
+    },
+    {
       "name": "Akshay Raj",
       "imgSrc": "img/teamImg/Akshay Raj.jpg",
-      "role": "React Developer",
+      "role": "Front End Developer",
       "phone": "6388503409",
       "stauts": "web"
     },
     {
       "name": "Aditya Mahrshi",
       "imgSrc": "img/teamImg/Aditya Maharshi.jpg",
-      "role": "React Developer",
+      "role": "Front End Developer",
+      "phone": "6388503409",
+      "stauts": "web"
+    },
+    {
+      "name": "Aryan Dutt",
+      "imgSrc": "img/teamImg/aryan.jpeg",
+      "role": "Front End Developer",
       "phone": "6388503409",
       "stauts": "web"
     },
 
     {
-      "name": "Ravi",
-      "imgSrc": "img/teamImg/dummy.jpg",
-      "role": "Front End",
-      "stauts": "web",
-      "phone": ""
-    },
-    {
       "name": "Himanshu",
       "imgSrc": "img/teamImg/himanshu.jpg",
-      "role": "Front End",
+      "role": "Front End Developer",
       "stauts": "web",
       "phone": ""
     },
@@ -360,14 +368,14 @@
       "phone": ""
     },
     {
-      "name": "Dummay Name",
+      "name": "Rahul Thakur",
       "imgSrc": "img/teamImg/IMG_7160.jpg",
       "role": "Supervisory",
       "stauts": "Supervisory",
       "phone": ""
     },
     {
-      "name": "Dummay Name",
+      "name": "Anamika",
       "imgSrc": "img/teamImg/SAVE_20220401_142407.jpg",
       "role": "Supervisory",
       "stauts": "Supervisory",
