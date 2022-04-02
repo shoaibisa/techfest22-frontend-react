@@ -307,11 +307,11 @@ const UserDash = props => {
                       <td className="dashboard_profile_left_cell dashboard_table_heading">
                         <b>Profile Information</b>
                       </td>
-                      <td className="dashboard_gapping"></td>
-                      <td className="dashboard_profile_table_td dashboard_profile_right_cell"></td>
-                      <td>
+                      {/* <td className="dashboard_gapping"></td> */}
+                      {/* <td className="dashboard_profile_table_td dashboard_profile_right_cell"></td> */}
+                      <td >
                         <i
-                          className="fa fa-edit Edit__info__button"
+                          className="fa fa-edit edit__res  "
                           onClick={() => setShow(true)}
                         ></i>
                       </td>
@@ -593,32 +593,32 @@ const UserDash = props => {
                     <tr className="TableRow">
                       <td>Profession</td>
 
-                      <td className=" ">Student</td>
+                      <td className="TableRow__res ">Student</td>
                     </tr>
                     <tr className="TableRow">
                       <td>Organisation/College Name</td>
 
-                      <td className="">
+                      <td className="TableRow__res">
                         {user.collegeName && user.collegeName}
                       </td>
                     </tr>
-                    <tr className="TableRow">
+                    <tr className="TableRow ">
                       <td>Course</td>
-                      <td className="">{user.course && user.course}</td>
+                      <td className="TableRow__res">{user.course && user.course}</td>
                     </tr>
                     <tr className="TableRow">
 
 
                     </tr>
-                    <tr className="TableRow">
+                    <tr className="TableRow ">
                       <td>Year Of Study</td>
-                      <td className="">{user.yearOfStudy && user.yearOfStudy}</td>
+                      <td className="TableRow__res">{user.yearOfStudy && user.yearOfStudy}</td>
 
                     </tr>
-                    <tr className="TableRow">
+                    <tr className="TableRow  ">
                       <td>Date of Birth</td>
 
-                      <td className="">
+                      <td className="TableRow__res">
                         {user.dob && user.dob.toString().substring(0, 10)}
                       </td>
                     </tr>

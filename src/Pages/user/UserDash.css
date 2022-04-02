@@ -536,7 +536,7 @@ color: white;
   color: #113b06;
 }
 
-@media screen and (max-width:1026px) {
+ @media screen and (max-width:1026px) {
   .content_box{
     flex-direction:column;
     
@@ -547,8 +547,11 @@ color: white;
   .Edit__info__button,.responsivetabledata{
     margin-right: 20rem !important;
   }
+  .TableRow__res{
+    margin-right: 26.9rem;
+  }
   
-}
+} 
 @media screen and (max-width:775px) {
   .OPenEdit{
     margin-left: -4rem !important;
@@ -568,7 +571,19 @@ color: white;
   }
   
   .Edit__info__button,.responsivetabledata{
-    margin-left: 20rem !important;
+    margin-left: 10rem !important;
+  }
+  .TableRow__res{
+    margin-right: 12.9rem;
+  }
+  .Edit__info__button{
+    margin-right: 1rem;
+  }
+}
+@media screen and (max-width:738px) {
+
+  .TableRow__res{
+      margin-right: 11.2rem;
   }
 }
 @media screen and (max-width:478px) {
@@ -589,9 +604,12 @@ color: white;
   .personal_information{
     margin-top: 2rem !important;
   }
+  .TableRow__res{
+    margin-right: 23.2rem;
+}
   
 }
-@media screen and (max-width:375px) {
+@media screen and (max-width:376px) {
   .OPenEdit{
     margin-left: -3.5rem !important;
   }
@@ -601,7 +619,15 @@ color: white;
   .Edit__info__button,.responsivetabledata{
     margin-left: 6rem !important;
   }
+  .TableRow__res{
+    margin-right: 24.2rem;
+}
   
+}
+@media screen and (max-width:325px) {
+  .TableRow__res{
+    margin-right: 26.2rem;
+}
 }
 table {
   border-collapse: collapse;
