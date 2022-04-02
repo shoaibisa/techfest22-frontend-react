@@ -133,7 +133,7 @@ const UpdateCoordinator = () => {
 
     console.log(data);
 
-    axios.put(`${baseUrl}/coordinator/update/${cccid}`, data, {
+    axios.post(`${baseUrl}/coordinator/update/${cccid}`, data, {
       headers: {
         Authorization: 'Bearer ' + authContext.token,
       }
@@ -162,7 +162,7 @@ const UpdateCoordinator = () => {
       });
   };
 
-  useEffect(() => {}, []);
+  // useEffect(() => {}, []);
 
   const onErrosMadeHandle = () => {
     setErrosMade(null);

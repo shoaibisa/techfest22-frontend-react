@@ -49,7 +49,45 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <style>
+    .videoBg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      /* width: 100%; */
+      height: 100%;
+      object-fit: fill
+    }
+
+    @media (min-aspect-ratio: 16/9) {
+      .videoBg {
+        /* width: 100%; */
+        height: 100%;
+      }
+    }
+
+    @media (max-aspect-ratio: 16/9) {
+      .videoBg {
+
+        /* width: 100%; */
+        height: 100%;
+
+        padding: 0
+      }
+    }
+  </style>
+    </head>
     <script>
+      $(document).ready(function () {
+        var screenWidth = $(window).width();
+        if (screenWidth < 700) {
+          $('video').attr('autoplay', 'true');
+          $('video').attr('src', '/loader.webm');
+        } else {
+          $('video').attr('autoplay', 'true');
+          $('video').attr('src', '/loader.webm');
+        }
+      });
       $(window).scroll(function (event) {
         function footer() {
           var scroll = $(window).scrollTop();
@@ -111,16 +149,20 @@
         });
       });
     </script>
-
   </head>
 
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="preloader">
+      <video playsInline muted width="100%" class="videoBg">
+      </video>
+    </div>
+    <div id="root"></div>
     <div id="backdropbg-root"></div>
     <div id="error-model-root"></div>
     <div id="load-spinner"></div>
     <div id="reg-event-popup"></div>
-    <div id="root"></div>
+    
     <!-- <script src="/bundle.js"></script> -->
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
   </body>

@@ -31,7 +31,7 @@ const Chemfor = () => {
               key={e._id}
               title={e.name}
               event={e}
-              imgurl={`${localUrl}/profile/${e.photo}`}
+              imgurl={`${baseUrl}/profile/${e.photo}`}
               subTitle={e.description}
               amount="Rs.300"
               endDate={e.endDate}

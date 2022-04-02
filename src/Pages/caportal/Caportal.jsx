@@ -21,7 +21,7 @@ import img_leader from '../../images/img_leader.png';
 
 const CaPortal = () => {
   return (
-    <div className="caportal">
+    <div className="caportal" style={{ marginBottom:"70px" }}>
       <div className="backImg__1">
         <div className="container2">
           <div className="mainContentdesktopview">
@@ -44,7 +44,7 @@ const CaPortal = () => {
                     href="https://forms.gle/Q9a3m6GJ99wsmEYz9"
                     className="homePage_Btn
                                     homePage__Btn__btn1"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                   >
                     Register Now
                   </a>
@@ -216,7 +216,7 @@ const CaPortal = () => {
                 <a
                   href="https://forms.gle/Q9a3m6GJ99wsmEYz9"
                   className="registerationblock-card_btn_a_mobile-view"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                 >
                   Register Here
                 </a>
@@ -236,7 +236,7 @@ const CaPortal = () => {
                     <a
                       href="https://forms.gle/Q9a3m6GJ99wsmEYz9"
                       className="registerationblock-card_btn_a"
-                      target="_blank"
+                      target="_blank" rel="noreferrer"
                     >
                       Register Here
                     </a>

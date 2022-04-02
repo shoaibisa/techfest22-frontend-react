@@ -45,7 +45,7 @@ import SponsorForm from './Pages/admin/sponsor/SponsorForm';
 import SponsorAll from './Pages/admin/sponsor/AllSponsor';
 import FrequentlyAsk  from './Pages/AboutUs/aboutus';
 
-//import WorkShopForm from './Pages/admin/WorkshopForm/WorkshopForm';
+import OurTeam from './Pages/OurTeam/OurTeam';
 import WorkshopAll from './Pages/admin/WorkshopForm/WorkShopList/AllWorkshop';
 
 function App() {
@@ -103,6 +103,11 @@ function App() {
           exact
           path="/frequentlyAsk"
           element={<FrequentlyAsk/>}
+        />
+         <Route
+          exact
+          path="/ourteam"
+          element={<OurTeam/>}
         />
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
           <Route
