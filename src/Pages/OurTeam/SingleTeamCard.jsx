@@ -14,9 +14,9 @@ const SingleTeamCard = props => {
               src={props.team.imgSrc}
               alt="Sophie"
             />
-            <h4>{props.team.name}</h4>
+            <h4 style={{ color: 'black' }}>{props.team.name}</h4>
             {/* <p>{props.team.phone}</p> */}
-            <h5>{props.team.role}</h5>
+            <h5 style={{ color: 'black' }}>{props.team.role}</h5>
           </div>
         </div>
       </div>

@@ -17,6 +17,10 @@ const EventCard = props => {
   let getTodayDate = new Date();
 
   const onRegisterClick = async () => {
+    return setErrosMade({
+      title: 'Open soon',
+      message: 'Registration will open soon!',
+    });
     if (!authContext.isUserLoggedIn) {
       setErrosMade({
         title: 'Auth Error',
@@ -157,9 +161,7 @@ const EventCard = props => {
             <div className="robozar_right_container">
               <div className="robozar_right_content">
                 <h2> Prize Worth</h2>
-
                 <h1>₹ {props.event.ePrizeWorth}</h1> <br />
-
                 <p>
                   {' '}
                   <i className=" fa fa-light fa-calendar"></i>Register before{' '}

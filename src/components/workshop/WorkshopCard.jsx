@@ -18,6 +18,10 @@ const WorkshopCard = props => {
     workshop: props.workshop,
   };
   const onClickRegister = async () => {
+    return setErrosMade({
+      title: 'Open soon',
+      message: 'Registration will open soon!',
+    });
     if (!authContext.isUserLoggedIn) {
       setErrosMade({
         title: 'Auth Error',
