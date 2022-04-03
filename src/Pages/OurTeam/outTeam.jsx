@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import "./ourTeam.css";
+import "./OurTeam.css";
  import Card from "./card"
  import data from '../../data/data.json';
 const OutTeam = () => {
