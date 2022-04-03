@@ -289,6 +289,7 @@
       "phone": "6201783527",
       "stauts": "web"
     },
+
     {
       "name": "Anubhav Rajput",
       "imgSrc": "img/teamImg/anubhav.jpg",
@@ -310,6 +311,7 @@
       "phone": "6388503409",
       "stauts": "web"
     },
+
     {
       "name": "Gaurav Kumar",
       "imgSrc": "img/teamImg/dummy.jpg",
@@ -323,6 +325,13 @@
       "role": "Front End Developer",
       "stauts": "web",
       "phone": ""
+    },
+    {
+      "name": "Ayush",
+      "imgSrc": "img/teamImg/ayush.jpeg",
+      "role": "Back End Developer",
+      "phone": "6201783527",
+      "stauts": "web"
     },
     {
       "name": "Akshay Raj",

@@ -251,46 +251,6 @@ const UserDash = props => {
                                   </tr>
                                 );
                               })}
-                              {/* <tr>
-                                <td>Name of Event</td>
-                                <td></td>
-                                <td>Date</td>
-                              </tr>
-                              <tr>
-                                <td>Name of Event</td>
-                                <td></td>
-                                <td>13/4</td>
-                              </tr>
-                              <tr>
-                                <td>Name of Event</td>
-                                <td></td>
-                                <td>20/4</td>
-                              </tr>
-                              <tr>
-                                <td>Name of Event</td>
-                                <td></td>
-                                <td>20/4</td>
-                              </tr>
-                              <tr>
-                                <td>Name of Event</td>
-                                <td></td>
-                                <td>20/4</td>
-                              </tr>
-                              <tr>
-                                <td>Name of Event</td>
-                                <td></td>
-                                <td>20/4</td>
-                              </tr>
-                              <tr>
-                                <td>Name of Event</td>
-                                <td></td>
-                                <td>20/4</td>
-                              </tr>
-                              <tr>
-                                <td>Name of Event</td>
-                                <td></td>
-                                <td>20/4</td>
-                              </tr> */}
                             </tbody>
                           </table>
                         </div>
@@ -313,7 +273,7 @@ const UserDash = props => {
                       </td>
                       {/* <td className="dashboard_gapping"></td> */}
                       {/* <td className="dashboard_profile_table_td dashboard_profile_right_cell"></td> */}
-                      <td >
+                      <td>
                         <i
                           className="fa fa-edit edit__res  "
                           onClick={() => setShow(true)}
@@ -608,18 +568,17 @@ const UserDash = props => {
                     </tr>
                     <tr className="TableRow ">
                       <td>Course</td>
-                      <td className="TableRow__res">{user.course && user.course}</td>
+                      <td className="TableRow__res">
+                        {user.course && user.course}
+                      </td>
                     </tr>
 
-                    <tr className="TableRow">
-
-
-                    </tr>
+                    <tr className="TableRow"></tr>
                     <tr className="TableRow ">
                       <td>Year Of Study</td>
-                      <td className="TableRow__res">{user.yearOfStudy && user.yearOfStudy}</td>
-
-
+                      <td className="TableRow__res">
+                        {user.yearOfStudy && user.yearOfStudy}
+                      </td>
                     </tr>
                     <tr className="TableRow  ">
                       <td>Date of Birth</td>
@@ -674,6 +633,8 @@ const UserDash = props => {
                         <i
                           className="fa fa-edit Edit__info__button"
                           onClick={onIsAddMembers}
+                          style={{ cursor: 'pointer' }}
+                          title="Create team"
                         >
                           {' '}
                         </i>

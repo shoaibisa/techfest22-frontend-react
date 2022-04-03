@@ -18,4 +18,4 @@ setTimeout(() => {
     </AuthContextProvider>,
     document.getElementById('root')
   );
-}, 6000);
+}, 10);

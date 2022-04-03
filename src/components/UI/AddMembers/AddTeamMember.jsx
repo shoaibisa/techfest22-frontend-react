@@ -10,7 +10,7 @@ import { baseUrl } from '../../../API/api';
 import AuthContext from '../../../auth/authContext';
 
 const BackdropBg = props => {
-  return <div className={classes.backdrop} onClick={props.onErrosClick} />;
+  return <div className={classes.backdrop} />;
 };
 const onSubmitBtnClick = async event => {};
 
@@ -19,6 +19,8 @@ const ModalOverlay = props => {
   const [Name, setName] = useState('');
   const [Email, setEmail] = useState('');
   const [memberEmail, setMemberEmail] = useState([]);
+  const [eventType, setEtype] = useState('');
+
   const [Number, setNumber] = useState('');
   const [errosMade, setErrosMade] = useState('');
 
@@ -30,6 +32,10 @@ const ModalOverlay = props => {
     setEmail(e.target.value);
   };
 
+  const getEtype = e => {
+    setEtype(e.target.value.toLowerCase());
+  };
+
   const getNumber = e => {
     setNumber(e.target.value);
   };
@@ -37,6 +43,10 @@ const ModalOverlay = props => {
     setErrosMade(null);
   };
   const AddMembersMail = () => {
+    // console.log(eventType);
+    if (eventType === '---select---') {
+      return alert('Please select event mode');
+    }
     const data = {
       email: Email,
     };
@@ -48,15 +58,15 @@ const ModalOverlay = props => {
       })
       .then(results => {
         if (results.data.isError) {
-          alert(results.data.message);
+          return alert(results.data.message);
           // setErrosMade({
           //   title: results.data.title,
           //   message: ,
           // });
         }
+
+        setMemberEmail(oldArray => [...oldArray, Email]);
       });
-    console.log('click');
-    setMemberEmail(oldArray => [...oldArray, Email]);
   };
 
   const AddForm = () => {};
@@ -88,6 +98,24 @@ const ModalOverlay = props => {
                   value={Name}
                 />
               </Form.Group>
+              <Form.Group className="mb-3">
+                <Form.Label style={{ color: 'black' }}>
+                  Event Mode Select
+                </Form.Label>
+                <Form.Select
+                  style={{ color: 'black', background: 'transparent' }}
+                  aria-label="Default select example"
+                  onChange={getEtype}
+                >
+                  <option style={{ color: 'black' }}>---select---</option>
+                  <option style={{ color: 'black' }} value="online">
+                    Online
+                  </option>
+                  <option style={{ color: 'black' }} value="offline">
+                    Offline
+                  </option>
+                </Form.Select>
+              </Form.Group>
               <div>
                 <div
                   style={{ display: 'flex', justifyContent: 'space-between' }}
@@ -99,6 +127,8 @@ const ModalOverlay = props => {
                       className="fa fa-user-plus"
                       aria-hidden="true"
                       onClick={AddMembersMail}
+                      style={{ cursor: 'pointer' }}
+                      title="Add team member mail"
                     ></i>
                   </div>
                 </div>
@@ -131,7 +161,7 @@ const AddTeamMembers = props => {
   return (
     <>
       {ReactDOM.createPortal(
-        <BackdropBg onErrosClick={props.onErrosClick} />,
+        <BackdropBg />,
         document.getElementById('backdropbg-root')
       )}
       {ReactDOM.createPortal(
