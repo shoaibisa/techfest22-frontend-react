@@ -45,7 +45,8 @@ import SponsorForm from './Pages/admin/sponsor/SponsorForm';
 import SponsorAll from './Pages/admin/sponsor/AllSponsor';
 import FrequentlyAsk  from './Pages/AboutUs/aboutus';
 
-import OurTeam from './Pages/OurTeam/OurTeam';
+import OurTeam from './Pages/OurTeam/outTeam';
+//import OurTeamDemo from './Pages/ourteamdemo/outTeam';
 import WorkshopAll from './Pages/admin/WorkshopForm/WorkShopList/AllWorkshop';
 
 function App() {
@@ -109,6 +110,7 @@ function App() {
           path="/ourteam"
           element={<OurTeam/>}
         />
+        
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
           <Route
             exact
