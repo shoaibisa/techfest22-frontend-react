@@ -283,7 +283,7 @@
       "phone": ""
     },
     {
-      "name": "Praveen",
+      "name": "Pravin",
       "imgSrc": "img/teamImg/pravin.jpeg",
       "role": "React Develper",
       "phone": "6201783527",
@@ -298,16 +298,16 @@
       "phone": "8877949888"
     },
     {
-      "name": "MD.Shoaib Akhtar",
+      "name": "Shoaib",
       "imgSrc": "img/teamImg/md.jpg",
-      "role": "Back End,Server Management,React",
+      "role": "Back End,Server Manage,React",
       "phone": "6201783527",
       "stauts": "web"
     },
     {
       "name": "Prateek Rai",
       "imgSrc": "img/teamImg/preteek.jpeg",
-      "role": "Back End  & Server Management",
+      "role": "Back End & Server Management",
       "phone": "6388503409",
       "stauts": "web"
     },
