@@ -3,11 +3,12 @@ import OurTeam from './OurTeam';
 import './OurTeam.css';
 import './SingleTeamCard.css';
 const SingleTeamCard = props => {
-  console.log(props.team);
+  // console.log(props.team);
   return (
-    <div className="row mt-3">
+    <div className="row mt-3 ">
       <div className="pt-1">
-        <div className="card ">
+        <div className="card "
+        style={{borderRadius: "20px"}}>
           <div className="card-body " style={{ height: '400px' }}>
           <div className='image'>
           <img

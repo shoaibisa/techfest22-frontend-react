@@ -167,7 +167,7 @@ const Navbar = props => {
                     </ul>
                   </li>
                 )}
-               
+
                 <li className="nav-item dropdown text-light">
                   <NavLink
                     className="nav-link dropdown-toggle mx-3 text-light line"
@@ -176,7 +176,7 @@ const Navbar = props => {
                     role="button"
                     aria-expanded="false"
                   >
-                     About Us
+                    About Us
                   </NavLink>
 
                   <ul
@@ -196,17 +196,15 @@ const Navbar = props => {
                         Contact Us
                       </NavLink>
                     </li>
-                    <li>
-                      <NavLink
-                        className="dropdown-item  text-light line"
-                        activeClassName="active "
-                        to="/OurTeam"
-                      >
-                        Teams
-                      </NavLink>
-                    </li>
-                  
                   </ul>
+                </li>
+                <li className='nav-item'>
+                  <NavLink
+                    className="nav-link mx-3 text-light line "
+                    to="/OurTeam"
+                  >
+                    Our Team
+                  </NavLink>
                 </li>
 
                 <li className="nav-item">
