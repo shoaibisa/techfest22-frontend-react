@@ -95,7 +95,7 @@ const UpdateCoordinator = () => {
     //   return;
     // }
 
-    console.log(cName, imageUrl);
+    // return console.log(cName, imageUrl);
 
     if (
       cName.trim().length === 0 ||
@@ -111,6 +111,7 @@ const UpdateCoordinator = () => {
     }
 
     let zData = new FormData();
+    zData.append('cid', cccid);
     zData.append('coordinator', selectedImage);
     zData.append('coordinatorName', 'mima');
     zData.append('coordinatorPhone', cNumber);
@@ -132,7 +133,7 @@ const UpdateCoordinator = () => {
     // return console.log(data);
 
     axios
-      .post(`${baseUrl}/coordinator/update/${cccid}`, data, {
+      .post(`${baseUrl}/coordinator/update/${cccid}`, zData, {
         headers: {
           Authorization: 'Bearer ' + authContext.token,
         },
