@@ -5,6 +5,7 @@
       background:url(../../images/Stagnant-BG-Webp.webp);
         background-position: center;
         background-size: cover;
+		background-attachment: fixed;
 }
 
 .flex-center {
