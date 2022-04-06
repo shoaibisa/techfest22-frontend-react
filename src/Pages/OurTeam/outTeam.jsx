@@ -17,7 +17,7 @@ const OutTeam = () => {
 
   return (
       <>
-    <h2 className='mt-5 pt-5'  style={{  textAlign:'center' }}>Core Team</h2>
+    <h2 className='mt-5 pt-5'  style={{  textAlign:'center',fontFamily: "heading font" }}>Core Team</h2>
     <div class="body1 mt-5">
       <div class="box">
       {coreTeamData &&
@@ -26,7 +26,7 @@ const OutTeam = () => {
         
       </div>
     </div>
-    <h2 className='mt-5 pt-5'  style={{  textAlign:'center' }}>Web Team</h2>
+    <h2 className='mt-5 pt-5'  style={{  textAlign:'center',fontFamily: "heading font" }}>Web Team</h2>
     <div class="body1 mt-5">
       <div class="box">
       {webTeamData &&
@@ -35,7 +35,7 @@ const OutTeam = () => {
         
       </div>
     </div>
-    <h2 className='mt-5 pt-5'  style={{  textAlign:'center' }}>Core Team</h2>
+    <h2 className='mt-5 pt-5'  style={{  textAlign:'center',fontFamily: "heading font" }}>Core Team</h2>
     <div class="body1 mt-5">
       <div class="box">
       {supTeamData &&

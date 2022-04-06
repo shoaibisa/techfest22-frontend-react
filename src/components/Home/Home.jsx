@@ -5,7 +5,7 @@ import Sliderslick from '../Slider/Sliderslick';
 import homepage__gifvideo from '../../images/Untitled.webm';
 import homepage_gif from '../../images/hompage-gif-logo.webp';
 import homepage_gif_mobile from '../../images/Untitled (1).webm';
-// import homapage_gif_vid from '../../images/gif/desk-view.gif';
+import merchendese from '../../images/merchandise/merchedndise.png';
 import workshop_home_png from '../../images/Png-Workshops-home-Webp.webp';
 import building from '../../images/BUilding.svg';
 import footfall from '../../images/Footfall.svg';
@@ -233,6 +233,16 @@ const Home = props => {
           {sponserData && !isLoading ? (
             <Sliderslick data={sponserData} isBack={true} />
           ) : null}
+        </div>
+
+      </div>
+      <div className="merchendise  container">
+        <div className="merchendise__head">
+              <h1>OUR MERCHANDISE</h1>
+              <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, nostrum quas. Ex quasi laborum voluptas omnis repellendus quis voluptatibus architecto, </p>
+        </div>
+        <div className="merchendise__image mt-5">
+           <a href="#"> <img src={merchendese} alt="" /></a>
         </div>
       </div>
     </div>
