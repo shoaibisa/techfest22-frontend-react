@@ -75,7 +75,7 @@ const UpdateCoordinator = () => {
   const getImageHandle = e => {
     if (imgFileCheck(e.target.files[0].name)) {
       //TO DO
-      setselectedImage(e.target.files[0]);
+      setImageUrl(e.target.files[0]);
     } else {
       setErrosMade({
         title: 'Error',
@@ -95,7 +95,7 @@ const UpdateCoordinator = () => {
     //   return;
     // }
 
-    console.log(cName, imageUrl);
+    // return console.log(cName, imageUrl);
 
     if (
       cName.trim().length === 0 ||
@@ -110,9 +110,8 @@ const UpdateCoordinator = () => {
       return;
     }
 
-    console.log(cName);
-
     let zData = new FormData();
+    zData.append('cid', cccid);
     zData.append('coordinator', selectedImage);
     zData.append('coordinatorName', 'mima');
     zData.append('coordinatorPhone', cNumber);
@@ -128,16 +127,17 @@ const UpdateCoordinator = () => {
       coordinatorEmail: cEmail,
       coordinatorType: cType,
       coordinatorDesignation: cDeg,
-      imageUrl: imageUrl
-    }
+      imageUrl: imageUrl,
+    };
 
-    console.log(data);
+    // return console.log(data);
 
-    axios.post(`${baseUrl}/coordinator/update/${cccid}`, data, {
-      headers: {
-        Authorization: 'Bearer ' + authContext.token,
-      }
-    })
+    axios
+      .post(`${baseUrl}/coordinator/update/${cccid}`, zData, {
+        headers: {
+          Authorization: 'Bearer ' + authContext.token,
+        },
+      })
       .then(results => {
         console.log(results);
         setIsLoading(true);

@@ -283,6 +283,7 @@
       "phone": ""
     },
     {
+
       "name": "Pravin Kumar",
       "imgSrc": "img/teamImg/pravin.jpeg",
       "role": "React Develper",
@@ -298,30 +299,30 @@
       "phone": "8877949888"
     },
     {
-      "name": "MD.Shoaib Akhtar",
+      "name": "Shoaib",
       "imgSrc": "img/teamImg/md.jpg",
-      "role": "Back End,Server Management,React",
+      "role": "Back End,Server Manage,React",
       "phone": "6201783527",
       "stauts": "web"
     },
     {
       "name": "Prateek Rai",
       "imgSrc": "img/teamImg/preteek.jpeg",
-      "role": "Back End  & Server Management",
+      "role": "Back End & Server Management",
       "phone": "6388503409",
       "stauts": "web"
     },
 
     {
       "name": "Gaurav Kumar",
-      "imgSrc": "img/teamImg/dummy.jpg",
+      "imgSrc": "img/teamImg/gaurav.jpg",
       "role": " Front End & React Developer",
       "phone": "6388503409",
       "stauts": "web"
     },
     {
       "name": "Ravi",
-      "imgSrc": "img/teamImg/dummy.jpg",
+      "imgSrc": "img/teamImg/RaviRanjan.jpg",
       "role": "Front End Developer",
       "stauts": "web",
       "phone": ""
