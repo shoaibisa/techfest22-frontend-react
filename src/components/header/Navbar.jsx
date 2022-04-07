@@ -336,7 +336,7 @@ const Navbar = props => {
                 )}
                 {!authContext.isUserLoggedIn && (
                   <NavLink
-                    className="btn btn-md btn-outline-light active mx-3"
+                    className="btn btn-md btn-outline-light active  signIn my-1"
                     activeClassName="active "
                     to="/signin"
                     data-toggle="button"

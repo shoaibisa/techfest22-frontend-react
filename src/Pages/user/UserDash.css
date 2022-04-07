@@ -161,8 +161,8 @@ background-image: linear-gradient(to top, #41f115 0%, #41f115 100%)  !important;
 
 }
 .dashboard_certificate_container{
-  width: 80%;
-  margin: 5%;
+  width: 100%;
+  margin: 4%;
 }
 /* .dashboard_profile_table_td{
   float: right;

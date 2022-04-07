@@ -38,9 +38,11 @@ const Home = props => {
 
   return (
     <div className="home">
-      <div className="home__video py-5">
+      <div className="home__video ">
         <video
           className="homepage_gif"
+          style={{marginTop:'100px' }}
+          width="100%"
           loop={true}
           autoPlay={true}
           muted={true}
@@ -52,7 +54,7 @@ const Home = props => {
           />
         </video>
         <video
-          className="homepage_gif_mobile"
+          className="homepage_gif_mobile my-5"
           width="100%"
           loop={true}
           autoPlay = {true}

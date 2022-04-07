@@ -627,13 +627,11 @@ const UserDash = props => {
                       >
                         <b> Team Member</b>
                       </td>
-                    </tr>
-                    <tr>
                       <td>
                         <i
                           className="fa fa-edit Edit__info__button"
                           onClick={onIsAddMembers}
-                          style={{ cursor: 'pointer' }}
+                          style={{ cursor: 'pointer', fontSize:'30px'}}
                           title="Create team"
                         >
                           {' '}
@@ -656,8 +654,8 @@ const UserDash = props => {
                       <td>Griffin</td>
                       <td>$100</td>
                       <td></td>
-                      <td>
-                        <i class="fa fa-trash" aria-hidden="true"></i>
+                      <td >
+                        <i className="fa fa-trash" style={{marginRight:"12px"}} aria-hidden="true"></i>
                       </td>
                     </tr>
                   </table>

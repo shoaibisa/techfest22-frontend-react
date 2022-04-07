@@ -81,115 +81,107 @@ function App() {
         />
       )}
       <Routes>
-        <Route exact path="/" element={<Home data={dataJson.sponser} />} />
-        <Route exact path="/ca" element={<CaPortal />} />
-        <Route exact path="/chemfor" element={<Chemfor />} />
-        <Route exact path="/electrica" element={<Electrica />} />
-        <Route exact path="/kermis" element={<Kermis />} />
-        <Route exact path="/karyarachna" element={<Karyarachna />} />
-        <Route exact path="/mechanica" element={<Mechanica />} />
-        <Route exact path="/plexus" element={<Plexus />} />
-        <Route exact path="/robozar" element={<Robozar />} />
-        <Route exact path="/genesis" element={<Genesis />} />
-        <Route exact path="/workshop" element={<Workshop />} />
-        <Route exact path="/about" element={<AboutUs data={dataJson} />} />
-        <Route exact path="/admin/domains" element={<DomainForm />} />
+        <Route path="/" element={<Home data={dataJson.sponser} />} />
+        <Route  path="/ca" element={<CaPortal />} />
+        <Route  path="/chemfor" element={<Chemfor />} />
+        <Route  path="/electrica" element={<Electrica />} />
+        <Route  path="/kermis" element={<Kermis />} />
+        <Route  path="/karyarachna" element={<Karyarachna />} />
+        <Route  path="/mechanica" element={<Mechanica />} />
+        <Route  path="/plexus" element={<Plexus />} />
+        <Route  path="/robozar" element={<Robozar />} />
+        <Route  path="/genesis" element={<Genesis />} />
+        <Route  path="/workshop" element={<Workshop />} />
+        <Route  path="/about" element={<AboutUs data={dataJson} />} />
+        <Route  path="/admin/domains" element={<DomainForm />} />
         //admin routes
         <Route
-          exact
           path="/domain"
           element={<Domain data={dataJson.domain} />}
         />
          <Route
-          exact
           path="/frequentlyAsk"
           element={<FrequentlyAsk/>}
         />
          <Route
-          exact
           path="/ourteam"
           element={<OurTeam/>}
         />
         
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
           <Route
-            exact
             path="/admin/coordinators/add"
             element={<CoordinatorForm />}
           />
         )}
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
-          <Route exact path="/admin/workshop/add" element={<WorkshopForm />} />
+          <Route  path="/admin/workshop/add" element={<WorkshopForm />} />
         )}
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
           <Route
-            exact
             path="/admin/workshop/delete"
             element={<DeleteWorkshop />}
           />
         )}
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
-          <Route exact path="/admin" element={<AdminContent />} />
+          <Route  path="/admin" element={<AdminContent />} />
         )}
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
-          <Route exact path="/admin/users" element={<AllUsers />} />
+          <Route  path="/admin/users" element={<AllUsers />} />
         )}
 
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
-          <Route exact path="/admin/sponsor" element={<SponsorAll />} /> 
+          <Route  path="/admin/sponsor" element={<SponsorAll />} /> 
         )} 
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
-         <Route exact path="/admin/sponsor/add" element={<SponsorForm />} />
+         <Route  path="/admin/sponsor/add" element={<SponsorForm />} />
         )} 
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
-          <Route exact path="/admin/workshop/" element={<WorkshopAll />} /> 
+          <Route  path="/admin/workshop/" element={<WorkshopAll />} /> 
         )} 
 
 
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
-          <Route exact path="/admin/domain" element={<DomainForm />} />
+          <Route  path="/admin/domain" element={<DomainForm />} />
         )}
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
-          <Route exact path="/admin/event" element={<EventAll />} />
+          <Route  path="/admin/event" element={<EventAll />} />
         )}
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
-          <Route exact path="/admin/event/add" element={<EventForm />} />
+          <Route  path="/admin/event/add" element={<EventForm />} />
         )}
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
-          <Route exact path="admin/coordinator" element={<AllCoordinator />} />
+          <Route  path="admin/coordinator" element={<AllCoordinator />} />
         )}
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
           <Route
-            exact
             path="admin/coordinator/add"
             element={<CoordinatorForm />}
           />
         )}
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
           <Route
-            exact
             path="admin/coordinator/update"
             element={<UpdateCoordinator />}
           />
         )}
         //user routes
         {!authContext.isUserLoggedIn && (
-          <Route exact path="/signin" element={<SignIn />} />
+          <Route  path="/signin" element={<SignIn />} />
         )}
         {!authContext.isUserLoggedIn && (
-          <Route exact path="/signup" element={<SignUp />} />
+          <Route  path="/signup" element={<SignUp />} />
         )}
         {authContext.isUserLoggedIn && authContext.userRole == 0 && (
           <Route
-            exact
             path="/dashboard"
             element={<UserDash isAuth={isUserLoggedIn} token={token} />}
           />
         )}
         {authContext.isUserLoggedIn && authContext.userRole == 0 && (
-          <Route exact path="user/pay" element={<PayNow />} />
+          <Route  path="user/pay" element={<PayNow />} />
         )}
-        <Route exact path="/forgot" element={<Forgot />} />
+        <Route  path="/forgot" element={<Forgot />} />
         <Route path="*" element={<Fourzerofour />} />
       </Routes>
 
