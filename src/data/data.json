@@ -261,6 +261,20 @@
       "stauts": "core"
     },
     {
+      "name": "Aashita  Saran",
+      "imgSrc": "img/teamImg/1.jpg",
+      "role": "Core",
+      "phone": "",
+      "stauts": "core"
+    },
+    {
+      "name": "Krishna Kumar",
+      "imgSrc": "img/teamImg/2.jpeg",
+      "role": "Core",
+      "phone": "",
+      "stauts": "core"
+    },
+    {
       "name": "Soham Das",
       "imgSrc": "img/teamImg/Soham Das.jpeg",
       "role": "Core",
@@ -387,6 +401,13 @@
     {
       "name": "Anamika",
       "imgSrc": "img/teamImg/SAVE_20220401_142407.jpg",
+      "role": "Supervisory",
+      "stauts": "Supervisory",
+      "phone": ""
+    },
+    {
+      "name": "Nivas",
+      "imgSrc": "img/teamImg/3.jpeg",
       "role": "Supervisory",
       "stauts": "Supervisory",
       "phone": ""

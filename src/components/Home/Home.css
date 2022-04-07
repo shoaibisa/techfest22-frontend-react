@@ -212,9 +212,7 @@
   border: 2px solid rgb(0, 138, 0);
 }
 
-button:active {
-  transform: scale(1.1);
-}
+
 /* Scroll Down Button Styling Start*/
 
 .Home__background {

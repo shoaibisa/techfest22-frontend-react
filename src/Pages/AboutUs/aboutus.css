@@ -8,9 +8,7 @@
 		background-attachment: fixed;
 }
 
-.flex-center {
-	align-items: center;
-}
+
 .accordion-button{
 	margin-bottom: 10px;
 }
@@ -38,7 +36,8 @@
 	transform: scale(1.2);
 }
 .accordion-item{
-	border: 0px!important;
+	/* border: 0px!important; */
+	 border-bottom: 1px solid white;
 }
 .accordion-button:not(.collapsed){
 	border: 0px!important;

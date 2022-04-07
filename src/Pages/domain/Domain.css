@@ -39,9 +39,7 @@
 .nav-item a.active {
   border-bottom: 2px solid rgb(65, 241, 21);
 }
-button:active {
-  transform: scale(1.1);
-}
+
 
 
 /* This is the footer section ................... */
