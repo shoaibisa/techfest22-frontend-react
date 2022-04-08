@@ -61,7 +61,7 @@
 
     @media (min-aspect-ratio: 16/9) {
       .videoBg {
-        /* width: 100%; */
+        width: 100%;
         height: 100%;
       }
     }
@@ -69,7 +69,7 @@
     @media (max-aspect-ratio: 16/9) {
       .videoBg {
 
-        /* width: 100%; */
+        width: 100%;
         height: 100%;
 
         padding: 0
@@ -82,10 +82,10 @@
         var screenWidth = $(window).width();
         if (screenWidth < 700) {
           $('video').attr('autoplay', 'true');
-          $('video').attr('src', '/loader.webm');
+          $('video').attr('src', '/mobile loader.webm');
         } else {
           $('video').attr('autoplay', 'true');
-          $('video').attr('src', '/mobile loader.webm');
+          $('video').attr('src', '/loader.webm');
         }
       });
       $(window).scroll(function (event) {
