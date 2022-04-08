@@ -43,7 +43,7 @@ const ModalOverlay = props => {
     setErrosMade(null);
   };
   const AddMembersMail = () => {
-    // console.log(eventType);
+    console.log(eventType);
     if (eventType === '---select---') {
       return alert('Please select event mode');
     }

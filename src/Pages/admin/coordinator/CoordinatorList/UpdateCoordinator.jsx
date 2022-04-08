@@ -112,8 +112,8 @@ const UpdateCoordinator = () => {
 
     let zData = new FormData();
     zData.append('cid', cccid);
-    zData.append('coordinator', selectedImage);
-    zData.append('coordinatorName', 'mima');
+    // zData.append('coordinator', selectedImage);
+    zData.append('coordinatorName', cName);
     zData.append('coordinatorPhone', cNumber);
     zData.append('coordinatorEmail', cEmail);
     zData.append('coordinatorType', cType);
@@ -133,13 +133,12 @@ const UpdateCoordinator = () => {
     // return console.log(data);
 
     axios
-      .post(`${baseUrl}/coordinator/update/${cccid}`, zData, {
+      .put(`${baseUrl}/coordinator/update/${cccid}`, zData, {
         headers: {
           Authorization: 'Bearer ' + authContext.token,
         },
       })
       .then(results => {
-        console.log(results);
         setIsLoading(true);
         if (results.status !== 200 || results.status !== 200) {
           setErrosMade({
@@ -147,6 +146,7 @@ const UpdateCoordinator = () => {
             message: results.data.message,
           });
         }
+        console.log(results);
         setErrosMade({
           title: results.data.title,
           message: results.data.message,

@@ -18,10 +18,10 @@ const WorkshopCard = props => {
     workshop: props.workshop,
   };
   const onClickRegister = async () => {
-    return setErrosMade({
-      title: 'Open soon',
-      message: 'Registration will open soon!',
-    });
+    // return setErrosMade({
+    //   title: 'Open soon',
+    //   message: 'Registration will open soon!',
+    // });
     if (!authContext.isUserLoggedIn) {
       setErrosMade({
         title: 'Auth Error',
@@ -74,17 +74,17 @@ const WorkshopCard = props => {
       authContext.logout();
       return;
     }
-    console.log(fetchedPushWorkshop);
-    if (fetchedPushWorkshop.data.payError) {
-      setErrosMade({
-        title: fetchedPushWorkshop.data.title,
-        message: fetchedPushWorkshop.data.message,
-      });
-      setTimeout(() => {
-        navigate('/user/pay');
-      }, 3000);
-      return;
-    }
+    // console.log(fetchedPushWorkshop);
+    // if (fetchedPushWorkshop.data.payError) {
+    //   setErrosMade({
+    //     title: fetchedPushWorkshop.data.title,
+    //     message: fetchedPushWorkshop.data.message,
+    //   });
+    //   setTimeout(() => {
+    //     navigate('/user/pay');
+    //   }, 3000);
+    //   return;
+    // }
 
     if (fetchedPushWorkshop.data.isError) {
       setErrosMade({
