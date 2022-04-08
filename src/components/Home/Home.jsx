@@ -41,7 +41,7 @@ const Home = props => {
       <div className="home__video ">
         <video
           className="homepage_gif"
-          style={{marginTop:'100px' }}
+          style={{ marginTop: '100px' }}
           width="100%"
           loop={true}
           autoPlay={true}
@@ -57,7 +57,7 @@ const Home = props => {
           className="homepage_gif_mobile my-5"
           width="100%"
           loop={true}
-          autoPlay = {true}
+          autoPlay={true}
           muted={true}
         >
           <source src={homepage_gif_mobile} type="video/webm" />
@@ -88,7 +88,13 @@ const Home = props => {
                   <figure className="text-center">
                     <blockquote className="blockquote">
                       <p className=" ">
-                      techFEST'22 is on the mission to revolutionize agro-technology. Explore with us how new advancements in technologies ranging from robotics and drones to computer vision software transform traditional methods of agriculture. With the young innovative minds competing to bring a change and supporting the backbone of our nation.
+                        techFEST'22 is on the mission to revolutionize
+                        agro-technology. Explore with us how new advancements in
+                        technologies ranging from robotics and drones to
+                        computer vision software transform traditional methods
+                        of agriculture. With the young innovative minds
+                        competing to bring a change and supporting the backbone
+                        of our nation.
                       </p>
                     </blockquote>
                   </figure>
@@ -130,7 +136,7 @@ const Home = props => {
       </div>
 
       {/* <!-- Scroll Down Button Start--> */}
-      <div className='banner--fadeBottom'/>
+      <div className="banner--fadeBottom" />
       <div className="bottomSection">
         <div className="cards-container">
           <div className="cards-container_card1">
@@ -146,7 +152,7 @@ const Home = props => {
                 Workshops
               </div>
               <div className="cards-container_card1_description-container_content">
-              In Workshops learning is something to be enjoyed, not endured. 
+                In Workshops learning is something to be enjoyed, not endured.
               </div>
               <div className="cards-container_card1_description-container_btn">
                 <NavLink to={'/workshop'}>Learn More</NavLink>
@@ -162,7 +168,8 @@ const Home = props => {
                 Domain
               </div>
               <div className="cards-container_card2_description-container_content">
-              Unleash your skills and test yourselves on National Battlegrounds with 8 Domains 
+                Unleash your skills and test yourselves on National
+                Battlegrounds with 8 Domains
               </div>
               <div className="cards-container_card2_description-container_btn">
                 <NavLink to={'/domain'}>Learn More</NavLink>
@@ -236,15 +243,17 @@ const Home = props => {
             <Sliderslick data={sponserData} isBack={true} />
           ) : null}
         </div>
-
       </div>
       <div className="merchendise  container">
         <div className="merchendise__head">
-              <h1>OUR MERCHANDISE</h1>
-              <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, nostrum quas. Ex quasi laborum voluptas omnis repellendus quis voluptatibus architecto, </p>
+          <h1>OUR MERCHANDISE</h1>
+          <p>Our latest merchandise T-shirt.</p>
         </div>
         <div className="merchendise__image mt-5">
-           <a href="#"> <img src={merchendese} alt="" /></a>
+          <a href="#">
+            {' '}
+            <img src={merchendese} alt="" />
+          </a>
         </div>
       </div>
     </div>
