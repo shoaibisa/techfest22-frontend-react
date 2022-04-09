@@ -13,7 +13,7 @@ const Aboutus = () => {
           <h1 className="text-center  mb-5">Frequently Asked Questions</h1>
 
           <div className="row flex-center">
-           <div >   {/*  className="col-sm-10 offset-sm-2" */}
+           <div >
               <div className="accordion" id="accordionExample">
                 <div
                   style={{
@@ -35,7 +35,7 @@ const Aboutus = () => {
                       <span
                         style={{ color: 'white', background: 'transparent' }}
                       >
-                        What jQuery do I need?
+                       How to register on the website?
                       </span>
                     </button>
                   </h2>
@@ -54,17 +54,11 @@ const Aboutus = () => {
                       }}
                       className="accordion-body"
                     >
-                      <strong>This is the second item's accordion body.</strong>
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem accusantium doloremque laudantium, totam rem
-                      aperiam, eaque ipsa quae ab illo inventore veritatis et
-                      quasi architecto beatae vitae dicta sunt explicabo. Nemo
-                      enim ipsam voluptatem quia voluptas sit aspernatur aut
-                      odit aut fugit, sed quia consequuntur magni dolores eos
-                      qui ratione voluptatem sequi nesciunt.
+                    You can enter your details and sign up at https://www.techfestsliet.com/signup
                     </div>
                   </div>
                 </div>
+
 
                 <div
                   style={{ backgroundColor: 'transparent' }}
@@ -83,7 +77,7 @@ const Aboutus = () => {
                       <span
                         style={{ color: 'white', background: 'transparent' }}
                       >
-                        How to Create FAQ Section
+                       When is techFEST'22 ?
                       </span>
                     </button>
                   </h2>
@@ -102,14 +96,11 @@ const Aboutus = () => {
                       }}
                       className="accordion-body"
                     >
-                      <strong>This is the first item's accordion body.</strong>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      The techfest is scheduled to be held on April 29th & 30th.
                     </div>
                   </div>
                 </div>
+                
                 <div
                   style={{
                     backgroundColor: 'transparent ',
@@ -130,7 +121,7 @@ const Aboutus = () => {
                       <span
                         style={{ color: 'white', background: 'transparent' }}
                       >
-                        HTML CSS FAQ Design With jQuery Accordion
+                       Do I need to pay any fee for registration?
                       </span>{' '}
                     </button>
                   </h2>
@@ -149,16 +140,214 @@ const Aboutus = () => {
                       }}
                       className="accordion-body"
                     >
-                      <strong>This is the third item's accordion body.</strong>
-                      At vero eos et accusamus et iusto odio dignissimos ducimus
-                      qui blanditiis praesentium voluptatum deleniti atque
-                      corrupti quos dolores et quas molestias excepturi sint
-                      occaecati cupiditate non provident, similique sunt in
-                      culpa qui officia deserunt mollitia animi, id est laborum
-                      et dolorum fuga. Et harum quidem rerum facilis.
+                      
+                      There is no registration fee for candidates enrolled in SLIET. For participants from other institutes the registration fee is:
+                       <ul>
+                         <li style={{ pointerEvents: 'none'}}>Rs. 299 for online events.</li>
+                         <li  style={{ pointerEvents: 'none'}}>Rs. 599 for offline events.</li>
+                       </ul>
+
+
+
                     </div>
                   </div>
                 </div>
+
+                <div
+                  style={{
+                    backgroundColor: 'transparent ',
+                    borderBottom: '1px solid white',
+                  }}
+                  className="accordion-item"
+                >
+                  <h2 className="accordion-header" id="headingFour">
+                    <button
+                      style={{ backgroundColor: 'transparent ' }}
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      <span
+                        style={{ color: 'white', background: 'transparent' }}
+                      >
+                       How many teams can I be a part of for an event?
+
+                      </span>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFour"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample"
+                    style={{ borderBottom: '1px solid white' }}
+                  >
+                    <div
+                      style={{
+                        backgroundColor: 'transparent',
+                        color: 'white',
+                        borderBottom: '1px sloid white',
+                      }}
+                      className="accordion-body"
+                    >
+                      
+                      For a given event, a participant can be a part of only one team. 
+
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  style={{
+                    backgroundColor: 'transparent ',
+                    borderBottom: '1px solid white',
+                  }}
+                  className="accordion-item"
+                >
+                  <h2 className="accordion-header" id="headingFive">
+                    <button
+                      style={{ backgroundColor: 'transparent ' }}
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive"
+                      aria-expanded="false"
+                      aria-controls="collapseFive"
+                    >
+                      <span
+                        style={{ color: 'white', background: 'transparent' }}
+                      >
+                       Can I participate in multiple events?
+
+                      </span>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFive"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingFive"
+                    data-bs-parent="#accordionExample"
+                    style={{ borderBottom: '1px solid white' }}
+                  >
+                    <div
+                      style={{
+                        backgroundColor: 'transparent',
+                        color: 'white',
+                        borderBottom: '1px sloid white',
+                      }}
+                      className="accordion-body"
+                    >
+                      
+                      Yes, you are encouraged to participate in as many events as you like. Also, there are no departmental constraints i.e. students of a department can participate in of the other domains.
+
+
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  style={{
+                    backgroundColor: 'transparent ',
+                    borderBottom: '1px solid white',
+                  }}
+                  className="accordion-item"
+                >
+                  <h2 className="accordion-header" id="headingSix">
+                    <button
+                      style={{ backgroundColor: 'transparent ' }}
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSix"
+                      aria-expanded="false"
+                      aria-controls="collapseSix"
+                    >
+                      <span
+                        style={{ color: 'white', background: 'transparent' }}
+                      >
+                      What is the registration process?
+
+                      </span>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseSix"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingSix"
+                    data-bs-parent="#accordionExample"
+                    style={{ borderBottom: '1px solid white' }}
+                  >
+                    <div
+                      style={{
+                        backgroundColor: 'transparent',
+                        color: 'white',
+                        borderBottom: '1px sloid white',
+                      }}
+                      className="accordion-body"
+                    >
+                      
+                      All members have to register themselves on the website. The team leader will then form a team and add the remaining members.
+
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  style={{
+                    backgroundColor: 'transparent ',
+                    borderBottom: '1px solid white',
+                  }}
+                  className="accordion-item"
+                >
+                  <h2 className="accordion-header" id="headingSeven">
+                    <button
+                      style={{ backgroundColor: 'transparent ' }}
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSeven"
+                      aria-expanded="false"
+                      aria-controls="collapseSeven"
+                    >
+                      <span
+                        style={{ color: 'white', background: 'transparent' }}
+                      >
+                      Can students of institutes other than sliet participate in the events?
+
+
+                      </span>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseSeven"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingSeven"
+                    data-bs-parent="#accordionExample"
+                    style={{ borderBottom: '1px solid white' }}
+                  >
+                    <div
+                      style={{
+                        backgroundColor: 'transparent',
+                        color: 'white',
+                        borderBottom: '1px sloid white',
+                      }}
+                      className="accordion-body"
+                    >
+                      
+                      Yes, students enrolled in diploma and degree programmes in any technical institute can participate.
+
+                    </div>
+                  </div>
+                </div>
+
+
+                
+
+                
+                
               </div>
               <div
                className='mt-5'
@@ -167,6 +356,7 @@ const Aboutus = () => {
                   flexDirection: 'column',
                   justifyContent: 'center',
                   alignItems: 'center',
+                  textAlign:'center',
                 }}>
                 <div>
                 
@@ -181,7 +371,7 @@ const Aboutus = () => {
                 >
                   <div>
                     <p style={{ fontSize: '20px', marginRight: '25px' }}>
-                      Soham
+                      Soham Das
                     </p>
                     <p style={{ fontSize: '18px', marginRight: '25px' }}>
                       <a
@@ -194,7 +384,7 @@ const Aboutus = () => {
                   </div>
                   <div>
                     <p style={{ fontSize: '20px', marginRight: '25px' }}>
-                      Pragati
+                      Pragati Priya
                     </p>
                     <p
                       style={{
@@ -220,7 +410,7 @@ const Aboutus = () => {
                         marginRight: '25px',
                       }}
                     >
-                      Abhishek
+                      Abhishek Yadav
                     </p>
                     <p
                       style={{
@@ -247,7 +437,7 @@ const Aboutus = () => {
                       textAlign: 'center',
                     }}
                   >
-                    write us at
+                    <b>Write Us At</b>
                   </p>
                   <p style={{ margin: '-24px' }}>
                     <a
