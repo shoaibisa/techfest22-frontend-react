@@ -32,7 +32,7 @@
     letter-spacing: 2px;
     font: optional;
     font-style: italic;
-    margin-left: -2rem;
+    /* margin-left: -2rem; */
 
 }
 .regitration__fee{
@@ -54,19 +54,17 @@
     height: 61px;
     border-radius: 50%;
 }
-.workshop__right__bottom{
-        margin-top: 3rem;
+
+.Robozar__bottom__middle__button button:last-child{
+    height: fit-content;
+    margin-left: 2rem;
     
 }
-.Robozar__bottom__middle__button button{
-    height: fit-content;
-    margin-top: 3rem;
-    margin-left: 1rem;
+.workshop__right__bottom{
+    margin-left: 7.5rem;
 }
-
 .workshop__price{
-    margin-left: 4rem;
-    margin-top: -1rem;
+    margin-left: 1rem;
 }
 .worksop__register__btn{
     background-color: aliceblue;
@@ -102,6 +100,9 @@
     .Robozar__bottom__left img{
     width: 200px;
     height: 201px;
+}
+.Robozar__bottom__middle {
+    flex: 0.8;
 }
 .workshop__right__bottom{
     margin-top: 1rem;
@@ -156,8 +157,8 @@
 }
 .workshop__right__bottom{
     margin-top: -1rem;
-    margin-left: 2rem;
     font-size: 7px;
+    margin-bottom: 2rem;
 
 }
 .Robozar__bottom__middle__button button{
@@ -183,6 +184,10 @@
         margin: auto;
         align-items: center;
         margin-bottom: 5rem;
+    }
+    .workshop__price{
+     
+        margin-top: -.7rem;
     }
     .workshop__right__top{
         flex-direction: column;
@@ -255,5 +260,8 @@
     }
     .Robozar__bottom__middle h1{
         font-size: 20px;
+    }
+    .Robozar__bottom__middle__button button{
+        font-size: 10px;
     }
 }

@@ -151,15 +151,15 @@ const WorkshopCard = props => {
                 <h5>500</h5>
               </div>
             </div> */}
-            <div className="regitration__fee">
-              <p>Workhsop Mode</p>
-              <div className="workshop__price d-flex">
+            <div className="regitration__fee d-flex">
+              <p>Workshop Mode:-</p>
+              <div className="workshop__price">
                 <h5>{props.workshop.workshopMode}</h5>
               </div>
             </div>
           </div>
 
-          <div className="workshop__right__bottom d-flex">
+          <div className="workshop__right__bottom">
             <div className="Robozar__bottom__middle__button d-flex">
               <button
                 onClick={onClickRegister}
@@ -172,31 +172,7 @@ const WorkshopCard = props => {
               </button>
             </div>
 
-            <div className="Event__cordinator d-flex">
-              {props.workshop.studentCoordinator.map(s => (
-                <div className="Event__cordinator2 d-flex" key={s._id}>
-                  <div className="Event__cordinator1__left ">
-                    <p>{s.coordinatorName}</p>
-                    <p>+91 {s.coordinatorPhone}</p>
-                  </div>
-                  <div className="Event__cordinator1__right">
-                    <img src={`${baseUrl}/profile/${s.photo}`} alt="c" />
-                  </div>
-                </div>
-              ))}
-              {/* <div className="Event__cordinator2 d-flex">
-                <div className="Event__cordinator1__left ">
-                  <p>Event cordinator</p>
-                  <p>+9162XXXXXXXX</p>
-                </div>
-                <div className="Event__cordinator1__right">
-                  <img
-                    src="https://media.istockphoto.com/photos/passport-picture-of-a-smiling-turkish-businesswoman-picture-id856599656?k=20&m=856599656&s=612x612&w=0&h=bIJ3aCa4vWB_-jFRTiPffYyUpw5uPpIHGDHEs4bjEqg="
-                    alt=""
-                  />
-                </div>
-              </div> */}
-            </div>
+            
           </div>
         </div>
       </div>
