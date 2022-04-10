@@ -54,7 +54,7 @@ const Aboutus = () => {
                       }}
                       className="accordion-body"
                     >
-                    You can enter your details and sign up at https://www.techfestsliet.com/signup
+                    You can enter your details and sign up at <a  href=' https://www.techfestsliet.com/signup'> https://www.techfestsliet.com/signup</a>
                     </div>
                   </div>
                 </div>

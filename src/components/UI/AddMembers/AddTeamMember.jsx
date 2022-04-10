@@ -99,6 +99,7 @@ const ModalOverlay = props => {
         if (results.data.isError) {
           return alert(results.data.message);
         }
+        props.onErrosClick();
         props.onTeamListAdd(results.data.team);
       });
   };
