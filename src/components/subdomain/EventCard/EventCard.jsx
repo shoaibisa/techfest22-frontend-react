@@ -5,22 +5,29 @@ import ErrorModel from '../../UI/ErrorModel/ErrorModel';
 import axios from 'axios';
 import { localUrl, baseUrl } from '../../../API/api';
 import { useNavigate } from 'react-router-dom';
+import EventRegistration from '../../UI/AddMembers/EventRegistration';
 
 const EventCard = props => {
   const navigate = useNavigate();
   const authContext = useContext(AuthContext);
   const [errosMade, setErrosMade] = useState(); //undefined
+  const [isEventRegister, setIsEventRegister] = useState();
+  const [teams, setTeam] = useState();
   let dateEvent = props.endDate.split('T');
   let date = dateEvent[0].split('-');
   let time = dateEvent[1].split(':');
   let eventDateRegister = new Date(props.endDate);
   let getTodayDate = new Date();
 
+  const onEventAdd = props => {
+    console.log(props);
+  };
+
   const onRegisterClick = async () => {
-    return setErrosMade({
-      title: 'Open soon',
-      message: 'Registration will open soon!',
-    });
+    // return setErrosMade({
+    //   title: 'Open soon',
+    //   message: 'Registration will open soon!',
+    // });
     if (!authContext.isUserLoggedIn) {
       setErrosMade({
         title: 'Auth Error',
@@ -39,67 +46,25 @@ const EventCard = props => {
       });
       return;
     }
-
-    const fetchUser = await axios.get(`${baseUrl}/user/getUserById`, {
+    const teamsData = await axios.get(`${baseUrl}/team/getTeams`, {
       headers: {
         Authorization: 'Bearer ' + authContext.token,
       },
     });
-    //  console.log(fetchUser);
-    if (
-      fetchUser.status !== 200 ||
-      (fetchUser.status !== 201 && fetchUser.data.isError)
-    ) {
-      setErrosMade({
-        title: 'Auth Error',
-        message: 'Wrong user auth!',
-      });
-      authContext.logout();
-      return;
-    }
-
-    const fetchedPushEvent = await axios.post(
-      `${baseUrl}/user/pushEvent`,
-      props.event,
-      {
-        headers: {
-          Authorization: 'Bearer ' + authContext.token,
-        },
-      }
-    );
-    if (fetchedPushEvent.data.authError) {
-      setErrosMade({
-        title: 'Auth Error',
-        message: 'Wrong user auth!',
-      });
-      authContext.logout();
-      return;
-    }
-    // console.log(fetchedPushEvent);
-    if (fetchedPushEvent.data.payError) {
-      setErrosMade({
-        title: fetchedPushEvent.data.title,
-        message: fetchedPushEvent.data.message,
-      });
-      setTimeout(() => {
-        navigate('/user/pay');
-      }, 3000);
-      return;
-    }
-
-    if (fetchedPushEvent.data.isError) {
-      setErrosMade({
-        title: fetchedPushEvent.data.title,
-        message: fetchedPushEvent.data.message,
-      });
-    }
+    // return console.log(teamsData);
+    setTeam(teamsData.data);
+    setIsEventRegister({
+      title: 'ji',
+      message: 'ok',
+    });
   };
 
   const onErrosMadeHandle = () => {
     setErrosMade(null);
   };
-
-  const [showreg, setshowreg] = useState(false);
+  const onIsEventRegister = () => {
+    setIsEventRegister(null);
+  };
 
   return (
     <div className="Robo">
@@ -110,13 +75,25 @@ const EventCard = props => {
           onErrosClick={onErrosMadeHandle}
         />
       )}
+      {isEventRegister && (
+        <EventRegistration
+          title={isEventRegister.title}
+          message={isEventRegister.message}
+          onTeamListAdd={onEventAdd}
+          onErrosClick={onIsEventRegister}
+          onLoadTeam={teams}
+          event={props.event._id}
+        />
+      )}
       {/* <div className="Robo__line"></div> */}
       <div className="Robozar__bottom d-flex container">
         <div className="robozar_main_container">
           <div className="robozar_container">
             <div
               className="robozar_left_container"
-              style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(${props.imgurl})` }}
+              style={{
+                backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(${props.imgurl})`,
+              }}
             >
               <div className="robozar_left_content">
                 <h1>{props.title}</h1>

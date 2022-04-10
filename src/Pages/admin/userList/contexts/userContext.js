@@ -21,7 +21,8 @@ const UserContextProvider = props => {
           authContext.logout();
           return;
         }
-        setUser(results.data.data);
+        //   return console.log(results.data.users);
+        setUser(results.data.users);
       });
   }, []);
 

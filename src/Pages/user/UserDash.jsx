@@ -22,13 +22,20 @@ const UserDash = props => {
   const [whatsapp, setWhatsApp] = useState();
   const [telegram, setTelegram] = useState();
   const [isAddTeam, setIsAddTeam] = useState();
-
+  const [teams, setTeam] = useState(null);
   const onIsAddMembers = () => {
     setIsAddTeam({
       title: 'add',
       message: 'hello',
     });
-    console.log('jh');
+  };
+
+  const onPayClick = () => {
+    navigate('/user/pay');
+  };
+
+  const teamListAdd = props => {
+    console.log(props);
   };
   const onSaveClick = () => {
     const saveUser = {
@@ -70,10 +77,6 @@ const UserDash = props => {
       });
   };
 
-  // if(user.dob){
-  //   console.log(user.dob.toDateString())
-  // }
-
   useEffect(() => {
     axios
       .get(`${baseUrl}/user/getUserById`, {
@@ -94,6 +97,15 @@ const UserDash = props => {
           return;
         }
         setUser(result.data.user);
+      });
+    axios
+      .get(`${baseUrl}/team/getTeams`, {
+        headers: {
+          Authorization: 'Bearer ' + authContext.token,
+        },
+      })
+      .then(results => {
+        setTeam(results.data.teams);
       });
   }, [authContext, authContext.login]);
 
@@ -124,6 +136,7 @@ const UserDash = props => {
         <AddTeamMembers
           title={isAddTeam.title}
           message={isAddTeam.message}
+          onTeamListAdd={teamListAdd}
           onErrosClick={onIsTeamMadeHandle}
         />
       )}
@@ -144,22 +157,36 @@ const UserDash = props => {
                     </figure>
                   </div>
                 </div>
-                {!user.hasPaidEntry && (
+
+                {user.paymentDetails.paymentStatus != 'Sliet mail Domain' && (
                   <div className="payment__select">
                     <div className="payment__select__icon">
-                      <i class="fa fa-info-circle"></i>
-                      <h3>Registration Fee</h3>
-                      <p>
-                        Pay one time registration fee and hustle <br /> through
-                        the plethora of Events at techFEST'22
-                      </p>
+                      {!user.hasPaidEntry && (
+                        <>
+                          <i class="fa fa-info-circle"></i>
+                          <h3>Registration Fee</h3>
+                          <p>
+                            Pay one time registration fee and hustle <br />{' '}
+                            through the plethora of Events at techFEST'22
+                          </p>
+                        </>
+                      )}
+                      {user.hasPaidEntry && (
+                        <>
+                          <h3>You have paid!</h3>
+                          <p>See your payment subscription!</p>
+                        </>
+                      )}
+
                       <button
                         className="payment__select__button"
-                        onClick={() => {
+                        // onClick={onPayClick}
+                        onClick={() =>
                           setErrosMade({
-                            message: 'The payment process will begin shortly!',
-                          });
-                        }}
+                            title: 'Pay',
+                            message: 'Payment process will begin shortly',
+                          })
+                        }
                       >
                         Pay
                       </button>
@@ -631,7 +658,7 @@ const UserDash = props => {
                         <i
                           className="fa fa-edit Edit__info__button"
                           onClick={onIsAddMembers}
-                          style={{ cursor: 'pointer', fontSize:'30px'}}
+                          style={{ cursor: 'pointer', fontSize: '30px' }}
                           title="Create team"
                         >
                           {' '}
@@ -640,24 +667,55 @@ const UserDash = props => {
                     </tr>
                     {/* <tr>
 
-                  {/* <!---------------------------------Workshop and Certificates------------------------------> */}
+                  {/* <!---------------------------------Teams------------------------------> */}
                   </table>
                   <table>
                     <tr>
                       <th>Team Name</th>
-                      <th>Member Name</th>
-                      <th>Email Id</th>
+                      <th>Team Leader</th>
+                      <th>Members Email & Status</th>
                       <th>Event Registered</th>
                     </tr>
-                    <tr>
+                    {/* <tr>
                       <td>Peter</td>
+                      <td>Griffin</td>
                       <td>Griffin</td>
                       <td>$100</td>
                       <td></td>
-                      <td >
-                        <i className="fa fa-trash" style={{marginRight:"12px"}} aria-hidden="true"></i>
+                      <td>
+                        <i
+                          className="fa fa-trash"
+                          style={{ marginRight: '12px' }}
+                          aria-hidden="true"
+                        ></i>
                       </td>
-                    </tr>
+                    </tr> */}
+                    {teams &&
+                      teams.map(team => (
+                        <tr key={team._id}>
+                          <td>{team.name}</td>
+                          <td>{team.leaderName}</td>
+
+                          {teams &&
+                            team.members.map(member => (
+                              <td key={member._id}>
+                                {member.email}:-
+                                {member.status ? 'Accepted' : 'Not accepted'},
+                                <br />
+                              </td>
+                            ))}
+                          {/* <td>{cn}</td> */}
+                          <td>{team.event}</td>
+                          <td>
+                            <i
+                              className="fa fa-trash"
+                              style={{ marginRight: '12px' }}
+                              aria-hidden="true"
+                            ></i>
+                          </td>
+                        </tr>
+                      ))}
+                    {/* {teams && teams.map(t => <h1>{t.name}</h1>)} */}
                   </table>
                 </div>
               </div>

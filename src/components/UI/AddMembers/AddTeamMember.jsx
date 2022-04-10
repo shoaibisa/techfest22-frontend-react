@@ -16,42 +16,51 @@ const onSubmitBtnClick = async event => {};
 
 const ModalOverlay = props => {
   const authContext = useContext(AuthContext);
-  const [Name, setName] = useState('');
-  const [Email, setEmail] = useState('');
-  const [memberEmail, setMemberEmail] = useState([]);
+  const [teamName, setTeamName] = useState('');
+  const [memberEmails, setMemberEmails] = useState([]);
+  const [memberMail, setMemberMail] = useState('');
   const [eventType, setEtype] = useState('');
 
-  const [Number, setNumber] = useState('');
   const [errosMade, setErrosMade] = useState('');
 
-  const getName = e => {
-    setName(e.target.value);
+  const getTeamName = e => {
+    setTeamName(e.target.value);
   };
 
   const getEmail = e => {
-    setEmail(e.target.value);
+    setMemberMail(e.target.value);
   };
 
   const getEtype = e => {
     setEtype(e.target.value.toLowerCase());
   };
 
-  const getNumber = e => {
-    setNumber(e.target.value);
-  };
   const onErrosMadeHandle = () => {
     setErrosMade(null);
   };
   const AddMembersMail = () => {
-    console.log(eventType);
-    if (eventType === '---select---') {
+    //return console.log(eventType);
+    if (!teamName) {
+      return alert('Please add team name');
+    }
+    if (!eventType) {
       return alert('Please select event mode');
     }
+
+    if (!memberMail) {
+      return alert('add member!');
+    }
+    const existMail = memberEmails.findIndex(e => e === memberMail);
+    if (existMail !== -1) {
+      return alert('member already added!');
+    }
     const data = {
-      email: Email,
+      memberMail: memberMail,
+      eventMode: eventType,
+      teamName: teamName,
     };
     axios
-      .post(`${baseUrl}/user/addTeamMemberMail`, data, {
+      .post(`${baseUrl}/team/addTeamMemberMail`, data, {
         headers: {
           Authorization: 'Bearer ' + authContext.token,
         },
@@ -65,11 +74,34 @@ const ModalOverlay = props => {
           // });
         }
 
-        setMemberEmail(oldArray => [...oldArray, Email]);
+        setMemberEmails(oldArray => [...oldArray, memberMail]);
       });
+    // setMemberEmails(oldArray => [...oldArray, memberMail]);
   };
 
-  const AddForm = () => {};
+  const createTeam = () => {
+    //  return console.log(memberEmails.length);
+    if (!teamName || memberEmails.length === 0 || !eventType) {
+      return alert('Invalid input fields');
+    }
+    const data = {
+      members: memberEmails,
+      eventType: eventType,
+      teamName: teamName,
+    };
+    axios
+      .post(`${baseUrl}/team/createTeam`, data, {
+        headers: {
+          Authorization: 'Bearer ' + authContext.token,
+        },
+      })
+      .then(results => {
+        if (results.data.isError) {
+          return alert(results.data.message);
+        }
+        props.onTeamListAdd(results.data.team);
+      });
+  };
 
   return (
     <>
@@ -94,8 +126,7 @@ const ModalOverlay = props => {
                   size="sm"
                   type="text"
                   placeholder="Enter Team Name *"
-                  onChange={getName}
-                  value={Name}
+                  onChange={getTeamName}
                 />
               </Form.Group>
               <Form.Group className="mb-3">
@@ -105,9 +136,12 @@ const ModalOverlay = props => {
                 <Form.Select
                   style={{ color: 'black', background: 'transparent' }}
                   aria-label="Default select example"
+                  defaultValue=""
                   onChange={getEtype}
                 >
-                  <option style={{ color: 'black' }}>---select---</option>
+                  <option style={{ color: 'black' }} disabled value="">
+                    ---select---
+                  </option>
                   <option style={{ color: 'black' }} value="online">
                     Online
                   </option>
@@ -144,13 +178,13 @@ const ModalOverlay = props => {
                 </Form.Group>
               </div>
               <h4>Member Mails</h4>
-              {memberEmail && memberEmail.map(e => <p key={e}>{e}</p>)}
+              {memberEmails && memberEmails.map(e => <p key={e}>{e}</p>)}
             </Form>
           </div>
         </div>
         <footer className={classes.actions}>
           <ButtonUi onBtnClick={props.onErrosClick}>Cancel</ButtonUi>
-          <ButtonUi onBtnClick={props.onErrosClick}>ADD</ButtonUi>
+          <ButtonUi onBtnClick={createTeam}>Create Team</ButtonUi>
         </footer>
       </CardUi>
     </>
@@ -165,7 +199,10 @@ const AddTeamMembers = props => {
         document.getElementById('backdropbg-root')
       )}
       {ReactDOM.createPortal(
-        <ModalOverlay onErrosClick={props.onErrosClick} />,
+        <ModalOverlay
+          onErrosClick={props.onErrosClick}
+          onTeamListAdd={props.onTeamListAdd}
+        />,
         document.getElementById('reg-event-popup')
       )}
     </>

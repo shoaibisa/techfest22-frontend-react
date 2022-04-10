@@ -26,7 +26,11 @@ const UserList = () => {
           <tr>
             <th>Name </th>
             <th>Email</th>
-            <th>Actions</th>
+            <td>Phone and Whatsapp</td>
+            <th>Team</th>
+            <th>Events</th>
+            <th>Workshops</th>
+            {/* <th>Actions</th> */}
           </tr>
         </thead>
         <tbody>
