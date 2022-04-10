@@ -26,13 +26,6 @@ const Workshop = ({ pWorkshop }) => {
   } else {
     cn = 'Not any coordinator';
   }
-  let fc = '';
-  if (pWorkshop.facultyCoordinator.length > 0) {
-    const ffn = pWorkshop.facultyCoordinator.map(e => e.coordinatorName);
-    fc = ffn.join();
-  } else {
-    fc = 'Not any coordinator';
-  }
 
   let dateEvent = pWorkshop.endDate.split('T');
   let date = dateEvent[0].split('-');
@@ -56,7 +49,7 @@ const Workshop = ({ pWorkshop }) => {
       <td>{pWorkshop.wDriveLink}</td>
       <td>{`${dateEvent[0]} / ${time[0]}: ${time[1]}`}</td>
       <td>{cn}</td>
-      <td>{fc}</td>
+
       <td>
         <a
           style={{ cursor: 'pointer' }}

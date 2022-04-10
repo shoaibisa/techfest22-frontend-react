@@ -19,7 +19,6 @@ const WorkshopForm = () => {
   const [startDate, setstartDate] = useState('');
   const [endDate, setendDate] = useState('');
   const [studentCoordinator, setstudentCoordinator] = useState([]);
-  const [facultyCoordinator, setFacultyCoordinator] = useState([]);
   const [coordinatorItems, setCoordinatorItems] = useState([]);
   const [selectedImage, setselectedImage] = useState(null);
   const [errosMade, setErrosMade] = useState(); //undefined
@@ -64,10 +63,6 @@ const WorkshopForm = () => {
     setstudentCoordinator(selectedList);
   };
 
-  const getFacultyCoordinator = (selectedList, selectedItem) => {
-    setFacultyCoordinator(selectedList);
-  };
-
   const getWtype = e => {
     setWorkshopMode(e.target.value.toLowerCase());
   };
@@ -86,7 +81,6 @@ const WorkshopForm = () => {
 
     if (
       studentCoordinator.length === 0 ||
-      facultyCoordinator.length === 0 ||
       wsName.trim().length === 0 ||
       wsDesc.trim().length === 0
     ) {
@@ -110,16 +104,12 @@ const WorkshopForm = () => {
     const dataSc = studentCoordinator.map(e => {
       return e.value;
     });
-    const dataFc = facultyCoordinator.map(e => {
-      return e.value;
-    });
 
     // return console.log(dataSc, dataFc);
 
     let zData = new FormData();
     zData.append('workshop', selectedImage);
     zData.append('studentCoordinator', dataSc);
-    zData.append('facultyCoordinator', dataFc);
     zData.append('wsName', wsName);
     zData.append('wsDesc', wsDesc);
     zData.append('workshopMode', workshopMode);
@@ -164,7 +154,6 @@ const WorkshopForm = () => {
         setstartDate(null);
         setendDate(null);
         setstudentCoordinator([]);
-        setFacultyCoordinator([]);
         setselectedImage(null);
         setWorkshopMode('');
       })
@@ -193,14 +182,8 @@ const WorkshopForm = () => {
     const dataOnlyCs = coordinatorItems.filter(
       w => w.coordinatorType === 'student'
     );
-    const dataOnlyFs = coordinatorItems.filter(
-      w => w.coordinatorType === 'faculty'
-    );
+
     const dataCs = dataOnlyCs.map(w => {
-      const cd = w.coordinatorName + ' ' + w.coordinatorEmail;
-      return { coordinator: cd, value: w._id };
-    });
-    const dataCf = dataOnlyFs.map(w => {
       const cd = w.coordinatorName + ' ' + w.coordinatorEmail;
       return { coordinator: cd, value: w._id };
     });
@@ -219,7 +202,7 @@ const WorkshopForm = () => {
             <div className="col-sm-12 pb-3">
               <h2 style={{ color: 'white' }}>Add Workshop</h2>
 
-              <Form className="pb-5"  onSubmit={onSubmitBtnClick}>
+              <Form className="pb-5" onSubmit={onSubmitBtnClick}>
                 <Form.Group className="mb-3">
                   <Form.Label style={{ color: 'white' }}>Name</Form.Label>
                   <Form.Control
@@ -321,18 +304,6 @@ const WorkshopForm = () => {
                     onSelect={getstudentCoordinator}
                     // onChange={getstudentCoordinator}
                     options={dataCs}
-                    displayValue="coordinator"
-                    showCheckbox="true"
-                  />
-                </Form.Group>
-                <Form.Group controlId="formFileSm" className="mb-3">
-                  <Form.Label style={{ color: 'white' }}>
-                    Faculty Coordinator
-                  </Form.Label>
-                  <Multiselect
-                    onSelect={getFacultyCoordinator}
-                    // onChange={getstudentCoordinator}
-                    options={dataCf}
                     displayValue="coordinator"
                     showCheckbox="true"
                   />
