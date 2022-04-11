@@ -106,7 +106,6 @@ const UserDash = props => {
         },
       })
       .then(results => {
-        console.log(results.data.teams);
         setTeam(results.data.teams);
       });
   }, [authContext, authContext.login]);
