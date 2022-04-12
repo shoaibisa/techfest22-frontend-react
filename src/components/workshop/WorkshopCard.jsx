@@ -138,9 +138,9 @@ const WorkshopCard = props => {
         </div>
         <div className="workshop__right">
           <div className="workshop__right__top d-flex">
-            <div className="Robozar__bottom__middle p-2">
+            <div className="Workshop__bottom__middle p-2">
               <h1>{props.workshop.workshopName}</h1>
-              <div className="Robozar__bottom__middle__para">
+              <div className="Workshop__bottom__middle__para">
                 <p className="">{props.workshop.wsDesc}</p>
               </div>
             </div>
@@ -160,7 +160,7 @@ const WorkshopCard = props => {
           </div>
 
           <div className="workshop__right__bottom">
-            <div className="Robozar__bottom__middle__button d-flex">
+            <div className="Workshop__bottom__middle__button d-flex">
               <button
                 onClick={onClickRegister}
                 className="worksop__register__btn"

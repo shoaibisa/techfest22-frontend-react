@@ -117,6 +117,7 @@ text-decoration: none;
 {
   .card__Style {
     width: 20rem;
+    margin-top: 3rem;
   } 
  
   
@@ -131,5 +132,38 @@ text-decoration: none;
 {
   .card__Style {
     width: 16.5rem;
+    margin-top: 3rem;
   } 
+  .Domain__card__row1{
+    
+    margin-left: 2.5rem;
+  }
+  .Domain__card__row2{
+  
+   
+    margin-left: 2.5rem;
+  }
+  .Domain__card__row3{
+    
+    margin-left: 2.5rem;
+  }
+
+}
+@media screen and (max-width:325px)
+{
+ 
+  .Domain__card__row1{
+    
+    margin-left: 1rem;
+  }
+  .Domain__card__row2{
+  
+   
+    margin-left: 1rem;
+  }
+  .Domain__card__row3{
+    
+    margin-left: 1rem;
+  }
+
 }

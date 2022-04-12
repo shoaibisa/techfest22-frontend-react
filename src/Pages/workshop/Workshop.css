@@ -7,10 +7,10 @@
     justify-content: space-between;
     margin-bottom: 5rem;
     width: 100%;
-    padding-top:13rem;
+    padding-top:20rem;
     border-bottom: 5px solid white;
 }
-.Robozar__bottom__middle{
+.Workshop__bottom__middle{
     flex: .5;
 }
 .workshop__right__top{
@@ -20,7 +20,7 @@
     justify-content: space-around;
     
 }
-.Robozar__bottom__middle h1{
+.Workshop__bottom__middle h1{
     font-family: "Vipnagorgialla";
     font-size: 25px;
     font-style: italic;
@@ -55,7 +55,7 @@
     border-radius: 50%;
 }
 
-.Robozar__bottom__middle__button button:last-child{
+.Workshop__bottom__middle__button button:last-child{
     height: fit-content;
     margin-left: 2rem;
     
@@ -101,7 +101,7 @@
     width: 200px;
     height: 201px;
 }
-.Robozar__bottom__middle {
+.Workshop__bottom__middle {
     flex: 0.8;
 }
 .workshop__right__bottom{
@@ -109,7 +109,7 @@
     margin-left: 2rem;
 
 }
-.Robozar__bottom__middle__button button{
+.Workshop__bottom__middle__button button{
   
     margin-top: -1rem;
     margin-left: 1rem;
@@ -130,7 +130,7 @@
     font-size: 7px;
 
 }
-.Robozar__bottom__middle__button button{
+.Workshop__bottom__middle__button button{
   
     margin-top: -1rem;
     margin-left: 1rem;
@@ -138,7 +138,7 @@
 .Event__cordinator{
     margin-top: -2rem;
 }
-.Robozar__bottom__middle__para p{
+.Workshop__bottom__middle__para p{
     font-size: 12px;
 }
 .Robozar__bottom__left__calender p{
@@ -161,7 +161,7 @@
     margin-bottom: 2rem;
 
 }
-.Robozar__bottom__middle__button button{
+.Workshop__bottom__middle__button button{
   
     margin-top: 1rem;
     margin-left: 1rem;
@@ -169,7 +169,7 @@
 .Event__cordinator{
     margin-top: -1rem;
 }
-.Robozar__bottom__middle__para p{
+.Workshop__bottom__middle__para p{
     font-size: 10px;
 }
 .Robozar__bottom__left__calender p{
@@ -184,6 +184,7 @@
         margin: auto;
         align-items: center;
         margin-bottom: 5rem;
+        padding-top: 20rem !important; 
     }
     .workshop__price{
      
@@ -196,7 +197,7 @@
         flex-direction: column;
         text-align: center;
     }
-    .Robozar__bottom__middle__para p{
+    .Workshop__bottom__middle__para p{
         text-align: center;
     }
     .regitration__fee{
@@ -211,7 +212,7 @@
         width: 340px;
         height: 251px;
     }
-    .Robozar__bottom__middle{
+    .Workshop__bottom__middle{
         text-align: center;
         margin: auto;
     }
@@ -222,7 +223,7 @@
     .Event__cordinator p{
         font-size: 10px;
     }
-    .Robozar__bottom__middle__button{
+    .Workshop__bottom__middle__button{
         font-size: 15px;
         text-align: center;
         margin-left: 2rem;
@@ -258,10 +259,10 @@
         /* font-size: 1px; */
         margin-left: 4rem;
     }
-    .Robozar__bottom__middle h1{
+    .Workshop__bottom__middle h1{
         font-size: 20px;
     }
-    .Robozar__bottom__middle__button button{
+    .Workshop__bottom__middle__button button{
         font-size: 10px;
     }
 }

@@ -19,9 +19,9 @@ const Workshop = props => {
 
   return (
     <div>
-      <EventLogo
+      <EventLogo 
         imgsrc={Workshopimg}
-        title="WORKSHOP"
+        title="WORKSHOPS"
         subTitle="Learning is something to be enjoyed, not endured. With the Workshop lets you skip the lectures and do more of what you love."
       />
       
