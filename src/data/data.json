@@ -411,6 +411,69 @@
       "role": "Supervisory",
       "stauts": "Supervisory",
       "phone": ""
+    },
+    {
+      "name": "Ashmi",
+      "imgSrc": "img/teamImg/4.jpg",
+      "role": "Domain coordinator",
+      "stauts": "Domain coordinator",
+      "phone": ""
+    },
+    {
+      "name": "Shailesh Mishra",
+      "imgSrc": "img/teamImg/Shailesh Mishra.png",
+      "role": "Domain coordinator",
+      "stauts": "Domain coordinator",
+      "phone": ""
+    },
+    {
+      "name": "Ayush Anand",
+      "imgSrc": "img/teamImg/5.jpeg",
+      "role": "Domain coordinator",
+      "stauts": "Domain coordinator",
+      "phone": ""
+    },
+    {
+      "name": "Ashish",
+      "imgSrc": "img/teamImg/6.jpg",
+      "role": "Domain coordinator",
+      "stauts": "Domain coordinator",
+      "phone": ""
+    },
+    {
+      "name": "Ashish",
+      "imgSrc": "img/teamImg/7.jpeg",
+      "role": "Domain coordinator",
+      "stauts": "Domain coordinator",
+      "phone": ""
+    } ,
+    {
+      "name": "Shristi",
+      "imgSrc": "img/teamImg/8.jpeg",
+      "role": "Domain coordinator",
+      "stauts": "Domain coordinator",
+      "phone": ""
+    },
+    {
+      "name": "Amrit",
+      "imgSrc": "img/teamImg/9.jpeg",
+      "role": "Domain coordinator",
+      "stauts": "Domain coordinator",
+      "phone": ""
+    },
+    {
+      "name": "Deepankar Jha",
+      "imgSrc": "img/teamImg/10.jpeg",
+      "role": "Domain coordinator",
+      "stauts": "Domain coordinator",
+      "phone": ""
+    },
+    {
+      "name": "Md.Dilkash",
+      "imgSrc": "img/teamImg/11.jpeg",
+      "role": "Domain coordinator",
+      "stauts": "Domain coordinator",
+      "phone": ""
     }
   ]
 }
