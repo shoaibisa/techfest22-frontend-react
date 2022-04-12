@@ -24,7 +24,9 @@ const Chemfor = () => {
         <EventLogo
           imgsrc={Kermis}
           title="KERMIS"
-          subTitle=""
+          subTitle="The mega domain of Kermis focuses on non-tech events including gaming events.
+           Aiming to promote the era of e-sports among the building students.
+           Events like BGMI, Mini Militia and CS GO."
         />
         {eData &&
           eData.map(e => (
