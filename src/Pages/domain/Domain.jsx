@@ -82,7 +82,9 @@ const Domain = (props) => {
           <img src={Kermisimg} className="card-img-top"  />
           <div className="card-body Domain__card__body">
             <h2 className="card-title">Kermis</h2>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p className="card-text">The mega domain of Kermis focuses on non-tech events including gaming events.
+             Aiming to promote the era of e-sports among the building students. Events like BGMI, Mini Militia and CS GO.
+</p>
             <NavLink to = "/kermis" className="Domain__button"><a href="#" className="Domain__button ">Read more</a></NavLink>
           </div>
         </div>
@@ -109,7 +111,9 @@ const Domain = (props) => {
           <img src={Chemforimg} className="card-img-top"  />
           <div className="card-body Domain__card__body">
             <h2 className="card-title">Chemfor</h2>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p className="card-text">This Domain is a platform to attempt and make the best use of your knowledge in the food and chemical industry.
+             It will help India become healthy and pollution free through projects on food development and events based on environment safety. 
+</p>
             <NavLink to = "/chemfor" className="Domain__button"><a href="#" className="Domain__button ">Read more</a></NavLink>          </div>
         </div>
        </div>

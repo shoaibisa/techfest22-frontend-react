@@ -12,7 +12,8 @@ const Card = props => {
         <h2>
           {props.team.name}
           <br />
-          <span>{props.team.role}</span>
+          <span>{props.team.role}
+</span>
         </h2>
       </div>
     </div>

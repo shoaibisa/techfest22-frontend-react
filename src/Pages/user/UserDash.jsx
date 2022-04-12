@@ -96,6 +96,7 @@ const UserDash = props => {
           authContext.logout();
           return;
         }
+
         setUser(result.data.user);
       });
     axios
@@ -705,7 +706,11 @@ const UserDash = props => {
                               </td>
                             ))}
                           {/* <td>{cn}</td> */}
-                          <td>{team.event}</td>
+                          <td>
+                            {!team.events || team.events.length === 0
+                              ? 'None'
+                              : team.events.map(e => e.name + ',')}
+                          </td>
                           <td>
                             <i
                               className="fa fa-trash"
