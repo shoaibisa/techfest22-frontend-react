@@ -297,7 +297,6 @@
       "phone": ""
     },
     {
-
       "name": "Pravin Kumar",
       "imgSrc": "img/teamImg/pravin.jpeg",
       "role": "React Develper",
@@ -314,7 +313,7 @@
     },
     {
       "name": "Shoaib",
-      "imgSrc": "img/teamImg/md.jpg",
+      "imgSrc": "img/teamImg/mahi_).jpeg",
       "role": "Back End,Server Manage,React",
       "phone": "6201783527",
       "stauts": "web"
@@ -446,7 +445,7 @@
       "role": "Domain coordinator",
       "stauts": "Domain coordinator",
       "phone": ""
-    } ,
+    },
     {
       "name": "Shristi",
       "imgSrc": "img/teamImg/8.jpeg",
