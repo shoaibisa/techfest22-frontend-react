@@ -22,7 +22,7 @@ function Fourzerofour() {
         >
           Home
         </NavLink>
-        {/* <button className="ForZeropage__button">Home</button> */}
+
       </div>
       <div className="EmailTemplate__topShadow__bottom">
         <img src={EmailtemplateTopShadow} alt="" />
