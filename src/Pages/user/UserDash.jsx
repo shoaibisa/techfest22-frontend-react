@@ -676,21 +676,8 @@ const UserDash = props => {
                       <th>Team Leader</th>
                       <th>Members Email & Status</th>
                       <th>Event Registered</th>
+                      <th></th>
                     </tr>
-                    {/* <tr>
-                      <td>Peter</td>
-                      <td>Griffin</td>
-                      <td>Griffin</td>
-                      <td>$100</td>
-                      <td></td>
-                      <td>
-                        <i
-                          className="fa fa-trash"
-                          style={{ marginRight: '12px' }}
-                          aria-hidden="true"
-                        ></i>
-                      </td>
-                    </tr> */}
                     {teams &&
                       teams.map(team => (
                         <tr key={team._id}>
