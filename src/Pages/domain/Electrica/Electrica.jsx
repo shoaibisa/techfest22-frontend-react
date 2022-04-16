@@ -3,6 +3,7 @@ import './Electrica.css';
 import EventCard from '../../../components/subdomain/EventCard/EventCard';
 import EventLogo from '../../../components/subdomain/EventLogo/EventLogo';
 import Electricaimg from '../../../../src/images/Domain/Electrica.webp';
+import domainimg from '../../../images/pravin.jpeg'
 import axios from 'axios';
 import { createContext, useEffect, useState } from 'react';
 import { baseUrl, localUrl } from '../../../API/api';
@@ -40,6 +41,14 @@ const Electrica = () => {
             studentCoordinator={e.studentCoordinator}
           />
         ))}
+         <div className="domain__cordinator d-flex">
+        <div className="domain__cordinator__img">
+          <img src={domainimg} alt="" />
+          <p className='mt-2'>Domain Cordinator</p>
+          <p>Pravin Kumar</p>
+          <p>6201783527</p>
+        </div>
+      </div>
     </div>
   );
 };

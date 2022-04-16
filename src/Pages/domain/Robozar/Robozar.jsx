@@ -2,6 +2,7 @@ import React from 'react';
 import EventCard from '../../../components/subdomain/EventCard/EventCard';
 import EventLogo from '../../../components/subdomain/EventLogo/EventLogo';
 import pngwing from '../../../../src/images/Domain/pngwing 3.png';
+import domainimg from '../../../images/pravin.jpeg'
 //import { useContext } from 'react';
 //import { ChemforContext } from './chemforContext';
 import axios from 'axios';
@@ -41,6 +42,17 @@ const Chemfor = () => {
             />
           ))}
       </div>
+     {eData &&
+      <div className="domain__cordinator d-flex">
+      <div className="domain__cordinator__img">
+        <img src={domainimg} alt="" />
+        <p className='mt-2'>Domain Cordinator</p>
+        <p>Pravin Kumar</p>
+        <p>6201783527</p>
+      </div>
+    </div>
+       
+     }
     </>
   );
 };

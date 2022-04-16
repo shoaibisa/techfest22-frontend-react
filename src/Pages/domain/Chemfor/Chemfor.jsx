@@ -1,5 +1,6 @@
 import React from 'react';
 import './Chemfor.css';
+import domainimg from '../../../images/pravin.jpeg'
 
 import EventCard from '../../../components/subdomain/EventCard/EventCard';
 import EventLogo from '../../../components/subdomain/EventLogo/EventLogo';
@@ -43,6 +44,14 @@ const Chemfor = () => {
               studentCoordinator={e.studentCoordinator}
             />
           ))}
+      </div>
+      <div className="domain__cordinator d-flex">
+        <div className="domain__cordinator__img">
+          <img src={domainimg} alt="" />
+          <p className='mt-2'>Domain Cordinator</p>
+          <p>Pravin Kumar</p>
+          <p>6201783527</p>
+        </div>
       </div>
     </>
   );
