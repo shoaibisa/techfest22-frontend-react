@@ -7,6 +7,7 @@ import ErrorModel from '../../components/UI/ErrorModel/ErrorModel';
 import './UserDash.css';
 import AuthContext from '../../auth/authContext';
 import AddTeamMembers from '../../components/UI/AddMembers/AddTeamMember';
+import EditTeamMember from '../../components/UI/AddMembers/EditTeamMember';
 
 const UserDash = props => {
   const authContext = useContext(AuthContext);
@@ -22,6 +23,7 @@ const UserDash = props => {
   const [whatsapp, setWhatsApp] = useState();
   const [telegram, setTelegram] = useState();
   const [isAddTeam, setIsAddTeam] = useState();
+  const [isEditTeam, setIsEditTeam] = useState();
   const [teams, setTeam] = useState(null);
   const onIsAddMembers = () => {
     setIsAddTeam({
@@ -29,13 +31,34 @@ const UserDash = props => {
       message: 'hello',
     });
   };
+  const onDeleteTeam = async props => {
+    const data = {
+      team: props._id,
+    };
+    const results = await axios.post(`${baseUrl}/team/deleteTeam`, data, {
+      headers: {
+        Authorization: 'Bearer ' + authContext.token,
+      },
+    });
+    // console.log(results.data);
+    setTeam(teams.filter(t => t._id !== props._id));
+  };
+  const onEditTeam = props => {
+    setIsEditTeam({
+      title: 'edit',
+      message: 'hello',
+      team: props,
+    });
+    // console.log(props);
+  };
 
   const onPayClick = () => {
     navigate('/user/pay');
   };
 
   const teamListAdd = props => {
-    console.log(props);
+    setTeam(oldTeams => [...oldTeams, props]);
+    // console.log(props);
   };
   const onSaveClick = () => {
     const saveUser = {
@@ -117,7 +140,9 @@ const UserDash = props => {
   const onIsTeamMadeHandle = () => {
     setIsAddTeam(null);
   };
-
+  const onIsEditTeam = () => {
+    setIsEditTeam(null);
+  };
   const [show, setShow] = useState(false);
 
   // const onPayBtnClick = () => {
@@ -139,6 +164,12 @@ const UserDash = props => {
           message={isAddTeam.message}
           onTeamListAdd={teamListAdd}
           onErrosClick={onIsTeamMadeHandle}
+        />
+      )}
+      {isEditTeam && (
+        <EditTeamMember
+          teamList={isEditTeam.team}
+          onErrosClick={onIsEditTeam}
         />
       )}
       {user && (
@@ -657,7 +688,7 @@ const UserDash = props => {
                       </td>
                       <td>
                         <i
-                          className="fa fa-edit Edit__info__button"
+                          className="fa fa-plus Edit__info__button"
                           onClick={onIsAddMembers}
                           style={{ cursor: 'pointer', fontSize: '30px' }}
                           title="Create team"
@@ -674,15 +705,18 @@ const UserDash = props => {
                     <tr>
                       <th>Team Name</th>
                       <th>Team Leader</th>
+                      <th>Event Type</th>
                       <th>Members Email & Status</th>
                       <th>Event Registered</th>
-                      <th></th>
+                      <th>Action</th>
                     </tr>
+
                     {teams &&
                       teams.map(team => (
                         <tr key={team._id}>
                           <td>{team.name}</td>
                           <td>{team.leaderName}</td>
+                          <td>{team.eventType}</td>
 
                           {teams &&
                             team.members.map(member => (
@@ -698,16 +732,41 @@ const UserDash = props => {
                               ? 'None'
                               : team.events.map(e => e.name + ',')}
                           </td>
-                          <td>
-                            <i
-                              className="fa fa-trash"
-                              style={{ marginRight: '12px' }}
-                              aria-hidden="true"
-                            ></i>
-                          </td>
+                          {team.leaderId === user._id ? (
+                            <>
+                              {' '}
+                              {/* <td>
+                                <i
+                                  className="fa  fa-pencil
+                              "
+                                  style={{
+                                    marginRight: '12px',
+                                    cursor: 'pointer',
+                                  }}
+                                  aria-hidden="true"
+                                  title="Edit team details"
+                                  onClick={() => onEditTeam(team)}
+                                ></i>
+                              </td> */}
+                              <td>
+                                <i
+                                  className="fa  fa-trash
+                              "
+                                  title="Delete team"
+                                  style={{
+                                    marginRight: '12px',
+                                    cursor: 'pointer',
+                                  }}
+                                  aria-hidden="true"
+                                  onClick={() => onDeleteTeam(team)}
+                                ></i>
+                              </td>
+                            </>
+                          ) : (
+                            'Not a leader'
+                          )}
                         </tr>
                       ))}
-                    {/* {teams && teams.map(t => <h1>{t.name}</h1>)} */}
                   </table>
                 </div>
               </div>

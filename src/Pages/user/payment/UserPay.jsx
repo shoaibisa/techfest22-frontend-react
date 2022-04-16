@@ -67,7 +67,7 @@ const UserPay = () => {
       },
     });
     console.log(fetchdata.data);
-    console.log('clickef');
+    // return console.log('clickef', fetchdata.data);
     window.location.href = fetchdata.data.url;
   };
   const payGold = async () => {
@@ -83,7 +83,7 @@ const UserPay = () => {
         Authorization: 'Bearer ' + authContext.token,
       },
     });
-    //  return console.log('clickef');
+    // return console.log('clickef', fetchdata.data);
     window.location.href = fetchdata.data.url;
   };
   return (
@@ -125,7 +125,13 @@ const UserPay = () => {
                       style={{ marginBottom: '10px' }}
                       type="submit"
                       block
-                      onClick={paySilver}
+                      // onClick={paySilver}
+                      onClick={() =>
+                        setErrosMade({
+                          title: 'Pay',
+                          message: 'Payment process will begin shortly',
+                        })
+                      }
                     >
                       299
                     </Button>
@@ -141,7 +147,13 @@ const UserPay = () => {
                       variant="success"
                       type="submit"
                       block
-                      onClick={payGold}
+                      // onClick={payGold}
+                      onClick={() =>
+                        setErrosMade({
+                          title: 'Pay',
+                          message: 'Payment process will begin shortly',
+                        })
+                      }
                     >
                       599
                     </Button>
