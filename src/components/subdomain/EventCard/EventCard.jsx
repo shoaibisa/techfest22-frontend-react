@@ -46,7 +46,7 @@ const EventCard = props => {
       });
       return;
     }
-    const teamsData = await axios.get(`${baseUrl}/team/getTeams`, {
+    const teamsData = await axios.get(`${baseUrl}/team/getTeamWhomeLeader`, {
       headers: {
         Authorization: 'Bearer ' + authContext.token,
       },
@@ -82,7 +82,7 @@ const EventCard = props => {
           onTeamListAdd={onEventAdd}
           onErrosClick={onIsEventRegister}
           onLoadTeam={teams}
-          event={props.event._id}
+          event={props.event}
         />
       )}
       {/* <div className="Robo__line"></div> */}
