@@ -25,6 +25,8 @@ const UserDash = props => {
   const [isAddTeam, setIsAddTeam] = useState();
   const [isEditTeam, setIsEditTeam] = useState();
   const [teams, setTeam] = useState(null);
+  const [eventsIndividual, setEventsIndividual] = useState();
+  const [eventWithTeam, setEventWithTeam] = useState();
   const onIsAddMembers = () => {
     setIsAddTeam({
       title: 'add',
@@ -50,6 +52,29 @@ const UserDash = props => {
       team: props,
     });
     // console.log(props);
+  };
+  const onDleteEvents = async props => {
+    const data = {
+      eventId: props._id,
+    };
+    const results = await axios.post(`${baseUrl}/user/unenrolEvent`, data, {
+      headers: {
+        Authorization: 'Bearer ' + authContext.token,
+      },
+    });
+    if (results.data.isError) {
+      return setErrosMade({
+        title: results.data.title,
+        message: results.data.message,
+      });
+    }
+    setErrosMade({
+      title: results.data.title,
+      message: results.data.message,
+    });
+    setEventsIndividual(
+      eventsIndividual.filter(e => e._id.toString() !== props._id)
+    );
   };
 
   const onPayClick = () => {
@@ -130,6 +155,17 @@ const UserDash = props => {
       })
       .then(results => {
         setTeam(results.data.teams);
+      });
+
+    axios
+      .get(`${baseUrl}/event/getProperEvent`, {
+        headers: {
+          Authorization: 'Bearer ' + authContext.token,
+        },
+      })
+      .then(results => {
+        setEventsIndividual(results.data.eventsIndividual);
+        setEventWithTeam(results.data.eventsTeam);
       });
   }, [authContext, authContext.login]);
 
@@ -247,24 +283,47 @@ const UserDash = props => {
                             <tbody>
                               <tr>
                                 <td>Name of Event</td>
-                                <td></td>
+
                                 <td>Time</td>
+                                <td>Action</td>
                               </tr>
                               {user.events.length === 0 && (
                                 <tr>
                                   <td>Not any Registered Events</td>
                                 </tr>
                               )}
-                              {user.events.map(event => {
-                                return (
-                                  <tr key={event._id}>
-                                    <td>{event.name}</td>
-                                    <td></td>
-                                    {/* {var a ="n"} */}
-                                    <td>{event.endDate.split('T')[0]}</td>
-                                  </tr>
-                                );
-                              })}
+                              {eventsIndividual &&
+                                eventsIndividual.map(event => {
+                                  return (
+                                    <tr key={event._id}>
+                                      <td>{event.name}</td>
+
+                                      <td>{event.endDate.split('T')[0]}</td>
+                                      <td>
+                                        <i
+                                          className="fa  fa-trash"
+                                          onClick={() => onDleteEvents(event)}
+                                          style={{
+                                            cursor: 'pointer',
+                                            fontSize: '30px',
+                                          }}
+                                          title="Unenroll from event"
+                                        ></i>
+                                      </td>
+                                    </tr>
+                                  );
+                                })}
+                              {eventWithTeam &&
+                                eventWithTeam.map(event => {
+                                  return (
+                                    <tr key={event._id}>
+                                      <td>{event.name}</td>
+
+                                      <td>{event.endDate.split('T')[0]}</td>
+                                      <td>With Team</td>
+                                    </tr>
+                                  );
+                                })}
                             </tbody>
                           </table>
                         </div>

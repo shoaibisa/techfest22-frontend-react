@@ -419,8 +419,22 @@
       "phone": ""
     },
     {
+      "name": "Md.Dilkash",
+      "imgSrc": "img/teamImg/11.jpeg",
+      "role": "Domain coordinator",
+      "stauts": "Domain coordinator",
+      "phone": ""
+    },
+    {
       "name": "Shailesh Mishra",
       "imgSrc": "img/teamImg/Shailesh Mishra.png",
+      "role": "Domain coordinator",
+      "stauts": "Domain coordinator",
+      "phone": ""
+    },
+    {
+      "name": "Shristi",
+      "imgSrc": "img/teamImg/8.jpeg",
       "role": "Domain coordinator",
       "stauts": "Domain coordinator",
       "phone": ""
@@ -446,13 +460,7 @@
       "stauts": "Domain coordinator",
       "phone": ""
     },
-    {
-      "name": "Shristi",
-      "imgSrc": "img/teamImg/8.jpeg",
-      "role": "Domain coordinator",
-      "stauts": "Domain coordinator",
-      "phone": ""
-    },
+
     {
       "name": "Amrit",
       "imgSrc": "img/teamImg/9.jpeg",
@@ -463,13 +471,6 @@
     {
       "name": "Utsav bhagel",
       "imgSrc": "img/teamImg/10.jpeg",
-      "role": "Domain coordinator",
-      "stauts": "Domain coordinator",
-      "phone": ""
-    },
-    {
-      "name": "Md.Dilkash",
-      "imgSrc": "img/teamImg/11.jpeg",
       "role": "Domain coordinator",
       "stauts": "Domain coordinator",
       "phone": ""
