@@ -16,3 +16,16 @@ p{
 a{
     font-family: "helveticaregular" !important;
 }
+.domain__cordinator__img img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.domain__cordinator{
+    margin: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+}

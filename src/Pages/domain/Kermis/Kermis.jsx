@@ -3,6 +3,7 @@ import './Kermis.jsx';
 import EventCard from '../../../components/subdomain/EventCard/EventCard';
 import EventLogo from '../../../components/subdomain/EventLogo/EventLogo';
 import Kermis from '../../../../src/images/Domain/Kermis.webp';
+import domainimg from '../../../images/pravin.jpeg'
 
 //import { useContext } from 'react';
 //import { ChemforContext } from './chemforContext';
@@ -20,14 +21,15 @@ const Chemfor = () => {
   }, []);
   return (
     <>
-      <div className="subdomain">
-        <EventLogo
+    <EventLogo
           imgsrc={Kermis}
           title="KERMIS"
-          subTitle="The mega domain of Kermis focuses on non-tech events including gaming events.
-           Aiming to promote the era of e-sports among the building students.
-           Events like BGMI, Mini Militia and CS GO."
+
+          subTitle="The mega domain of Kermis focuses on non-tech events including gaming events. Aiming to promote the era of e-sports among the building students. Events like BGMI, Mini Militia and CS GO"
+
         />
+      <div className="subdomain">
+        
         {eData &&
           eData.map(e => (
             <EventCard
@@ -43,6 +45,14 @@ const Chemfor = () => {
               studentCoordinator={e.studentCoordinator}
             />
           ))}
+      </div>
+      <div className="domain__cordinator d-flex">
+        <div className="domain__cordinator__img">
+          <img src={domainimg} alt="" />
+          <p className='mt-2'>Domain Cordinator</p>
+          <p>Pravin Kumar</p>
+          <p>6201783527</p>
+        </div>
       </div>
     </>
   );

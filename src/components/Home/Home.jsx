@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { NavLink, useNavigate } from 'react-router-dom';
 import Sliderslick from '../Slider/Sliderslick';
 import homepage__gifvideo from '../../images/Untitled.webm';
@@ -76,7 +78,7 @@ const Home = props => {
         <div className="container-fluid top-0 logo_section text-light py-5">
           <div className="logo_section_content">
             <div className="text-center rounded py-5 logo_section__image">
-              <img src={homepage_gif} className="rounded Logo_image" alt="" />
+              <LazyLoadImage src={homepage_gif} className="rounded Logo_image" alt="" />
             </div>
 
             <div className="text-center py-2  logo_section__about">
@@ -141,7 +143,7 @@ const Home = props => {
         <div className="cards-container">
           <div className="cards-container_card1">
             <div className="cards-container_card1_image ">
-              <img
+              <LazyLoadImage
                 className="workShop_Animation "
                 src={workshop_home_png}
                 alt=""
@@ -161,7 +163,7 @@ const Home = props => {
           </div>
           <div className="cards-container_card2">
             <div className="cards-container_card2_image">
-              <img className="workShop_Animation" src={domain_png} alt="" />
+              <LazyLoadImage className="workShop_Animation" src={domain_png} alt="" />
             </div>
             <div className="cards-container_card2_description-container">
               <div className="cards-container_card1_description-container_title">
@@ -199,7 +201,7 @@ const Home = props => {
               <div className="col p-5">
                 <div className="people p-3">
                   <div className="icon2">
-                    <img src={footfall} alt="" />
+                    <LazyLoadImage src={footfall} alt="" />
                   </div>
                   <div className="number">
                     <b>10K+</b>
@@ -215,7 +217,7 @@ const Home = props => {
               <div className="col p-5">
                 <div className="money p-3">
                   <div className="icon3">
-                    <img src={dollar_svg} alt="" />
+                    <LazyLoadImage src={dollar_svg} alt="" />
                   </div>
                   <div className="number">
                     <b>5L+</b>
@@ -252,7 +254,7 @@ const Home = props => {
         <div className="merchendise__image mt-5">
           <a href="#">
             {' '}
-            <img src={merchendese} alt="" />
+            <LazyLoadImage src={merchendese} alt="" />
           </a>
         </div>
       </div>

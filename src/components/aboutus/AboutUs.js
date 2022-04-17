@@ -1,5 +1,7 @@
 import React from 'react';
 import Sliderslick from '../Slider/Sliderslick';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import './AboutUs.css';
 
 const AboutUs = (props) => {
@@ -8,14 +10,14 @@ const AboutUs = (props) => {
       <div className="container__About__Us__Upperpart">
         <div className="About__Us__part1">
           <div className="About__Us__part1__techfest__logo">
-            <img src={props.data.head_tf[1].imageSrc} alt="" />
+            <LazyLoadImage src={props.data.head_tf[1].imageSrc} alt="" />
           </div>
           <div className="About__Us__part1__SLIET__logo">
-            <img src={props.data.head_tf[2].imageSrc} alt="" />
+            <LazyLoadImage src={props.data.head_tf[2].imageSrc} alt="" />
           </div>
         </div>
         <div className="About__Us__part2">
-          <img src={props.data.head_tf[0].imageSrc} alt="" />
+          <LazyLoadImage src={props.data.head_tf[0].imageSrc} alt="" />
           <div className="About__Us__part2__text  ">
             <p>
               techFEST is a platform where engineers, innovators, changemakers, 
@@ -31,7 +33,7 @@ const AboutUs = (props) => {
           <div className="colhmn">
             <div className="college">
               <div className="icon1">
-                <img src={props.data.group_buliding[0].imageSrc} alt="" />
+                <LazyLoadImage src={props.data.group_buliding[0].imageSrc} alt="" />
               </div>
               <div className="number">
                 <b>30+</b>
@@ -49,7 +51,7 @@ const AboutUs = (props) => {
           <div className="colhmn">
             <div className="people">
               <div className="icon2">
-                <img src={props.data.group_buliding[1].imageSrc} alt="" />
+                <LazyLoadImage src={props.data.group_buliding[1].imageSrc} alt="" />
               </div>
               <div className="number">
                 <b>10K+</b>
@@ -67,7 +69,7 @@ const AboutUs = (props) => {
           <div className="colhmn">
             <div className="money">
               <div className="icon3">
-                <img src={props.data.group_buliding[2].imageSrc} alt="" />
+                <LazyLoadImage src={props.data.group_buliding[2].imageSrc} alt="" />
               </div>
               <div className="number">
                 <b>5L+</b>
@@ -117,7 +119,7 @@ const AboutUs = (props) => {
           </div>
           <div className="website_year-declaration_right-block">
             <div className="website_year-declaration_right-block_img image-box">
-              <img
+              <LazyLoadImage
                 src={props.data.groupTechfestAbt[0].imageSrc}
                 alt="About us"
               />
@@ -127,7 +129,7 @@ const AboutUs = (props) => {
         <div className="website_year-declaration_outer-container">
           <div className="website_year-declaration_left-block">
             <div className="website_year-declaration_left-block_img image-box">
-              <img src={props.data.groupTechfestAbt[1].imageSrc} alt="" />
+              <LazyLoadImage src={props.data.groupTechfestAbt[1].imageSrc} alt="" />
             </div>
           </div>
           <div className="website_year-declaration_right-block">
@@ -159,14 +161,14 @@ const AboutUs = (props) => {
           </div>
           <div className="website_year-declaration_right-block">
             <div className="website_year-declaration_right-block_img image-box">
-              <img src={props.data.groupTechfestAbt[2].imageSrc} alt="" />
+              <LazyLoadImage src={props.data.groupTechfestAbt[2].imageSrc} alt="" />
             </div>
           </div>
         </div>
         <div className="website_year-declaration_outer-container">
           <div className="website_year-declaration_left-block">
             <div className="website_year-declaration_left-block_img image-box">
-              <img src={props.data.groupTechfestAbt[3].imageSrc} alt="" />
+              <LazyLoadImage src={props.data.groupTechfestAbt[3].imageSrc} alt="" />
             </div>
           </div>
           <div className="website_year-declaration_right-block">
