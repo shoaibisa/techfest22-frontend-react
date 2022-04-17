@@ -154,8 +154,7 @@ const AboutUs = (props) => {
             <div className="website_year-declaration_left-block_content para">
               <p>
                 <b>Pedalling towards Cosmic Yantra</b> <br />
-                Lorem ipsum dolor sit amet, consectetur <br />
-                adipisicing elit.
+                It instigated the innovation in space and we expanded our wings to more 30 universities all over the country
               </p>
             </div>
           </div>
@@ -178,8 +177,7 @@ const AboutUs = (props) => {
             <div className="website_year-declaration_right-block_content para">
               <p>
                 <b>Innovation in Cycle Design</b> <br />
-                Lorem ipsum, dolor sit amet consectetur <br />
-                adipisicing elit. Asperiores, nam.
+                Engrossed the Innovation in Bicycle with  collaborations of universities nationwide
               </p>
             </div>
           </div>
