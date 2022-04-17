@@ -91,7 +91,7 @@ const Home = props => {
                     <blockquote className="blockquote">
                       <p className=" ">
                         techFEST'22 is on the mission to revolutionize
-                        agro-technology. Explore with us how new advancements in
+                        Agro-Technology. Explore with us how new advancements in
                         technologies ranging from robotics and drones to
                         computer vision software transform traditional methods
                         of agriculture. With the young innovative minds

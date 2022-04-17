@@ -362,6 +362,13 @@
       "stauts": "web"
     },
     {
+      "name": "Abhishu Shakya",
+      "imgSrc": "img/teamImg/Abhishu Shakya.jpg",
+      "role": "UI/UX Designer",
+      "phone": "6388503409",
+      "stauts": "web"
+    },
+    {
       "name": "Aryan Dutt",
       "imgSrc": "img/teamImg/aryan.jpeg",
       "role": "Front End Developer",
@@ -384,7 +391,7 @@
       "phone": ""
     },
     {
-      "name": "Karan chanana",
+      "name": "Karan Chanana",
       "imgSrc": "img/teamImg/Karan chanana.jpg",
       "role": "Supervisory",
       "stauts": "Supervisory",
