@@ -90,7 +90,7 @@ const AboutUs = (props) => {
           <div className="About__Us__About__Sliet__Description">
             <p>
             Established in 1989, Sant Longowal Institute of Engineering and Technology was set up in Longowal,
-             Punjab in the memory of Late Sh. Harchand Singh Ji Longowal. With the motto “Proud to be a part of team SLIET”,
+             Punjab in the memory of Late Sh. Harchand Singh Ji Longowal. With the motto “Together We Can Make A Difference”,
               the institute strives to play its part in society by providing technical education with the underlying belief that only
                an educated youth holds the key to national upliftment.
             </p>

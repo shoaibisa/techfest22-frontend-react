@@ -226,7 +226,7 @@
       "stauts": "core"
     },
     {
-      "name": "Simram",
+      "name": "Simran",
       "imgSrc": "img/teamImg/IMG_20220401_143637.jpg",
       "role": "Core",
       "phone": "",
@@ -356,9 +356,16 @@
       "stauts": "web"
     },
     {
-      "name": "Aditya Mahrshi",
+      "name": "Aditya Maharshi",
       "imgSrc": "img/teamImg/Aditya Maharshi.jpg",
       "role": "Front End Developer",
+      "phone": "6388503409",
+      "stauts": "web"
+    },
+    {
+      "name": "Abhishu Shakya",
+      "imgSrc": "img/teamImg/Abhishu Shakya.jpg",
+      "role": "UI/UX Designer",
       "phone": "6388503409",
       "stauts": "web"
     },
@@ -385,7 +392,7 @@
       "phone": ""
     },
     {
-      "name": "Karan chanana",
+      "name": "Karan Chanana",
       "imgSrc": "img/teamImg/Karan chanana.jpg",
       "role": "Supervisory",
       "stauts": "Supervisory",
