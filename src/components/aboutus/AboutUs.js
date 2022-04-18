@@ -110,7 +110,7 @@ const AboutUs = (props) => {
             </div>
             <div className="website_year-declaration_left-block_content para">
               <p>
-                <b>The Ultimate Leap to Agri-Tech</b> <br />
+                <b>The Ultimate Leap to Agro-Tech</b> <br />
                 With 40+ Events and an aim to take up <br />
                 the Ultimate Leap in Technology for <br />
                 Agriculture this year.
