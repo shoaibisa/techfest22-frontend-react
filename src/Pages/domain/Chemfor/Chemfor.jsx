@@ -45,14 +45,14 @@ const Chemfor = () => {
             />
           ))}
       </div>
-      <div className="domain__cordinator d-flex">
+      {/* <div className="domain__cordinator d-flex">
         <div className="domain__cordinator__img">
           <img src={domainimg} alt="" />
           <p className='mt-2'>Domain Cordinator</p>
           <p>Pravin Kumar</p>
           <p>6201783527</p>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
