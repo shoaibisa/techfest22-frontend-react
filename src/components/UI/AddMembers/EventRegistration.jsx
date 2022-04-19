@@ -69,6 +69,7 @@ const ModalOverlay = props => {
                       type="radio"
                       id={`${team._id}`}
                       label={`${team.name}`}
+                      key={team._id}
                       name="radioEvent"
                       value={team._id}
                       onChange={e => setSelectedTeam(e.target.value)}
