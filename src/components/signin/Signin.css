@@ -66,7 +66,44 @@
 
 
 
-
+@media screen and (max-width: 750px) {
+  .Signin__Gif {
+    display: none;
+  }
+  .Signin__inputs {
+    flex: 1 !important;
+  }
+  .Signin__inputs form p {
+    margin-left: -10rem;
+  }
+  .Signin__inputs form label {
+    width: 18rem !important;
+  }
+  .login__button {
+    display: flex;
+    flex-direction: row !important;
+    margin-left: 1.8rem;
+  }
+  .login__button input {
+    margin-left: 2rem;
+  }
+  .login__button a {
+    margin-left: unset !important;
+    margin-right: 5rem;
+  }
+  .Signin__inputs__haveAcount {
+    margin-left: 4.2rem;
+  }
+  .Signin__inputs__head {
+    margin-left: 4.8rem;
+  }
+  .SigninBody{
+    overflow-y: scroll;
+  }
+  .Signin__inputs__haveAcount{
+    margin-bottom: 5rem;
+  }
+}
 @media screen and (max-width: 426px) {
   .Signin__Gif {
     display: none;

@@ -41,15 +41,22 @@
   margin-bottom: 3rem;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 750px) {
   .SignUp__Gif {
     display: none;
   }
   .SignUp__inputs {
     flex: 1 !important;
+    
   }
   .SignUp__inputs form p {
     margin-left: -10rem;
+  }
+  .signUpBody{
+    overflow-y: scroll;
+  }
+  .SignUp__inputs input {
+      width: 100% !important;
   }
 }
 
@@ -70,6 +77,9 @@
 @media screen and (max-width: 769px) {
   .SignUp__inputs form label {
     width: unset;
+  }
+  .signUpBody{
+    overflow-y: scroll;
   }
 }
 
