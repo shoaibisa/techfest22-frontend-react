@@ -85,6 +85,25 @@ border-radius: 1rem;
 background-color: #41f115;
 background-image: linear-gradient(to top, #41f115 0%, #41f115 100%);
 }
+.btnadmin{
+  display: flex;
+  justify-content: center;
+}
+.button {
+  background-color: green; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  text-align: center;
+  
+}
+.button5 {padding: 14px 40px;}
 
 .vl {
   flex: 0 0 0.666667%;

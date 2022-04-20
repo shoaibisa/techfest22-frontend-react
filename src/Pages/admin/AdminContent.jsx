@@ -7,6 +7,8 @@ import { baseUrl, localUrl } from '../../API/api';
 import AuthContext from '../../auth/authContext';
 import LoaderSpin from '../../components/UI/loader/LoaderSpin';
 import ErrorModel from '../../components/UI/ErrorModel/ErrorModel';
+import * as FileSaver from 'file-saver';
+import * as XLSX from 'xlsx';
 
 const AdminContent = () => {
   const authContext = useContext(AuthContext);
@@ -41,6 +43,30 @@ const AdminContent = () => {
   const onErrosMadeHandle = () => {
     setErrosMade(null);
   };
+  const fileType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
+  const fileExtension = '.xlsx';
+  
+  const exportToCSV = async()=>{
+    const csvData  =await axios
+    .get(`${baseUrl}/user/allUsers`, {
+      headers: {
+        Authorization: 'Bearer ' + authContext.token,
+      },
+     
+    })
+    console.log(csvData.data);
+   
+    const ws = XLSX.utils.json_sheet(csvData.data);
+    const wb = { Sheets: { 'data': ws }, SheetNames: ['data'] };
+
+    const excelBuffer = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
+
+    const data = new Blob([excelBuffer], {type: fileType});
+
+    FileSaver.saveAs(data, 'userdata' + fileExtension);
+
+} 
+  
   return (
     <>
       {errosMade && (
@@ -104,11 +130,16 @@ const AdminContent = () => {
                 </div>
               </div>
             </div>
+            <div className="btnadmin">
+            <button className="button button5" onClick={(e) => exportToCSV()}>Download</button>
+            </div>
           </div>
         </div>
       )}
     </>
   );
+      
 };
+
 
 export default AdminContent;
