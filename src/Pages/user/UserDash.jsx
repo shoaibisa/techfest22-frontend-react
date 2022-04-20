@@ -217,7 +217,9 @@ const UserDash = props => {
                   <div className="text-center text-light">
                     <figure className="text-center text-light">
                       <blockquote className="blockquote">
-                        <h2>Namaste! <br /> {user && user.name}</h2>
+                        <h2>
+                          Namaste! <br /> {user && user.name}
+                        </h2>
                       </blockquote>
                       <figcaption className="blockquote-footer">
                         Your Unique referral tF ID is {user.referralCode}
@@ -248,13 +250,13 @@ const UserDash = props => {
 
                       <button
                         className="payment__select__button"
-                        // onClick={onPayClick}
-                        onClick={() =>
-                          setErrosMade({
-                            title: 'Pay',
-                            message: 'Payment process will begin shortly',
-                          })
-                        }
+                        onClick={onPayClick}
+                        // onClick={() =>
+                        //   setErrosMade({
+                        //     title: 'Pay',
+                        //     message: 'Payment process will begin shortly',
+                        //   })
+                        // }
                       >
                         Pay
                       </button>
@@ -760,7 +762,7 @@ const UserDash = props => {
 
                   {/* <!---------------------------------Teams------------------------------> */}
                   </table>
-                  <table className='dashborad__teamdetails'>
+                  <table className="dashborad__teamdetails">
                     <tr>
                       <th>Team Name</th>
                       <th>Team Leader</th>
@@ -807,7 +809,7 @@ const UserDash = props => {
                                   onClick={() => onEditTeam(team)}
                                 ></i>
                               </td> */}
-                              <td className='faa__tash'>
+                              <td className="faa__tash">
                                 <i
                                   className="fa  fa-trash
                               "
