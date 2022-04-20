@@ -92,7 +92,7 @@ const EventCard = props => {
             <div
               className="robozar_left_container"
               style={{
-                backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(${props.imgurl})`,
+                backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ),url(${props.imgurl})`,
               }}
             >
               <div className="robozar_left_content">

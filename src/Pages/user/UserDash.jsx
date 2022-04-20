@@ -217,7 +217,7 @@ const UserDash = props => {
                   <div className="text-center text-light">
                     <figure className="text-center text-light">
                       <blockquote className="blockquote">
-                        <h2>Namaste! {user && user.name}</h2>
+                        <h2>Namaste! <br /> {user && user.name}</h2>
                       </blockquote>
                       <figcaption className="blockquote-footer">
                         Your Unique referral tF ID is {user.referralCode}
@@ -305,7 +305,7 @@ const UserDash = props => {
                                           onClick={() => onDleteEvents(event)}
                                           style={{
                                             cursor: 'pointer',
-                                            fontSize: '30px',
+                                            fontSize: '20px',
                                           }}
                                           title="Unenroll from event"
                                         ></i>
@@ -749,7 +749,7 @@ const UserDash = props => {
                         <i
                           className="fa fa-plus Edit__info__button"
                           onClick={onIsAddMembers}
-                          style={{ cursor: 'pointer', fontSize: '30px' }}
+                          style={{ cursor: 'pointer', fontSize: '25px' }}
                           title="Create team"
                         >
                           {' '}
@@ -760,7 +760,7 @@ const UserDash = props => {
 
                   {/* <!---------------------------------Teams------------------------------> */}
                   </table>
-                  <table>
+                  <table className='dashborad__teamdetails'>
                     <tr>
                       <th>Team Name</th>
                       <th>Team Leader</th>
@@ -807,7 +807,7 @@ const UserDash = props => {
                                   onClick={() => onEditTeam(team)}
                                 ></i>
                               </td> */}
-                              <td>
+                              <td className='faa__tash'>
                                 <i
                                   className="fa  fa-trash
                               "
@@ -815,6 +815,7 @@ const UserDash = props => {
                                   style={{
                                     marginRight: '12px',
                                     cursor: 'pointer',
+                                    fontSize: '20px',
                                   }}
                                   aria-hidden="true"
                                   onClick={() => onDeleteTeam(team)}
