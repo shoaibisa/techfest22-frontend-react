@@ -13,7 +13,6 @@
   
 }
 .Dashboard__body{
-  /* background-image: url("/images/background-overlay-right.png"); */
   background-position: bottom !important;
   background-repeat: no-repeat !important;
 }
@@ -125,9 +124,7 @@ background-image: linear-gradient(to top, #41f115 0%, #41f115 100%)  !important;
 
 /* This is the footer section ................... */
 
-
 .dashboard_both_table{
-  background-image: url("../../images/dashboard/hero_bg\ \(4\).png");
   background-position: center;
   background-size: 60rem;
   background-repeat: no-repeat;
@@ -278,6 +275,13 @@ color: white;
     width: unset;
     /* border: none; */
   }
+  .dashborad__teamdetails th{
+    font-size: 6px !important;
+  }
+  
+}
+.dashborad__teamdetails th{
+  font-size: 15px;
 }
 @media(max-width:400px){
   .dashboard_both_table{

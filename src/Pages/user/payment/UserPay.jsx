@@ -125,13 +125,13 @@ const UserPay = () => {
                       style={{ marginBottom: '10px' }}
                       type="submit"
                       block
-                      // onClick={paySilver}
-                      onClick={() =>
-                        setErrosMade({
-                          title: 'Pay',
-                          message: 'Payment process will begin shortly',
-                        })
-                      }
+                      onClick={paySilver}
+                      // onClick={() =>
+                      //   setErrosMade({
+                      //     title: 'Pay',
+                      //     message: 'Payment process will begin shortly',
+                      //   })
+                      // }
                     >
                       299
                     </Button>
@@ -147,13 +147,13 @@ const UserPay = () => {
                       variant="success"
                       type="submit"
                       block
-                      // onClick={payGold}
-                      onClick={() =>
-                        setErrosMade({
-                          title: 'Pay',
-                          message: 'Payment process will begin shortly',
-                        })
-                      }
+                      onClick={payGold}
+                      // onClick={() =>
+                      //   setErrosMade({
+                      //     title: 'Pay',
+                      //     message: 'Payment process will begin shortly',
+                      //   })
+                      // }
                     >
                       599
                     </Button>
