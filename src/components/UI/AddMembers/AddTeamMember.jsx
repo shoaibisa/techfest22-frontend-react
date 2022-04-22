@@ -157,7 +157,7 @@ const ModalOverlay = props => {
                 >
                   <div>Add Team Member email</div>
                   <div>
-                    {' '}
+                    
                     <i
                       className="fa fa-user-plus"
                       aria-hidden="true"
@@ -165,7 +165,9 @@ const ModalOverlay = props => {
                       style={{ cursor: 'pointer' }}
                       title="Add team member mail"
                     ></i>
+
                   </div>
+                  
                 </div>
 
                 <Form.Group className="mb-3">
@@ -173,7 +175,7 @@ const ModalOverlay = props => {
                     style={{ color: 'black', background: 'transparent' }}
                     size="sm"
                     type="text"
-                    placeholder="Enter Team Memeber Email *"
+                    placeholder="Enter Team Member Email *"
                     onChange={getEmail}
                   />
                 </Form.Group>
