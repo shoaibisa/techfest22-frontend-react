@@ -769,7 +769,7 @@ const UserDash = props => {
                       <th>Event Type</th>
                       <th>Members Email & Status</th>
                       <th>Event Registered</th>
-                      <th>Action</th>
+                      <th style={{width:"5px"}}>Action</th>
                     </tr>
 
                     {teams &&
