@@ -7,15 +7,18 @@ import { baseUrl, localUrl } from '../../API/api';
 import AuthContext from '../../auth/authContext';
 import LoaderSpin from '../../components/UI/loader/LoaderSpin';
 import ErrorModel from '../../components/UI/ErrorModel/ErrorModel';
-import * as FileSaver from 'file-saver';
+import fs from 'file-saver';
 import * as XLSX from 'xlsx';
-import reactcsv from "react-csv"
+import { CSVLink } from 'react-csv';
 
-const AdminContent = () => {
+
+
+  const AdminContent = () => {
   const authContext = useContext(AuthContext);
   const [tfData, setTfData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [errosMade, setErrosMade] = useState();
+  const [datainCsv, setdatainCsv] = useState("")
 
   useEffect(() => {
     setIsLoading(true);
@@ -55,16 +58,15 @@ const AdminContent = () => {
       },
      
     })
-    // console.log(csvData);
-    // console.log(csvData.data.users[19].events[0].name);
-    // const userDetails = [
-    //   {userName:csvData.data.users[19].name}
-    // ]
-    // console.log(userDetails);
+
+    setdatainCsv(csvData.data.users);
     
+    
+
+    const content = JSON.parse(fs.readFileSync())
   
 
-    // console.log(csvData.data);
+    
    
     // const ws = XLSX.utils.json_sheet(csvData.data);
     // const wb = { Sheets: { 'data': ws }, SheetNames: ['data'] };
@@ -142,7 +144,11 @@ const AdminContent = () => {
               </div>
             </div>
             <div className="btnadmin">
-            <button className="button button5" onClick={(e) => exportToCSV()}>Download</button>
+           
+              <a  className="button button5" onClick={(e) => exportToCSV()}>Download</a>
+           
+
+           
             
             </div>
           </div>

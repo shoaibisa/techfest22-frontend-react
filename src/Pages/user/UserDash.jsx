@@ -42,7 +42,7 @@ const UserDash = props => {
         Authorization: 'Bearer ' + authContext.token,
       },
     });
-     console.log(results.data);
+    console.log(results.data);
     setTeam(teams.filter(t => t._id !== props._id));
   };
   const onEditTeam = props => {
@@ -751,7 +751,7 @@ const UserDash = props => {
                         <i
                           className="fa fa-plus Edit__info__button"
                           onClick={onIsAddMembers}
-                          style={{ cursor: 'pointer', fontSize: '25px' }}
+                          style={{ cursor: 'pointer', fontSize: '25px ' }}
                           title="Create team"
                         >
                           {' '}
@@ -769,42 +769,44 @@ const UserDash = props => {
                       <th>Event Type</th>
                       <th>Members Email & Status</th>
                       <th>Event Registered</th>
-                      <th style={{width:"5px"}}>Action</th>
+                      <th style={{ width: "5px" }}>Action</th>
                     </tr>
 
                     {teams &&
                       teams.map(team => (
                         <tr className='border-bottom' key={team._id}>
-                          <td>{team.name}</td>
-                          <td>{team.leaderName}</td>
-                          <td>{team.eventType}</td> 
-                        <td>
-                          {teams &&
-                            team.members.map(member => (
-
-                              <div key={member._id} >
-                                
-
-                                {member.email.slice(0,7)}
-                                {member.status ? <i class="fa fa-check text-success ms-1" aria-hidden="true"></i> : <i class="fa fa-times text-danger" aria-hidden="true"></i>}
-                               
-                              </div>
-                             
-                            ))}
-                            
-                            </td>
-                            
-                            
-
-
-
-
-
+                          <td className='member__email'>{team.name}</td>
+                          <td className='member__email'>{team.leaderName}</td>
+                          <td className='member__email'>{team.eventType}</td>
                           <td>
+                            {teams &&
+                              team.members.map(member => (
+
+                                <div key={member._id} >
+
+
+
+                                  <div className='member__email' style={{ fontSize: member.email.length > 15 ? "10px" : "20px" }}>
+                                    {member.email}
+                                    {member.status ? <i class="fa fa-check text-success ms-1" aria-hidden="true"></i> : <i class="fa fa-times text-danger ms-1" aria-hidden="true"></i>}
+                                  </div>
+                                </div>
+
+                              ))}
+
+                          </td>
+
+
+
+
+
+
+
+                          <td >
                             {!team.events || team.events.length === 0
                               ? 'None'
-                              : team.events.map(e => (<div>{e.name} <br/></div>))} 
-                              
+                              : team.events.map(e => (<div className='member__email' style={{ fontSize: e.name.length > 8 ? "10px" : "20px" }}>{e.name} <br /></div>))}
+
                           </td>
                           {team.leaderId === user._id ? (
                             <>
@@ -830,7 +832,7 @@ const UserDash = props => {
                                   style={{
                                     marginRight: '12px',
                                     cursor: 'pointer',
-                                    fontSize: '20px',
+
                                   }}
                                   aria-hidden="true"
                                   onClick={() => onDeleteTeam(team)}
@@ -838,13 +840,13 @@ const UserDash = props => {
                               </td>
                             </>
                           ) : (
-                            'Not a leader'
+                            <i className='fa fa-ban'></i>
                           )}
-                          
+
                         </tr>
-                        
+
                       ))}
-                      
+
                   </table>
                 </div>
               </div>

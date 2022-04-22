@@ -239,7 +239,7 @@ color: white;
       width: 90%;
   }
   .dashboard_certificate_container{
-      width: 98%;
+      width: 100%;
   }
   /* .dashboard_certificate{
     width: 100%;
@@ -289,10 +289,16 @@ color: white;
   .dashborad__teamdetails th{
     font-size: 6px !important;
   }
+  .faa__tash .fa-trash{
+    font-size: 10px;
+  }
+  .member__email{
+    font-size: 5px !important;
+  }
   
 }
 .dashborad__teamdetails th{
-  font-size: 15px;
+  font-size: 13px;
 }
 .dashborad__teamdetails{
   overflow: scroll;
