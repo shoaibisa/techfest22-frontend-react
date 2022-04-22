@@ -1,7 +1,6 @@
-
 @font-face {
   font-family: heading font;
-  src: url("../../font/BEST\ IN\ CLASS.ttf");
+  src: url('../../font/BEST\ IN\ CLASS.ttf');
 }
 
 .caportal {
@@ -60,7 +59,7 @@
   color: white;
   margin-bottom: 20px;
   letter-spacing: 1.5px;
-  font-family: "heading font";
+  font-family: 'heading font';
 }
 
 .homePage_item_heading_shadow {
@@ -109,16 +108,11 @@
   border: 2px solid rgb(0, 138, 0);
 }
 
-input:active {
-  transform: scale(1.1);
-}
-
 /* Main Styling End*/
 
 /* Nav Responsive Styling Start */
 
 @media screen and (max-width: 767px) {
- 
   .homePage {
     display: flex;
     flex-wrap: wrap;
@@ -134,10 +128,6 @@ input:active {
     transition: 0.5s ease;
   }
 }
-
-
-
-
 
 /*Nav Responsive Styling End */
 
@@ -194,7 +184,6 @@ input:active {
   .perks_CaPortal__heading__Boader {
     width: 39% !important;
   }
- 
 }
 
 /* Main ResponsiveStyling End */
@@ -218,7 +207,7 @@ input:active {
 }
 
 .about_CaPortal__heading_content h2 {
-  font-family: "heading font";
+  font-family: 'heading font';
 }
 
 .about_CaPortal__heading__Boader {
@@ -311,7 +300,7 @@ input:active {
 }
 
 .perks_CaPortal__heading_content h2 {
-  font-family: "heading font";
+  font-family: 'heading font';
 }
 
 .perks_CaPortal__heading__Boader {
