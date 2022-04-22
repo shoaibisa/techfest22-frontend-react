@@ -621,7 +621,7 @@ const UserDash = props => {
                                   </label>
                                   <br />
                                   <input
-                                    type="text"
+                                    type="tel"
                                     id="number"
                                     name="number"
                                     value={phone}
@@ -636,7 +636,7 @@ const UserDash = props => {
                                     What's app Number
                                   </label>
                                   <input
-                                    type="text"
+                                    type="tel"
                                     id="number"
                                     onChange={e => {
                                       setWhatsApp(e.target.value);
@@ -651,7 +651,7 @@ const UserDash = props => {
                                     Telegram Number
                                   </label>
                                   <input
-                                    type="text"
+                                    type="tel"
                                     id="number"
                                     onChange={e => {
                                       setTelegram(e.target.value);

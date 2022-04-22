@@ -41,14 +41,14 @@ function Genesis() {
             />
           ))}
       </div>
-      {/* <div className="domain__cordinator d-flex">
+       <div className="domain__cordinator d-flex">
         <div className="domain__cordinator__img">
-          <img src={domainimg} alt="" />
+        <img src="https://www.kindpng.com/picc/m/366-3664582_bob-bob-dummy-image-of-user-hd-png.png" alt="" />
           <p className='mt-2'>Domain Cordinator</p>
-          <p>Pravin Kumar</p>
-          <p>6201783527</p>
+          <p>Ashish Kumar</p>
+          <p>9821855821</p>
         </div>
-      </div> */}
+      </div> 
     </div>
   )
 }

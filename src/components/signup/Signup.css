@@ -9,7 +9,7 @@
   background-attachment: fixed;
   height: 100vh;
   justify-content: center;
-  overflow-y: hidden;
+  overflow-y: scroll;
   padding-top: 4rem !important;
 }
 .SignUp__Gif video {
