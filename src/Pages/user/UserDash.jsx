@@ -42,7 +42,7 @@ const UserDash = props => {
         Authorization: 'Bearer ' + authContext.token,
       },
     });
-    // console.log(results.data);
+     console.log(results.data);
     setTeam(teams.filter(t => t._id !== props._id));
   };
   const onEditTeam = props => {
@@ -251,12 +251,12 @@ const UserDash = props => {
                       <button
                         className="payment__select__button"
                         onClick={onPayClick}
-                        // onClick={() =>
-                        //   setErrosMade({
-                        //     title: 'Pay',
-                        //     message: 'Payment process will begin shortly',
-                        //   })
-                        // }
+                      // onClick={() =>
+                      //   setErrosMade({
+                      //     title: 'Pay',
+                      //     message: 'Payment process will begin shortly',
+                      //   })
+                      // }
                       >
                         Pay
                       </button>
@@ -774,24 +774,37 @@ const UserDash = props => {
 
                     {teams &&
                       teams.map(team => (
-                        <tr key={team._id}>
+                        <tr className='border-bottom' key={team._id}>
                           <td>{team.name}</td>
                           <td>{team.leaderName}</td>
-                          <td>{team.eventType}</td>
-
+                          <td>{team.eventType}</td> 
+                        <td>
                           {teams &&
                             team.members.map(member => (
-                              <td key={member._id}>
-                                {member.email}:-
-                                {member.status ? 'Accepted' : 'Not accepted'},
-                                <br />
-                              </td>
+
+                              <div key={member._id} >
+                                
+
+                                {member.email.slice(0,7)}
+                                {member.status ? <i class="fa fa-check text-success ms-1" aria-hidden="true"></i> : <i class="fa fa-times text-danger" aria-hidden="true"></i>}
+                               
+                              </div>
+                             
                             ))}
-                          {/* <td>{cn}</td> */}
+                            
+                            </td>
+                            
+                            
+
+
+
+
+
                           <td>
                             {!team.events || team.events.length === 0
                               ? 'None'
-                              : team.events.map(e => e.name + ',')}
+                              : team.events.map(e => (<div>{e.name} <br/></div>))} 
+                              
                           </td>
                           {team.leaderId === user._id ? (
                             <>
@@ -827,8 +840,11 @@ const UserDash = props => {
                           ) : (
                             'Not a leader'
                           )}
+                          
                         </tr>
+                        
                       ))}
+                      
                   </table>
                 </div>
               </div>

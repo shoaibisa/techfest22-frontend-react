@@ -9,6 +9,7 @@ import LoaderSpin from '../../components/UI/loader/LoaderSpin';
 import ErrorModel from '../../components/UI/ErrorModel/ErrorModel';
 import * as FileSaver from 'file-saver';
 import * as XLSX from 'xlsx';
+import reactcsv from "react-csv"
 
 const AdminContent = () => {
   const authContext = useContext(AuthContext);
@@ -54,20 +55,30 @@ const AdminContent = () => {
       },
      
     })
-    console.log(csvData.data);
+    // console.log(csvData);
+    // console.log(csvData.data.users[19].events[0].name);
+    // const userDetails = [
+    //   {userName:csvData.data.users[19].name}
+    // ]
+    // console.log(userDetails);
+    
+  
+
+    // console.log(csvData.data);
    
-    const ws = XLSX.utils.json_sheet(csvData.data);
-    const wb = { Sheets: { 'data': ws }, SheetNames: ['data'] };
+    // const ws = XLSX.utils.json_sheet(csvData.data);
+    // const wb = { Sheets: { 'data': ws }, SheetNames: ['data'] };
 
-    const excelBuffer = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
+    // const excelBuffer = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
 
-    const data = new Blob([excelBuffer], {type: fileType});
+    // const data = new Blob([excelBuffer], {type: fileType});
 
-    FileSaver.saveAs(data, 'userdata' + fileExtension);
+    // FileSaver.saveAs(data, 'userdata' + fileExtension);
 
 } 
   
   return (
+  
     <>
       {errosMade && (
         <ErrorModel
@@ -132,6 +143,7 @@ const AdminContent = () => {
             </div>
             <div className="btnadmin">
             <button className="button button5" onClick={(e) => exportToCSV()}>Download</button>
+            
             </div>
           </div>
         </div>
