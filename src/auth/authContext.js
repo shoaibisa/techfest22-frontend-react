@@ -48,7 +48,7 @@ export const AuthContextProvider = props => {
     localStorage.setItem('jswToken', user.token);
     localStorage.setItem('userId', user.userId);
     localStorage.setItem('userRole', user.userRole);
-    const remainingMilliseconds = 60 * 60 * 1000; //1h
+    const remainingMilliseconds = 7 * 3600 * 60 * 60 * 1000; //1h
     const expiryDate = new Date(new Date().getTime() + remainingMilliseconds);
     localStorage.setItem('expiryDate', expiryDate.toISOString());
     setToken(user.token);
