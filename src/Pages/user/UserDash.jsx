@@ -132,6 +132,7 @@ const UserDash = props => {
           Authorization: 'Bearer ' + authContext.token,
         },
       })
+      
       .then(result => {
         if (
           result.status !== 200 ||

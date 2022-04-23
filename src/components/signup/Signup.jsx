@@ -218,7 +218,7 @@ const navigate = useNavigate()
                   autocomplete="off"
                   placeholder=" "
                 />
-                <span style={{ background: 'transparent' }}>Refral Code</span>
+                <span style={{ background: 'transparent',fontSize:'11px' }}>Refral Code(not for SLIETien)</span>
               </label>{' '}
               <br />
               <button

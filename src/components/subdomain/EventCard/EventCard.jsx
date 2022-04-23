@@ -18,11 +18,10 @@ const EventCard = props => {
   let time = dateEvent[1].split(':');
   let eventDateRegister = new Date(props.endDate);
   let getTodayDate = new Date();
-
   const onEventAdd = props => {
     console.log(props);
   };
-
+  
   const onRegisterClick = async () => {
     // return setErrosMade({
     //   title: 'Open soon',
@@ -45,6 +44,16 @@ const EventCard = props => {
         message: 'Time of the register is over!',
       });
       return;
+    }
+    const userData = await  axios
+    .get(`${baseUrl}/user/getUserById`, {
+      headers: {
+        Authorization: 'Bearer ' + authContext.token,
+      },
+    });
+    if(!userData.data.user.whatsappPhoneNumber|| userData.data.user.whatsappPhoneNumber.length===0){
+      
+      return alert("Please complete your profile");
     }
     const teamsData = await axios.get(`${baseUrl}/team/getTeamWhomeLeader`, {
       headers: {
