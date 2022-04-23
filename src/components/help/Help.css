@@ -1,0 +1,29 @@
+.Help{
+    width: 60px;
+    height: 40px;
+    background-color: rgb(2, 79, 2,0.5);
+    border-top-right-radius:20px ;
+    border-bottom-right-radius:20px ;
+    position: fixed;
+    left: 0;
+    z-index: 100;
+    cursor: pointer;
+    bottom:5rem;
+    text-align: center;
+    align-items: center;
+    
+
+}
+.Help:hover{
+    background-color: white;
+    
+} 
+.help__icon .fa-question-circle:hover{
+color: black !important;
+}
+@media screen and(max-width:"500px") {
+   .Help{
+       width: 20px !important;
+   }
+    
+}

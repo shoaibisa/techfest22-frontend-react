@@ -1,5 +1,5 @@
 import React, { useContext, useState,lazy } from 'react';
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { NavLink, Route, Routes, useNavigate } from 'react-router-dom';
 import CaPortal from './Pages/caportal/Caportal';
 import Navbar from './components/header/Navbar';
 import Home from './components/Home/Home';
@@ -34,7 +34,7 @@ import AllUsers from './Pages/admin/userList/allUsers';
 import Fourzerofour from './Pages/FourZero/Fourzerofour';
 import EventForm from './Pages/admin/event/EventForm';
 import AllCoordinator from './Pages/admin/coordinator/CoordinatorList/AllCoordinator';
-
+import Help from './components/help/Help';
 import Workshop from './Pages/workshop/Workshop';
 
 import EventAll from './Pages/admin/event/EventAll';
@@ -73,6 +73,7 @@ function App() {
   return (
     <div className="App">
       <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler} />
+     <NavLink to={"/frequentlyAsk"}> <Help /></NavLink>
       {errosMade && (
         <ErrorModel
           title={errosMade.title}
@@ -80,7 +81,7 @@ function App() {
           onErrosClick={onErrosMadeHandle}
         />
       )}
-      <Routes>
+      <Routes> 
         <Route path="/" element={<Home data={dataJson.sponser} />} />
         <Route  path="/ca" element={<CaPortal />} />
         <Route  path="/chemfor" element={<Chemfor />} />

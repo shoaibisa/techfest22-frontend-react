@@ -47,10 +47,37 @@ import { CSVLink } from 'react-csv';
   const onErrosMadeHandle = () => {
     setErrosMade(null);
   };
-  const fileType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
-  const fileExtension = '.xlsx';
-  
+  const fileHeaders= [
+    {label: "Email", key: "email"},
+    {label: "Name", key: "name"},
+    {label: "Mobile", key: "phone"},
+    {label: "Events", key: "events[0].name"},
+    {label: "", key: "events[1].name"},
+    {label: "", key: "events[2].name"},
+    {label: "", key: "events[3].name"},
+    {label: "", key: "events[4].name"},
+    {label: "", key: "events[5].name"},
+    {label: "", key: "events[6].name"},
+    {label: "", key: "events[7].name"},
+    {label: "", key: "events[8].name"},
+    {label: "", key: "events[9].name"},
+    {label: "", key: "events[10].name"},
+    {label: "", key: "events[11].name"},
+    {label: "", key: "events[12].name"},
+    {label: "", key: "events[13].name"},
+    {label: "", key: "events[14].name"},
+    {label: "", key: "events[15].name"},
+    {label: "", key: "events[16].name"},
+    {label: "", key: "events[17].name"},
+    {label: "", key: "events[18].name"},
+    {label: "", key: "events[19].name"},
+    {label: "", key: "events[20].name"}
+  ];
+  useEffect(()=>{
+    exportToCSV();
+  }, [])
   const exportToCSV = async()=>{
+   
     const csvData  =await axios
     .get(`${baseUrl}/user/allUsers`, {
       headers: {
@@ -58,26 +85,24 @@ import { CSVLink } from 'react-csv';
       },
      
     })
-
     setdatainCsv(csvData.data.users);
-    
-    
 
-    const content = JSON.parse(fs.readFileSync())
+  };
+
+
+    
+    console.log(datainCsv);
+   
+  
+    
+    
+    
+    
   
 
-    
-   
-    // const ws = XLSX.utils.json_sheet(csvData.data);
-    // const wb = { Sheets: { 'data': ws }, SheetNames: ['data'] };
+  
 
-    // const excelBuffer = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
-
-    // const data = new Blob([excelBuffer], {type: fileType});
-
-    // FileSaver.saveAs(data, 'userdata' + fileExtension);
-
-} 
+ 
   
   return (
   
@@ -143,9 +168,18 @@ import { CSVLink } from 'react-csv';
                 </div>
               </div>
             </div>
-            <div className="btnadmin">
+            <div className="btnadmin pb-5">
            
-              <a  className="button button5" onClick={(e) => exportToCSV()}>Download</a>
+            
+              <CSVLink className='btn btn-success'
+        headers={fileHeaders}
+        data={datainCsv}
+        filename="results.csv"
+       
+        
+      >
+        Export
+      </CSVLink>
            
 
            

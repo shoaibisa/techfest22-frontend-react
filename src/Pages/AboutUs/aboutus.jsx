@@ -350,7 +350,7 @@ const Aboutus = () => {
                 
               </div>
               <div
-               className='mt-5'
+               className='mt-5 ms-5'
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
@@ -367,9 +367,9 @@ const Aboutus = () => {
 
                 <div
                   style={{ display: 'flex', justifyContent: 'space-evenly' }}
-                  className="center"
+                  className="text-center"
                 >
-                  <div>
+                  <div className='contactus__user'>
                     <p style={{ fontSize: '20px', marginRight: '25px' }}>
                       Soham Das
                     </p>
@@ -382,7 +382,7 @@ const Aboutus = () => {
                       </a>
                     </p>
                   </div>
-                  <div>
+                  <div className='contactus__user'>
                     <p style={{ fontSize: '20px', marginRight: '25px' }}>
                       Pragati Priya
                     </p>
@@ -402,7 +402,7 @@ const Aboutus = () => {
                       </a>
                     </p>
                   </div>
-                  <div>
+                  <div className='contactus__user'>
                     <p
                       style={{
                         textDecoration: 'none',
