@@ -14,6 +14,8 @@ function Signin(props) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const [isLoading, setIsLoading] = useState(false)
+
   const [errosMade, setErrosMade] = useState(); //undefined
 
   const navigate = useNavigate();
@@ -26,6 +28,7 @@ function Signin(props) {
   };
 
   const userLoginHandle = async authData => {
+    setIsLoading(true)
     const fetchdata = await axios({
       method: 'post',
       data: authData,
@@ -35,6 +38,7 @@ function Signin(props) {
       fetchdata.status !== 200 ||
       (fetchdata.status !== 201 && fetchdata.data.isError)
     ) {
+      setIsLoading(false)
       setErrosMade({
         title: 'Error',
         message: fetchdata.data.message,
@@ -46,18 +50,22 @@ function Signin(props) {
       fetchdata.status === 200 ||
       (fetchdata.status === 201 && fetchdata.data.isSucces)
     ) {
+      setIsLoading(false)
       setErrosMade(false);
       const userData = {
         token: fetchdata.data.token,
         userId: fetchdata.data.userId,
         userRole: fetchdata.data.userRole,
       };
-      await authContext.login(userData);
+      authContext.login(userData);
 
       if (fetchdata.data.userRole === 569) {
+        setIsLoading(true)
         navigate('/admin');
       }
-      if (fetchdata.data.userRole === 0) navigate('/dashboard');
+      if (fetchdata.data.userRole === 0) {
+        setIsLoading(false)
+        navigate('/dashboard')};
 
       // console.log(fetchdata);
     }
@@ -192,6 +200,7 @@ function Signin(props) {
                   type="button"
                   onClick={onSubmitBtnClick}
                   className="btn__color mb-3"
+                  disabled={isLoading}
                 >
                   Submit
                 </button>
