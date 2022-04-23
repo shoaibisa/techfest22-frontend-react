@@ -59,7 +59,7 @@ const navigate = useNavigate()
       return;
     }
 
-    if (name.trim().length < 5) {
+    if (name.trim().length <=3) {
       setErrosMade({
         title: 'Error',
         message: 'Name should be 5 character long!',
