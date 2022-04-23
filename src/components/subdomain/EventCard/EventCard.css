@@ -168,6 +168,7 @@
     .robozar_left_content p{
         text-align: justify;
         line-height: 1;
+        font-size: 15px;
     }
       .robozar_right_container{
         margin-top: -2rem !important;
