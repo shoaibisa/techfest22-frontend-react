@@ -25,7 +25,7 @@ const Chemfor = () => {
           imgsrc={Kermis}
           title="KERMIS"
 
-          subTitle="The mega domain of Kermis focuses on non-tech events including gaming events. Aiming to promote the era of e-sports among the building students. Events like BGMI, Mini Militia and CS GO"
+          subTitle="The mega domain of Kermis focuses on non-tech events including gaming events. Aiming to promote the era of e-sports among the building students. Events like BGMI, Mini Militia and Valorant"
 
         />
       <div className="subdomain">
