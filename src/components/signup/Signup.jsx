@@ -14,6 +14,9 @@ const Signup = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [referralCode, setReferralCode] = useState('');
   const [errosMade, setErrosMade] = useState(); //undefined
+
+  const [isLoading, setIsLoading] = useState(false)
+
 const navigate = useNavigate()
   const getName = e => {
     setName(e.target.value);
@@ -87,10 +90,13 @@ const navigate = useNavigate()
       confirmPassword: confirmPassword,
     };
 
+    setIsLoading(true);
+
     await axios
       .post(`${baseUrl}/signUp`, data)
       .then(result => {
-        console.log(result);
+        setIsLoading(false)
+        // console.log(result);
         if (
           result.status !== 200 ||
           (result.status !== 201 && result.data.isError)
@@ -106,7 +112,8 @@ const navigate = useNavigate()
         }
       })
       .catch(err => {
-        console.log(err);
+        setIsLoading(false)
+        // console.log(err);
       });
 
     // let routes ()= <Navigate to="/login" />;
@@ -217,6 +224,7 @@ const navigate = useNavigate()
               <button
                 type="button"
                 onClick={onSubmitBtnClick}
+                disabled={isLoading}
                 className="btn__color mb-3"
               >
                 Submit
