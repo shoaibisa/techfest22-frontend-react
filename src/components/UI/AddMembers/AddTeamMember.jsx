@@ -81,8 +81,11 @@ const ModalOverlay = props => {
 
   const createTeam = () => {
     //  return console.log(memberEmails.length);
-    if (!teamName || memberEmails.length === 0 || !eventType) {
+    if (!teamName || !eventType) {
       return alert('Invalid input fields');
+    }
+    if (memberEmails.length === 0) {
+      return alert('Add Your Team Member');
     }
     const data = {
       members: memberEmails,
@@ -156,31 +159,36 @@ const ModalOverlay = props => {
                   style={{ display: 'flex', justifyContent: 'space-between' }}
                 >
                   <div>Add Team Member email</div>
+                </div>
+                <div
+                  style={{ display: 'flex', justifyContent: 'space-between' }}
+                >
+                  <Form.Group className="mb-3" style={{ width: '60%' }}>
+                    <Form.Control
+                      style={{ color: 'black', background: 'transparent' }}
+                      size="sm"
+                      type="email"
+                      placeholder="Enter Team Member Email *"
+                      onChange={getEmail}
+                    />
+                  </Form.Group>
                   <div>
-                    
+                    {/*                     
                     <i
                       className="fa fa-user-plus"
                       aria-hidden="true"
-                      onClick={AddMembersMail}
-                      style={{ cursor: 'pointer' }}
                       title="Add team member mail"
-                    ></i>
-
+                    ></i> */}
+                    <ButtonUi
+                      style={{ cursor: 'pointer' }}
+                      onBtnClick={AddMembersMail}
+                    >
+                      Add Email
+                    </ButtonUi>
                   </div>
-                  
                 </div>
-
-                <Form.Group className="mb-3">
-                  <Form.Control
-                    style={{ color: 'black', background: 'transparent' }}
-                    size="sm"
-                    type="text"
-                    placeholder="Enter Team Member Email *"
-                    onChange={getEmail}
-                  />
-                </Form.Group>
               </div>
-              <h4>Member Mails</h4>
+              <h4> Your Member Mails</h4>
               {memberEmails && memberEmails.map(e => <p key={e}>{e}</p>)}
             </Form>
           </div>

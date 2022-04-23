@@ -124,7 +124,7 @@ const WorkshopCard = props => {
             <div className="Robozar__bottom__left__calender mt-2 d-flex">
               <i class=" fa fa-solid mx-1 fa-calendar"></i>
               <p>
-                register before:{' '}
+                register before:
                 <span>
                   {date[2]}/{date[1]}
                 </span>

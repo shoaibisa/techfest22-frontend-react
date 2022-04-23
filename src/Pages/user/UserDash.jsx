@@ -754,7 +754,7 @@ const UserDash = props => {
                           style={{ cursor: 'pointer', fontSize: '25px ' }}
                           title="Create team"
                         >
-                          {' '}
+                          
                         </i>
                       </td>
                     </tr>
@@ -783,9 +783,6 @@ const UserDash = props => {
                               team.members.map(member => (
 
                                 <div key={member._id} >
-
-
-
                                   <div className='member__email' style={{ fontSize: member.email.length > 15 ? "10px" : "20px" }}>
                                     {member.email}
                                     {member.status ? <i class="fa fa-check text-success ms-1" aria-hidden="true"></i> : <i class="fa fa-times text-danger ms-1" aria-hidden="true"></i>}
