@@ -62,6 +62,8 @@ const ModalOverlay = props => {
                 name="radioEvent"
                 onChange={e => setSelectedTeam(e.target.value)}
               />
+                          <small style={{fontSize:'12px',color:'Green',fontWeight:'bold' }}>(If you Want to participate in Team  first Create Team From Deshboard)</small>
+
               {!props.onLoadTeam.teams || props.onLoadTeam.teams.length === 0
                 ? ''
                 : props.onLoadTeam.teams.map(team => (
