@@ -43,12 +43,19 @@ const Electrica = () => {
         ))}
       <div className="domain__cordinator d-flex">
         <div className="domain__cordinator__img">
-        <img src="https://www.kindpng.com/picc/m/366-3664582_bob-bob-dummy-image-of-user-hd-png.png" alt="" />
+          <img src="https://www.kindpng.com/picc/m/366-3664582_bob-bob-dummy-image-of-user-hd-png.png" alt="" />
           <p className='mt-2'>Domain Cordinator</p>
           <p>Ashmi Raj</p>
           <p>7889299129</p>
         </div>
-      </div> 
+        <div className="domain__cordinator__img">
+          <img src="https://www.kindpng.com/picc/m/366-3664582_bob-bob-dummy-image-of-user-hd-png.png" alt="" />
+          <p className='mt-2'>Domain Cordinator</p>
+          <p>Deepankar Jha
+          </p>
+          <p>9123120946</p>
+        </div>
+      </div>
     </div>
   );
 };

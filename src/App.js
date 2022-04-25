@@ -48,6 +48,7 @@ import FrequentlyAsk  from './Pages/AboutUs/aboutus';
 import OurTeam from './Pages/OurTeam/outTeam';
 //import OurTeamDemo from './Pages/ourteamdemo/outTeam';
 import WorkshopAll from './Pages/admin/WorkshopForm/WorkShopList/AllWorkshop';
+import Eventdata from './Pages/admin/event/Eventdata';
 
 function App() {
   const authContext = useContext(AuthContext);
@@ -96,6 +97,9 @@ function App() {
         <Route  path="/workshop" element={<Workshop />} />
         <Route  path="/about" element={<AboutUs data={dataJson} />} />
         <Route  path="/admin/domains" element={<DomainForm />} />
+        
+        
+        
         //admin routes
         <Route
           path="/domain"
@@ -148,6 +152,9 @@ function App() {
         )}
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
           <Route  path="/admin/event" element={<EventAll />} />
+        )}
+        {authContext.isUserLoggedIn && authContext.userRole == 569 && (
+          <Route  path="/admin/event/eventsdata" element={<Eventdata />} />
         )}
         {authContext.isUserLoggedIn && authContext.userRole == 569 && (
           <Route  path="/admin/event/add" element={<EventForm />} />
