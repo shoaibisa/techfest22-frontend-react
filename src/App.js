@@ -36,7 +36,7 @@ import EventForm from './Pages/admin/event/EventForm';
 import AllCoordinator from './Pages/admin/coordinator/CoordinatorList/AllCoordinator';
 import Help from './components/help/Help';
 import Workshop from './Pages/workshop/Workshop';
-
+import Date from './components/Date/Date';
 import EventAll from './Pages/admin/event/EventAll';
 import UpdateCoordinator from './Pages/admin/coordinator/CoordinatorList/UpdateCoordinator';
 import PayNow from './Pages/user/payment/UserPay';
@@ -74,6 +74,7 @@ function App() {
     <div className="App">
       <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler} />
      <NavLink to={"/frequentlyAsk"}> <Help /></NavLink>
+     <Date/>
       {errosMade && (
         <ErrorModel
           title={errosMade.title}

@@ -88,6 +88,10 @@ background-image: linear-gradient(to top, #41f115 0%, #41f115 100%);
   display: flex;
   justify-content: center;
 }
+.export_event{
+  flex-direction: column !important;
+  padding-bottom: 5rem !important;
+}
 .button {
   background-color: green; /* Green */
   border: none;

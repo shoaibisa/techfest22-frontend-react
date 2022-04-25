@@ -7,8 +7,6 @@ import { baseUrl, localUrl } from '../../API/api';
 import AuthContext from '../../auth/authContext';
 import LoaderSpin from '../../components/UI/loader/LoaderSpin';
 import ErrorModel from '../../components/UI/ErrorModel/ErrorModel';
-import fs from 'file-saver';
-import * as XLSX from 'xlsx';
 import { CSVLink } from 'react-csv';
 
 

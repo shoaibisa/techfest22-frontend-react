@@ -1,0 +1,269 @@
+.date{
+    width: 170px;
+    height: 50px;
+    
+    border-top-left-radius:30px ;
+    border-bottom-left-radius:30px ;
+    position: fixed;
+    right: 0;
+    z-index: 100;
+    cursor: pointer;
+    top:5rem;
+    text-align: center;
+    align-items: center;
+    font-family: "heading font";
+    padding: 5px;
+    border: 2px solid rgb(129, 127, 127);
+    animation: animatedgradient 3s ease alternate infinite;
+    right: -.2rem;
+}
+@keyframes animatedgradient {
+	0% {
+		border-color: red;
+	}
+	25% {
+		border-color: #0cb54a;
+	}
+	50% {
+		border-color: yellow;
+	}
+	75% {
+		border-color: rgb(255, 0, 144);
+	}
+	100% {
+		border-color: rgb(0, 255, 247);
+	}
+}
+
+
+.date_icon p{
+    margin-bottom: -.3rem;
+}
+@font-face {
+    font-family: Clip;
+    src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+  }
+
+  .span{
+      background: none;
+  }
+  .sign {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -.5rem;
+    
+    transform: translate(-80%, -50%);
+    letter-spacing: 2;
+    left: 45%;
+    top: 50%;
+    font-family: "Clip";
+    text-transform: uppercase;
+    font-size: 1em;
+    color: #c20fb3;
+    text-shadow: 0 0 0.6rem #20d6c4, 0 0 1.5rem #39fbeb,
+      -0.2rem 0.1rem 1rem #65ff9d, 0.2rem 0.1rem 1rem #65ff9d,
+      0 -0.5rem 2rem #48ff24, 0 0.5rem 3rem #5bff24;
+    animation: shine 2s forwards, flicker 3s infinite;
+  }
+  .lower{
+      text-transform: lowercase !important;
+  }
+  
+  @keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
+      color: #52ea0c;
+      text-shadow: 0 0 0.6rem #5cb914, 0 0 1.5rem #65ffad,
+        -0.2rem 0.1rem 1rem #f7ff05, 0.2rem 0.1rem 1rem #dada0a,
+        0 -0.5rem 2rem #95ff24, 0 0.5rem 3rem #bee307;
+    }
+    28%,
+    33% {
+      color: #65ffb7;
+      text-shadow: none;
+    }
+    82%,
+    97% {
+      color: #99ff24;
+      text-shadow: none;
+    }
+  }
+  
+  .flicker {
+    animation: shine 2s forwards, blink 3s 2s infinite;
+  }
+  
+  .fast-flicker {
+    animation: shine 2s forwards, blink 10s 1s infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      color: #b7d300;
+      text-shadow: none;
+    }
+    100% {
+      color: #e3009b;
+      text-shadow: 0 0 0.6rem #ca5b00, 0 0 1.5rem #0cb54a,
+        -0.2rem 0.1rem 1rem #aff40e, 0.2rem 0.1rem 1rem #e90c89,
+        0 -0.5rem 2rem #fff024, 0 0.5rem 3rem #ef7700;
+    }
+  }
+  
+  @keyframes flicker {
+    from {
+      opacity: 1;
+    }
+  
+    4% {
+      opacity: 0.9;
+    }
+  
+    6% {
+      opacity: 0.85;
+    }
+  
+    8% {
+      opacity: 0.95;
+    }
+  
+    10% {
+      opacity: 0.9;
+    }
+  
+    11% {
+      opacity: 0.922;
+    }
+  
+    12% {
+      opacity: 0.9;
+    }
+  
+    14% {
+      opacity: 0.95;
+    }
+  
+    16% {
+      opacity: 0.98;
+    }
+  
+    17% {
+      opacity: 0.9;
+    }
+  
+    19% {
+      opacity: 0.93;
+    }
+  
+    20% {
+      opacity: 0.99;
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    26% {
+      opacity: 0.94;
+    }
+  
+    28% {
+      opacity: 0.98;
+    }
+  
+    37% {
+      opacity: 0.93;
+    }
+  
+    38% {
+      opacity: 0.5;
+    }
+  
+    39% {
+      opacity: 0.96;
+    }
+  
+    42% {
+      opacity: 1;
+    }
+  
+    44% {
+      opacity: 0.97;
+    }
+  
+    46% {
+      opacity: 0.94;
+    }
+  
+    56% {
+      opacity: 0.9;
+    }
+  
+    58% {
+      opacity: 0.9;
+    }
+  
+    60% {
+      opacity: 0.99;
+    }
+  
+    68% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.9;
+    }
+  
+    72% {
+      opacity: 0.95;
+    }
+  
+    93% {
+      opacity: 0.93;
+    }
+  
+    95% {
+      opacity: 0.95;
+    }
+  
+    97% {
+      opacity: 0.93;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @media screen and (max-width:500px) {
+      .span{
+          font-size: 12px !important;
+      }
+      .sign{
+       
+      }
+      .date{
+          width: 170px;
+          right: -5rem;
+          border-top-left-radius:500px ;
+          border-bottom-left-radius:500px ;
+      }
+    }
+     
+  @media screen and (max-width:770px) {
+    .span{
+        font-size: 16px;
+    }
+      .date{
+          width: 170px;
+          right: -5rem;
+          border-top-left-radius:500px ;
+          border-bottom-left-radius:500px ;
+      }
+     
+  }

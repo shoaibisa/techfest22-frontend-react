@@ -1,18 +1,35 @@
 import { Modal, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { useContext, useState } from 'react';
+import { useContext, useState ,useEffect} from 'react';
+import { CSVLink } from 'react-csv';
+import axios from 'axios';
+
+import { baseUrl, localUrl } from '../../../API/api';
+import AuthContext from '../../../auth/authContext';
 
 import { EventContext } from './EventContext';
 import Event from './Event';
 
 const EventList = () => {
+  const authContext = useContext(AuthContext);
   const { event } = useContext(EventContext);
   const [show, setShow] = useState(false);
+  const [eventsDetail, seteventsDetail] = useState('')
+  const [datainCsv, setdatainCsv] = useState("")
+  const geteventsDetail = e => {
+    seteventsDetail(e.target.value);
+  };
+
+  const [filteredEvent, setFilteredEvent] = useState(event)
+  const EventFilter = {
+    eventFilter:eventsDetail
+  }
+    console.log(EventFilter);
 
   const handleAddCo = () => navigate('/admin/event/add');
   const handleClose = () => setShow(false);
   const navigate = useNavigate();
-
+  
   return (
     <>
       <div className="table-title">
@@ -21,6 +38,15 @@ const EventList = () => {
             <h2>
               EVENTS <b>LIST</b>
             </h2>
+            <div className="export_event text-center">
+              <input className='p-2' type="text" name="eventName"
+                  required
+                  autoComplete="off"
+                  
+                //  onChange={geteventsDetail}
+                  placeholder="Enter the event name " />
+                 
+            </div>
           </div>
           <div className="col-sm-6">
             <Button
@@ -28,6 +54,7 @@ const EventList = () => {
               className="btn btn-success"
               data-toggle="modal"
             >
+              
               <i className="material-icons">&#xE147;</i>{' '}
               <span style={{ background: 'transparent', padding: '2px' }}>
                 Add New EVENT

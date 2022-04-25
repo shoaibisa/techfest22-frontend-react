@@ -3,7 +3,7 @@ import './Kermis.jsx';
 import EventCard from '../../../components/subdomain/EventCard/EventCard';
 import EventLogo from '../../../components/subdomain/EventLogo/EventLogo';
 import Kermis from '../../../../src/images/Domain/Kermis.webp';
-import domainimg from '../../../images/pravin.jpeg'
+import domainimg from '../../../images/pravin.jpeg';
 
 //import { useContext } from 'react';
 //import { ChemforContext } from './chemforContext';
