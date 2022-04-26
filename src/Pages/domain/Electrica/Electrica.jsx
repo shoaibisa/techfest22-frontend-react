@@ -48,7 +48,7 @@ const Electrica = () => {
           <p>Ashmi Raj</p>
           <p>7889299129</p>
         </div>
-        <div className="domain__cordinator__img">
+        <div className="domain__cordinator__img ms-3">
           <img src="https://www.kindpng.com/picc/m/366-3664582_bob-bob-dummy-image-of-user-hd-png.png" alt="" />
           <p className='mt-2'>Domain Cordinator</p>
           <p>Deepankar Jha
