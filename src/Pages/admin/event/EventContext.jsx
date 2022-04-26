@@ -22,7 +22,7 @@ const EventContextProvider = props => {
 
   useEffect(() => {
     axios.get(`${baseUrl}/event/getAllEvents`).then(results => {
-      // console.log(results.data);
+       console.log(results);
       setEvent(results.data.data);
     });
   }, []);

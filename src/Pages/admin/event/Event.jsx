@@ -54,13 +54,7 @@ if(csvData)
   navigate('/admin/event/eventsdata',{state:csvData.data})
 }
 
-  
-
-   
-
   }
- 
- 
 
   return (
     <>
@@ -120,7 +114,7 @@ if(csvData)
             <div onClick={downEventData} 
          className='btn btn-success'
       
-           >Get</div  >
+           >Get</div>
             
          
       </td>
