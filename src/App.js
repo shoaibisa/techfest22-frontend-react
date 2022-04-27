@@ -44,7 +44,7 @@ import AuthContext from './auth/authContext';
 import SponsorForm from './Pages/admin/sponsor/SponsorForm';
 import SponsorAll from './Pages/admin/sponsor/AllSponsor';
 import FrequentlyAsk  from './Pages/AboutUs/aboutus';
-
+import Datehorizontal from './components/Datehorizontal/Datehorizontal'
 import OurTeam from './Pages/OurTeam/outTeam';
 //import OurTeamDemo from './Pages/ourteamdemo/outTeam';
 import WorkshopAll from './Pages/admin/WorkshopForm/WorkShopList/AllWorkshop';
@@ -76,6 +76,7 @@ function App() {
     <div className="App">
       <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler} />
      <NavLink to={"/frequentlyAsk"}> <Help /></NavLink>
+    <Datehorizontal/>
      <Date/>
      <DateExt/>
       {errosMade && (

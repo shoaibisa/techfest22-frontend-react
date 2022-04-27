@@ -149,6 +149,11 @@
            
         }
        }
+       @media (max-width:500px) {
+        .Robozar{
+           margin-top: 1.5rem;
+        }
+    }
        @media (max-width:426px) {
         .Robozar{
             background: none ;

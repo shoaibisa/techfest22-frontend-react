@@ -19,16 +19,16 @@
 }
 @keyframes animatedgradient {
 	0% {
-		border-color: red;
+		border-color: rgb(0, 255, 110);
 	}
 	25% {
 		border-color: #0cb54a;
 	}
 	50% {
-		border-color: yellow;
+		border-color: rgb(0, 255, 51);
 	}
 	75% {
-		border-color: rgb(255, 0, 144);
+		border-color: rgb(0, 255, 183);
 	}
 	100% {
 		border-color: rgb(0, 255, 247);
@@ -83,12 +83,12 @@
     }
     28%,
     33% {
-      color: #65ffb7;
+      color: #65ff98;
       text-shadow: none;
     }
     82%,
     97% {
-      color: #99ff24;
+      color: #24ff28;
       text-shadow: none;
     }
   }
@@ -107,9 +107,9 @@
       text-shadow: none;
     }
     100% {
-      color: #e3009b;
-      text-shadow: 0 0 0.6rem #ca5b00, 0 0 1.5rem #0cb54a,
-        -0.2rem 0.1rem 1rem #aff40e, 0.2rem 0.1rem 1rem #e90c89,
+      color: #00e322;
+      text-shadow: 0 0 0.6rem #02830b, 0 0 1.5rem #0cb54a,
+        -0.2rem 0.1rem 1rem #aff40e, 0.2rem 0.1rem 1rem #07a126,
         0 -0.5rem 2rem #fff024, 0 0.5rem 3rem #ef7700;
     }
   }
@@ -266,4 +266,12 @@
           border-bottom-left-radius:500px ;
       }
      
+  }
+  @media screen   and (max-width:500px){
+    .date{
+      display: none !important;
+    }
+    .sign {
+      display: none !important;
+    }
   }
