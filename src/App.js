@@ -49,6 +49,7 @@ import OurTeam from './Pages/OurTeam/outTeam';
 //import OurTeamDemo from './Pages/ourteamdemo/outTeam';
 import WorkshopAll from './Pages/admin/WorkshopForm/WorkShopList/AllWorkshop';
 import Eventdata from './Pages/admin/event/Eventdata';
+import DateExt from './components/dateExtanded';
 
 function App() {
   const authContext = useContext(AuthContext);
@@ -76,6 +77,7 @@ function App() {
       <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler} />
      <NavLink to={"/frequentlyAsk"}> <Help /></NavLink>
      <Date/>
+     <DateExt/>
       {errosMade && (
         <ErrorModel
           title={errosMade.title}

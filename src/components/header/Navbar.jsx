@@ -363,7 +363,9 @@ const Navbar = props => {
             </div>
           </div>
         </div>
+      
       </div>
+     
     </>
   );
 };
