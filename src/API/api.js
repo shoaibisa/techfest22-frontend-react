@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const baseUrl = 'https://api.techfestsliet.com';
+export const baseUrl = 'https://22backend.techfestsliet.com';
 export const localUrl = 'http://localhost:4000';
 
 // export const baseUrl = 'http://localhost:4000';
